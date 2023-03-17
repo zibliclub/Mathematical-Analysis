@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.17)  17 MAR 2023 22:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.17)  18 MAR 2023 01:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"d:/latex/Mathematical Analysis/Summary in full/MatAn.tex"
-(d:/latex/Mathematical Analysis/Summary in full/MatAn.tex
+**d:/latex/GitHub/Mathematical-Analysis/MatAn.tex
+(d:/latex/GitHub/Mathematical-Analysis/MatAn.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-07> (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -389,19 +389,41 @@ Overfull \hbox (14.59404pt too wide) in paragraph at lines 95--99
 []\T2A/cmr/m/n/10 Возьмем про-из-вод-ную по $\OML/cmm/m/it/10 x$ \T2A/cmr/m/n/10 от обе-их ча-стей ра-вен-ства: $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ^^Lg\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ))[] =
  []
 
-[2] (MatAn.aux) ) 
+
+Overfull \hbox (0.25713pt too wide) in paragraph at lines 119--128
+[]$[] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] = [] [][] \OML/cmm/m/it/10 tdt \OT1/cmr/m/n/10 = [] [](1 + [] 2\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dt \OT1/cmr/m/n/10 =
+ []
+
+[2]
+Overfull \hbox (7.86542pt too wide) in paragraph at lines 143--149
+\T2A/cmr/bx/n/10 Определение 1.4 \T2A/cmr/m/n/10 (Ра-ци-о-наль-ная дробь)\T2A/cmr/bx/n/10 . \T2A/cmr/m/n/10 Функ-ция ви-да $[]$, где $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;  Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (5.81934pt too wide) in paragraph at lines 143--149
+\T2A/cmr/m/n/10 - мно-го-чле-ны, на-зы-ва-ет-ся \T2A/cmr/bx/n/10 ра-ци-о-наль-ной дро-бью\T2A/cmr/m/n/10 , или ра-ци-о-наль-ной функ-
+ []
+
+
+Overfull \hbox (1.85526pt too wide) in paragraph at lines 143--149
+\T2A/cmr/m/n/10 Если $[] \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 < [] Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$\T2A/cmr/m/n/10 , то дробь на-зы-ва-ет-ся \T2A/cmr/bx/n/10 пра-виль-ной\T2A/cmr/m/n/10 , ина-че - \T2A/cmr/bx/n/10 непра-
+ []
+
+[3
+
+] (MatAn.aux) ) 
 Here is how much of TeX's memory you used:
- 3093 strings out of 476339
- 48005 string characters out of 5788119
- 1861340 words of memory out of 5000000
- 23517 multiletter control sequences out of 15000+600000
- 518433 words of font info for 46 fonts, out of 8000000 for 9000
+ 3097 strings out of 476339
+ 47981 string characters out of 5788119
+ 1864340 words of memory out of 5000000
+ 23519 multiletter control sequences out of 15000+600000
+ 520054 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,5n,62p,295b,279s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MatAn.pdf (2 pages, 119346 bytes).
+ 56i,8n,62p,284b,279s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on MatAn.pdf (3 pages, 160733 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
+ 227 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

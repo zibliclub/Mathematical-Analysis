@@ -105,4 +105,58 @@
   \end{enumerate}
 \end{proof}
 
+\begin{example}
+  (Интегрирование функций)
+  \begin{enumerate}
+    \item \(\int x^{3} dx = \frac{x^{4}}{4} + C\)
+    \item \(\int \ln x dx = 
+      \left(
+        \begin{array}{c}
+          u = \ln x, \ dv = dx, \ du = d(\ln x) = \frac{dx}{x} \implies \\
+          \implies \int dv = \int dx \implies v = x
+        \end{array}
+      \right) = x \ln x - \int x \frac{dx}{x} = x \ln x - x + C\)
+    \item \(\int \sqrt{1 - x^{2}} dx =
+    \left(
+      \begin{array}{c}
+        x = \sin t, \ dx = \\
+        = d(\sin t) = \cos t dt
+      \end{array}
+    \right) = \int \cos^{2} t dt = \int \frac{1}{2}(1 + \cos 2t) dt = \frac{1}{2} \int dt + \frac{1}{2} \int \cos 2t dt =
+    \frac{t}{2} + \frac{1}{4} \int \cos 2t d(2t) = \frac{t}{2} + \frac{1}{4} \sin 2t + C = \frac{\arcsin x}{2} +
+    \frac{1}{2} x \sqrt{1 - x^{2}} + C\)
+  \end{enumerate}
+\end{example}
+
+\begin{example}
+  (Неинтегрируемые функции)
+  \begin{equation*}
+    \int \frac{x}{\ln x} dx; \quad \int \frac{e^{x}}{x} dt; \quad \int e^{x^{2}} dx
+  \end{equation*}
+\end{example}
+
+\clearpage
+
+\subsection{Интегрирование рациональных дробей}
+
+\begin{definition}[Рациональная дробь]
+  Функция вида \(\frac{P(x)}{Q(x)}\), где \(P(x), \ Q(x)\) - многочлены, называется \textbf{рациональной дробью},
+  или рациональной функцией. \\
+  Если \(\deg P(x) < \deg Q(x)\), то дробь называется \textbf{правильной}, иначе - \textbf{неправильной}. \\
+  Если дробь \(\frac{P(x)}{Q(x)}\) - неправильная, то ее можно представить в виде \(\frac{P(x)}{Q(x)} = M(x) +
+  \frac{P_{1}(x)}{Q_{1}(x)}\), где \(\frac{P_{1}(x)}{Q_{1}(x)}\) - правильная дробь. Поэтому достаточно уметь
+  интегрировать правильную дробь.
+\end{definition}
+
+\begin{definition}[Простые дроби]
+  \textbf{Простыми дробями} будем называть дроби следующих четырех видов:
+  \begin{enumerate}
+    \item \(\frac{A}{x - a}, \quad A,a \in \mathbb{R}\)
+    \item \(\frac{A}{(x - a)^{k}}, \quad A,a \in \mathbb{R}, \ k > 1\)
+    \item \(\frac{Ax + B}{x^{2} + px + q}, \quad A,B,p,q \in \mathbb{R}, \ p^{2} - 4q < 0\)
+    \item \(\frac{Ax + B}{(x^{2} + px + q)^{k}}, \quad A,B,p,q \in \mathbb{R}, \ k > 1, \ p^{2} - 4q < 0\)
+  \end{enumerate}
+\end{definition}
+
+
 \end{document}
