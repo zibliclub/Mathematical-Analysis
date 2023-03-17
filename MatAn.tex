@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{setspace,amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}[section]
+\newtheorem{example}{Пример}
+\newtheorem{statement}{Утверждение}[section]
+\newtheorem*{remark}{Замечание}
+
+\begin{document}
+
+\section{Первообразная и неопределенный интеграл}
+
+\begin{definition}[Первообразная функция]
+  Пусть \(X\) - промежуток, \(f:X\rightarrow \mathbb{R}\). Функция \(F(x)\) называется
+  \textbf{первообразной} \(f(x)\), если производная \(F'(x) = f(x)\), при этом \(F(x)\)
+  дифференцируема и непрерывна.
+\end{definition}
+
+\begin{example}
+  \(f(x) = 2x \implies F(x) = x^{2}\). В самом деле, \(F'(x) = f(x)\).
+\end{example}
+
+\begin{statement}
+  (О первообразной)
+  \begin{enumerate}
+    \item Если \(F(x)\) - первообразная функции \(f(x)\) на промежутке \(X\), и
+    \(\varPhi(x) = F(x) + C, \ c \in \mathbb{R}\), то \(\varPhi(x)\) - тоже первообразная.
+    \item Если \(F(x)\) и \(\varPhi(x)\) - две первообразные для \(f(x)\) на промежутке \(X\),
+    то \(\exists C = const, \ c \in \mathbb{R}\) такая, что \(\varPhi(x) = F(x) + C\). 
+  \end{enumerate}
+\end{statement}
+
+\begin{proof}
+  (Утверждения о первообразной)
+  \begin{enumerate}
+    \item \(\Phi'(x) = (F(x) + C)' = F'(x) = f(x) \implies \Phi(x)\)
+      - первообразная для \(f(x)\).
+    \item Так как \(F(x)\) и \(\Phi(x)\) - первообразные для \(f(x)\), то \(F'(x) = f(x),
+    \Phi'(x) = f(x)\). Рассмотрим функцию \(\phi = \Phi(x) - F(x), \ \forall x \in X\):
+    \(\phi'(x) = \Phi'(x) - F'(x) = f(x) - f(x) = 0\). Рассмотрим
+    \(\forall x_{1}, x_{2} \in X\), по теореме Лагранжа, \(\exists \xi \in (x_{1}, x_{2}):
+    \ \phi(x_{1}) - \phi(x_{2}) = \phi'(\xi)(x_{1} - x_{2}) = 0 \implies \phi(x_{1}) =
+    \phi(x_{2}) \implies \phi(x) = const\) для \(\forall x \in X\).
+  \end{enumerate}
+\end{proof}
+
+\begin{definition}[Неопределенный интеграл]
+  Совокупность всех первообразных для функции \(f(x)\) на промежутке \(X\) называется
+  \textbf{неопределенным интегралом} и обозначается:
+  \begin{equation*}
+    \int f(x) dx
+  \end{equation*}
+  Таким образом, \(\int f(x) dx = \{F(x) + C\), где \(F'(x) = f(x), \ C \in \mathbb{R}\}\),
+  или:
+  \begin{equation*}
+    \int f(x) dx = F(x) + C
+  \end{equation*}
+\end{definition}
+
+\begin{remark}
+  (Для неопределенного интеграла)
+  \begin{itemize}
+    \item \((\int f(x) dx)_{x}' = (F(x) + C)_{x}' = F'(x) = f(x)\);
+    \item \(d(\int f(x) dx) = d(F(x) + C) = (F(x) + C)' dx = F'(x) dx = f(x) dx\);
+    \item \(\int d(F(x)) = \int F'(x) dx = \int f(x) dx = F(x) + C, \ C \in \mathbb{R}\). 
+  \end{itemize}
+\end{remark}
+
+\begin{definition}[Интегрирование]
+  Операция нахождения первообразной функции \(f(x)\) называетсвя ее \textbf{интегрированием}.
+\end{definition}
+
+\begin{statement}
+  (Основные методы интегрирования) \\
+  Пусть \(f: X \rightarrow \mathbb{R}, \ g:X \rightarrow \mathbb{R}, \ X\) - промежуток:
+  \begin{enumerate}
+    \item Пусть \(\alpha, \beta \in \mathbb{R} = const\), тогда:\\
+      \(\int (\alpha f(x) + \beta g(x)) dx = \alpha \int f(x) dx + \beta \int g(x) dx\).
+    \item Формула интегрирования по частям: \\
+      \(udv = uv - \int udv, \ u = u(x), v = v(x)\).
+    \item Интегрирование подстановкой: \\
+      Пусть \(T\) - промежуток, \(X = X(t)\) - дифференцируема на \(T\). \\
+      Тогда \(\int f(X(t)) * X'(t) dt = F(X(t)) + C = \int f(x) dx + C\).
+  \end{enumerate}
+\end{statement}
+
+\begin{proof}
+  (Утверждения об основных методах интегрирования)
+  \begin{enumerate}
+    \item Возьмем производную по \(x\) от обеих частей равенства: \(\int(\alpha f(x) +
+      \beta g(x))_{x}' = \alpha f(x) + \beta g(x) = \alpha F'(x) + \beta G'(x) =
+      \alpha(\int f(x) dx)_{x}' + \beta(\int g(x) dx)_{x}'\) - является производной для
+      \(\alpha \int f(x) dx + \beta \int g(x) dx\).
+    \item Рассмотрим \(d(uv) = v du + u dv: \ \int d(uv) = \int v du + \int u dv\).
+      Так как \(d(uv) = uv\), то из того, что \(\int d(uv) = \int v du + \int u dv
+      \implies \int u dv = uv - \int v du\).
+    \item \(f(X(t)) * X'(t) dt = \int f(X(t)) dx(t) = \int f(x) dx = F(x) + C =
+      F(X(t)) + C; \ (F(X(t)) + C)_{t}' = F_{t}' * X_{t}' = f(x) * X'(t) =
+      (\int f(X(t)) * X'(t) dt)_{t}'\).
+  \end{enumerate}
+\end{proof}
+
+\end{document}
