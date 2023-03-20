@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.17)  18 MAR 2023 01:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.17)  21 MAR 2023 00:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -325,7 +325,16 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+) (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks23
 \thm@bodyfont=\toks24
@@ -336,20 +345,58 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip54
 \thm@headsep=\skip55
 \dth@everypar=\toks28
-) (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/scalerel\scalerel.sty
+Package: scalerel 2016/12/29 v1.8 Routines for constrained scaling and stretching of objects, relative to a reference object or in absolute terms
+ (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count273
+\calc@Bcount=\count274
+\calc@Adimen=\dimen151
+\calc@Bdimen=\dimen152
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count275
+\calc@Cskip=\skip58
+) (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks29
+) (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-\c@definition=\count273
-\c@example=\count274
-\c@statement=\count275
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen153
+\Gin@req@width=\dimen154
+) (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count276
+)
+\thesrwidth=\skip59
+\thesrheight=\skip60
+\srblobheight=\skip61
+\srblobdepth=\skip62
+\mnxsrwidth=\skip63
+\LMex=\skip64
+\LMpt=\skip65
+)
+\c@definition=\count277
+\c@example=\count278
+\c@statement=\count279
+\c@lemma=\count280
+\c@theorem=\count281
  (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count276
+\l__color_backend_stack_int=\count282
 \l__pdf_internal_box=\box53
 ) (MatAn.aux
 LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 5.
@@ -358,72 +405,235 @@ File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 ))
 \openout1 = `MatAn.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Info: Redefining \th on input line 14.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Info: Redefining \th on input line 21.
+ (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count283
+\scratchdimen=\dimen155
+\scratchbox=\box54
+\nofMPsegments=\count284
+\nofMParguments=\count285
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count286
+\MPscratchDim=\dimen156
+\MPnumerator=\count287
+\makeMPintoPDFobject=\count288
+\everyMPtoPDFconversion=\toks31
+) (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
  (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
  (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/zibli/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (14.59404pt too wide) in paragraph at lines 95--99
+Overfull \hbox (14.59404pt too wide) in paragraph at lines 102--106
 []\T2A/cmr/m/n/10 Возьмем про-из-вод-ную по $\OML/cmm/m/it/10 x$ \T2A/cmr/m/n/10 от обе-их ча-стей ра-вен-ства: $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ^^Lg\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ))[] =
  []
 
 
-Overfull \hbox (0.25713pt too wide) in paragraph at lines 119--128
-[]$[] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] = [] [][] \OML/cmm/m/it/10 tdt \OT1/cmr/m/n/10 = [] [](1 + [] 2\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dt \OT1/cmr/m/n/10 =
+Overfull \hbox (11.70532pt too wide) in paragraph at lines 119--126
+[]$[] [] \OML/cmm/m/it/10 xdx \OT1/cmr/m/n/10 = [] = \OML/cmm/m/it/10 x [] x \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 =
  []
 
 [2]
-Overfull \hbox (7.86542pt too wide) in paragraph at lines 143--149
+Overfull \hbox (7.86542pt too wide) in paragraph at lines 150--156
 \T2A/cmr/bx/n/10 Определение 1.4 \T2A/cmr/m/n/10 (Ра-ци-о-наль-ная дробь)\T2A/cmr/bx/n/10 . \T2A/cmr/m/n/10 Функ-ция ви-да $[]$, где $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;  Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (5.81934pt too wide) in paragraph at lines 143--149
+Overfull \hbox (5.81934pt too wide) in paragraph at lines 150--156
 \T2A/cmr/m/n/10 - мно-го-чле-ны, на-зы-ва-ет-ся \T2A/cmr/bx/n/10 ра-ци-о-наль-ной дро-бью\T2A/cmr/m/n/10 , или ра-ци-о-наль-ной функ-
  []
 
 
-Overfull \hbox (1.85526pt too wide) in paragraph at lines 143--149
+Overfull \hbox (1.85526pt too wide) in paragraph at lines 150--156
 \T2A/cmr/m/n/10 Если $[] \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 < [] Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$\T2A/cmr/m/n/10 , то дробь на-зы-ва-ет-ся \T2A/cmr/bx/n/10 пра-виль-ной\T2A/cmr/m/n/10 , ина-че - \T2A/cmr/bx/n/10 непра-
  []
 
 [3
 
-] (MatAn.aux) ) 
+]
+Overfull \hbox (33.65671pt too wide) in paragraph at lines 187--201
+[]$[] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] = [] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--214
+[] [] [] \OT1/cmr/m/n/10 = [] =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--222
+[]$\OML/cmm/m/it/10 I \OT1/cmr/m/n/10 = [] = [] [] [] =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--222
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--225
+
+ []
+
+
+Overfull \hbox (32.8028pt too wide) in paragraph at lines 231--246
+[]$[] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] = [] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] [] [] +
+ []
+
+
+Overfull \hbox (43.38599pt too wide) in paragraph at lines 231--246
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 ) [] [] = [][] + [][][] =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--246
+
+ []
+
+
+Overfull \hbox (12.46149pt too wide) in paragraph at lines 247--265
+\T2A/cmr/m/n/10 грал $[] [] \OT1/cmr/m/n/10 = [] =
+ []
+
+[4
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 280--282
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--289
+
+ []
+
+
+Overfull \hbox (7.65678pt too wide) in paragraph at lines 290--294
+[]\OT1/cmr/m/n/10 [(\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 Q[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )]$\T2A/cmr/m/n/10 . Име-ем, $\OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = [];  [] \OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \U/msa/m/n/10 6 []\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--318
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--321
+
+ []
+
+[5
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 322--324
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--345
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--370
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 399--402
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
+
+ []
+
+
+Overfull \hbox (7.84045pt too wide) in paragraph at lines 418--420
+\T2A/cmr/bx/n/10 Пример 5. $[] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] + [] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] + [] []\OML/cmm/m/it/10 dx$ 
+ []
+
+[7] (MatAn.aux) ) 
 Here is how much of TeX's memory you used:
- 3097 strings out of 476339
- 47981 string characters out of 5788119
- 1864340 words of memory out of 5000000
- 23519 multiletter control sequences out of 15000+600000
- 520054 words of font info for 48 fonts, out of 8000000 for 9000
+ 4865 strings out of 476339
+ 72932 string characters out of 5788119
+ 1884340 words of memory out of 5000000
+ 25236 multiletter control sequences out of 15000+600000
+ 521599 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,8n,62p,284b,279s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MatAn.pdf (3 pages, 160733 bytes).
+ 72i,11n,76p,284b,336s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on MatAn.pdf (7 pages, 249933 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
+ 301 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
