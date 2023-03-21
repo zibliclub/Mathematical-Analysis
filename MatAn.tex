@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{report}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage{setspace,amsmath}
@@ -6,6 +6,9 @@
 \usepackage{amsthm}
 \usepackage{amsfonts}
 \usepackage{scalerel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
 
 \def\stretchint#1{\vcenter{\hbox{\stretchto[440]{\displaystyle\int}{#1}}}}
 \def\scaleint#1{\vcenter{\hbox{\scaleto[3ex]{\displaystyle\int}{#1}}}}
@@ -18,7 +21,15 @@
 \newtheorem{lemma}{Лемма}[section]
 \newtheorem{theorem}{Теорема}[section]
 
+\title{Математический Анализ \\ 2 семестр}
+\author{Данил Заблоцкий}
+\date{\today}
+
 \begin{document}
+
+\maketitle
+\tableofcontents
+\chapter{Дифференциальное исчисление}
 
 \section{Первообразная и неопределенный интеграл}
 
@@ -141,8 +152,6 @@
     \int \frac{x}{\ln x} dx; \quad \int \frac{e^{x}}{x} dt; \quad \int e^{x^{2}} dx
   \end{equation*}
 \end{example}
-
-\clearpage
 
 \subsection{Интегрирование рациональных дробей}
 
@@ -397,8 +406,8 @@
 \end{example}
 
 Приведем в $\frac{P(x)}{Q(x)} = \sum_{i = 0}^{k_{1}-1} \frac{A_{i}}{(x - a_{i})^{k_{1} - i}} + \ldots$
-правую часть к общему знаменателю и получим: $\frac{P(x)}{Q(x)} \equiv \frac{R(x)}{Q(x)}; \quad \deg Q(x) = 
-k_{1} + \ldots + k_{s} + 2m_{1} + \ldots + 2m_{r} = n$; \\
+правую часть к общему знаменателю и получим: $\frac{P(x)}{Q(x)} \equiv \frac{R(x)}{Q(x)}; \quad \deg Q(x) =
+  k_{1} + \ldots + k_{s} + 2m_{1} + \ldots + 2m_{r} = n$; \\
 
 $l = \deg R(x) = \deg P(x) \leqslant \deg Q(x) - 1$. \\
 
@@ -409,17 +418,199 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
 \begin{theorem}
   Пусть $\frac{P(x)}{Q(x)}$ - правильная несократимая дробь. \\ Тогда $\int \frac{P(x)}{Q(x)}dx = \frac{P_{1}(x)}{Q_{1}(x)}
-  + \int \frac{P_{2}(x)}{Q_{2}(x)}dx$. Дроби $\frac{P_{1}(x)}{Q_{1}(x)}$ и $\frac{P_{2}(x)}{Q_{2}(x)}$ - правильные.
+    + \int \frac{P_{2}(x)}{Q_{2}(x)}dx$. Дроби $\frac{P_{1}(x)}{Q_{1}(x)}$ и $\frac{P_{2}(x)}{Q_{2}(x)}$ - правильные.
   $Q(x) = Q_{1}(x) Q_{2}(x)$ и многочлен $Q_{2}(x)$ представляет собой произведение всех линейных и квадратичных множителей
   многочлена $Q(x)$, взятых в первой степени.
 \end{theorem}
 
 \begin{example}
   $\int \frac{x^{2} + 2x + 5}{(x-2)(x^{2} + 1)^{2}}dx = \frac{P_{1}(x)}{x^{2} + 1} + \int \frac{P_{2}(x)}{(x-2)(x^{2}+1)}dx
-  = \frac{Ax + B}{x^{2} + 1} + \int \frac{Cx^{2} + Dx + E}{(x-2)(x^{2}+1)}dx$
+    = \frac{Ax + B}{x^{2} + 1} + \int \frac{Cx^{2} + Dx + E}{(x-2)(x^{2}+1)}dx$
 \end{example}
 
+\begin{proof}
+  Рассмотрим $\int \frac{A}{(x-a)^{k}} dx = \frac{A}{1 - k} \frac{1}{(x-a)^{k-1}}$; \\
 
+  $\int \frac{Mx + N}{(x^{2} + px + q)^{k}} dx = \frac{A}{(x^{2} + px + q)^{k-1}} + B\int \frac{dx}{(x^{2}+px+q)^{k}} =
+    \frac{A}{(x^{2} + px + q)^{k-1}} + \frac{C}{(x^{2} + px + q)^{k-1}} + D\int \frac{dx}{(x^{2} + px + q)^{k-1}} =
+    \frac{A}{(x^{2} + px + q)^{k-1}} + \ldots + \frac{V}{(x^{2} + px + q)^{2}} + W\int \frac{dx}{x^{2} + px + q}$.\\
+
+  Представим $Q(x)$ в виде $Q(x) = (x-a_{1})^{k_{1}} * \ldots * (x-a_{s})^{k_{s}} * (x^{2} + p_{1}x + q_{1})^{m_{1}} *
+    \ldots * (x^{2} + p_{r}x + q_{r})^{m_{r}}$, тогда: \\
+
+  $Q_{2}(x) = (x-a_{1}) * \ldots * (x-a_{s}) * (x^{2} + p_{1}x + q_{1}) * \ldots * (x^{2} + p_{r}x + q_{r})$;\\
+
+  $Q_{1}(x) = (x-a_{1})^{k_{1}-1} * \ldots * (x-a_{s})^{k_{s}-1} * (x^{2} + p_{1}x + q_{1})^{m_{1}-1} * \ldots *
+    (x^{2} + p_{r}x + q_{r})^{m_{r}-1}$;\\
+
+  Из метода неопределенных коэффициентов и того, что $\int \frac{Mx + N}{(x^{2} + px + q)^{k}} dx = \frac{A}
+    {(x^{2} + px + q)^{k-1}} + \ldots + \frac{V}{(x^{2} + px + q)^{2}} + W\int \frac{dx}{x^{2} + px + q} \implies
+    \int \frac{P(x)}{Q(x)} dx = \frac{P_{1}(x)}{Q_{1}(x)} + \int \frac{P_{2}(x)}{Q_{2}(x)} dx$. \\
+
+  Как найти $P_{1}(x)$ и $Q_{1}(x)$?\\
+
+  Продифференцируем $\int \frac{P(x)}{Q(x)}dx = \frac{P_{1}(x)}{Q_{1}(x)} + \int \frac{P_{2}(x)}{Q_{2}(x)}dx$: \\
+
+  $\frac{P(x)}{Q(x)} = \frac{P_{1}'(x) Q_{1}(x) - P_{1}(x)Q_{1}'(x)}{Q_{1}^{2}} + \frac{P_{2}(x)}{Q_{2}(x)}$.
+  Рассмотрим: $\frac{P_{1}'(x) Q_{1}(x) - P_{1}(x)Q_{1}'(x)}{Q_{1}^{2}} = \frac{P_{1}'(x) - P_{1}(x)
+      \frac{Q_{1}'(x)}{Q_{1}(x)}}{Q_{1}(x)} = \frac{P_{1}'(x)Q(x) - P_{1}(x)\frac{Q_{1}'(x)Q_{2}(x)}{Q_{1}(x)}}
+    {Q_{1}(x)Q_{2}(x)}$.\\
+
+  Пусть $H(x) = \frac{Q_{1}'(x)Q_{2}(x)}{Q_{1}(x)}$ - многочлен (нужно показать).\\
+
+  Пусть $Q_{1}(x)$ имеет среди своих множителей многочлен вида $(x-a)^{n}$, тогда $Q_{1}'(x)$ будет иметь в своем
+  составе $(x-a)^{n-1}$, а $Q_{2}(x)$ только содержит в себе выражение $(x-a) \implies H(x)$ - многочлен.\\
+
+  Коэффициенты многочленов $P_{1}(x)$ и $P_{2}(x)$ можно найти с помощью метода неопределенных коэффициентов
+  из выражения $\frac{P(x)}{Q(x)} = \frac{Mx + N}{(x^{2} + px + q)^{k}} + \frac{P_{1}(x)}{(x^{2} + px + q)^{k-1}Q_{1}(x)}$.
+\end{proof}
+
+\chapter{Интегральное исчисление}
+
+\section{Интеграл Римана}
+
+\begin{definition}[интеграл Римана]
+  Пусть $f:[a;b]\rightarrow\mathbb{R}$. Разобьем отрезок $[a;b]$ на $n$ частей точками $a = x_{0} < x_{1} < \ldots <
+    x_{n-1} < x_{n} = b$. В каждом таком кусочке выберем точку $\xi_{i} \in [x_{i-1};x_{i}], \ i = 1,\ldots ,n$.\\
+
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[scale=0.5]{graphic.png}\label{figure1}
+    \end{center}
+  \end{figure}
+
+  {\Huge ИСПРАВИТЬ!}
+
+  $\Delta i = [x_{i-1}, x_{i}], \quad \Delta x = x_{i} - x_{i-1}$ - длина отрезка $\Delta i$.\\
+
+  Составим сумму $S_{n} = \sum_{i=1}^{n} f(\xi_{i})\Delta x_{i}$, где $f(\xi_{i})$ - высота $i$-го прямоугольника и
+  $\Delta x_{i}$ - ширина $i$-го прямоугольника.\\
+
+  $S_{n}$ - площадь ступенчатой фигуры, составленной из прямоугольников под графиком функции $f(x)$.\\
+
+  Говорят, что функция $f$ интегрируема на $[a;b]$, если существует предел интегральных сумм $S_{n}$, то есть
+  $\exists \underset{max\Delta x_{i}\rightarrow0}{\lim}S_{n}$, причем этот предел не зависит ни от способа разбиения
+  отрезка $[a;b]$, ни от способа выбора точек $\xi_{i}$.\\
+
+  Этот предел называется \textbf{интегралом Римана} функции $f$ на $[a;b]$. Класс интегрируемых функций на отрезке
+  $[a;b]$ будем обозначать $R([a;b])$.
+\end{definition}
+
+\section{Базы. Предел функции по базе}
+
+\begin{definition}[база множества]
+  Пусть $X$ - произвольное множество.\\
+
+  Система $\beta$ подмножеств множества $X$ называется \textbf{базой} на $X$, если:
+  \begin{enumerate}
+    \item $\forall \beta \in \beta \quad \beta \ne \o$
+    \item $\forall \beta_{1}, \beta_{2} \in \beta \ \exists \beta_{3} \in \beta: \quad \beta_{3} \subset \beta_{1}
+            \cap \beta_{2}$
+  \end{enumerate}
+\end{definition}
+
+\begin{example}[баз множества]
+  \begin{enumerate}
+    \item $\beta = \{X\}$ - база
+    \item $X = \mathbb{R}, \quad \beta = \{\beta_{n} = (-\frac{1}{n};\frac{1}{n}), \ n \in \mathbb{N}\}$
+    \item $X = \mathbb{R}, \quad \beta = \{\beta_{\epsilon} = \{x: \  0 < |x| < \epsilon\}, \epsilon > 0\}$
+          (выколотые окрестности нуля)
+  \end{enumerate}
+\end{example}
+
+\begin{definition}[предел по базе]
+  Пусть $f:X\rightarrow\mathbb{R}, \ \beta$ - база на $X$\\
+
+  Число $A\in\mathbb{R}$ называется \textbf{пределом} функции $f$ \textbf{по базе $\beta$}, если
+  $\forall \epsilon > 0 \ \exists$ элемент базы $\beta \in \beta: \quad |f(x) - A| < \epsilon$.
+  \begin{equation*}
+    \underset{\beta}{\lim} f(x)
+  \end{equation*}
+\end{definition}
+
+\begin{definition}[предел по базе (МП)]
+  Пусть $(Y, d)$ - МП, $f:X\rightarrow Y, \ \beta$ - база на $X$.\\
+
+  $y\in Y$ называется \textbf{пределом} функции $f(x)$ \textbf{по базе $\beta$}, если $\forall \epsilon > 0 \
+    \exists \beta \in \beta \ \forall x \in \beta: \quad d(f(x), y) < \epsilon$, или, что то же самое,
+  $\forall V_{Y}(y) \ \exists \beta \in \beta \quad f(\beta) \subset V_{Y}(y)$, где $V_{Y}$ - окрестность
+  метрического пространства $Y$.
+\end{definition}
+
+\begin{theorem}[основные свойства предела по базе]
+  Пусть $f:X\rightarrow\mathbb{R}, \ \beta$ - база на $X$:
+  \begin{enumerate}
+    \item Если $\exists \underset{\beta}{\lim}f(x)$, то $\exists \beta \in \beta: \ f$ ограничена на $\beta$
+    \item Если $\underset{\beta}{\lim}f(x) = A$ и $\underset{\beta}{\lim}f(x) = B$, то $A = B$
+  \end{enumerate}
+\end{theorem}
+
+\clearpage
+
+\begin{theorem}[связь предела по базе с арифметическими операциями]
+  Пусть $f:X\rightarrow\mathbb{R}, \ g:X\rightarrow\mathbb{R}, \ \beta$ - база на $X, \quad \underset{\beta}
+    {\lim}f(x) = A, \quad \underset{\beta}{\lim}g(x) = B$:
+  \begin{enumerate}
+    \item $\exists \underset{\beta}{\lim}(f(x)\pm g(x)) = A\pm B$
+    \item $\exists \underset{\beta}{\lim}(f(x)g(x)) = AB$
+    \item $\exists \underset{\beta}{\lim}(\frac{f(x)}{g(x)}) = \frac{A}{B}$, если $g(x)\ne 0, \ \beta \ne 0$
+  \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[связь предела функции по базе с неравенствами]
+  Пусть $f:X\rightarrow\mathbb{R}, \ g:X\rightarrow\mathbb{R}, \ \beta$ - база на $X$:
+  \begin{enumerate}
+    \item Если $\exists\beta\in\beta: \quad \forall x \in \beta \ f(x) \leqslant g(x)$, то $\underset{\beta}
+            {\lim}f(x) \leqslant \underset{\beta}{\lim}g(x)$
+    \item Если $\underset{\beta}{\lim}f(x) < \underset{\beta}{\lim}g(x)$, то $\exists\beta\in\beta \ \forall
+            x \in \beta \quad f(x) < g(x)$\\
+
+          Если $\underset{\beta}{\lim}f(x) \geqslant \underset{\beta}{\lim}g(x)$, то $\exists\beta\in\beta \ \forall
+            x \in \beta \quad f(x) \geqslant g(x)$
+    \item Если $h:X\rightarrow \mathbb{R}$ и $\exists\beta\in\beta: \ \forall x \in \beta \ f(x) \leqslant h(x)
+            \leqslant g(x)$ \textbf{И} $A = \underset{\beta}{\lim}f(x) = \underset{\beta}{\lim}g(x)$, то $\underset{\beta}
+            {\lim}h(x) = A$
+  \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[критерий Коши существования предела по базе]
+  Существуют две формулировки:
+  \begin{enumerate}
+    \item Пусть $f:X\rightarrow\mathbb{R}, \ \beta$ - база на $X$.
+
+          Функция $f(x)$ имеет предел по базе $\beta \iff \forall \epsilon > 0 \ \exists\beta\in\beta: \quad \forall
+            x_{1},x_{2} \in \beta \ |f(x_{1}) - f(x_{2})| < \epsilon$
+
+    \item Пусть $(Y,d)$ - МП (\textbf{полное}), $f:X\rightarrow Y, \ \beta$ - база на $Y$.
+
+          Функция $f(x)$ имеет предел по базе $\beta \iff \forall \epsilon>0\exists\beta\in\beta: \quad \forall
+            x_{1},x_{2} \in \beta \ d(f(x_{1}), f(x_{2})) < \epsilon$
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  (критерия Коши $\exists$ предела по базе)\\
+
+  $"\rightarrow"$ Пусть $\exists \underset{\beta}{\lim}f(x) = A$. Покажем, что $\forall \epsilon > 0 \exists \beta \in
+  \beta: \quad \forall x_{1},x_{2} \in \beta \ |f(x_{1}) - f(x_{2})| < \epsilon$. Рассмотрим $| f(x_{1}) - f(x_{2}) |
+  = | f(x_{1} - A) + (A - f(x_{2})) | \leqslant | f(x_{1}) - A | + | f(x_{2}) - A | < \frac{\epsilon}{2} +
+  \frac{\epsilon}{2} = \epsilon$.\\
+
+  $"\leftarrow"$ Пусть $\forall \epsilon > 0 \ \exists \beta\in\beta: \quad \forall x_{1},x_{2}\in\beta \ | f(x_{1}) -
+  f(x_{2}) |<\epsilon$. Покажем, что $\exists \underset{\beta}{\lim}f(x)$. Возьмем $\beta_{1} \in \beta: \quad
+  \forall x_{1},x_{2}\in\beta_{1} \ | f(x_{1}) - f(x_{2}) | < 1$. Возьмем $\beta_{1}'\in\beta: \quad \forall
+  x_{1},x_{2}\in\beta_{1}' \ | f(x_{1}) - f(x_{2}) | < \frac{1}{2}$. Пусть $\beta_{2} \subset \beta_{1} \cap \beta_{1}'$
+  и так далее.\\
+
+  Таким образом построим систему вложенных множеств: $\beta_{1} \supset \beta_{2} \supset \ldots \supset \beta_{n}
+  \supset \ldots$, при этом $\forall x_{1},x_{2} \in \beta_{n} \ | f(x_{1}) - f(x_{2}) | < \frac{1}{2^{n-1}}$.
+  Воспользуемся полнотой пространства, то есть в нем $\exists \lim f(x)$, если $f(x)$ - фундаментальная.\\
+
+  $\forall n \in \mathbb{N}$ рассмотрим $x_{n} \in \beta_{n}$. Тогда, если $n < m \ (m \in \mathbb{N})$, то
+  для $x_{n} \in \beta_{n}$ и $x_{m} \in \beta_{n} \ | f(x_{n}) - f(x_{m}) | < \frac{1}{2^{n-1}}$.
+
+
+\end{proof}
 
 
 \end{document}
