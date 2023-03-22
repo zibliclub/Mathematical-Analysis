@@ -9,6 +9,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{wrapfig}
+\usepackage[unicode, pdftex]{hyperref}
 
 \def\stretchint#1{\vcenter{\hbox{\stretchto[440]{\displaystyle\int}{#1}}}}
 \def\scaleint#1{\vcenter{\hbox{\scaleto[3ex]{\displaystyle\int}{#1}}}}
@@ -89,8 +90,8 @@
   \end{itemize}
 \end{remark}
 
-\begin{definition}[Интегрирование]
-  Операция нахождения первообразной функции \(f(x)\) называетсвя ее \textbf{интегрированием}.
+\begin{definition}[интегрирование]
+  Операция нахождения первообразной функции \(f(x)\) называется ее \textbf{интегрированием}.
 \end{definition}
 
 \begin{statement}
@@ -475,11 +476,9 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
   \begin{figure}[H]
     \begin{center}
-      \includegraphics[scale=0.5]{graphic.png}\label{figure1}
+      \includegraphics[scale=0.7]{graph1.png}\label{figure1}
     \end{center}
   \end{figure}
-
-  {\Huge ИСПРАВИТЬ!}
 
   $\Delta i = [x_{i-1}, x_{i}], \quad \Delta x = x_{i} - x_{i-1}$ - длина отрезка $\Delta i$.\\
 
@@ -592,25 +591,121 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   (критерия Коши $\exists$ предела по базе)\\
 
   $"\rightarrow"$ Пусть $\exists \underset{\beta}{\lim}f(x) = A$. Покажем, что $\forall \epsilon > 0 \exists \beta \in
-  \beta: \quad \forall x_{1},x_{2} \in \beta \ |f(x_{1}) - f(x_{2})| < \epsilon$. Рассмотрим $| f(x_{1}) - f(x_{2}) |
-  = | f(x_{1} - A) + (A - f(x_{2})) | \leqslant | f(x_{1}) - A | + | f(x_{2}) - A | < \frac{\epsilon}{2} +
-  \frac{\epsilon}{2} = \epsilon$.\\
+    \beta: \quad \forall x_{1},x_{2} \in \beta \ |f(x_{1}) - f(x_{2})| < \epsilon$. Рассмотрим $| f(x_{1}) - f(x_{2}) |
+    = | f(x_{1} - A) + (A - f(x_{2})) | \leqslant | f(x_{1}) - A | + | f(x_{2}) - A | < \frac{\epsilon}{2} +
+    \frac{\epsilon}{2} = \epsilon$.\\
 
   $"\leftarrow"$ Пусть $\forall \epsilon > 0 \ \exists \beta\in\beta: \quad \forall x_{1},x_{2}\in\beta \ | f(x_{1}) -
-  f(x_{2}) |<\epsilon$. Покажем, что $\exists \underset{\beta}{\lim}f(x)$. Возьмем $\beta_{1} \in \beta: \quad
-  \forall x_{1},x_{2}\in\beta_{1} \ | f(x_{1}) - f(x_{2}) | < 1$. Возьмем $\beta_{1}'\in\beta: \quad \forall
-  x_{1},x_{2}\in\beta_{1}' \ | f(x_{1}) - f(x_{2}) | < \frac{1}{2}$. Пусть $\beta_{2} \subset \beta_{1} \cap \beta_{1}'$
+    f(x_{2}) |<\epsilon$. Покажем, что $\exists \underset{\beta}{\lim}f(x)$. Возьмем $\beta_{1} \in \beta: \quad
+    \forall x_{1},x_{2}\in\beta_{1} \ | f(x_{1}) - f(x_{2}) | < 1$. Возьмем $\beta_{1}'\in\beta: \quad \forall
+    x_{1},x_{2}\in\beta_{1}' \ | f(x_{1}) - f(x_{2}) | < \frac{1}{2}$. Пусть $\beta_{2} \subset \beta_{1} \cap \beta_{1}'$
   и так далее.\\
 
   Таким образом построим систему вложенных множеств: $\beta_{1} \supset \beta_{2} \supset \ldots \supset \beta_{n}
-  \supset \ldots$, при этом $\forall x_{1},x_{2} \in \beta_{n} \ | f(x_{1}) - f(x_{2}) | < \frac{1}{2^{n-1}}$.
+    \supset \ldots$, при этом $\forall x_{1},x_{2} \in \beta_{n} \ | f(x_{1}) - f(x_{2}) | < \frac{1}{2^{n-1}}$.
   Воспользуемся полнотой пространства, то есть в нем $\exists \lim f(x)$, если $f(x)$ - фундаментальная.\\
 
   $\forall n \in \mathbb{N}$ рассмотрим $x_{n} \in \beta_{n}$. Тогда, если $n < m \ (m \in \mathbb{N})$, то
-  для $x_{n} \in \beta_{n}$ и $x_{m} \in \beta_{n} \ | f(x_{n}) - f(x_{m}) | < \frac{1}{2^{n-1}}$.
+  для $x_{n} \in \beta_{n}$ и $x_{m} \in \beta_{n} \ | f(x_{n}) - f(x_{m}) | < \frac{1}{2^{n-1}}$.\\
 
+  Таким образом последовательность ${f(x_{n})}$ - фундаментальная $\implies \\ \exists \underset{n\rightarrow\infty}{\lim}
+    f(x_{n}) = A$. Покажем, что $A = \underset{\beta}{\lim}f(x)$. Пусть $\epsilon > 0$ задано. Выберем $n\in\mathbb{N}:\quad
+    \frac{1}{2^{n-1}} < \frac{\epsilon}{2}$. Возьмем $m>n:\quad | f(x_{m}) - A | < \frac{\epsilon}{2}$. Возьмем $\beta =
+    \beta_{n}$. Тогда $\forall x \in \beta \ | f(x) - A | = | f(x) - f(m) + f(x_{m}) - A | \leqslant | f(x) - f(x_{m}) | +
+    | f(x_{m}) - A | < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$.\\
 
+  Следовательно, $\exists\underset{\beta}{\lim}f(x) = A$.
 \end{proof}
 
+\section{Разбиение. Интеграл Римана (v.2)}
+
+\begin{definition}[разбиение]
+  Пусть дан отрезок $[a;b]$. \textbf{Разбиением} $P$ отрезка $[a;b]$ называется набор точек $a=x_{0}<x_{1}<\ldots
+    <x_{n-1}<x_{n}=b$. То есть $P = \{x_{0},\ldots,x_{n}\}$. Отрезки $[x_{i-1};x_{i}] = \Delta_{i}$.
+  $x_{i}-x_{i-1} = \Delta x_{i}$ - длина $i$-го отрезка разбиения $\lambda(P) = \underset{i=\overline{0,n}}
+    {\max}\{\Delta x_{i}\}$. Величины $\Delta_{i}, \Delta x_{i}, \lambda(P)$ - параметры ограничения.
+\end{definition}
+
+\begin{definition}[разбиение с отмеченными точками]
+  \textbf{Разбиением с отмеченными точками} называется пара наборов
+  \begin{equation*}
+    P(\xi) = \{x_{0},\ldots,x_{n}\},\{\xi_{0},\ldots,\xi_{n}\},
+  \end{equation*}
+  \center{где $a=x_{0} < \ldots < x_{n}=b, \ \xi_{i}\in [x_{i-1};x_{i}]$.}
+  \begin{figure}[h]
+    \begin{minipage}[h]{0.49\linewidth}
+      \center{\includegraphics[scale=0.6]{graph2.png}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[h]{0.49\linewidth}
+      Пусть $\Re_{\xi} = \{(P,\xi)\}$ - семейство всевозможных разбиений с отмеченными точками отрезка $[a,b]$.
+    \end{minipage}
+  \end{figure}
+\end{definition}
+
+Рассмотрим $\beta_{\delta} = \{(P,\xi):\quad \lambda(P) < \delta\}, \ \beta_{\delta}\subset P_{\xi}$:
+
+\begin{statement}
+  Множество $\beta = \{\beta_{\delta}:\quad \delta > 0\}$ является базой на $\Re_{\xi}$.
+\end{statement}
+
+\begin{proof}
+  (утверждения 2.3.1.).
+  \begin{enumerate}
+    \item $\forall\delta>0 \ \beta_{\delta}$ - непусто.\\
+
+          В самом деле, пусть отрезок $[a;b]$ поделен на $n$ равных частей, причем $n$ выбирается из соображений,
+          чтобы $\Delta x_{i} = \Delta x \quad \forall i = \overline{1,n} \ (1,\ldots,n), \ \Delta x < \delta$.\\
+
+          Пусть $\xi_{i} \in [x_{i-1};x_{i}]$ - середины отрезков $[x_{i-1};x_{i}]$.
+
+    \item Покажем, что $\forall \beta_{\delta_{1}},\beta_{\delta_{2}} \in \beta \ \exists \beta_{\delta_{3}}
+          \subset \beta_{\delta_{1}} \cap \beta_{\delta_{2}}$.\\
+
+          Пусть заданы $\delta_{1}>0, \delta_{2}>0$. Покажем, что $\exists\beta_{3}>0$:\\
+          $\beta_{\delta_{3}} \subset \beta_{\delta_{1}} \cap \beta_{\delta_{2}}$. Если $\delta_{1} < \delta_{2}$,
+          то $\delta_{3} = \delta_{1}$ или $\delta_{3} = \frac{\delta_{1}}{2}$. 
+  \end{enumerate}
+\end{proof}
+
+\begin{definition}[!]
+  Пусть $f:[a;b]\rightarrow\mathbb{R}, \ (P,\xi)$ - разбиение отрезка $[a;b]$ с отмеченными точками. Составим сумму:
+  \begin{equation*}
+    \sigma(f,(P,\xi)) = \sum_{k=1}^{n}f(\xi_{k})\Delta x_{k}
+  \end{equation*}
+  Можно смотреть на $\sigma$ для фиксированной функции $f(x)$ как на функцию, сопоставляющую разбиение $(P,\xi)\in
+  \Re_{\xi}$ сумме $\sum_{k=1}^{n}f(\xi_{k})\Delta x_{k}$, то есть $\sigma_{f}:\Re_{\xi}\rightarrow\mathbb{R}$
+  (то есть $(P,\xi)$ - аргумент функции $\sigma$).\\
+
+  Говорят, что функция $f:[a;b]\rightarrow\mathbb{R}$ интегрируема по Риману на $[a;b]$, если:
+  \begin{equation*}
+    \exists\underset{\lambda(P)\rightarrow0}{\lim}\sigma_{f}((P,\xi)) = \underset{\lambda(P)\rightarrow0}{\lim}
+    \sum_{k=1}^{n}f(\xi_{k})\Delta x_{k}
+  \end{equation*}
+  Или, что то же самое, если $\forall\epsilon>0 \ \exists\delta>0$ и соответствующий элемент $\beta_{\delta} \in
+  \beta:\quad \forall$ разбиения $(P,\xi): \ \lambda(P) < \delta$ выполняется неравенство \\ $| \sigma_{f} 
+  ((P,\xi)) - I | < 0$:
+  \begin{equation*}
+    I = \underset{\lambda(P)\rightarrow0}{\lim}\sigma_{f}((P,\xi)) = \int_{a}^{b}f(x)dx
+  \end{equation*}
+\end{definition}
+
+Обозначим базу $\beta$ из утверждения 2.3.1. как $\lambda(P)\rightarrow0$.
+
+\begin{theorem}[необходимое условие интегрируемости функции]
+  $*\_*$
+
+  Если $f:[a;b]\rightarrow\mathbb{R}$ интегрируема на $[a;b]$ (то есть $f\in\mathbb{R}[a;b]$), то \\ $f$
+  ограничена на $[a;b]$.
+\end{theorem}
+
+\begin{proof}
+  От противного:
+
+  Пусть $f$ - неограничена, то есть $\forall M>0 \ \exists x\in[a;b]: \ | f(x) | > M$.\\
+
+  Покажем, что в этом случае функция $\sigma_{f}: \Re\xi\rightarrow\mathbb{R}$ не имеет предела по базе
+  $\lambda(P)\rightarrow0$. 
+\end{proof}
 
 \end{document}
