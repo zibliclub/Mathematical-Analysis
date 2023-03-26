@@ -17,6 +17,7 @@
 \theoremstyle{definition}
 \newtheorem{definition}{Определение}[section]
 \newtheorem{example}{Пример}
+\newtheorem*{effect}{Следствие}
 \newtheorem{statement}{Утверждение}[section]
 \newtheorem*{remark}{Замечание}
 \newtheorem{lemma}{Лемма}[section]
@@ -660,11 +661,11 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
           Пусть $\xi_{i} \in [x_{i-1};x_{i}]$ - середины отрезков $[x_{i-1};x_{i}]$.
 
     \item Покажем, что $\forall \beta_{\delta_{1}},\beta_{\delta_{2}} \in \beta \ \exists \beta_{\delta_{3}}
-          \subset \beta_{\delta_{1}} \cap \beta_{\delta_{2}}$.\\
+            \subset \beta_{\delta_{1}} \cap \beta_{\delta_{2}}$.\\
 
           Пусть заданы $\delta_{1}>0, \delta_{2}>0$. Покажем, что $\exists\beta_{3}>0$:\\
           $\beta_{\delta_{3}} \subset \beta_{\delta_{1}} \cap \beta_{\delta_{2}}$. Если $\delta_{1} < \delta_{2}$,
-          то $\delta_{3} = \delta_{1}$ или $\delta_{3} = \frac{\delta_{1}}{2}$. 
+          то $\delta_{3} = \delta_{1}$ или $\delta_{3} = \frac{\delta_{1}}{2}$.
   \end{enumerate}
 \end{proof}
 
@@ -674,7 +675,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
     \sigma(f,(P,\xi)) = \sum_{k=1}^{n}f(\xi_{k})\Delta x_{k}
   \end{equation*}
   Можно смотреть на $\sigma$ для фиксированной функции $f(x)$ как на функцию, сопоставляющую разбиение $(P,\xi)\in
-  \Re_{\xi}$ сумме $\sum_{k=1}^{n}f(\xi_{k})\Delta x_{k}$, то есть $\sigma_{f}:\Re_{\xi}\rightarrow\mathbb{R}$
+    \Re_{\xi}$ сумме $\sum_{k=1}^{n}f(\xi_{k})\Delta x_{k}$, то есть $\sigma_{f}:\Re_{\xi}\rightarrow\mathbb{R}$
   (то есть $(P,\xi)$ - аргумент функции $\sigma$).\\
 
   Говорят, что функция $f:[a;b]\rightarrow\mathbb{R}$ интегрируема по Риману на $[a;b]$, если:
@@ -683,8 +684,8 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
     \sum_{k=1}^{n}f(\xi_{k})\Delta x_{k}
   \end{equation*}
   Или, что то же самое, если $\forall\epsilon>0 \ \exists\delta>0$ и соответствующий элемент $\beta_{\delta} \in
-  \beta:\quad \forall$ разбиения $(P,\xi): \ \lambda(P) < \delta$ выполняется неравенство \\ $| \sigma_{f} 
-  ((P,\xi)) - I | < 0$:
+    \beta:\quad \forall$ разбиения $(P,\xi): \ \lambda(P) < \delta$ выполняется неравенство \\ $| \sigma_{f}
+    ((P,\xi)) - I | < 0$:
   \begin{equation*}
     I = \underset{\lambda(P)\rightarrow0}{\lim}\sigma_{f}((P,\xi)) = \int_{a}^{b}f(x)dx
   \end{equation*}
@@ -702,10 +703,130 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 \begin{proof}
   От противного:
 
-  Пусть $f$ - неограничена, то есть $\forall M>0 \ \exists x\in[a;b]: \ | f(x) | > M$.\\
+  Допустим, что $f$ интегрируема на $[a;b]$, но неограничена, то есть: $\forall M>0 \ \exists x \in
+    [a;b]: \quad | f(x) | > M$. Покажем, что функция $\sigma ((P,\xi))$ не имеет предела по базе на $[a;b]$.
 
-  Покажем, что в этом случае функция $\sigma_{f}: \Re\xi\rightarrow\mathbb{R}$ не имеет предела по базе
-  $\lambda(P)\rightarrow0$. 
+  То есть $\exists \epsilon > 0: \ \forall \delta > 0 \ \exists (P',\xi')$ и $(P'',\xi''): \quad
+    \lambda(P') < \delta, \ \lambda(P'')<\delta \ (\lambda(P'') = \max\Delta x_{i})$, но
+  $(\sigma(P'',\xi'') - \sigma(P'',\xi'')) \geqslant \epsilon$.
+
+  Положим, $\epsilon = 1$. Пусть $\delta > 0$ задана. Выберем разбиение с отмеченными точками $(P',\xi')$
+  такое, что $\lambda(P')<\delta, \ P' = \{a = x_{0},x_{1},\ldots,x_{n}=b\}, \ \epsilon_{i} \in [x_{1},
+    \ldots,x_{n}]$. Поскольку функция $f$ неограничена на $[a;b]$, то существует хотя бы один элемент
+  разбиения $[x_{i-1},x_{i}] = \Delta i:$ функция $f$ неограничена на (? Спасибо Максим). В качестве
+  $P^{n}$ возьмем $P', \ \xi'' = \{\xi_{1}',\xi_{2}',\ldots,\xi_{i}'',\ldots,\xi_{n}'\}, \
+    \lambda(P'')<\delta$ и $|f(\xi_{i}'') - f(\xi_{i}')| > \frac{1}{\Delta x_{i}}$. Разбиения $P'$ и $P''$
+  совпадают, точки разбиения так же совпадают, кроме $\xi_{i}''$.
+
+  Рассмотрим $| \sigma((P'',\xi'')) - \sigma((P',\xi')) | = | \sum_{k=1}^{n}\Delta x_{k}f(\xi_{k}') -
+    \sum_{k=1}^{n}\Delta x_{k}f(\xi_{k}'') | = | \Delta x_{i}(f(\xi_{i}'') - f(\xi_{i}')) | >
+    \frac{\Delta x_{i}}{\Delta x_{i}} = 1 = \epsilon$.
 \end{proof}
+
+\section{Критерий интегрируемости}
+
+\subsection{Суммы Дарбу}
+
+\begin{definition}[нижняя/верхняя суммы Дарбу]
+  Пусть $f[a;b] \rightarrow \mathbb{R}, \ P$ - произвольное разбиение отрезка $[a;b]$. Числа
+  $\underline{S}(P) = \sum_{k=1}^{n}m_{k}\Delta x_{k}$ и $\overline{S}(P) = \sum_{k=1}^{n}M_{k}
+    \Delta x_{k}$, где $m_{k} = \underset{\xi \in \Delta k}{\inf}f(\xi), \ M_{k} = \underset{\xi\in\Delta k}
+    {\sup}f(\xi)$, называются \textbf{нижней} и \textbf{верхней суммами Дарбу}, отвечающими разбиению $P$.
+
+    {\Huge ДВА ГРАФИКА}
+\end{definition}
+
+\begin{theorem}[свойства сумм Дарбу]
+  Свойства:
+  \begin{enumerate}
+    \item $\forall(P,\xi) \ \underline{S}(P)\leqslant\sigma_{f}((P,\xi))\leqslant\overline{S}(P)$
+    \item Если разбиение $P'$ получено из разбиения $P$ добавлением новых точек, то $\underline{S}
+            (P') \geqslant \underline{S}(P)$ и $\overline{S}(P')\leqslant\overline{S}(P)$
+    \item $\forall P_{1},P_{2} \quad \underline{S}(P_{1})\leqslant\overline{S}(P_{2})$
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  (теоремы 2.4.1)
+
+  \begin{enumerate}
+    \item $\underline{S}(P) = \sum_{k=1}^{n}m_{k}\Delta x_{k} \leqslant \sum_{k=1}^{n}f(\xi_{k})
+            \Delta x_{k} \leqslant \sum_{k=1}^{n}M_{k}\Delta x_{k} = \overline{S}(P)$, где $f(\xi_{k}) =
+            \sigma((P,\xi))$, вроде
+    \item Пусть $P$ - произвольное разбиение отрезка $[a;b]$. Построим $P'$. Добавим на элемент
+    разбиения $\Delta i$ новую точку $x'\in [x_{i-1};x_{i}]$.
+
+    Пусть $m_{i}' = \underset{\xi\in[x_{i-1},x_{i}]}{\inf}f(\xi)$ и $m_{i}'' = \underset
+    {\xi\in[x_{i}',x_{i}]}{\inf}f(\xi), \ m_{i} = \underset{\xi\in[x_{i-1};x_{i}]}{\inf}f(\xi)$,
+    имеем $m_{i}\leqslant m_{i}', \ m_{i} \leqslant m_{i}''$.
+
+    Тогда $\underline{S}(P') - \underline{S}(P) = \sum_{k=1}^{i-1}\Delta x_{k}m_{k} +
+    m_{i}' | x' - x_{i-1} | + m_{i}''| x_{i} - x' | + \sum_{k=i+1}^{n}m_{k}\Delta x_{k} - \sum_{k=1}^{n}
+    \Delta x_{k}m_{k} = m_{i}'| x' - x_{i-1} | + m_{i}''| x_{i} - x' | - m_{i}\Delta x_{i} \geqslant 0
+    \implies \underline{S}(P') \geqslant S(P)$ (вероятно, куча индексов - неправильные).
+
+    Аналогично доказывается для $\overline{S}(P')\leqslant\overline{S}(P)$.
+    \item Пусть $P_{1},P_{2}$ - произвольные разбиения отрезка $[a;b]$.
+    
+    Возьмем разбиение $P = P_{1}\cap P_{2}$. Тогда, с одной стороны, $P$ получено из $P_{1}$ добавлением
+    точек, а с другой стороны - из $P_{2}$ добавлением точек.
+
+    Тогда $\underline{P_{i}} \leqslant \underline{S}(P)$ и $\overline{S}(P_{i})\geqslant S(P)$.
+
+    Тогда верно, что $\underline{S}(P_{2})\leqslant \underline{S}(P)$ и $\overline{S}(P_{2})
+    \geqslant \overline{S}(P) \implies \underline{S}(P_{1}) \leqslant \underline{S}(P) \leqslant
+    \overline{S}(P)\leqslant \overline{S}(P_{2})$.
+  \end{enumerate}
+\end{proof}
+
+\begin{effect}
+  Множество нижних сумм Дарбу ограничено сверху. Множество верхних сумм Дарбу ограничено снизу.
+\end{effect}
+
+\begin{definition}[верхний/нижний интеграл Дарбу]
+  Числа $\underline{\mathfrak{I}}=\sup\underline{S}(P)$ и $\overline{\mathfrak{I}}=\inf\overline{S}(P)$ называются
+  \textbf{нижним} и \textbf{верхним интегралом Дарбу}.
+\end{definition}
+
+Рассмотрим множество разбиений с отмеченными точками отрезка $[a;b] \ \Re = \{(P,\xi)\}$. Построим функцию $\underline{S}:
+\Re_{\xi}\rightarrow\mathbb{R}$ и $\underline{S}((P,\xi)) = \underline{S}(P)$. Аналогично определим $\overline{S}:
+\Re_{\xi}\rightarrow\mathbb{R}$ и $\overline{S}((P,\xi)) = \overline{S}(P)$.
+
+Таким образом сумму Дарбу можно представить как функции на множестве разбиений с отмеченными точками отрезка $[a;b]$.
+
+\begin{theorem}[критерий интегрируемости]
+  Функция $f:[a;b]\rightarrow\mathbb{R}$ интегрируема на $[a;b] \iff \underset{\lambda (P)\rightarrow0}{\lim}
+  (\overline{S}(P) - \underline{S}(P)) = 0$.  
+\end{theorem}
+
+\begin{proof}
+  (теоремы 2.4.2)
+
+  $"\rightarrow"$ Пусть $f\in\mathbb{R} \ ([a;b])$ (то есть интегрируема на $[a;b]$), то есть $\forall \epsilon > 0 \
+  \forall (P,\xi): \ \lambda (P) < \delta \implies | \sigma_{f} ((P,\xi)) - I | < \epsilon$.
+
+  \begin{lemma}
+    $\forall P \ \underline{S}(P) = \underset{\xi}{\inf} \sigma_{f}((P,\xi))$ и $\overline{S}(P)=\underset{\xi}{\sup}
+    \sigma_{f}((P,\xi))$
+  \end{lemma}
+
+  \begin{proof}
+    (леммы 2.4.1)
+
+    $\forall P \ \underline{S}(P) \leqslant \sigma_{f}((P,\xi))$.
+
+    Покажем, что $\forall \epsilon > 0 \ \exists \xi = \{\xi_{1},\xi_{2},\ldots,\xi_{n}\}: \ \underline{S}(P) + \epsilon
+    > \sigma_{f}(P,\xi)$.
+
+    Выберем $\xi_{1},\xi_{2},\ldots,\xi_{n}: \ f(\xi_{i}) < m_{i} + \frac{\epsilon}{b-a}$.
+
+    Тогда $\sigma_{f}(P,\xi) = \sum_{k=1}^{n}f(\xi_{k})\Delta x_{k} < \sum_{k=1}^{n}(m_{k} + \frac{\epsilon}{b-a})
+    \Delta x_{k} = \sum_{k=1}^{n}m_{k}\Delta x_{k} + \frac{\epsilon}{b-a}\sum_{k=1}^{n}\Delta x_{k} = \underline{S}(P)
+    + \epsilon \implies \underline{S}(P) = \underset{\xi}{\inf}\sigma_{f}(P,\xi)$.
+
+    Аналогично для $\overline{S}(P) = \underset{\xi}{\sup}\sigma_{f}(P,\xi)$.
+  \end{proof}
+\end{proof}
+
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.17)  22 MAR 2023 20:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.17)  27 MAR 2023 01:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -531,27 +531,27 @@ File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 ))
 \openout1 = `MatAn.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Info: Redefining \th on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Info: Redefining \th on input line 30.
  (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count297
@@ -571,16 +571,16 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 30.
  (MatAn.out) (MatAn.out)
 \@outlinefile=\write3
 \openout3 = `MatAn.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
  (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
  (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -593,395 +593,419 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.33 \chapter
+l.34 \chapter
              {Р”РёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅРѕРµ РёСЃС‡РёСЃР»РµРЅРёРµ} [1
 
 ]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
 
-Overfull \hbox (2.49733pt too wide) in paragraph at lines 35--35
+Overfull \hbox (2.49733pt too wide) in paragraph at lines 36--36
 []\T2A/cmr/bx/n/14.4 Первообразная и неопре-де-лен-ный ин-те-грал 
  []
 
 [2
 
 ]
-Overfull \hbox (14.59404pt too wide) in paragraph at lines 114--118
+Overfull \hbox (14.59404pt too wide) in paragraph at lines 115--119
 []\T2A/cmr/m/n/10 Возьмем про-из-вод-ную по $\OML/cmm/m/it/10 x$ \T2A/cmr/m/n/10 от обе-их ча-стей ра-вен-ства: $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ^^Lg\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ))[] =
  []
 
 
-Overfull \hbox (11.70532pt too wide) in paragraph at lines 131--138
+Overfull \hbox (11.70532pt too wide) in paragraph at lines 132--139
 []$[] [] \OML/cmm/m/it/10 xdx \OT1/cmr/m/n/10 = [] = \OML/cmm/m/it/10 x [] x \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 =
  []
 
 [3]
-Overfull \hbox (16.80768pt too wide) in paragraph at lines 160--166
+Overfull \hbox (16.80768pt too wide) in paragraph at lines 161--167
 []\T2A/cmr/bx/n/10 Определение 1.1.4 \T2A/cmr/m/n/10 (Ра-ци-о-наль-ная дробь)\T2A/cmr/bx/n/10 . \T2A/cmr/m/n/10 Функ-ция ви-да $[]$, где $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;  Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (5.81934pt too wide) in paragraph at lines 160--166
+Overfull \hbox (5.81934pt too wide) in paragraph at lines 161--167
 \T2A/cmr/m/n/10 - мно-го-чле-ны, на-зы-ва-ет-ся \T2A/cmr/bx/n/10 ра-ци-о-наль-ной дро-бью\T2A/cmr/m/n/10 , или ра-ци-о-наль-ной функ-
  []
 
 
-Overfull \hbox (1.85526pt too wide) in paragraph at lines 160--166
+Overfull \hbox (1.85526pt too wide) in paragraph at lines 161--167
 \T2A/cmr/m/n/10 Если $[] \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 < [] Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$\T2A/cmr/m/n/10 , то дробь на-зы-ва-ет-ся \T2A/cmr/bx/n/10 пра-виль-ной\T2A/cmr/m/n/10 , ина-че - \T2A/cmr/bx/n/10 непра-
  []
 
 [4]
-Overfull \hbox (33.65671pt too wide) in paragraph at lines 197--211
+Overfull \hbox (33.65671pt too wide) in paragraph at lines 198--212
 []$[] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] = [] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--211
+Underfull \hbox (badness 10000) in paragraph at lines 198--212
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--224
+Underfull \hbox (badness 10000) in paragraph at lines 216--225
 [] [] [] \OT1/cmr/m/n/10 = [] =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--224
+Underfull \hbox (badness 10000) in paragraph at lines 216--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--232
+Underfull \hbox (badness 10000) in paragraph at lines 226--233
 []$\OML/cmm/m/it/10 I \OT1/cmr/m/n/10 = [] = [] [] [] =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--232
+Underfull \hbox (badness 10000) in paragraph at lines 226--233
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--235
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
 
  []
 
 
-Overfull \hbox (32.8028pt too wide) in paragraph at lines 241--256
+Overfull \hbox (32.8028pt too wide) in paragraph at lines 242--257
 []$[] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] = [] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] [] [] +
  []
 
 
-Overfull \hbox (43.38599pt too wide) in paragraph at lines 241--256
+Overfull \hbox (43.38599pt too wide) in paragraph at lines 242--257
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 ) [] [] = [][] + [][][] =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--256
+Underfull \hbox (badness 10000) in paragraph at lines 242--257
 
  []
 
 
-Overfull \hbox (12.46149pt too wide) in paragraph at lines 257--275
+Overfull \hbox (12.46149pt too wide) in paragraph at lines 258--276
 \T2A/cmr/m/n/10 грал $[] [] \OT1/cmr/m/n/10 = [] =
  []
 
 [5
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 290--292
+Underfull \hbox (badness 10000) in paragraph at lines 291--293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--299
+Underfull \hbox (badness 10000) in paragraph at lines 294--300
 
  []
 
 
-Overfull \hbox (7.65678pt too wide) in paragraph at lines 300--304
+Overfull \hbox (7.65678pt too wide) in paragraph at lines 301--305
 []\OT1/cmr/m/n/10 [(\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 Q[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )]$\T2A/cmr/m/n/10 . Име-ем, $\OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = [];  [] \OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \U/msa/m/n/10 6 []\OT1/cmr/m/n/10 ([] \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--304
+Underfull \hbox (badness 10000) in paragraph at lines 301--305
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--322
+Underfull \hbox (badness 10000) in paragraph at lines 319--323
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--325
+Underfull \hbox (badness 10000) in paragraph at lines 324--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--328
+Underfull \hbox (badness 10000) in paragraph at lines 327--329
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--331
+Underfull \hbox (badness 10000) in paragraph at lines 330--332
 
  []
 
 [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 332--334
+Underfull \hbox (badness 10000) in paragraph at lines 333--335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--338
+Underfull \hbox (badness 10000) in paragraph at lines 336--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--355
+Underfull \hbox (badness 10000) in paragraph at lines 354--356
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--368
+Underfull \hbox (badness 10000) in paragraph at lines 357--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--380
+Underfull \hbox (badness 10000) in paragraph at lines 379--381
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 409--412
+Underfull \hbox (badness 10000) in paragraph at lines 410--413
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  []
 
 
-Overfull \hbox (7.84045pt too wide) in paragraph at lines 428--430
+Overfull \hbox (7.84045pt too wide) in paragraph at lines 429--431
 []\T2A/cmr/bx/n/10 Пример 5. $[] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] + [] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] + [] []\OML/cmm/m/it/10 dx$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
 
 
-Overfull \hbox (15.35068pt too wide) in paragraph at lines 435--438
+Overfull \hbox (15.35068pt too wide) in paragraph at lines 436--439
 []$[] []\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [] + \OML/cmm/m/it/10 B [] [] \OT1/cmr/m/n/10 = [] + [] +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--438
+Underfull \hbox (badness 10000) in paragraph at lines 436--439
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--441
+Underfull \hbox (badness 10000) in paragraph at lines 440--442
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--446
+Underfull \hbox (badness 10000) in paragraph at lines 445--447
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--450
+Underfull \hbox (badness 10000) in paragraph at lines 448--451
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 451--452
+Underfull \hbox (badness 10000) in paragraph at lines 452--453
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 453--454
+Underfull \hbox (badness 10000) in paragraph at lines 454--455
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--459
+Underfull \hbox (badness 10000) in paragraph at lines 456--460
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 462--464
+Underfull \hbox (badness 10000) in paragraph at lines 463--465
 
  []
 
 [9]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 474--476
+Underfull \hbox (badness 10000) in paragraph at lines 475--477
 
  []
 
-<graph1.png, id=166, 237.0456pt x 173.9298pt>
+<graph1.png, id=176, 237.0456pt x 173.9298pt>
 File: graph1.png Graphic file (type png)
 <use graph1.png>
-Package pdftex.def Info: graph1.png  used on input line 479.
+Package pdftex.def Info: graph1.png  used on input line 480.
 (pdftex.def)             Requested size: 165.93077pt x 121.75002pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--484
+Underfull \hbox (badness 10000) in paragraph at lines 484--485
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--487
+Underfull \hbox (badness 10000) in paragraph at lines 486--488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--489
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 490--493
+Underfull \hbox (badness 10000) in paragraph at lines 491--494
 
  []
 
 [10
 
  <./graph1.png>]
-Overfull \hbox (1.52338pt too wide) in paragraph at lines 494--496
+Overfull \hbox (1.52338pt too wide) in paragraph at lines 495--497
 []\T2A/cmr/m/n/10 Этот пре-дел на-зы-ва-ет-ся \T2A/cmr/bx/n/10 ин-те-гра-лом Ри-ма-на \T2A/cmr/m/n/10 функ-ции $\OML/cmm/m/it/10 f$ \T2A/cmr/m/n/10 на $\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 b\OT1/cmr/m/n/10 ]$\T2A/cmr/m/n/10 . Класс
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--502
+Underfull \hbox (badness 10000) in paragraph at lines 502--503
 
  []
 
 
-LaTeX Warning: Command \o invalid in math mode on input line 505.
+LaTeX Warning: Command \o invalid in math mode on input line 506.
 
 
-LaTeX Warning: Command \o invalid in math mode on input line 505.
+LaTeX Warning: Command \o invalid in math mode on input line 506.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--522
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 531--532
+Underfull \hbox (badness 10000) in paragraph at lines 532--533
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 564--566
+Underfull \hbox (badness 10000) in paragraph at lines 565--567
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 591--592
+Underfull \hbox (badness 10000) in paragraph at lines 592--593
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--597
+Underfull \hbox (badness 10000) in paragraph at lines 594--598
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 598--603
+Underfull \hbox (badness 10000) in paragraph at lines 599--604
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 604--607
+Underfull \hbox (badness 10000) in paragraph at lines 605--608
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 608--610
+Underfull \hbox (badness 10000) in paragraph at lines 609--611
 
  []
 
 [12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 611--616
+Underfull \hbox (badness 10000) in paragraph at lines 612--617
 
  []
 
-<graph2.png, id=205, 237.2865pt x 49.6254pt>
+<graph2.png, id=215, 237.2865pt x 49.6254pt>
 File: graph2.png Graphic file (type png)
 <use graph2.png>
-Package pdftex.def Info: graph2.png  used on input line 637.
+Package pdftex.def Info: graph2.png  used on input line 638.
 (pdftex.def)             Requested size: 142.37299pt x 29.77545pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 655--656
+Underfull \hbox (badness 10000) in paragraph at lines 656--657
 
  []
 
 
-Overfull \hbox (16.19026pt too wide) in paragraph at lines 657--659
+Overfull \hbox (16.19026pt too wide) in paragraph at lines 658--660
 \OML/cmm/m/it/10 n$ \T2A/cmr/m/n/10 вы-би-ра-ет-ся из со-об-ра-же-ний, что-бы $\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 = ^^A\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 i \OT1/cmr/m/n/10 = [] (1\OML/cmm/m/it/10 ; [] ; n\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 x <
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 657--659
+Underfull \hbox (badness 10000) in paragraph at lines 658--660
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 662--664
+Underfull \hbox (badness 10000) in paragraph at lines 663--665
 
  []
 
 [13 <./graph2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 675--679
+Underfull \hbox (badness 10000) in paragraph at lines 676--680
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--706
-
+Overfull \hbox (11.77287pt too wide) in paragraph at lines 721--724
+[]\T2A/cmr/m/n/10 Рассмотрим $\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ^^[\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 P[]; ^^X[]\OT1/cmr/m/n/10 )) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^[\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 P[]; ^^X[]\OT1/cmr/m/n/10 ))\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 j [][] \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 x[]f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^X[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ [][] \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 x[]f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^X[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 =
  []
 
-[14] (MatAn.aux)
+
+Overfull \hbox (2.67319pt too wide) in paragraph at lines 731--735
+\T2A/cmr/m/n/10 - про-из-воль-ное раз-би-е-ние от-рез-ка $\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 b\OT1/cmr/m/n/10 ]$\T2A/cmr/m/n/10 . Чис-ла $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 x[]$ \T2A/cmr/m/n/10 и $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ) =
+ []
+
+[14]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 787.
+ (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Overfull \hbox (7.10225pt too wide) in paragraph at lines 787--789
+[]\T2A/cmr/bx/n/10 Определение 2.4.2 \T2A/cmr/m/n/10 (верх-ний/нижний ин-те-грал Дар-бу)\T2A/cmr/bx/n/10 . \T2A/cmr/m/n/10 Чис-ла $[] \OT1/cmr/m/n/10 = [] [](\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (14.36363pt too wide) in paragraph at lines 791--794
+[]\T2A/cmr/m/n/10 Рассмотрим мно-же-ство раз-би-е-ний с от-ме-чен-ны-ми точ-ка-ми от-рез-ка $\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 b\OT1/cmr/m/n/10 ] \OMS/cmsy/m/n/10 < \OT1/cmr/m/n/10 =
+ []
+
+[15]
+Overfull \hbox (0.3051pt too wide) in paragraph at lines 823--826
+[]\T2A/cmr/m/n/10 Тогда $\OML/cmm/m/it/10 ^^[[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P; ^^X\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^X[]\OT1/cmr/m/n/10 )^^A\OML/cmm/m/it/10 x[] < [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 + [])^^A\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 +
+ []
+
+[16] (MatAn.aux)
 Package rerunfilecheck Info: File `MatAn.out' has not changed.
-(rerunfilecheck)             Checksum: DE59A9C0B4B6CE94250CED20CD25F535;3287.
+(rerunfilecheck)             Checksum: 8B525EB81D6DBB550DC117993156A342;3684.
  ) 
 Here is how much of TeX's memory you used:
- 12290 strings out of 476339
- 188770 string characters out of 5788119
+ 12324 strings out of 476339
+ 189264 string characters out of 5788119
  1884340 words of memory out of 5000000
- 32429 multiletter control sequences out of 15000+600000
- 531915 words of font info for 79 fonts, out of 8000000 for 9000
+ 32442 multiletter control sequences out of 15000+600000
+ 532623 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,76p,503b,629s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx2074.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx2488.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1200.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1728.pk><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MatAn.pdf (15 pages, 359756 bytes).
+ <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm2488.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx2074.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx2488.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1200.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1728.pk><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on MatAn.pdf (17 pages, 385711 bytes).
 PDF statistics:
- 602 PDF objects out of 1000 (max. 8388607)
- 97 named destinations out of 1000 (max. 500000)
- 99 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 663 PDF objects out of 1000 (max. 8388607)
+ 112 named destinations out of 1000 (max. 500000)
+ 115 words of extra memory for PDF output out of 10000 (max. 10000000)
 
