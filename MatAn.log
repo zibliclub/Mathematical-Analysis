@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.18)  27 MAR 2023 14:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.17)  27 MAR 2023 22:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,7 +6,7 @@ entering extended mode
 **d:/latex/GitHub/Mathematical-Analysis/MatAn.tex
 (d:/latex/GitHub/Mathematical-Analysis/MatAn.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-02-22> (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+L3 programming layer <2023-02-07> (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2022/07/02 v1.4n Standard LaTeX document class
 (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
 File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
@@ -524,11 +524,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count296
 \l__pdf_internal_box=\box56
-) (MatAn.aux
-LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 19.
- (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2acmr.fd
-File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-))
+) (MatAn.aux)
 \openout1 = `MatAn.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -546,6 +542,10 @@ LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 30.
+LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 30.
+ (C:\Users\zibli\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2acmr.fd
+File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
 LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
@@ -572,7 +572,6 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring OFF on input line 30.
- (MatAn.out) (MatAn.out)
 \@outlinefile=\write3
 \openout3 = `MatAn.out'.
 
@@ -585,7 +584,8 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/zibli/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (MatAn.toc)
+{C:/Users/zibli/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+No file MatAn.toc.
 \tf@toc=\write4
 \openout4 = `MatAn.toc'.
 
@@ -841,7 +841,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 475--477
 
  []
 
-<graph1.png, id=176, 237.0456pt x 173.9298pt>
+<graph1.png, id=118, 237.0456pt x 173.9298pt>
 File: graph1.png Graphic file (type png)
 <use graph1.png>
 Package pdftex.def Info: graph1.png  used on input line 480.
@@ -931,7 +931,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 612--617
 
  []
 
-<graph2.png, id=215, 237.2865pt x 49.6254pt>
+<graph2.png, id=160, 237.2865pt x 49.6254pt>
 File: graph2.png Graphic file (type png)
 <use graph2.png>
 Package pdftex.def Info: graph2.png  used on input line 638.
@@ -990,37 +990,138 @@ Overfull \hbox (0.3051pt too wide) in paragraph at lines 823--826
 []\T2A/cmr/m/n/10 Тогда $\OML/cmm/m/it/10 ^^[[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P; ^^X\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^X[]\OT1/cmr/m/n/10 )^^A\OML/cmm/m/it/10 x[] < [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 + [])^^A\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 +
  []
 
+
+d:/latex/GitHub/Mathematical-Analysis/MatAn.tex:843: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.843 ...erline{S}(P) < I + \frac{3\epsilon}{2} \\
+                                                  (+)\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+d:/latex/GitHub/Mathematical-Analysis/MatAn.tex:843: Missing $ inserted.
+<inserted text> 
+                $
+l.843 ...erline{S}(P) < I + \frac{3\epsilon}{2} \\
+                                                  (+)\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+d:/latex/GitHub/Mathematical-Analysis/MatAn.tex:843: Missing } inserted.
+<inserted text> 
+                }
+l.843 ...erline{S}(P) < I + \frac{3\epsilon}{2} \\
+                                                  (+)\\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+d:/latex/GitHub/Mathematical-Analysis/MatAn.tex:843: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.843 ...erline{S}(P) < I + \frac{3\epsilon}{2} \\
+                                                  (+)\\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+d:/latex/GitHub/Mathematical-Analysis/MatAn.tex:844: Missing $ inserted.
+<inserted text> 
+                $
+l.844 ...nderline{S}(P) < -I + \frac{3\epsilon}{2}
+                                                  $
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+d:/latex/GitHub/Mathematical-Analysis/MatAn.tex:844: Missing $ inserted.
+<inserted text> 
+                $
+l.844 ...nderline{S}(P) < -I + \frac{3\epsilon}{2}
+                                                  $
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+d:/latex/GitHub/Mathematical-Analysis/MatAn.tex:844: Missing $ inserted.
+<inserted text> 
+                $
+l.844 ...nderline{S}(P) < -I + \frac{3\epsilon}{2}
+                                                  $
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+d:/latex/GitHub/Mathematical-Analysis/MatAn.tex:844: Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.844 ...nderline{S}(P) < -I + \frac{3\epsilon}{2}
+                                                  $
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+d:/latex/GitHub/Mathematical-Analysis/MatAn.tex:845: Missing } inserted.
+<inserted text> 
+                }
+l.845   \end{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 [16]
-Overfull \hbox (19.31564pt too wide) in paragraph at lines 865--867
+Overfull \hbox (19.31564pt too wide) in paragraph at lines 869--871
 []\T2A/cmr/bx/n/10 Определение 2.4.3. \T2A/cmr/m/n/10 Обо-зна-чим $\OML/cmm/m/it/10 M[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^X\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ []\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^X\OT1/cmr/m/n/10 ) = []\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (22.93001pt too wide) in paragraph at lines 899--907
+Overfull \hbox (22.93001pt too wide) in paragraph at lines 903--911
 \T2A/cmr/m/n/10 зок раз-би-е-ния $\OML/cmm/m/it/10 P$\T2A/cmr/m/n/10 . (гра-фик, по-смот-реть у Мак-си-ма). $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (3.8683pt too wide) in paragraph at lines 899--907
+Overfull \hbox (3.8683pt too wide) in paragraph at lines 903--911
 \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 )^^A\OML/cmm/m/it/10 x[] \U/msa/m/n/10 6 [][] \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 =$ \T2A/cmr/m/n/10 (вспом-ним, что $\OML/cmm/m/it/10 ^^U\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ) = []\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 x[]; \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 x[]; [] ; \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 g$\T2A/cmr/m/n/10 )
  []
 
 [17] [18] (MatAn.aux)
-Package rerunfilecheck Info: File `MatAn.out' has not changed.
-(rerunfilecheck)             Checksum: 8B525EB81D6DBB550DC117993156A342;3684.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `MatAn.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `MatAn.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  8B525EB81D6DBB550DC117993156A342;3684.
  ) 
 Here is how much of TeX's memory you used:
- 12332 strings out of 476334
- 189352 string characters out of 5787971
- 1884382 words of memory out of 5000000
- 32450 multiletter control sequences out of 15000+600000
+ 12312 strings out of 476339
+ 188987 string characters out of 5788119
+ 1884340 words of memory out of 5000000
+ 32431 multiletter control sequences out of 15000+600000
  533331 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,76p,503b,629s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm2488.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx2074.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx2488.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1200.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1728.pk><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MatAn.pdf (19 pages, 425530 bytes).
+ 75i,11n,76p,294b,629s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm2488.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx2074.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx2488.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1200.pk> <C:\Users\zibli\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1728.pk><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/zibli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on MatAn.pdf (19 pages, 416663 bytes).
 PDF statistics:
- 692 PDF objects out of 1000 (max. 8388607)
+ 640 PDF objects out of 1000 (max. 8388607)
  117 named destinations out of 1000 (max. 500000)
- 115 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
