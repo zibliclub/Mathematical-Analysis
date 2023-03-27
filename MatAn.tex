@@ -826,6 +826,112 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
     Аналогично для $\overline{S}(P) = \underset{\xi}{\sup}\sigma_{f}(P,\xi)$.
   \end{proof}
+
+  $I - \epsilon < \sigma_{f}(P,\xi) < I + \epsilon, \ I - \frac{\epsilon}{2} < \sigma_{f}(P,\xi) < I + \frac
+  {\epsilon}{2}$. Из леммы 2.4.1: $\underline{S}(P) + \epsilon > \sigma_{f}(P,\xi) \implies \underline{S}(P) >
+  \sigma_{f} (P,\xi) - \epsilon > \sigma_{f}(P,\xi) - \frac{\epsilon}{2} \ (I = \underset{\lambda
+  (P)\rightarrow0}{\lim}\sigma_{f}(P,\xi))$
+
+  Рассмотрим $I-\frac{2\epsilon}{3} < I - \frac{\epsilon}{2} \leqslant \underline{S}(P) \leqslant \sigma_{f}(P,\xi)
+  \leqslant \overline{S}(P) < \sigma_{f}(P,\xi) + \epsilon < I + \frac{\epsilon}{2} + \epsilon = I + \frac{3\epsilon}{2}
+  \ (\overline{S}(P) - \epsilon < \sigma_{f}(P,\xi))$
+
+  Тогда $I - \frac{3\epsilon}{2} < \underline{S}(P) \leqslant \overline{S}(P) < I + \frac{3\epsilon}{2}$, так как
+  $\underline{S}(P) \leqslant \overline{S}(P) \implies 0 \leqslant \overline{S}(P) - \underline{S}(P), \\
+  \overline{S}(P) < I + \frac{3\epsilon}{2} \ (+)\\
+  -\underline{S}(P) < -I + \frac{3\epsilon}{2}$
+
+  $0 \leqslant \overline{S}(P) - \underline{S}(P) < 3\epsilon \implies \underset{\lambda(P)\rightarrow0}{\lim}
+  (\overline{S}(P) - \underline{S}(P)) = 0$
+
+  $"\leftarrow"$ Пусть $\underset{\lambda(P)\rightarrow0}{\lim}(\overline{S}(P) - \underline{S}(P)) = 0$.
+
+  Пусть $\epsilon > 0$ задана. Выберем $\delta > 0: \quad 0\leqslant\overline{S}(P) - \underline{S}(P) < \epsilon \
+  \forall (P,\xi) : \ d(P) < \delta$.
+
+  Покажем, что $\exists I = \int_{a}^{b} f(x)dx = \underset{\lambda(P)\rightarrow0}{\lim}\sigma_{f}(P,\xi)$.
+  Имеем $\overline{S}(P) - \underline{S}(P) < \epsilon$ и $\underline{S}(P) \leqslant I \leqslant \overline{S}(P)$.
+
+  Из неравенств следует, что $\overline{S}(P) < \underline{S}(P) + \epsilon \leqslant I + \epsilon, \ 
+  \underline{S}(P) > \overline{S}(P) - \epsilon \geqslant I - \epsilon$.
+
+  Пусть $(P,\xi)$ - произвольное разбиение: $\lambda(P) < \delta$. Тогда $I - \epsilon < \underline{S}(P)
+  \leqslant \sigma_{f}(P,\xi) \leqslant \overline{S}(P) < I + \epsilon \implies I - \epsilon <
+  \sigma_{f}(P,\xi) < I + \epsilon \implies | \sigma_{f}(P,\xi) - I | < \epsilon \implies I = \underset
+  {\lambda(P)\rightarrow0}{\lim}\sigma_{f}(P,\xi) \implies f\in\mathbb{R} [a;b]$.
+\end{proof}
+
+\begin{definition}
+  Обозначим $M_{i} - m_{i} = \underset{\xi \in \Delta i}{\sup}f(\xi) - \underset{\xi\in\Delta i}{\inf}f(\xi)
+  = \underset{x_{1},x_{2}\in\Delta i}{\sup}| f(x_{1}) - f(x_{2}) | = \omega_{i} = \omega_{i}(f,\Delta i)$.
+
+  $\omega_{i}$ называется \textbf{колебанием} функции $f(x)$ на отрезке $\Delta i$.
+
+  $\overline{S}(P) - \underline{S}(P) = \sum_{i = 1}^{n}\omega_{i}\Delta x_{i}$
+\end{definition}
+
+\begin{effect}
+  (из критерия интегрируемости)
+
+  $f\in\mathbb{R}[a;b] \iff \underset{\lambda(P)\rightarrow0}{\lim} \sum_{i=1}^{n}\omega_{i}\Delta x_{i} = 0$
+\end{effect}
+
+\begin{theorem}[Дарбу]
+  Для любой ограниченной функции $f:[a;b]\rightarrow\mathbb{R}$ выполняются равенства:
+
+  \begin{center}
+    {\large $\underline{\mathfrak{I}} = \underset{\lambda(P)\rightarrow0}{\lim}\underline{S}(P); \ \overline{\mathfrak{I}}
+    = \underset{\lambda(P)\rightarrow0}{\lim}\overline{S}(P)$}
+  \end{center}
+\end{theorem}
+
+\begin{lemma}
+  Пусть $f:[a;b]\rightarrow\mathbb{R}$ ограничена на $[a;b]$, то есть $\exists L > 0: \ \forall x \in [a;b]
+  \ | f(x) | < L$. Разбиение $P'$ получено из разбиения $P$ добавлением $m$ точек. Тогда $\overline{S}{P}
+  - \overline{S}(P') \leqslant 2L\lambda(P)m$
+\end{lemma}
+
+\begin{proof}
+  (леммы 2.4.2)
+
+  Пусть $P$ - производное разбиение, $\lambda(P)$.
+
+  Рассмотрим случай, что $P'$ получено добавлением $k$ точек на $i$-тый отрезок разбиения $P$. (график,
+  посмотреть у Максима). $\overline{S}(P) - \overline{S}(P') = \sum_{j=1}^{n}M_{j}\Delta x_{j} - 
+  (\sum_{j=1}^{i-1}M_{j}\Delta x_{j} + \sum_{j = 1}^{k}M_{ij}'\Delta x_{ij} + \sum_{j=i+1}^{n}
+  M_{j}\Delta x_{j}) = M_{i}\Delta x_{i} - \sum_{j = 1}^{k}M_{ij}'\Delta x_{ij} = M_{i}\sum_{j=1}^{k}
+  \Delta x_{ij} - \sum_{j=1}^{k}M_{ij}'\Delta x_{ij} = \sum_{j=1}^{k}M_{i}\Delta x_{ij} - \sum_{j=1}^{k}
+  M_{ij}'\Delta x_{ij} = \sum_{j=1}^{k}(M_{i} - M_{ij}')\Delta x_{ij} \leqslant \sum_{j=1}^{k}2L\Delta x_{ij}
+  =$ (вспомним, что $\lambda(P)=\max\{\Delta x_{1},\Delta x_{2},\ldots,\Delta x_{n}\}$) $=2L\sum_{j=1}^{k}
+  \Delta x_{ij} = 2L\Delta x_{i} \leqslant 2L\lambda(P)$
+
+  Теперь, если $P'$ получено из $P$ добавлением $m$ точек, то они попадут самое большее на $m$ промежутков.
+  Тогда $\overline{S}(P) - \overline{S}(P') \leqslant 2L\lambda (P)m$
+\end{proof}
+
+\begin{proof}
+  (теоремы 2.4.3, Дарбу)
+
+  $\underline{\mathfrak{I}} \overset{def}{=} \underset{P}{\sup}\underline{S}(P), \ \overline{\mathfrak{I}}
+  \overset{def}{=} \underset{p}{\inf}\overline{S}(P)$
+
+  Пусть $\epsilon > 0$ задано. Выберем разбиение $P'$ такое, что $\overline{\mathfrak{I}} + \epsilon >
+  \overline{S}(P')$ (**) (определение $\inf$). Положим, что $\delta = \frac{\epsilon}{2Lm}$.
+
+  Пусть $P$ - произвольное разбиение: $\lambda (P) < \delta$.
+
+  Покажем, что $0 \leqslant \overline{S}(P) - \overline{\mathfrak{I}} < \epsilon$.
+
+  Построим разбиение $P'' = P' \cup P$. Тогда $P''$ получено из $P$ добавлением $m$ точек $\implies
+  \overline{S}(P) - \overline{S}(P'') \leqslant 2L\lambda(P)m$, где $L>0: \ \forall x \in [a;b] | f(x) |
+  < L$. Далее, $\overline{S}(P) - \overline{S}(P'')\leqslant2L\lambda(P)m < 2Lm\delta = \frac{2Lm\epsilon}
+  {2Lm} = \frac{\epsilon}{2}$. Кроме того, $P''$ получено из $P'$ добавлением некоторого количества точек.
+  \begin{center}
+    {\large $\overline{S}(P'')\leqslant\overline{S}(P')\overset{(**)}{<} \overline{\mathfrak{I}} + \frac
+    {\epsilon}{2}\implies \overline{S}(P'')-\frac{\epsilon}{2}<\overline{\mathfrak{I}}$}
+  \end{center}
+  Рассмотрим $0\leqslant\overline{S}(P) - \overline{\mathfrak{I}} < \overline{S}(P) - \overline{S}(P'') +
+  \frac{\epsilon}{2} < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$
 \end{proof}
 
 
