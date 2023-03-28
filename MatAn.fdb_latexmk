@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1679934871 "d:/latex/GitHub/Mathematical-Analysis/MatAn.tex" "MatAn.pdf" "MatAn" 1679934874 2
+["pdflatex"] 1679936871 "d:/latex/GitHub/Mathematical-Analysis/MatAn.tex" "MatAn.pdf" "MatAn" 1679936874 0
   "C:/Users/zibli/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1679494278 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/zibli/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1679061340 11548 ee41528682af1760453d06367963b005 ""
   "C:/Users/zibli/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1000.pk" 1679055059 23468 a538513c3530f738ac669b8fa917a6f6 ""
@@ -11,7 +11,6 @@
   "C:/Users/zibli/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/larm1200.pk" 1679057206 27028 3022658d1d5a529d09b27e292666cab2 ""
   "C:/Users/zibli/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/larm1440.pk" 1679336127 32600 142f61ee613765e9b31a4b7bc9c9e266 ""
   "C:/Users/zibli/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/larm1728.pk" 1679057207 40148 90bd7a2402541d6d1a02e86c7bb83356 ""
-  "C:/Users/zibli/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/larm2488.pk" 1679056585 63432 cb4bf1f10294efdcaddad5a9a9b27ae4 ""
   "C:/Users/zibli/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/lati1000.pk" 1679057576 31788 b105771c60f39c6e1fd5d671fe6669b5 ""
   "C:/Users/zibli/AppData/Local/MiKTeX/fonts/tfm/lh/lh-t2a/labx1000.tfm" 1679055054 3300 6abb8e321227ead2a8e929e5abc72bd3 ""
   "C:/Users/zibli/AppData/Local/MiKTeX/fonts/tfm/lh/lh-t2a/labx1200.tfm" 1679057374 3308 eee81981029f67083258db36df06e523 ""
@@ -138,13 +137,15 @@
   "C:/Users/zibli/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1667242266 10214 de3e21cfc0eccc98ca7f8dac0ef263d2 ""
   "C:/Users/zibli/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/zibli/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
-  "MatAn.aux" 1679934873 2967 a4fa6037b3f5cc4ccd6fd6db89c09787 "pdflatex"
-  "MatAn.out" 1679934873 3684 8b525eb81d6dbb550dc117993156a342 "pdflatex"
-  "MatAn.tex" 1679934870 54693 58e8745d5659258f738c5d274451481c ""
-  "MatAn.toc" 1679934873 1574 0a3d5702ab4ae567b23776e1b992fa56 "pdflatex"
-  "d:/latex/GitHub/Mathematical-Analysis/MatAn.tex" 1679934870 54693 58e8745d5659258f738c5d274451481c ""
+  "MatAn.aux" 1679936874 2967 a4fa6037b3f5cc4ccd6fd6db89c09787 "pdflatex"
+  "MatAn.out" 1679936874 3684 8b525eb81d6dbb550dc117993156a342 "pdflatex"
+  "MatAn.tex" 1679936871 54965 a1f03734ff4cf57f2920ff72d770b7bd ""
+  "MatAn.toc" 1679936874 1574 0a3d5702ab4ae567b23776e1b992fa56 "pdflatex"
+  "d:/latex/GitHub/Mathematical-Analysis/MatAn.tex" 1679936871 54965 a1f03734ff4cf57f2920ff72d770b7bd ""
   "graph1.png" 1679489869 15614 ecb8ed2af3b25bb5508758b001f1b15b ""
   "graph2.png" 1679490919 5619 6585ee5cc6038c4ccc6c6c720254c1d2 ""
+  "graph3.png" 1679936810 16235 d338325b0f8aa0401fd47fc3e94f332d ""
+  "graph4.png" 1679936822 16174 dd6bfc8429d921a317dcb537a789a08e ""
   (generated)
   "MatAn.aux"
   "MatAn.log"
