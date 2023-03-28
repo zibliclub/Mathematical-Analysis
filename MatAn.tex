@@ -733,15 +733,15 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
     \Delta x_{k}$, где $m_{k} = \underset{\xi \in \Delta k}{\inf}f(\xi), \ M_{k} = \underset{\xi\in\Delta k}
     {\sup}f(\xi)$, называются \textbf{нижней} и \textbf{верхней суммами Дарбу}, отвечающими разбиению $P$.
 
-    \begin{figure}[h]
-      \begin{minipage}[h]{0.49\linewidth}
-        \center{\includegraphics[scale=0.6]{graph4.png}}
-      \end{minipage}
-      \hfill
-      \begin{minipage}[h]{0.49\linewidth}
-        \center{\includegraphics[scale=0.6]{graph3.png}}
-      \end{minipage}
-    \end{figure}
+  \begin{figure}[h]
+    \begin{minipage}[h]{0.49\linewidth}
+      \center{\includegraphics[scale=0.6]{graph4.png}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[h]{0.49\linewidth}
+      \center{\includegraphics[scale=0.6]{graph3.png}}
+    \end{minipage}
+  \end{figure}
 \end{definition}
 
 \begin{theorem}[свойства сумм Дарбу]
@@ -762,28 +762,28 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
             \Delta x_{k} \leqslant \sum_{k=1}^{n}M_{k}\Delta x_{k} = \overline{S}(P)$, где $f(\xi_{k}) =
             \sigma((P,\xi))$, вроде
     \item Пусть $P$ - произвольное разбиение отрезка $[a;b]$. Построим $P'$. Добавим на элемент
-    разбиения $\Delta i$ новую точку $x'\in [x_{i-1};x_{i}]$.
+          разбиения $\Delta i$ новую точку $x'\in [x_{i-1};x_{i}]$.
 
-    Пусть $m_{i}' = \underset{\xi\in[x_{i-1},x_{i}]}{\inf}f(\xi)$ и $m_{i}'' = \underset
-    {\xi\in[x_{i}',x_{i}]}{\inf}f(\xi), \ m_{i} = \underset{\xi\in[x_{i-1};x_{i}]}{\inf}f(\xi)$,
-    имеем $m_{i}\leqslant m_{i}', \ m_{i} \leqslant m_{i}''$.
+          Пусть $m_{i}' = \underset{\xi\in[x_{i-1},x_{i}]}{\inf}f(\xi)$ и $m_{i}'' = \underset
+            {\xi\in[x_{i}',x_{i}]}{\inf}f(\xi), \ m_{i} = \underset{\xi\in[x_{i-1};x_{i}]}{\inf}f(\xi)$,
+          имеем $m_{i}\leqslant m_{i}', \ m_{i} \leqslant m_{i}''$.
 
-    Тогда $\underline{S}(P') - \underline{S}(P) = \sum_{k=1}^{i-1}\Delta x_{k}m_{k} +
-    m_{i}' | x' - x_{i-1} | + m_{i}''| x_{i} - x' | + \sum_{k=i+1}^{n}m_{k}\Delta x_{k} - \sum_{k=1}^{n}
-    \Delta x_{k}m_{k} = m_{i}'| x' - x_{i-1} | + m_{i}''| x_{i} - x' | - m_{i}\Delta x_{i} \geqslant 0
-    \implies \underline{S}(P') \geqslant S(P)$ (вероятно, куча индексов - неправильные).
+          Тогда $\underline{S}(P') - \underline{S}(P) = \sum_{k=1}^{i-1}\Delta x_{k}m_{k} +
+            m_{i}' | x' - x_{i-1} | + m_{i}''| x_{i} - x' | + \sum_{k=i+1}^{n}m_{k}\Delta x_{k} - \sum_{k=1}^{n}
+            \Delta x_{k}m_{k} = m_{i}'| x' - x_{i-1} | + m_{i}''| x_{i} - x' | - m_{i}\Delta x_{i} \geqslant 0
+            \implies \underline{S}(P') \geqslant S(P)$ (вероятно, куча индексов - неправильные).
 
-    Аналогично доказывается для $\overline{S}(P')\leqslant\overline{S}(P)$.
+          Аналогично доказывается для $\overline{S}(P')\leqslant\overline{S}(P)$.
     \item Пусть $P_{1},P_{2}$ - произвольные разбиения отрезка $[a;b]$.
-    
-    Возьмем разбиение $P = P_{1}\cap P_{2}$. Тогда, с одной стороны, $P$ получено из $P_{1}$ добавлением
-    точек, а с другой стороны - из $P_{2}$ добавлением точек.
 
-    Тогда $\underline{P_{i}} \leqslant \underline{S}(P)$ и $\overline{S}(P_{i})\geqslant S(P)$.
+          Возьмем разбиение $P = P_{1}\cap P_{2}$. Тогда, с одной стороны, $P$ получено из $P_{1}$ добавлением
+          точек, а с другой стороны - из $P_{2}$ добавлением точек.
 
-    Тогда верно, что $\underline{S}(P_{2})\leqslant \underline{S}(P)$ и $\overline{S}(P_{2})
-    \geqslant \overline{S}(P) \implies \underline{S}(P_{1}) \leqslant \underline{S}(P) \leqslant
-    \overline{S}(P)\leqslant \overline{S}(P_{2})$.
+          Тогда $\underline{P_{i}} \leqslant \underline{S}(P)$ и $\overline{S}(P_{i})\geqslant S(P)$.
+
+          Тогда верно, что $\underline{S}(P_{2})\leqslant \underline{S}(P)$ и $\overline{S}(P_{2})
+            \geqslant \overline{S}(P) \implies \underline{S}(P_{1}) \leqslant \underline{S}(P) \leqslant
+            \overline{S}(P)\leqslant \overline{S}(P_{2})$.
   \end{enumerate}
 \end{proof}
 
@@ -797,25 +797,25 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 \end{definition}
 
 Рассмотрим множество разбиений с отмеченными точками отрезка $[a;b] \ \Re = \{(P,\xi)\}$. Построим функцию $\underline{S}:
-\Re_{\xi}\rightarrow\mathbb{R}$ и $\underline{S}((P,\xi)) = \underline{S}(P)$. Аналогично определим $\overline{S}:
-\Re_{\xi}\rightarrow\mathbb{R}$ и $\overline{S}((P,\xi)) = \overline{S}(P)$.
+  \Re_{\xi}\rightarrow\mathbb{R}$ и $\underline{S}((P,\xi)) = \underline{S}(P)$. Аналогично определим $\overline{S}:
+  \Re_{\xi}\rightarrow\mathbb{R}$ и $\overline{S}((P,\xi)) = \overline{S}(P)$.
 
 Таким образом сумму Дарбу можно представить как функции на множестве разбиений с отмеченными точками отрезка $[a;b]$.
 
 \begin{theorem}[критерий интегрируемости]
   Функция $f:[a;b]\rightarrow\mathbb{R}$ интегрируема на $[a;b] \iff \underset{\lambda (P)\rightarrow0}{\lim}
-  (\overline{S}(P) - \underline{S}(P)) = 0$.  
+    (\overline{S}(P) - \underline{S}(P)) = 0$.
 \end{theorem}
 
 \begin{proof}
   (теоремы 2.4.2)
 
   $"\rightarrow"$ Пусть $f\in\mathbb{R} \ ([a;b])$ (то есть интегрируема на $[a;b]$), то есть $\forall \epsilon > 0 \
-  \forall (P,\xi): \ \lambda (P) < \delta \implies | \sigma_{f} ((P,\xi)) - I | < \epsilon$.
+    \forall (P,\xi): \ \lambda (P) < \delta \implies | \sigma_{f} ((P,\xi)) - I | < \epsilon$.
 
   \begin{lemma}
     $\forall P \ \underline{S}(P) = \underset{\xi}{\inf} \sigma_{f}((P,\xi))$ и $\overline{S}(P)=\underset{\xi}{\sup}
-    \sigma_{f}((P,\xi))$
+      \sigma_{f}((P,\xi))$
   \end{lemma}
 
   \begin{proof}
@@ -824,59 +824,59 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
     $\forall P \ \underline{S}(P) \leqslant \sigma_{f}((P,\xi))$.
 
     Покажем, что $\forall \epsilon > 0 \ \exists \xi = \{\xi_{1},\xi_{2},\ldots,\xi_{n}\}: \ \underline{S}(P) + \epsilon
-    > \sigma_{f}(P,\xi)$.
+      > \sigma_{f}(P,\xi)$.
 
     Выберем $\xi_{1},\xi_{2},\ldots,\xi_{n}: \ f(\xi_{i}) < m_{i} + \frac{\epsilon}{b-a}$.
 
     Тогда $\sigma_{f}(P,\xi) = \sum_{k=1}^{n}f(\xi_{k})\Delta x_{k} < \sum_{k=1}^{n}(m_{k} + \frac{\epsilon}{b-a})
-    \Delta x_{k} = \sum_{k=1}^{n}m_{k}\Delta x_{k} + \frac{\epsilon}{b-a}\sum_{k=1}^{n}\Delta x_{k} = \underline{S}(P)
-    + \epsilon \implies \underline{S}(P) = \underset{\xi}{\inf}\sigma_{f}(P,\xi)$.
+      \Delta x_{k} = \sum_{k=1}^{n}m_{k}\Delta x_{k} + \frac{\epsilon}{b-a}\sum_{k=1}^{n}\Delta x_{k} = \underline{S}(P)
+      + \epsilon \implies \underline{S}(P) = \underset{\xi}{\inf}\sigma_{f}(P,\xi)$.
 
     Аналогично для $\overline{S}(P) = \underset{\xi}{\sup}\sigma_{f}(P,\xi)$.
   \end{proof}
 
   $I - \epsilon < \sigma_{f}(P,\xi) < I + \epsilon, \ I - \frac{\epsilon}{2} < \sigma_{f}(P,\xi) < I + \frac
-  {\epsilon}{2}$. Из леммы 2.4.1: $\underline{S}(P) + \epsilon > \sigma_{f}(P,\xi) \implies \underline{S}(P) >
-  \sigma_{f} (P,\xi) - \epsilon > \sigma_{f}(P,\xi) - \frac{\epsilon}{2} \ (I = \underset{\lambda
-  (P)\rightarrow0}{\lim}\sigma_{f}(P,\xi))$
+    {\epsilon}{2}$. Из леммы 2.4.1: $\underline{S}(P) + \epsilon > \sigma_{f}(P,\xi) \implies \underline{S}(P) >
+    \sigma_{f} (P,\xi) - \epsilon > \sigma_{f}(P,\xi) - \frac{\epsilon}{2} \ (I = \underset{\lambda
+      (P)\rightarrow0}{\lim}\sigma_{f}(P,\xi))$
 
   Рассмотрим $I-\frac{2\epsilon}{3} < I - \frac{\epsilon}{2} \leqslant \underline{S}(P) \leqslant \sigma_{f}(P,\xi)
-  \leqslant \overline{S}(P) < \sigma_{f}(P,\xi) + \epsilon < I + \frac{\epsilon}{2} + \epsilon = I + \frac{3\epsilon}{2}
-  \ (\overline{S}(P) - \epsilon < \sigma_{f}(P,\xi))$
+    \leqslant \overline{S}(P) < \sigma_{f}(P,\xi) + \epsilon < I + \frac{\epsilon}{2} + \epsilon = I + \frac{3\epsilon}{2}
+    \ (\overline{S}(P) - \epsilon < \sigma_{f}(P,\xi))$
 
   Тогда $I - \frac{3\epsilon}{2} < \underline{S}(P) \leqslant \overline{S}(P) < I + \frac{3\epsilon}{2}$, так как
   $\underline{S}(P) \leqslant \overline{S}(P) \implies 0 \leqslant \overline{S}(P) - \underline{S}(P),$
-  
+
   \begin{center}
     $\overline{S}(P) < I + \frac{3\epsilon}{2}$ \\
     +\\
     $-\underline{S}(P) < -I + \frac{3\epsilon}{2}$
   \end{center}
-  
+
 
   $0 \leqslant \overline{S}(P) - \underline{S}(P) < 3\epsilon \implies \underset{\lambda(P)\rightarrow0}{\lim}
-  (\overline{S}(P) - \underline{S}(P)) = 0$
+    (\overline{S}(P) - \underline{S}(P)) = 0$
 
   $"\leftarrow"$ Пусть $\underset{\lambda(P)\rightarrow0}{\lim}(\overline{S}(P) - \underline{S}(P)) = 0$.
 
   Пусть $\epsilon > 0$ задана. Выберем $\delta > 0: \quad 0\leqslant\overline{S}(P) - \underline{S}(P) < \epsilon \
-  \forall (P,\xi) : \ d(P) < \delta$.
+    \forall (P,\xi) : \ d(P) < \delta$.
 
   Покажем, что $\exists I = \int_{a}^{b} f(x)dx = \underset{\lambda(P)\rightarrow0}{\lim}\sigma_{f}(P,\xi)$.
   Имеем $\overline{S}(P) - \underline{S}(P) < \epsilon$ и $\underline{S}(P) \leqslant I \leqslant \overline{S}(P)$.
 
-  Из неравенств следует, что $\overline{S}(P) < \underline{S}(P) + \epsilon \leqslant I + \epsilon, \ 
-  \underline{S}(P) > \overline{S}(P) - \epsilon \geqslant I - \epsilon$.
+  Из неравенств следует, что $\overline{S}(P) < \underline{S}(P) + \epsilon \leqslant I + \epsilon, \
+    \underline{S}(P) > \overline{S}(P) - \epsilon \geqslant I - \epsilon$.
 
   Пусть $(P,\xi)$ - произвольное разбиение: $\lambda(P) < \delta$. Тогда $I - \epsilon < \underline{S}(P)
-  \leqslant \sigma_{f}(P,\xi) \leqslant \overline{S}(P) < I + \epsilon \implies I - \epsilon <
-  \sigma_{f}(P,\xi) < I + \epsilon \implies | \sigma_{f}(P,\xi) - I | < \epsilon \implies I = \underset
-  {\lambda(P)\rightarrow0}{\lim}\sigma_{f}(P,\xi) \implies f\in\mathbb{R} [a;b]$.
+    \leqslant \sigma_{f}(P,\xi) \leqslant \overline{S}(P) < I + \epsilon \implies I - \epsilon <
+    \sigma_{f}(P,\xi) < I + \epsilon \implies | \sigma_{f}(P,\xi) - I | < \epsilon \implies I = \underset
+    {\lambda(P)\rightarrow0}{\lim}\sigma_{f}(P,\xi) \implies f\in\mathbb{R} [a;b]$.
 \end{proof}
 
 \begin{definition}
   Обозначим $M_{i} - m_{i} = \underset{\xi \in \Delta i}{\sup}f(\xi) - \underset{\xi\in\Delta i}{\inf}f(\xi)
-  = \underset{x_{1},x_{2}\in\Delta i}{\sup}| f(x_{1}) - f(x_{2}) | = \omega_{i} = \omega_{i}(f,\Delta i)$.
+    = \underset{x_{1},x_{2}\in\Delta i}{\sup}| f(x_{1}) - f(x_{2}) | = \omega_{i} = \omega_{i}(f,\Delta i)$.
 
   $\omega_{i}$ называется \textbf{колебанием} функции $f(x)$ на отрезке $\Delta i$.
 
@@ -894,14 +894,14 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
   \begin{center}
     {\large $\underline{\mathfrak{I}} = \underset{\lambda(P)\rightarrow0}{\lim}\underline{S}(P); \ \overline{\mathfrak{I}}
-    = \underset{\lambda(P)\rightarrow0}{\lim}\overline{S}(P)$}
+        = \underset{\lambda(P)\rightarrow0}{\lim}\overline{S}(P)$}
   \end{center}
 \end{theorem}
 
 \begin{lemma}
   Пусть $f:[a;b]\rightarrow\mathbb{R}$ ограничена на $[a;b]$, то есть $\exists L > 0: \ \forall x \in [a;b]
-  \ | f(x) | < L$. Разбиение $P'$ получено из разбиения $P$ добавлением $m$ точек. Тогда $\overline{S}{P}
-  - \overline{S}(P') \leqslant 2L\lambda(P)m$
+    \ | f(x) | < L$. Разбиение $P'$ получено из разбиения $P$ добавлением $m$ точек. Тогда $\overline{S}{P}
+    - \overline{S}(P') \leqslant 2L\lambda(P)m$
 \end{lemma}
 
 \begin{proof}
@@ -910,13 +910,13 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   Пусть $P$ - производное разбиение, $\lambda(P)$.
 
   Рассмотрим случай, что $P'$ получено добавлением $k$ точек на $i$-тый отрезок разбиения $P$. (график,
-  посмотреть у Максима). $\overline{S}(P) - \overline{S}(P') = \sum_{j=1}^{n}M_{j}\Delta x_{j} - 
-  (\sum_{j=1}^{i-1}M_{j}\Delta x_{j} + \sum_{j = 1}^{k}M_{ij}'\Delta x_{ij} + \sum_{j=i+1}^{n}
-  M_{j}\Delta x_{j}) = M_{i}\Delta x_{i} - \sum_{j = 1}^{k}M_{ij}'\Delta x_{ij} = M_{i}\sum_{j=1}^{k}
-  \Delta x_{ij} - \sum_{j=1}^{k}M_{ij}'\Delta x_{ij} = \sum_{j=1}^{k}M_{i}\Delta x_{ij} - \sum_{j=1}^{k}
-  M_{ij}'\Delta x_{ij} = \sum_{j=1}^{k}(M_{i} - M_{ij}')\Delta x_{ij} \leqslant \sum_{j=1}^{k}2L\Delta x_{ij}
-  =$ (вспомним, что $\lambda(P)=\max\{\Delta x_{1},\Delta x_{2},\ldots,\Delta x_{n}\}$) $=2L\sum_{j=1}^{k}
-  \Delta x_{ij} = 2L\Delta x_{i} \leqslant 2L\lambda(P)$
+  посмотреть у Максима). $\overline{S}(P) - \overline{S}(P') = \sum_{j=1}^{n}M_{j}\Delta x_{j} -
+    (\sum_{j=1}^{i-1}M_{j}\Delta x_{j} + \sum_{j = 1}^{k}M_{ij}'\Delta x_{ij} + \sum_{j=i+1}^{n}
+    M_{j}\Delta x_{j}) = M_{i}\Delta x_{i} - \sum_{j = 1}^{k}M_{ij}'\Delta x_{ij} = M_{i}\sum_{j=1}^{k}
+    \Delta x_{ij} - \sum_{j=1}^{k}M_{ij}'\Delta x_{ij} = \sum_{j=1}^{k}M_{i}\Delta x_{ij} - \sum_{j=1}^{k}
+    M_{ij}'\Delta x_{ij} = \sum_{j=1}^{k}(M_{i} - M_{ij}')\Delta x_{ij} \leqslant \sum_{j=1}^{k}2L\Delta x_{ij}
+    =$ (вспомним, что $\lambda(P)=\max\{\Delta x_{1},\Delta x_{2},\ldots,\Delta x_{n}\}$) $=2L\sum_{j=1}^{k}
+    \Delta x_{ij} = 2L\Delta x_{i} \leqslant 2L\lambda(P)$
 
   Теперь, если $P'$ получено из $P$ добавлением $m$ точек, то они попадут самое большее на $m$ промежутков.
   Тогда $\overline{S}(P) - \overline{S}(P') \leqslant 2L\lambda (P)m$
@@ -926,25 +926,153 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   (теоремы 2.4.3, Дарбу)
 
   $\underline{\mathfrak{I}} \overset{def}{=} \underset{P}{\sup}\underline{S}(P), \ \overline{\mathfrak{I}}
-  \overset{def}{=} \underset{p}{\inf}\overline{S}(P)$
+    \overset{def}{=} \underset{p}{\inf}\overline{S}(P)$
 
   Пусть $\epsilon > 0$ задано. Выберем разбиение $P'$ такое, что $\overline{\mathfrak{I}} + \epsilon >
-  \overline{S}(P')$ (**) (определение $\inf$). Положим, что $\delta = \frac{\epsilon}{2Lm}$.
+    \overline{S}(P')$ (**) (определение $\inf$). Положим, что $\delta = \frac{\epsilon}{2Lm}$.
 
   Пусть $P$ - произвольное разбиение: $\lambda (P) < \delta$.
 
   Покажем, что $0 \leqslant \overline{S}(P) - \overline{\mathfrak{I}} < \epsilon$.
 
   Построим разбиение $P'' = P' \cup P$. Тогда $P''$ получено из $P$ добавлением $m$ точек $\implies
-  \overline{S}(P) - \overline{S}(P'') \leqslant 2L\lambda(P)m$, где $L>0: \ \forall x \in [a;b] | f(x) |
-  < L$. Далее, $\overline{S}(P) - \overline{S}(P'')\leqslant2L\lambda(P)m < 2Lm\delta = \frac{2Lm\epsilon}
-  {2Lm} = \frac{\epsilon}{2}$. Кроме того, $P''$ получено из $P'$ добавлением некоторого количества точек.
+    \overline{S}(P) - \overline{S}(P'') \leqslant 2L\lambda(P)m$, где $L>0: \ \forall x \in [a;b] | f(x) |
+    < L$. Далее, $\overline{S}(P) - \overline{S}(P'')\leqslant2L\lambda(P)m < 2Lm\delta = \frac{2Lm\epsilon}
+    {2Lm} = \frac{\epsilon}{2}$. Кроме того, $P''$ получено из $P'$ добавлением некоторого количества точек.
   \begin{center}
     {\large $\overline{S}(P'')\leqslant\overline{S}(P')\overset{(**)}{<} \overline{\mathfrak{I}} + \frac
-    {\epsilon}{2}\implies \overline{S}(P'')-\frac{\epsilon}{2}<\overline{\mathfrak{I}}$}
+        {\epsilon}{2}\implies \overline{S}(P'')-\frac{\epsilon}{2}<\overline{\mathfrak{I}}$}
   \end{center}
   Рассмотрим $0\leqslant\overline{S}(P) - \overline{\mathfrak{I}} < \overline{S}(P) - \overline{S}(P'') +
-  \frac{\epsilon}{2} < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$
+    \frac{\epsilon}{2} < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$
+\end{proof}
+
+\subsection{Классы интегрируемых функций}
+
+\begin{theorem}[интегрируемость непрерывных функций]
+  Пусть $f:[a;b]\rightarrow\mathbb{R}$ непрерывна на $[a;b]\implies f$ - интегрируема на $[a;b]$
+  , то есть $f\in\mathbb{R}[a;b]$.
+\end{theorem}
+
+\begin{proof}
+  (теоремы 2.4.4)
+
+  Так как $f$ - непрерывна на $[a;b]\implies f$ - равномерно непрерывна на $[a;b]$. Это значит,
+  что если $\epsilon>0$ задано, то $\exists\delta>0: \ \forall x_{1},x_{2}\in [a;b]: \
+    | x_{1} - x_{2} | < \delta \implies | f(x_{1}) - f(x_{2}) | < \frac{\epsilon}{b - a}$.
+
+  По критерию интегрируемости: $f\in\mathbb{R}[a;b] \iff \underset{\lambda(P)\rightarrow0}{\lim}
+    (\overline{S}(P) - \underline{S}(P)) = 0 \ \forall (P;\xi)$ - разбиение.
+
+  $\overline{S}(P) - \underline{S}(P) = \sum\omega_{i}\Delta x_{i}$, где $\omega_{i} = \underset
+    {x_{1},x_{2}\in\Delta i}{\sup} | f(x_{1}) - f(x_{2}) |$.
+
+  $\overline{S}(P) = \sum M_{i}\Delta x_{i}, \ M_{i} = \underset{\xi\in\Delta x_{i}}{\sup}f(\xi)$.
+
+  $\omega_{i} = M_{i} - m_{i} = \underset{\xi\in\Delta i}{\sup}f(\xi) - \underset{\xi\in\Delta i}
+    {\inf}f(\xi) = \underset{x_{1},x_{2}\in\Delta i}{\sup}| f(x_{1}) - f(x_{2}) |$.
+
+  $\overline{S}(P) - \underline{S}(P) = \sum M_{i}\Delta x_{i} - \sum m_{i}\Delta x_{i} =
+    \sum \omega_{i}\Delta x_{i}$.
+
+  Таким образом критерий интегрируемости: $f$ - интегрируема на $[a;b] \iff \underset{\lambda
+      (P)\rightarrow0}{\lim}\sum\omega_{i}\Delta x_{i} = 0$, то есть $\forall \epsilon > 0 \
+    \exists \delta > 0: \ \forall (P;\xi): \ \lambda(P)<\delta\implies 0 \leqslant\sum\omega_{i}
+    \Delta x_{i} < \epsilon$.
+
+  Пусть $\epsilon > 0$ задано. Возьмем $(P;\xi)$ - разбиение такое, что $\lambda(P) < \delta$.
+  Тогда $\sum\omega_{i}\Delta x_{i} = \sum \underset{x_{1},x_{2}\in\Delta i}{\sup}
+    | f(x_{1}) - f(x_{2}) |\Delta x_{i}\leqslant \sum \frac{\epsilon}{b - a} \Delta x_{i} =
+    \frac{\epsilon}{b - a}\sum \Delta x_{i} = \frac{\epsilon}{b - a}(b-a) = \epsilon$
+\end{proof}
+
+\begin{theorem}[интегрируемость функций с конечным числом точек разрыва]
+  Пусть $f:[a;b]\rightarrow\mathbb{R}$ - ограничена и имеет на $[a;b]$ конечное число точек
+  разрыва. Тогда $f\in\mathbb{R}[a;b]$ интегрируема на $[a;b]$.
+\end{theorem}
+
+\begin{proof}
+  (теоремы 2.4.5)
+
+  Пусть $L > 0: \ \forall x \in [a;b] \ | f(x) | < L$ (ограничена). Пусть $f$ имеет $k$ точек
+  разрыва на $[a;b]$.
+
+  Пусть $\epsilon > 0$ задано. Возьмем $\delta_{1} = \frac{\epsilon}{16Lk}$. Для каждой точки
+  разрыва построим $\delta_{1}$-окрестность.
+
+  Пусть $U$ - множество таких окрестностей. $U$ - открытое множество. Рассмотрим
+  $V = [a;b]\setminus U \implies V$ - замкнутое (так как его дополнение открытое). Из того,
+  что $V$ - ограничено и замкнуто $\implies V$ - компактное. Функция $f$ - непрерывна на $V
+    \implies$ из того, что $V$ - компактно и $f$ - непрерывна на $V \implies f$ - равномерно
+  непрерывна на $V\implies \forall\epsilon>0 \ \exists\delta_{2}>0: \ \forall x_{1},x_{2}\in V:
+    \ | f(x_{1}) - f(x_{2}) | < \frac{\epsilon}{2(b-a)}$.
+
+  Положим, что $\delta = \min\{\delta_{1},\delta_{2}\}$. Пусть $P$ - произвольное разбиение
+  отрезка $[a;b]: \ \lambda(P) < \delta$.
+
+  Рассмотрим $\sum \omega_{i}\Delta x_{i} =  \sum'\omega_{i}\Delta x_{i} + \sum''\omega_{i}
+    \Delta x_{i} \leqslant | \sum'$ берется по всепм отрезкам разбиения, $k$-тые пересекаются
+  с $U$, $\sum''$ - по всем остальным $| \leqslant \sum'\omega_{i}\Delta x_{i} + \sum''
+    \frac{\epsilon}{2(b-a)}\Delta x_{i} \leqslant 2L2\delta_{1}k + \frac{\epsilon}{2(b-a)}\sum''
+    \Delta x_{i} < \frac{4Lk\epsilon}{8Lk} + \frac{\epsilon}{2(b-a)}(b-a) = \frac{\epsilon}{2}
+    + \frac{\epsilon}{2} = \epsilon$.
+
+  Дополнение: $(\overline{S}(P) - \overline{S}(P') \leqslant
+    2L\lambda(P)m, \ \sum M_{i}\Delta x_{i} - \sum M_{i}' \Delta x_{i})$.
+  $\sum'\omega_{i}\Delta x_{i} = \sum\underset{x_{1},x_{2}\in\Delta i \cap k}{\sup}
+    | f(x_{1}) - f(x_{2}) |\Delta x_{i} \leqslant 2L2\delta_{1}k$
+
+\end{proof}
+
+{\Large ГРАФИКИ НАДО НАРИСОВАТЬ}
+
+\begin{theorem}[интегрируемость монотонных функций]
+  Пусть $f:[a;b]\rightarrow\mathbb{R}$ - монотонна на $[a;b]\implies f$ - интегрируема на $[a;b]$.
+\end{theorem}
+
+\begin{proof}
+  (теоремы 2.4.6)
+
+  Пусть $f$ - не убывает на $[a;b]$. Пусть $\epsilon>0$ задано. Возьмем $\delta = \frac{\epsilon}
+    {f(b) - f(a)}$. Тогда, если $P$ - произвольное разбиение $[a;b]: \ \lambda(P)<\delta$, то
+  $\sum\omega_{i}\Delta x_{i} \overset{monoton.}{=} \sum (f(x_{i}) - f(x_{i-1}))\Delta x_{i} <
+    \delta \sum (f(x_{i}) - f(x_{i-1})) = \delta (f(b) - f(a)) = \epsilon$.
+\end{proof}
+
+\subsection{Свойства интегрируемых функций}
+
+\begin{theorem}
+  Пусть $f\in\mathbb{R}[a;b], \ g\in\mathbb{R}[a;b]$. Тогда:
+  \begin{enumerate}
+    \item $f\pm g \in R[a;b]$.
+    \item $\alpha f \in R[a;b], \ \alpha \in \mathbb{R}$.
+    \item $f*g\in R[a;b]$.
+    \item $|f|\in R[a;b]$, при этом:
+          \begin{itemize}
+            \item $\int_{a}^{b}(f\pm g)dx = \int_{a}^{b}f(x)dx \pm \int_{a}^{b}g(x)dx$
+            \item $\int_{a}^{b}\alpha f(x)dx = \alpha \int_{a}^{b}f(x)dx$
+            \item $|\int_{a}^{b}f(x)dx | \leqslant \int_{a}^{b}|f(x)|dx$
+          \end{itemize}
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  (теоремы 2.4.7)
+
+  \begin{enumerate}
+    \item $\int_{a}^{b}(f(x)\pm g(x))dx = \underset{\lambda(P)\rightarrow0}{\lim}\sum(f(\xi_{i})
+            \pm g(\xi_{i}))\Delta x_{i} = \underset{\lambda(P)\rightarrow0}{\lim}\sum f(\xi_{i})\Delta
+            x_{i} = \int_{a}^{b}f(x)dx + \int_{a}^{b}g(x)dx$.
+    \item Аналогично.
+    \item Покажем, что если $f\in R[a;b]$, то $f^{2}\in R[a;b]$. Рассмотрим $| f^{2}(x_{1}) -
+            f^{2}(x_{2}) | = | (f(x_{1}) - f(x_{2}))(f(x_{1}) - f(x_{2})) | \leqslant | f(x_{1}) -
+            f(x_{2}) |(|f(x_{2})| + | f(x_{2}) |) < 2L| f(x_{1}) - f(x_{2}) |$, где $L>0: \ \forall x
+            \in [a;b] \ | f(x) | < L$ (интегрируема $\implies$ ограничена).
+
+          Пусть $P$ - произвольное разбиение. Пусть $\epsilon > 0$ задано. Возьмем $\delta>0$ и
+          $P: \ \lambda(P) < \delta \quad \omega_{i}(f^{2},\Delta_{i}) \leqslant 2L\omega_{i}
+            (f,\Delta_{i})$
+  \end{enumerate}
 \end{proof}
 
 
