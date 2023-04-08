@@ -1071,9 +1071,171 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
           Пусть $P$ - произвольное разбиение. Пусть $\epsilon > 0$ задано. Возьмем $\delta>0$ и
           $P: \ \lambda(P) < \delta \quad \omega_{i}(f^{2},\Delta_{i}) \leqslant 2L\omega_{i}
-            (f,\Delta_{i})$
+            (f,\Delta_{i})$.\\
+
+          $\underset{i}{\sum}w_{i}(f^{2},\Delta_{i})\Delta x_{i} \leqslant (\underset{i}{\sum}\omega_{i}(f,
+              \Delta_{i})\Delta_{i})2L$.\\
+
+          Так как $f\in R[a;b]$, то $\underset{i}{\sum}\omega_{i}(f,\Delta_{i})\Delta x_{i}\rightarrow 0
+            \implies$ по лемме о двух миллиционерах, $\underset{i}{\sum}\omega_{i}(f^{2},\Delta_{i})\Delta
+            x_{i}\rightarrow0 \implies$ (по критерию интегрируемости) $f^{2}\in R[a;b]$.\\
+
+          $fg = \frac{1}{4}((f+g)^{2}-(f-g)^{2})\implies fg \in R[a;b]$.
+    \item Рассмотрим $||f(x_{1})| - | f(x_{2}) || \leqslant | f(x_{1}) - f(x_{2}) |, \ x_{1},x_{2}\in
+            \Delta_{i} \implies \omega_{i}(|f|,\Delta_{i})\leqslant \omega_{i}(f,\Delta_{i})$. \\
+
+          $0 \leqslant \underset{i}{\sum}\omega_{i}(| f |,\Delta_{i})\Delta x_{i} \leqslant \underset{i}{\sum}
+            \omega_{i}(f,\Delta_{i})\Delta x_{i} \implies |f|\in R[a;b].$
+
+          Рассмотрим $| \underset{i}{\sum}f(\xi_{i}) | \leqslant \underset{i}{\sum} | f(\xi_{i}) |\Delta x_{i}
+            \implies \underset{\lambda(P)\rightarrow 0}{\lim}| \underset{i}{\sum}f(\xi_{i})\Delta x_{i} |
+            \leqslant \underset{\lambda(P)\rightarrow0}{\lim}\underset{i}{\sum} | f(\xi_{i}) |\Delta x_{i}, \quad
+            | \int_{a}^{b}f(x)dx | \leqslant \int_{a}^{b} |f(x)|dx$.
   \end{enumerate}
 \end{proof}
+
+\subsection{Аддитивность интеграла Римана}
+
+\begin{definition}
+  Пусть $a>b, \ a,b\in\mathbb{R}$, положим $\int_{a}^{b}f(x)dx = -\int_{b}^{a}f(x)dx$. Если $a=b$, то
+  $\int_{a}^{a=b}f(x)dx =0$.
+\end{definition}
+
+\begin{theorem}[Аддитивность интеграла Римана]
+  Пусть даны точки $a,b,c\in \mathbb{R}$. Если $f$ - интегрируема на большем из отрезков $[a;b],\ [a,c],\
+    [b,c]$, то $f$ - интегрируема и на меньших отрезках. И наоборот, если $f$ интегрирема на двух меньших отрезках,
+  то она интегрируема и на большем отрезке. При этом:
+  \begin{equation*}
+    \int_{a}^{b}f(x) dx + \int_{b}^{c}f(x)dx + \int_{c}^{a}f(x)dx = 0
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}[теоремы 2.4.8]
+  Пусть $a<b<c$.
+
+  Построим такое разбиение отрезка $[a;c]$ с отмеченнымыми точками, что точка $b$ будет его точкой разбиения
+  $P = {x_{0}, x_{1}, \ldots, b, \ldots, x_{n}}$.
+
+  Тогда $\underset{P}{\sum}f(\xi_{i})\Delta x_{i} < \underset{P'}{\sum}f(\xi_{i})\Delta x_{i} +
+    \underset{P''}{\sum}f(\xi_{i})\Delta x_{i}$, где $P'$ - разбиение отрезка левеее точки $b$, $P''$ - правее
+  точки $b$.
+
+  Покажем, что если $f\in R[a;c]$, то $f\in R[a;b]$. В самом деле, $\underset{P'}{\sum}\omega_{i}\Delta x_{i}
+    \leqslant \underset{P}{\sum}\omega_{i}\Delta x_{i}\rightarrow 0 \implies f\in R[a;b]$. Аналогично, можно
+  показать, что $f\in R[b;c]$. Если $f$ - интегрируема на $[a;b]$ и $f\in R[b;c] \implies \underset{P'}{\sum}
+    \omega_{i}\Delta x_{i} \rightarrow0, \ \underset{P''}{\sum}\omega_{i}\Delta x_{i} \rightarrow0 \implies$
+  учитывая то, что $\underset{P}{\sum}f(\xi_{i})\Delta x_{i} < \underset{P'}{\sum}f(\xi_{i})\Delta x_{i} +
+    \underset{P''}{\sum}f(\xi_{i})\Delta x_{i}$, тогда $\underset{P}{\sum}\omega_{i}\Delta x_{i}\rightarrow0
+    \implies f\in R[a;c]$, а так же то, что $\int_{a}^{c}f(x) dx \ \int_{a}^{b}f(x) dx + \int_{b}^{c}f(x)dx$.
+\end{proof}
+
+\subsection{Монотонность интеграла Римана}
+
+\begin{theorem}
+  Если $a<b$ и $f\in R[a;b]$ и:
+  \begin{enumerate}
+    \item $\forall x \in [a;b] \ f(x) \geqslant 0$, то $\int_{a}^{b} f(x) dx \geqslant 0$
+    \item $\forall x \in [a;b] \ f(x) > 0$, то $\int_{a}^{b}f(x)dx > 0$
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  (теоремы 2.4.9)
+
+  \begin{enumerate}
+    \item Почти очевидно (по определению интеграла Римана и свойствам предела)
+    \item Пусть $\forall x \in [a;b] f(x) > 0$. Покажем, что $\int_{a}^{b} f(x) dx > 0$. Допустим, что
+          $\int_{a}^{b}f(x) dx = 0$. Тогда $\underset{\lambda(P)\rightarrow0}{\lim}\overline{S}(P)=0$.
+
+          Тогда можно взять такое разбинеие $P: \ \overline{S}(P) < \frac{b-a}{2}$. Тогда у этого разбиения $P
+            \exists$ отрезок $\Delta_{i}: \ M_{i} = \underset{x \in \Delta_{i}}{\sup}f(x) < \frac{1}{2}$. В самом деле,
+          если $M_{i} \geqslant \frac{1}{2} \ \forall i$, то $\overline{S}(P) = \underset{i}{\sum}M_{i}\Delta x_{i}
+            \geqslant \frac{1}{2}\underset{i}{\sum}\Delta x_{i} = \frac{b-a}{2}$, противоречие с выбраным $P$.
+
+          Обозначим $\Delta_{i} = [a_{1},b_{1}]$. Так как $f\in R[a;b] \implies f\in R[a_{1},b_{1}]$. При этом
+          $\int_{a}^{b}f(x)dx = 0$. Пусть $P_{1}$ - разбиение отрезка $[a_{1},b_{1}]: \ \overline{S}(P_{1}) <
+            \frac{b_{1} - a_{1}}{4} \implies \exists$ отрезок разбиения $[a_{2},b_{2}] \subset [a_{1},b_{1}]: \
+            \underset{x\in [a_{2},b_{2}]}{\sup}f(x) < \frac{1}{4}$ и так далее.
+
+          Таким образом получим систему вложенных отрезков $[a;b] \supset [a_{1},b_{1}] \supset [a_{2},b_{2}] \supset
+            \ldots$, при этом $\underset{x\in[a_{k},b_{k}]}{\sup}f(x) < \frac{1}{2^{k}}$. Пусть $c \in \underset
+            {k=1}{\overset{\infty}{\cap}}[a_{k};b_{k}]$. Тогда $f(c) > 0$. С другой стороны, $f(c) < \frac{1}{2^{k}}
+            \implies f(c) = 0$ - противоречие $\implies \int_{a}^{b}f(x)dx > 0$.
+  \end{enumerate}
+\end{proof}
+
+\begin{effect}
+  (теоремы 2.4.9)
+  \begin{enumerate}
+    \item Если $a<b, \ f,g \in R[a;b]$ и:
+          \begin{enumerate}
+            \item $\forall x \in [a;b] \ f(x) \leqslant g(x)$, то $\int_{a}^{b}f(x) dx \leqslant
+                    \int_{a}^{b}g(x)dx$
+            \item $\forall x \in [a;b] \ f(x) < g(x)$, то $\int_{a}^{b}f(x)dx < \int_{a}^{b}g(x) dx$
+                  \begin{proof}
+                    Очевидно, $g(x) - f(x) \geqslant 0$.
+                  \end{proof}
+          \end{enumerate}
+    \item Если $f\in R[a;b], \ a<b, \ M = \underset{x \in [a;b]}{\sup}f(x), \ m = \underset{x\in[a;b]}
+            {\inf}f(x)$, то $m(b-a) \leqslant \int_{a}^{b}f(x)dx \leqslant M(b-a)$.
+          \begin{proof}
+            $\forall$ разбиения $P$ с отмеченными точками верно: $\underset{i}{\sum}m\Delta x_{i} \leqslant
+              \underset{i}{\sum}f(\xi_{i})\Delta x_{i} \leqslant \underset{i}{\sum} M\Delta x_{i}$ и
+            $m(b-a) \leqslant \underset{i}{\sum}f(\xi_{i})\Delta x_{i} \leqslant M(b-a)$.
+
+            Переходя к пределу получаем то, что нужно было доказать.
+          \end{proof}
+    \item (Теорема о среднем)
+
+          Пусть $f\in R[a;b] (a>b, a<b), \ m = \underset{x \in[a;b]}{\inf}f(x), \ M = \underset{x \in[a;b]}{\sup}f(x)$.
+          Тогда существует $\mu \in [m;M]: \ \int_{a}^{b}f(x)dx = \mu (b-a)$.
+
+          \begin{proof}
+            Пусть $a<b$. Тогда (из 2-го пункта) $m(b-a) \leqslant \int_{a}^{b}f(x)dx\leqslant M(b-a), \ (b-a>0)$.
+
+            $m \leqslant \frac{1}{b-a}\int_{a}^{b}f(x)dx \leqslant M$. Пусть $\mu \ \frac{1}{b-a} \frac{1}{b-a}
+              \int_{a}^{b}f(x) dx \implies \frac{a}{b}f(x)dx = \mu(b-a)$. Если $a > b$, то $m(a-b) \leqslant
+              \int_{a}^{b}f(x)dx \leqslant M(a-b)$ (домножим на $-1$), $m(b-a)\geqslant \int_{a}^{b}f(x)dx \geqslant
+              M(b-a)\implies m \leqslant \frac{1}{b-a}\int_{a}^{b}f(x) dx \leqslant M$.
+          \end{proof}
+
+          \begin{effect}
+            Если, кроме того, $f(x)$ - непрерывна на $[a;b]$, то $\exists c \in [a;b]: \ \int_{a}^{b}f(x)dx =
+              f(x)(b-a)$.
+          \end{effect}
+          \begin{proof}
+            Доказательство следует из теоремы Больцано-Коши о промежуточном значении.
+          \end{proof}
+  \end{enumerate}
+\end{effect}
+
+\begin{theorem}[Первая теорема о среднем]
+  Пусть $f,g\in R[a;b] (a>b, a<b), \ m = \underset{x\in[a;b]}{\inf}f(x), \ M = \underset{x\in[a;b]}{\sup}f(x)$
+  и $g$ не меняет свой знак на $[a;b]$. Тогда $\exists \mu \in [m;M]: \ \int_{a}^{b}f(x)g(x)dx = \mu \int_{a}^{b}
+    g(x)dx$.
+\end{theorem}
+
+\begin{proof}
+  Пусть $a<b$ и $\forall x \in [a;b] \ g(x) \geqslant 0$. Имеем, что $m\leqslant f(x) \leqslant M, \ (g(x) > 0), \
+    mg(x) \leqslant f(x)g(x) \leqslant Mg(x) \implies m \int_{a}^{b}g(x)dx \leqslant \int_{a}^{b}f(x)g(x)dx
+    \leqslant M\int_{a}^{b}g(x)dx$. Если $\int_{a}^{b}g(x)dx = 0 \implies \int_{a}^{b}f(x)g(x)dx = 0 \implies
+    \int_{a}^{b}f(x)g(x)dx = \mu \int_{a}^{b}g(x)dx$. Если $\int_{a}^{b}g(x)dx \ne 0$, то поделим в неравенстве
+  $m \int_{a}^{b}g(x)dx \leqslant \int_{a}^{b}f(x)g(x)dx \leqslant M\int_{a}^{b}g(x)dx$ все на $\int_{a}^{b}
+    g(x)dx > 0: \quad m \leqslant \frac{\int_{a}^{b}f(x)g(x)dx}{\int_{a}^{b}g(x)dx} \leqslant M$, где
+  $\frac{\int_{a}^{b}f(x)g(x)dx}{\int_{a}^{b}g(x)dx} = \mu$.
+
+  Аналогично доказываются остальные случаи $(a<b, \ g(x) \leqslant 0; \ a>b, \ g(x)\geqslant 0)$.
+\end{proof}
+
+\subsection{Интеграл Римана как функция верхнего предела интегрирования}
+
+\begin{definition}
+  Пусть $f\in R[a;b], \ x \in [a;b]$.
+
+  Рассмотрим функцию $F(x) = \int_{a}^{x}f(t)dt, \ F(x)$ определена для $\forall x \in [a;b]$.
+\end{definition}
+
+
 
 
 \end{document}
