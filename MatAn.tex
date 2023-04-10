@@ -1235,7 +1235,154 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   Рассмотрим функцию $F(x) = \int_{a}^{x}f(t)dt, \ F(x)$ определена для $\forall x \in [a;b]$.
 \end{definition}
 
+\begin{theorem}[непрерывность интеграла Римана]
+  Если $f\in R[a;b]$, то $F(x) = \int_{a}^{x}f(t)dt$ - непрерывна на $[a;b]$.
+\end{theorem}
 
+\begin{proof}
+  Пусть $h\in \mathbb{R}: \ x + h \in [a;b]$. Тогда $F(x+h) = \int_{a}^{x+h}f(t)dt$. Пусть
+  $\epsilon>0$ задано. Покажем, что $\exists\delta>0: \ \forall h \in \mathbb{R}: \ |h|<\delta \
+    | F(x+h) - F(x) | < \epsilon$.
 
+  Рассмотрим $| F(x+h) - F(x) | = | \int_{a}^{x+h}f(t)dt - \int_{a}^{x}f(t)dt | = | \int_{a}^{x}f(t)dt +
+    \int_{x}^{x+h}f(t)dt - \int_{a}^{x}f(t)dt | = | \int_{x}^{x+h}f(t)dt | \leqslant |\int_{x}^{x+h}| f(t) |dt|$.
+  Так как $f\in R[a;b]$, то $f$ - ограничена на $[a;b]$, то есть $\exists L > 0: \ \forall x \in [a;b] \
+    | f(x) | \leqslant L$. Тогда $|\int_{x}^{x+h}| f(t) |dt| \leqslant | L \int_{x}^{x+h}dt |$, так как
+  \begin{equation*}
+    \int_{x}^{x+h}1dt = \underset{\lambda(P)\rightarrow0}{\lim}\sum_{i=1}^{n}1\Delta x_{i} = | h |,
+  \end{equation*}
+  тогда $\delta = \frac{\epsilon}{L}$, что и требовалось доказать.
+\end{proof}
+
+\begin{theorem}[о дифференцируемости интеграла Римана как функции по верхнему пределу]
+  Пусть $f\in R[a;b], \ x \in [a;b]$ и $f$ непрерывна в точке $x$, тогда функция $F(x) = \int_{a}^{x}f(t)dt$
+  дифференцируема в точке $x$, причем:
+  \begin{equation*}
+    F'(x) = f(x) \implies (\int_{a}^{x}f(t)dt)_{x}'=f(x)
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Пусть $h\in\mathbb{R}: \ x+h \in [a;b]$.
+
+  Рассмотрим $|\frac{F(x+h) - F(x)}{h} - f(x)| = | \frac{1}{h}(\int_{a}^{x+h}f(t)dt - \int_{a}^{x}f(t)dt) -
+    f(x) | = | \frac{1}{h} \int_{a}^{x+h}f(t)dt - f(x) | = | \frac{1}{h}\int_{x}^{x+h}f(t)dt - \frac{f(x)}{h}
+    \int_{x}^{x+h}dt | = | \frac{1}{h}(\int_{x}^{x+h}f(t)dt - \int_{x}^{x+h}f(x)dt) | = | \frac{1}{h}
+    (\int_{x}^{x+h}(f(t)-f(x))dt) | = \frac{1}{|h|}| \int_{x}^{x+h}| f(t) - f(x) |dt |$.
+
+    Так как $f$ - непрерывна в точке $x$, то $\forall \epsilon>0 \ \exists \delta>0: \ \forall h: \ |h|<\delta
+    \ | f(t) - f(x) | < \epsilon$, где $t\in[x;x+h]$.
+
+    Тогда $|\frac{F(x+h) - F(x)}{h} - f(x) | \leqslant \frac{1}{|h|}| \int_{x}^{x+h}| f(t) - f(x) |dt | <
+    \frac{1}{|h|}\epsilon| \int_{x}^{x+h}dt | = \frac{1}{|h|}\epsilon|h| = \epsilon$
+
+    Таким образом, по определению производной:
+    \begin{equation*}
+      \underset{h\rightarrow0}{\lim}\frac{F(x+h) - F(x)}{h} = f(x) = F'(x).
+    \end{equation*}
+\end{proof}
+
+\begin{effect}
+  Если $f$ - непрерывна на $[a;b]$, то на $[a;b]$ она имеет первообразную, которая равна:
+  \begin{equation*}
+    \Phi (x) = \int_{a}^{x}f(t)dt + C
+  \end{equation*}
+\end{effect}
+
+\begin{remark}
+  Рассмотрим следующие классы (множества/пространства) функций:
+  \begin{itemize}
+    \item $R[a;b]$ - множество интегрируемых на $[a;b]$ функций;
+    \item $C[a;b]$ - множество непрерывных на $[a;b]$ функций;
+    \item $C^{o}[a;b]$ - множество дифференцируемых на $[a;b]$ функций.
+  \end{itemize}
+  Получаем:
+  \begin{equation*}
+    C^{o}[a;b]\subset C[a;b] \subset R[a;b].
+  \end{equation*}
+\end{remark}
+
+\begin{theorem}[вторая теорема о среднем]
+  Пусть $f,g\in R[a;b]$, причем $f$ - монотонна на $[a;b]$. Тогда $\exists \xi \in [a;b]:$
+  \begin{equation*}
+    \int_{a}^{b}f(x)g(x)dx = f(a)\int_{a}^{\xi}g(x)dx + f(b)\int_{\xi}^{b}g(x)dx
+  \end{equation*}
+\end{theorem}
+
+\begin{lemma}
+  Пусть $f,g\in R[a;b]$, причем $f$ - невозрастающая и неотрицательная.
+
+  Тогда $\exists \xi \in [a;b]:$
+  \begin{equation*}
+    \int_{a}^{b}f(x)g(x)dx = f(a)\int_{a}^{\xi}g(x)dx.
+  \end{equation*}
+\end{lemma}
+
+\begin{proof}
+  (леммы)
+
+  Пусть $P$ - произвольное разбиение отрезка $[a;b]: \ a = x_{0} < x_{1} < \ldots < x_{n-1} < x_{n} = b$.
+  Тогда $\int_{a}^{b}f(x)g(x)dt = \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}f(x)g(x)dx \\ + \sum_{i=1}^{n}
+  \int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx - \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx = 
+  \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}(f(x)-f(x_{i-1}))g(x)dx + \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}
+  f(x_{i-1})g(x)dx =$ (где $\sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}(f(x)-f(x_{i-1}))g(x)dx = \rho$ и 
+  $\sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx = \sigma$) $= \rho + \sigma$.
+
+  Устремим $\lambda(P)\rightarrow0$:
+  \begin{equation*}
+    \int_{a}^{b}f(x)g(x)dx = \underset{\lambda(P)\rightarrow0}{\lim}\rho + \underset{\lambda(P)\rightarrow0}
+    {\lim}\sigma
+  \end{equation*}
+  Покажем, что пределы существуют, более того: $\underset{\lambda(P)\rightarrow0}{\lim}\rho = 0$.
+
+  Так как $g(x)\in R[a;b] \implies g$ - ограничена на $[a;b]$, то есть $\exists L > 0: \ \forall x 
+  \in [a;b] \ | g(x) |\leqslant L$.
+
+  Рассмотрим $\omega_{i} = \omega_{i}(f,\Delta_{i}) = \underset{\xi_{1},\xi_{2}=\Delta_{i}}{\sup}
+  | f(\xi_{1}) - f(\xi_{2}) |$. Так как $f\in R[a;b]$, то по критерию интегрируемости:
+  $\underset{i}{\sum}\omega_{i}\Delta x_{i} \rightarrow 0$.
+
+  Тогда $| \rho | = | \sum_{i=1}^{n} \int_{x_{i-1}}^{x_{i}}(f(x) - f(x_{i-1}))g(x)dx |\leqslant
+  \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}| f(x) - f(x_{i-1}) | | g(x) |dx \leqslant\sum_{i=1}^{n}
+  \int_{x_{i-1}}^{x_{i}}\omega_{i}Ldx = L\sum_{i=1}^{n}\omega_{i}\int_{x_{i-1}}^{x_{i}}dx =
+  L\sum_{i=1}^{n}\omega_{i}\Delta x_{i}$.
+
+  Пусть $\epsilon > 0$ задано. Выберем $\delta>0: \ \forall P: \ \lambda(P) < \delta$ и 
+  $\sum_{i=1}^{n}\omega_{i}\Delta x_{i} < \frac{\epsilon}{L}$.
+
+  Имеем, что $|\rho| \leqslant L\sum_{i=1}^{n}\omega_{i}\Delta x_{i} < L\frac{\epsilon}{L} = 
+  \epsilon \implies \underset{\lambda(P)\rightarrow0}{\lim}\rho = 0$.
+
+  Тогда $\int_{a}^{b}f(x)g(x)dx = \underset{\lambda(P)\rightarrow0}{\lim}\sum_{i=1}^{n}
+  \int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx$. $\underset{\lambda(P)\rightarrow0}{\lim}\sigma$
+  существует, так как $\int_{a}^{b}f(x)g(x)dx = const$ и $\underset{\lambda(P)\rightarrow0}{\lim}
+  \rho = 0$.
+
+  Рассмотрим функцию $C_{1}(x) = \int_{a}^{x}g(x)dx$:
+  \begin{enumerate}
+    \item $C_{1}(x)$ - непрерывна на $[a;b] \ (x\in[a;b]) \implies C_{1}(x)$ принимает на $[a;b]
+    \ max \ min$ значение (по теореме Вейерштрасса о максимальном значении), $m = \underset
+    {x\in[a;b]}{\min}C_{1}(x), \ M = \underset{x\in[a;b]}{\max} C_{1}(x)$.
+    \item $\int_{x_{i-1}}^{x_{i}}g(x)dx = \int_{a}^{x_{i}}g(x)dx - \int_{a}^{x_{i-1}}g(x)dx =
+    C_{1}(x_{i}) - C_{1}(x_{i-1})$.
+
+    $\sigma = \sum_{i=1}^{n}f(x_{i-1})\int_{x_{i-1}}^{x_{i}}g(x)dx = \sum_{i=1}^{n}f(x_{i-1})
+    (C_{1}(x_{i}) - C_{1}(x_{i-1})) = f(x_{0}) C_{1}(x_{1}) - f(x_{0})C_{1}(x_{0}) + 
+    f(x_{1}) C_{1}(x_{2}) - f(x_{1}) C_{1}(x_{1}) + \ldots + f(x_{n-2})C_{1}(x_{n-1}) - 
+    f(x_{n-2}) C_{1}(x_{n-2}) + f(x_{n-1})C_{1}(x_{n}) - f(x_{n-1})C_{1}(x_{n-1}) = 
+    \sum_{i=1}^{n-1} C_{1}(x_{i})(f(x_{i-1}) - f(x_{i})) + f(x_{n-1})C_{1}(x_{n})$.
+
+    Тогда $\sigma \geqslant m (\sum_{i=1}^{n-1}(f(x_{i-1}) - f(x_{2})) + f(x_{n-1})) =
+    m(f(x_{0}) - f(x_{1}) + f(x_{1}) - f(x_{2}) + f(x_{2}) - \ldots - f(x_{n-1}) + f(x_{n-1}))
+    = mf(a)$. Аналогично, $\sigma \leqslant Mf(a)$.
+    \begin{equation*}
+      mf(a) \leqslant \sigma \leqslant Mf(a)
+    \end{equation*}
+    Пусть $f(a) \ne 0 \implies (f(a) > 0) \ m \leqslant \frac{\sigma}{f(a)} \leqslant M$.
+    \begin{equation*}
+      m \leqslant \frac{1}{f(a)}\int_{a}^{b}f(x)g(x)dx \leqslant M
+    \end{equation*}
+  \end{enumerate}
+\end{proof} 
 
 \end{document}
