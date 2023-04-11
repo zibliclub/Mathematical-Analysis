@@ -469,7 +469,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
 \chapter{Интегральное исчисление}
 
-\section{Интеграл Римана}
+\section*{Интеграл Римана}
 
 \begin{definition}[интеграл Римана]
   Пусть $f:[a;b]\rightarrow\mathbb{R}$. Разобьем отрезок $[a;b]$ на $n$ частей точками $a = x_{0} < x_{1} < \ldots <
@@ -1227,7 +1227,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   Аналогично доказываются остальные случаи $(a<b, \ g(x) \leqslant 0; \ a>b, \ g(x)\geqslant 0)$.
 \end{proof}
 
-\subsection{Интеграл Римана как функция верхнего предела интегрирования}
+\section{Интеграл Римана как функция верхнего предела интегрирования}
 
 \begin{definition}
   Пусть $f\in R[a;b], \ x \in [a;b]$.
@@ -1270,16 +1270,16 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
     \int_{x}^{x+h}dt | = | \frac{1}{h}(\int_{x}^{x+h}f(t)dt - \int_{x}^{x+h}f(x)dt) | = | \frac{1}{h}
     (\int_{x}^{x+h}(f(t)-f(x))dt) | = \frac{1}{|h|}| \int_{x}^{x+h}| f(t) - f(x) |dt |$.
 
-    Так как $f$ - непрерывна в точке $x$, то $\forall \epsilon>0 \ \exists \delta>0: \ \forall h: \ |h|<\delta
+  Так как $f$ - непрерывна в точке $x$, то $\forall \epsilon>0 \ \exists \delta>0: \ \forall h: \ |h|<\delta
     \ | f(t) - f(x) | < \epsilon$, где $t\in[x;x+h]$.
 
-    Тогда $|\frac{F(x+h) - F(x)}{h} - f(x) | \leqslant \frac{1}{|h|}| \int_{x}^{x+h}| f(t) - f(x) |dt | <
+  Тогда $|\frac{F(x+h) - F(x)}{h} - f(x) | \leqslant \frac{1}{|h|}| \int_{x}^{x+h}| f(t) - f(x) |dt | <
     \frac{1}{|h|}\epsilon| \int_{x}^{x+h}dt | = \frac{1}{|h|}\epsilon|h| = \epsilon$
 
-    Таким образом, по определению производной:
-    \begin{equation*}
-      \underset{h\rightarrow0}{\lim}\frac{F(x+h) - F(x)}{h} = f(x) = F'(x).
-    \end{equation*}
+  Таким образом, по определению производной:
+  \begin{equation*}
+    \underset{h\rightarrow0}{\lim}\frac{F(x+h) - F(x)}{h} = f(x) = F'(x).
+  \end{equation*}
 \end{proof}
 
 \begin{effect}
@@ -1323,9 +1323,9 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
   Пусть $P$ - произвольное разбиение отрезка $[a;b]: \ a = x_{0} < x_{1} < \ldots < x_{n-1} < x_{n} = b$.
   Тогда $\int_{a}^{b}f(x)g(x)dt = \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}f(x)g(x)dx \\ + \sum_{i=1}^{n}
-  \int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx - \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx = 
-  \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}(f(x)-f(x_{i-1}))g(x)dx + \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}
-  f(x_{i-1})g(x)dx =$ (где $\sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}(f(x)-f(x_{i-1}))g(x)dx = \rho$ и 
+    \int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx - \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx =
+    \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}(f(x)-f(x_{i-1}))g(x)dx + \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}
+    f(x_{i-1})g(x)dx =$ (где $\sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}(f(x)-f(x_{i-1}))g(x)dx = \rho$ и
   $\sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx = \sigma$) $= \rho + \sigma$.
 
   Устремим $\lambda(P)\rightarrow0$:
@@ -1335,54 +1335,213 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   \end{equation*}
   Покажем, что пределы существуют, более того: $\underset{\lambda(P)\rightarrow0}{\lim}\rho = 0$.
 
-  Так как $g(x)\in R[a;b] \implies g$ - ограничена на $[a;b]$, то есть $\exists L > 0: \ \forall x 
-  \in [a;b] \ | g(x) |\leqslant L$.
+  Так как $g(x)\in R[a;b] \implies g$ - ограничена на $[a;b]$, то есть $\exists L > 0: \ \forall x
+    \in [a;b] \ | g(x) |\leqslant L$.
 
   Рассмотрим $\omega_{i} = \omega_{i}(f,\Delta_{i}) = \underset{\xi_{1},\xi_{2}=\Delta_{i}}{\sup}
-  | f(\xi_{1}) - f(\xi_{2}) |$. Так как $f\in R[a;b]$, то по критерию интегрируемости:
+    | f(\xi_{1}) - f(\xi_{2}) |$. Так как $f\in R[a;b]$, то по критерию интегрируемости:
   $\underset{i}{\sum}\omega_{i}\Delta x_{i} \rightarrow 0$.
 
   Тогда $| \rho | = | \sum_{i=1}^{n} \int_{x_{i-1}}^{x_{i}}(f(x) - f(x_{i-1}))g(x)dx |\leqslant
-  \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}| f(x) - f(x_{i-1}) | | g(x) |dx \leqslant\sum_{i=1}^{n}
-  \int_{x_{i-1}}^{x_{i}}\omega_{i}Ldx = L\sum_{i=1}^{n}\omega_{i}\int_{x_{i-1}}^{x_{i}}dx =
-  L\sum_{i=1}^{n}\omega_{i}\Delta x_{i}$.
+    \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}| f(x) - f(x_{i-1}) | | g(x) |dx \leqslant\sum_{i=1}^{n}
+    \int_{x_{i-1}}^{x_{i}}\omega_{i}Ldx = L\sum_{i=1}^{n}\omega_{i}\int_{x_{i-1}}^{x_{i}}dx =
+    L\sum_{i=1}^{n}\omega_{i}\Delta x_{i}$.
 
-  Пусть $\epsilon > 0$ задано. Выберем $\delta>0: \ \forall P: \ \lambda(P) < \delta$ и 
+  Пусть $\epsilon > 0$ задано. Выберем $\delta>0: \ \forall P: \ \lambda(P) < \delta$ и
   $\sum_{i=1}^{n}\omega_{i}\Delta x_{i} < \frac{\epsilon}{L}$.
 
-  Имеем, что $|\rho| \leqslant L\sum_{i=1}^{n}\omega_{i}\Delta x_{i} < L\frac{\epsilon}{L} = 
-  \epsilon \implies \underset{\lambda(P)\rightarrow0}{\lim}\rho = 0$.
+  Имеем, что $|\rho| \leqslant L\sum_{i=1}^{n}\omega_{i}\Delta x_{i} < L\frac{\epsilon}{L} =
+    \epsilon \implies \underset{\lambda(P)\rightarrow0}{\lim}\rho = 0$.
 
   Тогда $\int_{a}^{b}f(x)g(x)dx = \underset{\lambda(P)\rightarrow0}{\lim}\sum_{i=1}^{n}
-  \int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx$. $\underset{\lambda(P)\rightarrow0}{\lim}\sigma$
+    \int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx$. $\underset{\lambda(P)\rightarrow0}{\lim}\sigma$
   существует, так как $\int_{a}^{b}f(x)g(x)dx = const$ и $\underset{\lambda(P)\rightarrow0}{\lim}
-  \rho = 0$.
+    \rho = 0$.
 
-  Рассмотрим функцию $C_{1}(x) = \int_{a}^{x}g(x)dx$:
+  Рассмотрим функцию $G(x) = \int_{a}^{x}g(x)dx$:
   \begin{enumerate}
-    \item $C_{1}(x)$ - непрерывна на $[a;b] \ (x\in[a;b]) \implies C_{1}(x)$ принимает на $[a;b]
-    \ max \ min$ значение (по теореме Вейерштрасса о максимальном значении), $m = \underset
-    {x\in[a;b]}{\min}C_{1}(x), \ M = \underset{x\in[a;b]}{\max} C_{1}(x)$.
+    \item $G(x)$ - непрерывна на $[a;b] \ (x\in[a;b]) \implies G(x)$ принимает на $[a;b]
+            \ max \ min$ значение (по теореме Вейерштрасса о максимальном значении), $m = \underset
+            {x\in[a;b]}{\min}G(x), \ M = \underset{x\in[a;b]}{\max} G(x)$.
     \item $\int_{x_{i-1}}^{x_{i}}g(x)dx = \int_{a}^{x_{i}}g(x)dx - \int_{a}^{x_{i-1}}g(x)dx =
-    C_{1}(x_{i}) - C_{1}(x_{i-1})$.
+            G(x_{i}) - G(x_{i-1})$.
 
-    $\sigma = \sum_{i=1}^{n}f(x_{i-1})\int_{x_{i-1}}^{x_{i}}g(x)dx = \sum_{i=1}^{n}f(x_{i-1})
-    (C_{1}(x_{i}) - C_{1}(x_{i-1})) = f(x_{0}) C_{1}(x_{1}) - f(x_{0})C_{1}(x_{0}) + 
-    f(x_{1}) C_{1}(x_{2}) - f(x_{1}) C_{1}(x_{1}) + \ldots + f(x_{n-2})C_{1}(x_{n-1}) - 
-    f(x_{n-2}) C_{1}(x_{n-2}) + f(x_{n-1})C_{1}(x_{n}) - f(x_{n-1})C_{1}(x_{n-1}) = 
-    \sum_{i=1}^{n-1} C_{1}(x_{i})(f(x_{i-1}) - f(x_{i})) + f(x_{n-1})C_{1}(x_{n})$.
+          $\sigma = \sum_{i=1}^{n}f(x_{i-1})\int_{x_{i-1}}^{x_{i}}g(x)dx = \sum_{i=1}^{n}f(x_{i-1})
+            (G(x_{i}) - G(x_{i-1})) = f(x_{0}) G(x_{1}) - f(x_{0})G(x_{0}) +
+            f(x_{1}) G(x_{2}) - f(x_{1}) G(x_{1}) + \ldots + f(x_{n-2})G(x_{n-1}) -
+            f(x_{n-2}) G(x_{n-2}) + f(x_{n-1})G(x_{n}) - f(x_{n-1})G(x_{n-1}) =
+            \sum_{i=1}^{n-1} G(x_{i})(f(x_{i-1}) - f(x_{i})) + f(x_{n-1})G(x_{n})$.
 
-    Тогда $\sigma \geqslant m (\sum_{i=1}^{n-1}(f(x_{i-1}) - f(x_{2})) + f(x_{n-1})) =
-    m(f(x_{0}) - f(x_{1}) + f(x_{1}) - f(x_{2}) + f(x_{2}) - \ldots - f(x_{n-1}) + f(x_{n-1}))
-    = mf(a)$. Аналогично, $\sigma \leqslant Mf(a)$.
-    \begin{equation*}
-      mf(a) \leqslant \sigma \leqslant Mf(a)
-    \end{equation*}
-    Пусть $f(a) \ne 0 \implies (f(a) > 0) \ m \leqslant \frac{\sigma}{f(a)} \leqslant M$.
-    \begin{equation*}
-      m \leqslant \frac{1}{f(a)}\int_{a}^{b}f(x)g(x)dx \leqslant M
-    \end{equation*}
+          Тогда $\sigma \geqslant m (\sum_{i=1}^{n-1}(f(x_{i-1}) - f(x_{2})) + f(x_{n-1})) =
+            m(f(x_{0}) - f(x_{1}) + f(x_{1}) - f(x_{2}) + f(x_{2}) - \ldots - f(x_{n-1}) + f(x_{n-1}))
+            = mf(a)$. Аналогично, $\sigma \leqslant Mf(a)$.
+          \begin{equation*}
+            mf(a) \leqslant \sigma \leqslant Mf(a)
+          \end{equation*}
+          Пусть $f(a) \ne 0 \implies (f(a) > 0) \ m \leqslant \frac{\sigma}{f(a)} \leqslant M \implies$
+          \begin{equation*}
+            m \leqslant \frac{1}{f(a)}\int_{a}^{b}f(x)g(x)dx \leqslant M
+          \end{equation*}
+          $\implies \exists \xi \in [a;b]: \ m \leqslant G(\xi) \leqslant M$ и $G(\xi) = \frac{1}{f(a)}
+            \int_{a}^{\xi}f(x)g(x)dx$.
+
+          $\int_{a}^{b}f(x)g(x)dx = f(a)G(\xi) = f(a)\int_{a}^{\xi}g(x)dx$.
   \end{enumerate}
-\end{proof} 
+\end{proof}
+
+\begin{proof}
+  (теоремы)
+
+  Пусть $f$ - неубывающая. Рассмотрим функцию $h(x) = f(b) - f(x), \ h(x) \geqslant 0 \
+    \forall x \in [a;b] \ \forall x_{1},x_{2} \in [a;b]: \ x_{1} < x_{2} \implies
+    h(x_{1}) - h(x_{2}) = f(b) - f(x) - f(b) + f(x_{2}) = f(x_{2}) - f(x_{1}) \geqslant 0
+    \implies h(x_{1}) \geqslant h(x_{2}) \implies h(x)$ - невозрастающая.
+
+  По лемме, $\int_{a}^{b}h(x)g(x)dx = h(a)\int_{a}^{\xi}g(x)dx$.
+
+  С другой стороны, $\int_{a}^{b}h(x)g(x)dx = \int_{a}^{b}(f(b) - f(x))g(x)dx =
+    f(b)\int_{a}^{b}g(x)dx - \int_{a}^{b}f(x)g(x)dx$.
+
+  Имеем, что $f(b)\int_{a}^{\xi}g(x)dx - f(a)\int_{a}^{\xi}g(x)dx = f(b)\int_{a}^{b}
+    g(x)dx - \int_{a}^{b}f(x)g(x)dx$.
+
+  $\int_{a}^{b}f(x)g(x)dx = f(b)(\int_{a}^{\xi}g(x)dx + \int_{\xi}^{b}g(x)dx) -
+    f(b)\int_{a}^{\xi}g(x)dx + f(a)\int_{a}^{\xi}g(x)dx = f(a)\int_{a}^{\xi} +
+    f(b)\int_{\xi}^{b}g(x)dx$.
+
+  Для случая, когда $f$ - невозрастающая, доказываем аналогично.
+\end{proof}
+
+\section{Формула Ньютона-Лейбница}
+
+\begin{theorem}
+  Пусть $f$ - непрерывна на $[a;b]$ и $F(x)$ - её первообразная.
+
+  Тогда $\int_{a}^{b}f(x)dx = F(b) - F(a) = F(x)|_{a}^{b}$
+\end{theorem}
+
+\begin{proof}
+  Пусть $F(x)$ - первообразная функции $f(x)$ на $[a;b]$:
+  \begin{equation*}
+    F(x) = \int_{a}^{x}f(t)dt + C.
+  \end{equation*}
+  Отсюда, $F(b) = \int_{a}^{b}f(t)dt + C; \ F(a) = \int_{a}^{a}f(t)dt;$
+
+  $F(b) - F(a) = \int_{a}^{b}f(t)dt + C - C = \int_{a}^{b}f(t)dt + C (?)$
+\end{proof}
+
+\begin{theorem}
+  Пусть $F(x)$ - непрерывна на $[a;b]$, дифференцируема на $[a;b]$
+  за исключением не более чем конечного числа точек. Причем всюду, где
+  она дифференцируема: $F'(x) = f(x)$. И, наконец, $f(x)\in R[a;b]$.
+
+  Тогда:
+  \begin{equation*}
+    \int_{a}^{b}f(x)dx = F(b) - F(a) = F(x)|_{a}^{b}
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Возьмем произвольное разбиение $P$ отрезка $[a;b]$ так, что оно содержит
+  все точки недиференцируемости функции $F(x): \ a=x_{0} < x_{1} < \ldots
+    <x_{n-1} < x_{n} = b, \implies F(b) - F(a) = \sum_{i=1}^{n}(F(x_{i}) - F(x_{i-1}))$.
+
+  Пусть $\Delta_{i} = [x_{i-1};x_{i}]$. Фукнция $F(x)$ дифференцируема на
+  $(x_{i-1};x_{i})$, непрерывна на $[x_{i-1};x_{i}] \ \forall i = \overline{1,n}$.
+
+  По теореме Лагранжа, $\exists \xi_{i} \in (x_{i-1};x_{i}): \ F(x_{i}) - F(x_{i-1})=
+    F'(\xi_{i})(x_{i} - x_{i-1}) = f(\xi_{i})\Delta x_{i}$.
+
+  Тогда:
+  \begin{equation*}
+    F(b) - F(a) = \sum_{i=1}^{n}f(\xi_{i})\Delta x_{i}.
+  \end{equation*}
+
+  Устремим $\lambda (P) \rightarrow 0$:
+  \begin{equation*}
+    F(b) - F(a) = \underset{\lambda(P)\rightarrow0}{\lim}\sum_{i=1}^{n}f(\xi_{i})\Delta x_{i},
+  \end{equation*}
+
+  так как $\exists \lim, \ f\in R[a;b]$, то $F(b) - F(a) = \int_{a}^{b}f(x)dx$.
+\end{proof}
+
+\begin{effect}
+  Если функция $F(x)$ удовлетворяет условиям теоремы 2.5.2, то $\forall x \in [a;b]:$
+  \begin{equation*}
+    F(x) = F(a) + \int_{a}^{x}F'(t)dt.
+  \end{equation*}
+\end{effect}
+
+\section{Интегрирование по частям в определенном интеграле и формула Тейлора}
+
+\begin{theorem}[формула интегрирования по частям]
+  Если фукнции $u(x)$ и $v(x)$ непрерывно дифференцируемы на отрезке $[a;b]$, то
+  справедливо равенство:
+  \begin{equation*}
+    \int_{a}^{b}udv = uv|_{a}^{b} - \int_{a}^{b}vdu.
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Рассмотрим $uv|_{a}^{b} = \int_{a}^{b}d(uv) = \int_{a}^{b}(vdu + udv) = \int_{a}^{b}vdu +
+    \int_{a}^{b}udv \implies \int_{a}^{b}udv = uv|_{a}^{b} - \int_{a}^{b}vdu$.
+\end{proof}
+
+\begin{theorem}[формула Тейлора с остаточным членом в интегральной форме]
+  Пусть функция $f(t)$ имеет на отрезке $[a;x]$ непрерывные производные до
+  $n$-го порядка включительно. Тогда справедлива формула Тейлора:
+  \begin{equation*}
+    f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^{2} + \ldots +
+    \frac{f^{(n-1)}(a)}{(n-1)!}(x-a)^{n-1} + r_{n}(a;x),
+  \end{equation*}
+  где $r_{n}(a;x) = \frac{1}{(n-1)!}\int_{a}^{x}f^{(n)}(t)(x-a)^{n-1}dt$.
+\end{theorem}
+
+\begin{proof}
+  Пусть $f(t)$ имеет на $[a;x]$ непрерывные производные до $n$-го порядка включительно.
+  По формуле Ньютона-Лейбница:
+  $f(x) - f(a) = \int_{a}^{x}f'(t)dt = \int_{a}^{x}f'(t)dt = -\int_{a}^{x}f'(t)(x-t)'dt=$\\
+  \begin{equation*}
+    = \left|
+    \begin{array}{c}
+      u = f'(t) \implies u' = f'(t) \implies du = f''(t)dt \\
+      (x-t)'dt = dv \implies d(x-t) = dv \implies v=x-t
+    \end{array}
+    \right| =
+  \end{equation*}
+  $= -f'(t)(x-t)|_{a}^{x} + \int_{a}^{x}f''(t)(x-t)dt = f'(a)(x-a) +
+    \frac{1}{2}\int_{a}^{x}-f''(t)((x-t)^{2})_{t}'dt = f'(a)(x-a) - \frac{1}{2}
+    (f''(t)(x-t)^{2}|_{a}^{x} - \int_{a}^{x}f'''(t)(x-t)^{2}dt) = f'(a)(x-a) +
+    \frac{1}{2} f''(a)(x-a)^{2} - \frac{1}{6}\int_{a}^{x}f'''(t)((x-t)^{3})'dt =
+    \ldots = f'(a)(x-a) + \frac{1}{2}f''(a)(x-a)^{2} + \frac{1}{6}f'''(a)(x-a)^{3}
+    + \ldots + \frac{1}{6 * \ldots * (n-1)}f^{(n-1)}(a)(x-a)^{n-1} + \frac{1}{(n-1)!}
+    \int_{a}^{x}f^{(n)}(t)(x-t)^{n-1}dt$.
+\end{proof}
+
+\section{Замена переменной в определенном интеграле}
+
+\begin{theorem}
+  Пусть $\phi : [\alpha;\beta] \rightarrow [a;b]$ - непрерывно дифференцируемое
+  отображение отрезка $[\alpha;\beta]$ в отрезок $[a;b]$, причем $\phi(\alpha)
+  = a, \ \phi(\beta) = b$. Тогда для любой функции $f(x)$, непрерывной на $[a;b]$,
+  функция $f(\phi(t))\phi'(t)$ - непрерывна на $[\alpha;\beta]$ и справедливо
+  равенство:
+  \begin{equation*}
+    \int_{a}^{b}f(x)dx = \int_{\alpha}^{\beta}f(\phi(t))\phi'(t)dt.
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Пусть $F(x)$ - первообразная $f(x)$ на $[a;b]$.
+  
+  Тогда $F(\phi(t))$ - первообразная для $f(\phi(t)\phi'(t)) \ (F_{t}'(\phi(t))
+  = F_{\phi}'\phi_{t}') \implies F(\phi(t))$ - непрерывна на $[\alpha;\beta]$.
+
+  По формуле Ньютона-Лейбница, $F(b) - F(a) = \int_{a}^{b}f(x)dx$ и $\int_{\alpha}
+  ^{\beta}f(\phi(t))\phi'(t)dt = F(\phi(\beta)) - F(\phi(\alpha))$.
+
+  По условию, $\phi(\beta) = b, \ \phi(\alpha) = a \implies \int_{a}^{b}f(x)dx =
+  \int_{\alpha}^{\beta}f(\phi(t))\phi'(t)dt$.
+\end{proof}
 
 \end{document}
