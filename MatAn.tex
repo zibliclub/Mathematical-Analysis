@@ -1709,4 +1709,185 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
     \int_{\alpha}^{\beta}f(\phi(t))\phi'(t)dt$.
 \end{proof}
 
+\begin{theorem}[замена переменной для интегрируемых функций]
+  Пусть $f:[a;b]\rightarrow\mathbb{R}, \ f\in R[a;b]$, функция $x = \phi(t):$
+  \begin{enumerate}
+    \item $\phi:[\alpha;\beta]\rightarrow[a;b]$
+    \item $\phi(\alpha)=a, \ \phi(\beta)=b$
+    \item $\phi'(t)$ непрерывна на $[\alpha;\beta]$
+    \item $\phi$ - строго монотонна
+  \end{enumerate}
+  Тогда:
+  \begin{equation*}
+    \int_{a}^{b}f(x)dx = \int_{\alpha}^{\beta}f(\phi(t))\phi'(t)dt
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Пусть $(P_t,\tau)$ - произвольное разбиение с отмеченными точками отрезка $[\alpha;\beta]:$
+  \begin{equation*}
+    \alpha = t_0 < t_1 < \ldots < t_{n-1} < t_n = \beta;
+  \end{equation*}
+  \begin{equation*}
+    \tau_i \in [t_{i-1};t_i], \ i = \overline{1,n},
+  \end{equation*}
+  Для определенности будем считать, что $\phi$ - возрастающая, то есть $\alpha < \beta, \ a < b$.
+
+  Тогда можно построить разбиение $(P_x,\xi)$ с отмеченными точками отрезка $[a;b]:$
+  \begin{equation*}
+    a = x_0 < x_1 < \ldots < x_{n-1} < x_n = b;
+  \end{equation*}
+  \begin{equation*}
+    \xi_i \in [x_{i-1};x_i], \ i = \overline{1,n},
+  \end{equation*}
+  Здесь $x_i = \phi(t_i), \ \xi_i = \phi(\tau_i)$.
+  {\Large ДВА ГРАФИКА ИЗ ГАЛЕРЕИ}
+
+  Если $\lambda(P_t)\rightarrow0 \implies \lambda(P_x)\rightarrow0$. Составим интегральные суммы:
+  \begin{equation*}
+    \sigma = \sum_{i=1}^{n}f(\phi(\tau_i))\phi'(\tau_i)\Delta t_i;
+  \end{equation*}
+  \begin{equation*}
+    \overline{\sigma} = \sum_{i=1}^{n}f(\xi_i)\Delta x_i,
+  \end{equation*}
+  Если $\lambda(P_t)\rightarrow0 \implies \lambda(P_x) \rightarrow 0 \implies \overline{\sigma}
+  \rightarrow \int_{a}^{b}f(x)dx$ (так как $f\in R[a;b]$).
+
+  Покажем, что $\sigma \rightarrow \int_{a}^{b}f(x)dx: \ \Delta x_i = x_i - x_{i-1} = \phi(t_i)
+  - \phi (t_{i-1}) = \phi'(\overline{\tau_i})\Delta t_i, \ \overline{\tau_i} \in [t_{i-1};t_i]$
+  (случайная точка из отрезка).
+
+  Тогда:
+  \begin{equation*}
+    \overline{\sigma} = \sum_{i=1}^{n}f(\xi_i)\Delta x_i = \sum_{i=1}^{n}f(\phi(\tau_i))
+    \phi'(\overline{\tau_i})\Delta t_i;
+  \end{equation*}
+  Покажем, что $\underset{\lambda(P_i)\rightarrow0}{\lim}(\sigma - \overline{\sigma}) = 0:$
+
+  В самом деле, $| \sigma - \overline{\sigma} | = | \sum_{i=1}^{n} f(\phi(\tau_i))\phi'(\tau_i)
+  \Delta t_i - \sum_{i=1}^{n}f(\phi(\tau_i)\phi'(\overline{\tau_i}))\Delta t_i | = 
+  | \sum_{i=1}^{n}f(\phi(\tau_i))(\phi'(\tau_i) - \phi'(\overline{\tau_i}))\Delta t_i | \leqslant
+  \sum_{i=1}^{n}| f(\phi(\tau_i)) | | \phi'(\tau_i) - \phi'(\overline{\tau_i}) |\Delta t_i \leqslant
+  \\ L\sum_{i=1}^{n}| \phi'(\tau_i) - \phi'(\overline{\tau_i}) | \Delta t_i$, где $L>0: \ \forall x
+  \in [a;b] \quad |f(x)| \leqslant L$ (так как $f$ - интегрируема $\implies$ ограничена).
+
+  Так как $\phi'(t)$ непрерывна на $[\alpha;\beta] \implies \forall i = \overline{1,n} \ 
+  \phi'(t)$ непрерывна на $[t_{i-1}; t_i] \implies \phi'(t)$ равномерно непрерывна на $[t_{i-1}; t_i]$.
+  Возьмем $\delta > 0 : \ \forall t_1, t_2 \in [t_{i-1}; t_i] \ | [t_1 - t_2] | < \delta \implies
+  | \phi'(t_1) - \phi'(t_2) | < \frac{\epsilon}{L(\beta - \alpha)} \ (\forall \epsilon > 0)$.
+
+  Тогда $| \sigma - \overline{\sigma} | \leqslant L\sum_{i=1}^{n} | \phi'(\tau_i) - \phi'(\overline{
+  \tau_i}) | \Delta t_i < L\frac{\epsilon}{L(\beta - \alpha)}\sum_{i=1}^{n}\Delta t_i = L
+  \frac{\epsilon}{L(\beta - \alpha)}(\beta - \alpha) = \epsilon \implies \sigma \rightarrow
+  \int_{a}^{b}f(x)dx$ при $\lambda(P_t) \rightarrow 0$.
+
+  С другой стороны, по определению определенного интеграла:
+  \begin{equation*}
+    \underset{\lambda(P_t)\rightarrow0}{\lim}
+    \sigma = \int_{\alpha}^{\beta}f(\phi(t))\phi'(t)dt \implies \int_{a}^{b}f(x)dx = \int_{\alpha}^{\beta}
+    f(\phi(t))\phi'(t)dt.
+  \end{equation*}
+\end{proof}
+
+\chapter{Геометрические приложения интеграла Римана}
+
+\section{Длина кривой}
+
+\begin{definition}
+  Пусть $(X,\rho)$ - метрическое пространство, $[a;b] \subset \mathbb{R}$. Будем называть \textbf{путем}
+  произвольное непрерывное отображение:
+  \begin{equation*}
+    \gamma:[a;b]\rightarrow X
+  \end{equation*}
+\end{definition}
+
+\begin{definition}
+  Пусть $\gamma:[a;b]\rightarrow X$ называется \textbf{простым}, если:
+  \begin{equation*}
+    \forall t_1,t_2 \in[a;b]: \quad \gamma(t_1) = \gamma(t_2) \implies t_1 = t_2
+  \end{equation*}
+  {\Large ДВА ГРАФИКА ИЗ ГАЛЕРЕИ}
+\end{definition}
+
+\begin{definition}
+  Пусть $\gamma:[a;b]\rightarrow X$ называется \textbf{замкнутым}, если:
+  \begin{equation*}
+    \gamma(a) = \gamma(b),
+  \end{equation*}
+  тогда:
+  \begin{itemize}
+    \item $\gamma(a)$ - начало пути,
+    \item $\gamma(b)$ - конец пути
+  \end{itemize}
+\end{definition}
+
+\begin{definition}
+  Пусть $\gamma:[a;b]\rightarrow X$ называется \textbf{простым замкнутым}, если:
+  \begin{equation*}
+    \forall t_1,t_2\in(a;b): \ \gamma(t_1)=\gamma(t_2)\implies t_1=t_2; \ \gamma(a) = \gamma(b)
+  \end{equation*}
+\end{definition}
+
+\clearpage
+
+На множестве путей введем отношение.
+
+Пусть $\gamma_1:[a;b]\rightarrow X, \ \gamma_2:[\alpha;\beta] \rightarrow X$.
+
+Будем говорить, что $\gamma_1$ и $\gamma_2$ находятся в отношении $"\sim"$, то есть $\gamma_1 \sim \gamma_2$,
+если существует строго возрастающее отображение $\phi:[\alpha;\beta]\rightarrow[a;b]:$
+\begin{equation*}
+  \phi(\alpha) = a, \ \phi(\beta) = b,
+\end{equation*}
+а так же:
+\begin{equation*}
+  \gamma_2(\tau) = \gamma_1(\phi(\tau))
+\end{equation*}
+{\Large РИСУНОК ИЗ ГАЛЕРЕИ}
+
+Упражнение 1: Доказать, что введенное отношение есть отношение эквивалентности.
+
+\begin{definition}
+  Отображение $\phi$ называется \textbf{гомеоморфизмом}, если:
+  \begin{center}
+    $\phi$ и $\phi^{-1}$ - непрерывны
+  \end{center}
+\end{definition}
+
+Упражнение 2: Доказать, что $\phi$ в определении отношения между $\gamma_1$ и $\gamma_2$ есть
+гомеоморфизм.
+
+\begin{definition}
+  \textbf{Кривой} в $X$ будем называть класс эквивалентных путей.
+\end{definition}
+
+\begin{definition}
+  Образ пути $\gamma$ называется \textbf{носителем} этого пути.
+\end{definition}
+
+\begin{example}
+  Рассмотрим:
+  
+  $\gamma_1: [0;1] \rightarrow \mathbb{R}: \quad \gamma_1(t) = t$;
+
+  $\gamma_2: [0;1] \rightarrow \mathbb{R}: \quad \gamma_2(\tau) = \tau^3$,
+
+  {\Large ГРАФИК ИЗ ГАЛЕРЕИ}
+
+  Что бы доказать, что $\gamma_1 \sim \gamma_2$, нужно найти строго возрастающее отображение
+  $\phi:[0;1]\rightarrow[0;1]$:
+
+  $t = \phi(\tau) = \tau^3, \ \phi(\tau)$ - строго возрастающее, $\phi(0) = 0, \ \phi(1) = 1$;
+
+  $\gamma_2(\tau) = \tau^3 = \phi(\tau) = t = \gamma_1(t) = \gamma_1(\phi(\tau)) \implies
+  \gamma_2(\tau) = \gamma_1(\phi(\tau))$.
+\end{example}
+
+\begin{definition}
+  Кривая называется \textbf{простой}, если она представляется простым путем (это значит, что в ее классе
+  есть простой путь).
+\end{definition}
+
+Упражнение 3: Доказать, что если один путь в классе эквивалентности простой, то остальные тоже простые.
+
 \end{document}
