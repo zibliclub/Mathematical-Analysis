@@ -1758,10 +1758,10 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
     \overline{\sigma} = \sum_{i=1}^{n}f(\xi_i)\Delta x_i,
   \end{equation*}
   Если $\lambda(P_t)\rightarrow0 \implies \lambda(P_x) \rightarrow 0 \implies \overline{\sigma}
-  \rightarrow \int_{a}^{b}f(x)dx$ (так как $f\in R[a;b]$).
+    \rightarrow \int_{a}^{b}f(x)dx$ (так как $f\in R[a;b]$).
 
   Покажем, что $\sigma \rightarrow \int_{a}^{b}f(x)dx: \ \Delta x_i = x_i - x_{i-1} = \phi(t_i)
-  - \phi (t_{i-1}) = \phi'(\overline{\tau_i})\Delta t_i, \ \overline{\tau_i} \in [t_{i-1};t_i]$
+    - \phi (t_{i-1}) = \phi'(\overline{\tau_i})\Delta t_i, \ \overline{\tau_i} \in [t_{i-1};t_i]$
   (случайная точка из отрезка).
 
   Тогда:
@@ -1772,21 +1772,21 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   Покажем, что $\underset{\lambda(P_i)\rightarrow0}{\lim}(\sigma - \overline{\sigma}) = 0:$
 
   В самом деле, $| \sigma - \overline{\sigma} | = | \sum_{i=1}^{n} f(\phi(\tau_i))\phi'(\tau_i)
-  \Delta t_i - \sum_{i=1}^{n}f(\phi(\tau_i)\phi'(\overline{\tau_i}))\Delta t_i | = 
-  | \sum_{i=1}^{n}f(\phi(\tau_i))(\phi'(\tau_i) - \phi'(\overline{\tau_i}))\Delta t_i | \leqslant
-  \sum_{i=1}^{n}| f(\phi(\tau_i)) | | \phi'(\tau_i) - \phi'(\overline{\tau_i}) |\Delta t_i \leqslant
-  \\ L\sum_{i=1}^{n}| \phi'(\tau_i) - \phi'(\overline{\tau_i}) | \Delta t_i$, где $L>0: \ \forall x
-  \in [a;b] \quad |f(x)| \leqslant L$ (так как $f$ - интегрируема $\implies$ ограничена).
+    \Delta t_i - \sum_{i=1}^{n}f(\phi(\tau_i)\phi'(\overline{\tau_i}))\Delta t_i | =
+    | \sum_{i=1}^{n}f(\phi(\tau_i))(\phi'(\tau_i) - \phi'(\overline{\tau_i}))\Delta t_i | \leqslant
+    \sum_{i=1}^{n}| f(\phi(\tau_i)) | | \phi'(\tau_i) - \phi'(\overline{\tau_i}) |\Delta t_i \leqslant
+    \\ L\sum_{i=1}^{n}| \phi'(\tau_i) - \phi'(\overline{\tau_i}) | \Delta t_i$, где $L>0: \ \forall x
+    \in [a;b] \quad |f(x)| \leqslant L$ (так как $f$ - интегрируема $\implies$ ограничена).
 
-  Так как $\phi'(t)$ непрерывна на $[\alpha;\beta] \implies \forall i = \overline{1,n} \ 
-  \phi'(t)$ непрерывна на $[t_{i-1}; t_i] \implies \phi'(t)$ равномерно непрерывна на $[t_{i-1}; t_i]$.
+  Так как $\phi'(t)$ непрерывна на $[\alpha;\beta] \implies \forall i = \overline{1,n} \
+    \phi'(t)$ непрерывна на $[t_{i-1}; t_i] \implies \phi'(t)$ равномерно непрерывна на $[t_{i-1}; t_i]$.
   Возьмем $\delta > 0 : \ \forall t_1, t_2 \in [t_{i-1}; t_i] \ | [t_1 - t_2] | < \delta \implies
-  | \phi'(t_1) - \phi'(t_2) | < \frac{\epsilon}{L(\beta - \alpha)} \ (\forall \epsilon > 0)$.
+    | \phi'(t_1) - \phi'(t_2) | < \frac{\epsilon}{L(\beta - \alpha)} \ (\forall \epsilon > 0)$.
 
   Тогда $| \sigma - \overline{\sigma} | \leqslant L\sum_{i=1}^{n} | \phi'(\tau_i) - \phi'(\overline{
-  \tau_i}) | \Delta t_i < L\frac{\epsilon}{L(\beta - \alpha)}\sum_{i=1}^{n}\Delta t_i = L
-  \frac{\epsilon}{L(\beta - \alpha)}(\beta - \alpha) = \epsilon \implies \sigma \rightarrow
-  \int_{a}^{b}f(x)dx$ при $\lambda(P_t) \rightarrow 0$.
+      \tau_i}) | \Delta t_i < L\frac{\epsilon}{L(\beta - \alpha)}\sum_{i=1}^{n}\Delta t_i = L
+    \frac{\epsilon}{L(\beta - \alpha)}(\beta - \alpha) = \epsilon \implies \sigma \rightarrow
+    \int_{a}^{b}f(x)dx$ при $\lambda(P_t) \rightarrow 0$.
 
   С другой стороны, по определению определенного интеграла:
   \begin{equation*}
@@ -1817,7 +1817,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
     \begin{center}
       \includegraphics[scale=0.2]{graph6.png}\label{figure6}
 
-      (рисунок а). - простой путь) (рисунок б). - непростой путь)
+      а). простой путь $\quad$ б). непростой путь
     \end{center}
   \end{figure}
 \end{definition}
@@ -1884,7 +1884,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
 \begin{example}
   Рассмотрим:
-  
+
   $\gamma_1: [0;1] \rightarrow \mathbb{R}: \quad \gamma_1(t) = t$;
 
   $\gamma_2: [0;1] \rightarrow \mathbb{R}: \quad \gamma_2(\tau) = \tau^3$,
@@ -1901,7 +1901,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   $t = \phi(\tau) = \tau^3, \ \phi(\tau)$ - строго возрастающее, $\phi(0) = 0, \ \phi(1) = 1$;
 
   $\gamma_2(\tau) = \tau^3 = \phi(\tau) = t = \gamma_1(t) = \gamma_1(\phi(\tau)) \implies
-  \gamma_2(\tau) = \gamma_1(\phi(\tau))$.
+    \gamma_2(\tau) = \gamma_1(\phi(\tau))$.
 \end{example}
 
 \begin{definition}
@@ -1910,5 +1910,151 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 \end{definition}
 
 Упражнение 3: Доказать, что если один путь в классе эквивалентности простой, то остальные тоже простые.
+
+\begin{definition}
+  Путь, представляющий данную кривую (из класса эквивалентности путей) $l$ называется
+  \textbf{параметризацией} этой кривой.
+\end{definition}
+
+Вдальнейшем будем рассматривать метрические пространства $(X,\rho)$ как $\mathbb{R}^2, \ \mathbb{R}^3$
+с евклидовой метрикой.
+
+\begin{definition}
+  Пусть $l$ - простая кривая в $\mathbb{R}^2, \ \gamma(t) = (x(t);t(t))$ - ее параметризация.
+  Кривая $l$ называется \textbf{гладкой}, если $\forall t \ x(t),y(t)$ имеют непрерывные производные
+  на $[\alpha,\beta]$ и $\nexists t_0 \in [\alpha,\beta] \ (\gamma : [\alpha,\beta] \rightarrow
+    \mathbb{R}^2), \ x'(t_0)=0$ и $y'(t_0) = 0$.
+\end{definition}
+
+\begin{definition}
+  Пусть $l \subset \mathbb{R}^2 \ (\mathbb{R}^3)$ и $\gamma:[\alpha,\beta]\rightarrow\mathbb{R}^2 \
+    (\mathbb{R}^3)$ - параметризация кривой $l$.
+
+  Пусть $\alpha = t_0 < t_1 < \ldots < t_{n-1} < t_n = \beta$ - разбиение отрезка $[\alpha,\beta]$
+  и $M_i = \gamma(t_i), \ i=\overline{0,n}$ - точка пути $\gamma$ (кривая $l$):
+  \begin{equation*}
+    M_i = \gamma (t_i) = (x(t_i);y(t_i))
+  \end{equation*}
+  Тогда отрезок $M_{i-1}M_i \ (i = \overline{1,n})$ называется \textbf{звеном} кривой $l$.
+  Объединение $\underset{i}{\cap}M_{i-1}M_i$ - ломаная, вписанная в $l$.
+
+  \textbf{Периметром} ломаной называется сумма длин ее звеньев:
+  \begin{equation*}
+    p(M_0,M_1,\ldots,M_n) = \sum_{i=1}^{n}| M_{i-1}M_i |
+  \end{equation*}
+  {\Large ДВА ГРАФИКА ИЗ ГАЛЕРЕИ}
+\end{definition}
+
+\begin{definition}
+  Если множество периметров ломаных, вписанных в данную кривую $l$ - ограничено, то кривую $l$
+  будем называть \textbf{спрямляемой}.
+\end{definition}
+
+\begin{definition}
+  Если $p(M_0,M_1,\ldots,M_n)$ - периметр ломаной, вписанной в кривую $l, \ S(l)$ - длина кривой, то
+  по определению:
+  \begin{equation*}
+    S(l) = \sup p(M_0,\ldots,M_n),
+  \end{equation*}
+  где $\sup$ берется по всем ломаным $\underset{i}{\cup} M_{i-1}M_i$, вписанным в $l$.
+\end{definition}
+
+\begin{example}
+  (неспрямляемой кривой)
+
+  {\Large РИСУНОК ИЗ ГАЛЕРЕИ}
+\end{example}
+
+Рассмотрим $L$ - множество всех спрямляемых кривых на плоскости $(\mathbb{R}^2)$.
+Введем $S:L\rightarrow\mathbb{R}$, то есть отображение $S$ сопоставляет спрямляемую кривую $l$
+ее длину.
+\begin{center}
+  $S(l)$ - длина кривой $l$
+\end{center}
+
+\begin{theorem}[аддитивность длины кривой]
+  Функция $S(l)$ является аддитивной, то есть если $l = l_1 \cup l_2$, то $S(l) = S(l_1) + S(l_2)$.
+
+  \textbf{Более тонко:} Пусть $\gamma:[a;b]\rightarrow\mathbb{R}^2$ - параметризация спрямляемой кривой
+  $l$, точка $c \in [a;b]$:
+
+  $\gamma_1:[a;c] \rightarrow \mathbb{R}^2$ - параметризация кривой $l_1$,
+
+  $\gamma_2:[c;b] \rightarrow \mathbb{R}^2$ - параметризация кривой $l_2$,
+
+  при этом $C = \gamma(c) = \gamma_1(c) = \gamma_2(c)$.
+    {\Large ГРАФИК ИЗ ГАЛЕРЕИ}
+
+  Тогда $S(l) = S(l_1) + S(l_2)$.
+\end{theorem}
+
+\begin{proof}
+  Пусть $l$ - спрямляемая кривая. Покажем, что $l_1$ и $l_2$ - спрямляемые.
+
+  Обозначим за $m_1$ и $m_2$ - ломаные, вписанные в $l_1$ и $l_2$ соответственно. Тогда можно ввести
+  $m$ как $m = m_1 \cup m_2$ - ломаная, вписанная в $l$.
+    {\Large РИСУНОК ИЗ ГАЛЕРЕИ}
+
+  $p(m)$ - периметр ломаной, вписанной в $l$, $p(m) = p(m_1) + p(m_2) \leqslant S(l) \implies
+    p(m_1)\leqslant S(l)$ и $p(m_2) \leqslant S(l) \implies l_1$ и $l_2$ - спрямляемые.
+
+  Пусть $S(l_1) = \underset{m_1}{\sup} p(m_1)$ и $S(l_2) = \underset{m_2}{\sup} p(m_2) \implies
+    S(l_1) + S(l_2) \leqslant S(l)$
+
+  Обратно, пусть $l_2$ и $l_2$ - спрямляемые кривые. Покажем, что $l$ - спрямляемая. Пусть $m$
+  - некоторая ломаная, вписанная в $l$.
+
+  Возьмем $C \in l$. Пусть $m'$ - ломаная, получаемая из ломаной $m$ добавлением звеньев,
+  проходящих через $C$. {\Large РИСУНОК}.
+
+  {\Large РИСУНОК} Пусть $m_1$ - часть ломаной, вписанной в $l_1, \ m_2'$ - часть ломаной, вписанной
+  в $l_2$. Тогда $p(m) \leqslant p(m') = p(m_1') + p(m_2') \leqslant S(l_1) + S(l_2) \implies
+    S(l) = \underset{m}{p(m)} \leqslant S(l_1) + S(l_2)$.
+
+  Тогда имеем, что $S(l_1) + S(l_2) \leqslant S(l) \leqslant S(l_1) + S(l_2) \implies S(l) =
+    S(l_1) + S(l_2)$.
+\end{proof}
+
+\section{Длина кривой как предел}
+
+\begin{theorem}
+  Пусть $l$ - простая спрямляемая незамкнутая кривая в $\mathbb{R}^2$ и $\gamma:[a;b]\rightarrow\mathbb{R}^2$
+  - ее параметризация. Пусть $a = t_0 < t_1 < \ldots < t_{n-1} < t_n = b$ - разбиение отрезка $[a;b]$,
+  этому разбиению соответствуют точки $M_0,M_1,\ldots,M_n$ - соответсвующая ломаная, вписанная в $l \
+    (M_i = \gamma(t_i))$, тогда:
+  \begin{equation*}
+    S(l) = \underset{\lambda\rightarrow0}{\lim}p(m),
+  \end{equation*}
+  где $\lambda = \underset{i}{\max}\Delta t_i, \ \Delta t_i = t_i - t_{i-1}$.
+\end{theorem}
+
+\begin{proof}
+  (теоремы) Пусть $l$ - простая спрямляемая незамкнутая кривая в $\mathbb{R}^2, \ P' =
+  \{a=t_0<t_1<\ldots<t_{n-1} <t_n=b\}$ - произвольное разбиение отрезка $[a;b]$.
+
+  $m(P')$ - ломаная, вписанная в $l$, соответствующая разбиениею $P$. Пусть $\gamma:[a;b]\rightarrow
+  \mathbb{R}^2$ - параметризация кривой $l, \ \gamma(t) = (x(t);y(t)), \ t\in[a;b]$.
+  \begin{lemma}
+    Если разбиение $P''$ получено из разбиения $P'$ добавлением точки на промежуток $(t_{i-1};t_i)$,
+    то периметр ломаной, соответсвующий разбиению $P'$, не больше периметра ломаной, соответсвующей
+    разбиению $P''$ и $p(m(P')) \leqslant p(m(P')) + 2(\omega_i(x(t)) + \omega_i(y(t)))$, где
+    $\omega_i$ - колебания функции $x(t), \ y(t)$:
+    \begin{equation*}
+      \omega_i(x(t)) = \underset{t',t''\in[t_{i-1};t_i]}{\sup}(x(t') - x(t'')) =
+      \underset{t\in[t_{i-1};t_i]}{\sup}(x(t)) - \underset{t\in[t_{i-1};t_i]}{\inf}(x(t))
+    \end{equation*}
+    {\Large РИСУНКИ ИЗ ГАЛЕРЕИ}
+  \end{lemma}
+  \begin{proof}
+    (леммы) Ломаная $m(P'')$ получена из ломаной $m(P')$ путем замены звена $M_{i-1}M_i$ на два
+    звена: $M_{i-1}M'$ и $M'M_i$.
+
+    Очевидно, что $p(m(P')) \leqslant p(m(P''))$.
+
+    $| M_{i-1}M' | + | M'M_i | \leqslant ???$
+
+    $M_i = \gamma (t_i) = (x(t_i);y(t_i))$ {\Large РИСУНОК}
+  \end{proof}
+\end{proof}
 
 \end{document}
