@@ -2030,14 +2030,14 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
 \begin{proof}
   (теоремы) Пусть $l$ - простая спрямляемая незамкнутая кривая в $\mathbb{R}^2, \ P' =
-  \{a=t_0<t_1<\ldots<t_{n-1} <t_n=b\}$ - произвольное разбиение отрезка $[a;b]$.
+    \{a=t_0<t_1<\ldots<t_{n-1} <t_n=b\}$ - произвольное разбиение отрезка $[a;b]$.
 
   $m(P')$ - ломаная, вписанная в $l$, соответствующая разбиениею $P$. Пусть $\gamma:[a;b]\rightarrow
-  \mathbb{R}^2$ - параметризация кривой $l, \ \gamma(t) = (x(t);y(t)), \ t\in[a;b]$.
+    \mathbb{R}^2$ - параметризация кривой $l, \ \gamma(t) = (x(t);y(t)), \ t\in[a;b]$.
   \begin{lemma}
     Если разбиение $P''$ получено из разбиения $P'$ добавлением точки на промежуток $(t_{i-1};t_i)$,
     то периметр ломаной, соответсвующий разбиению $P'$, не больше периметра ломаной, соответсвующей
-    разбиению $P''$ и $p(m(P')) \leqslant p(m(P')) + 2(\omega_i(x(t)) + \omega_i(y(t)))$, где
+    разбиению $P''$ и $p(m(P')) \leqslant p(m(P'')) \leqslant p(m(P')) + 2(\omega_i(x(t)) + \omega_i(y(t)))$, где
     $\omega_i$ - колебания функции $x(t), \ y(t)$:
     \begin{equation*}
       \omega_i(x(t)) = \underset{t',t''\in[t_{i-1};t_i]}{\sup}(x(t') - x(t'')) =
@@ -2051,12 +2051,120 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
     Очевидно, что $p(m(P')) \leqslant p(m(P''))$.
 
-    $| M_{i-1}M' | + | M'M_i | \leqslant ???$
+    $M_i = \gamma (t_i) = (x(t_i);y(t_i)), \ M' = (x(t');y(t')), \ M_{i-1} =
+      (x(t_{i-1});y(t_{i-1}))$, {\Large РИСУНОК}
 
-    $M_i = \gamma (t_i) = (x(t_i);y(t_i))$ {\Large РИСУНОК}
+    $| M_{i-1}M' | + | M'M_i | \leqslant | x(t') - x(t_{i-1}) | + | y(t') - y(t_{i-1}) | + | x(t_i) - x(t') |
+      + | y(t_i) - y(t') | \leqslant 2\omega_i(x(t)) + 2\omega_i(y(t)), \ \sup$ берется на отрезке
+    $[t_{i-1};t_i]$.
 
-    $| M'M_i | \leqslant | x(t_i) - x(t') | + | g(t_i) - y(t') |$
+    В итоге, $p(m(P'')) \leqslant p(m(P')) + 2(\omega_i(x(t)) + \omega_i(y(t)))$.
+
+    Если не понятно: $p(m(P'')) = \sum_{k=1}^{n}| M_{k-1} M_k | = \sum_{k=1}^{i-1}| M_{k-1}M_k | +
+      | M_{i-1}M' | + | M'M_i | + \sum_{k=i+1}^{n}| M_{k-1}M_k | \leqslant p(m(P')) + 2(\omega_i(x(t))
+      +\omega_i(y(t)))$, {\Large РИСУНОК}
   \end{proof}
+
+  (повтор) Пусть $\epsilon > 0$ задано. Выберем произвольное разбиение $P'$ отрезка $[a;b]: \ p(m(P'))
+    > S(l) - \frac{\epsilon}{2}$ (по определению $\sup$ множества).
+
+  Пусть это разбиение состоит из $n$ точек. Тогда выберем $\delta > 0: \ \forall t',t'' \in [a;b]: \
+    |t'-t''| < \delta \implies | x(t') - x(t'') | < \frac{\epsilon}{8n}; \ | y(t') - y(t'') | < \frac{\epsilon}
+    {8n}$, {\Large РИСУНОК}
+
+  Пусть $P''$ - произвольное разбиение: $\lambda(P'') < \delta$. Покажем, что $p(m(P'')) \leqslant S(l)$
+  и $p(m(P'')) > S(l) - \frac{\epsilon}{2}$.
+
+  Рассмотрим $P''' = P' \cup P''$. Тогда $p(m(P''')) \geqslant p(m(P''))$. С другой стороны, $P'''$ 
+  получена из $P''$ добавлением не более чем $n$ точек. Тогда $p(m(P''')) \leqslant p(m(P'')) +
+  \sum_{i=1}^{n}2(\omega_i(x(t)) + \omega_i(y(t))) < S(l) + 4 \frac{\epsilon}{8n}n = S(l) +
+  \frac{\epsilon}{2}$. Получим, что:
+  \begin{equation*}
+    p(m(P''')) < S(l) + \frac{\epsilon}{2}.
+  \end{equation*}
+
+  Так как $P'''$ тоже получено из $P'$ добавлением точек, то:
+  \begin{equation*}
+    p(m(P''')) \geqslant p(m(P')) > S(l) - \frac{\epsilon}{2}.
+  \end{equation*}
+
+  Так же имеем, что $p(m(P''')) \leqslant p(m(P'')) + \frac{\epsilon}{2} \implies p(m(P'')) \geqslant
+  p(m(P''')) - \frac{\epsilon}{2} \geqslant p(m(P')) - \frac{\epsilon}{2} > S(l) - \frac{\epsilon}{2}
+  - \frac{\epsilon}{2} = S(l) - \epsilon$.
+
+  Так как $S(l) = \underset{m}{\sup} p(m(P)), \ P$ - разбиение отрезка $[a;b] \implies$
+  \begin{equation*}
+    p(m(P'')) \leqslant S(l) < S(l) + \epsilon.
+  \end{equation*}
+
+  Таким образом, если $\epsilon > 0$ задано, то возьмем произвольное разбиение $P'': \ \lambda(P'') <
+  \delta \implies S(l) - \epsilon < p(m(P'')) < S(l) + \epsilon \implies | p(m(P'')) - S(l) | < \epsilon
+  \implies$
+  \begin{equation*}
+    \underset{\lambda(P)\rightarrow0}{\lim}p(m(P'')) = S(l).
+  \end{equation*}
+\end{proof}
+
+\begin{theorem}[формула для вычисления длины кривой]
+  Пусть $l$ - гладкая кривая; $\gamma:[a;b]\rightarrow\mathbb{R}^2$ - ее параметризация (гладкая,
+  то есть $\gamma(t) = (x(t);y(t))$, где $x(t)$ и $y(t)$ имеют непрерывные произведения на $[a;b]$).
+  Тогда $l$ - спрямляема и:
+  \begin{equation*}
+    S(l) = \int_{a}^{b}\sqrt{(x'(t))^2 + (y'(t))^2}dt
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  (теоремы) Возьмем разбиение:
+  \begin{equation*}
+    P' = \{a=t_0<t_1<\ldots<t_{n-1}<t_n=b\}
+  \end{equation*}
+  Тогда:
+  \begin{equation*}
+    p(m(P')) = \sum_{i=1}^{n} \sqrt{(x(t_i)) - x(t_{i-1})^2 + (y(t_i) - y(t_{i-1}))^2}
+  \end{equation*}
+  $\forall i = \overline{1,n} \ x(t_i) - x(t_{i-1}) = x'(\tau_i)\Delta t_i, \ \tau_i\in[t_{i-1};t_i], \
+  y(t_i) - y(t_{i-1}) = y'(\overline{\tau_i})\Delta t_i, \ \overline{\tau_i}\in[t_{i-1};t_i]$.
+
+  Тогда:
+  \begin{equation*}
+    p(m(P')) = \sum_{i=1}^{n}\sqrt{(x'(\tau_i)\Delta t_i)^2 + (y'(\overline{\tau_i})\Delta t_i)^2} =
+  \sum_{i=1}^{n}\sqrt{(x'(\tau_i))^2 + (y'(\overline{\tau_i}))^2}\Delta t_i.
+  \end{equation*}
+
+  Рассмотрим функцию:
+  \begin{equation*}
+    \phi(t) = \sqrt{(x'(t))^2 + (y'(t))^2},
+  \end{equation*}
+  где $\phi(t)$ - непрерывна на $[a;b] \implies \phi(t)$ - интегрируема на $[a;b]$, то есть:
+  \begin{equation*}
+    \exists \underset{\lambda(P')\rightarrow0}{\lim}\sigma = \int_{a}^{b}\phi(t)dt,
+  \end{equation*}
+  где $\sigma = \sum_{i=1}^{n}\phi(\tau_i)\Delta t_i = \sum_{i=1}^{n}\sqrt{(x'(\tau_i))^2 +
+  (y'(\tau_i))^2}\Delta t_i$.
+
+  \begin{lemma}
+    $\forall a,b_1,b_2\in\mathbb{R}$ верно неравенство:
+    \begin{equation*}
+      \sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2} \leqslant | b_1 - b_2 |
+    \end{equation*}
+  \end{lemma}
+
+  \begin{proof}
+    (леммы)
+    
+    \begin{enumerate}
+      \item Если $a=0$ - очевидно;
+      \item Если $a\ne0 \implies \frac{(\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2})
+      (\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2})}{\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2}} = 
+      \frac{| b_1^2 - b_2^2 |}{\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2}} = 
+      \frac{| b_1 + b_2 | | b_1 - b_2 |}{\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2}} <
+      \frac{| b_1 + b_2 |}{| b_1 | + | b_2 |}| b_1 - b_2 | \leqslant | b_1 - b_2 |$, потому что
+      $\frac{| b_1 + b_2 |}{| b_1 | + | b_2 |} \leqslant 1$.
+    \end{enumerate}
+  \end{proof}
+
+
 \end{proof}
 
 \end{document}
