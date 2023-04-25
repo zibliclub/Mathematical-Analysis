@@ -1942,7 +1942,15 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   \begin{equation*}
     p(M_0,M_1,\ldots,M_n) = \sum_{i=1}^{n}| M_{i-1}M_i |
   \end{equation*}
-  {\Large ДВА ГРАФИКА ИЗ ГАЛЕРЕИ}
+  \begin{figure}[h]
+    \begin{minipage}[h]{0.49\linewidth}
+      \center{\includegraphics[scale=0.2]{graph9.png}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[h]{0.49\linewidth}
+      \center{\includegraphics[scale=0.2]{graph10.png}}
+    \end{minipage}
+  \end{figure}
 \end{definition}
 
 \begin{definition}
@@ -1962,7 +1970,11 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 \begin{example}
   (неспрямляемой кривой)
 
-  {\Large РИСУНОК ИЗ ГАЛЕРЕИ}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[scale=0.2]{graph11.png}\label{figure11}
+    \end{center}
+  \end{figure}
 \end{example}
 
 Рассмотрим $L$ - множество всех спрямляемых кривых на плоскости $(\mathbb{R}^2)$.
@@ -1983,7 +1995,11 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   $\gamma_2:[c;b] \rightarrow \mathbb{R}^2$ - параметризация кривой $l_2$,
 
   при этом $C = \gamma(c) = \gamma_1(c) = \gamma_2(c)$.
-    {\Large ГРАФИК ИЗ ГАЛЕРЕИ}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[scale=0.2]{graph12.png}\label{figure12}
+    \end{center}
+  \end{figure}
 
   Тогда $S(l) = S(l_1) + S(l_2)$.
 \end{theorem}
@@ -1993,7 +2009,11 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
   Обозначим за $m_1$ и $m_2$ - ломаные, вписанные в $l_1$ и $l_2$ соответственно. Тогда можно ввести
   $m$ как $m = m_1 \cup m_2$ - ломаная, вписанная в $l$.
-    {\Large РИСУНОК ИЗ ГАЛЕРЕИ}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[scale=0.2]{graph13.png}\label{figure13}
+    \end{center}
+  \end{figure}
 
   $p(m)$ - периметр ломаной, вписанной в $l$, $p(m) = p(m_1) + p(m_2) \leqslant S(l) \implies
     p(m_1)\leqslant S(l)$ и $p(m_2) \leqslant S(l) \implies l_1$ и $l_2$ - спрямляемые.
@@ -2005,11 +2025,20 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   - некоторая ломаная, вписанная в $l$.
 
   Возьмем $C \in l$. Пусть $m'$ - ломаная, получаемая из ломаной $m$ добавлением звеньев,
-  проходящих через $C$. {\Large РИСУНОК}.
-
-  {\Large РИСУНОК} Пусть $m_1$ - часть ломаной, вписанной в $l_1, \ m_2'$ - часть ломаной, вписанной
+  проходящих через $C$.
+  \begin{figure}[h]
+    \begin{minipage}[h]{0.49\linewidth}
+      \center{\includegraphics[scale=0.2]{graph14.png}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[h]{0.49\linewidth}
+      Пусть $m_1$ - часть ломаной, вписанной в $l_1, \ m_2'$ - часть ломаной, вписанной
   в $l_2$. Тогда $p(m) \leqslant p(m') = p(m_1') + p(m_2') \leqslant S(l_1) + S(l_2) \implies
     S(l) = \underset{m}{p(m)} \leqslant S(l_1) + S(l_2)$.
+    \end{minipage}
+  \end{figure}
+
+  
 
   Тогда имеем, что $S(l_1) + S(l_2) \leqslant S(l) \leqslant S(l_1) + S(l_2) \implies S(l) =
     S(l_1) + S(l_2)$.
@@ -2043,26 +2072,37 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
       \omega_i(x(t)) = \underset{t',t''\in[t_{i-1};t_i]}{\sup}(x(t') - x(t'')) =
       \underset{t\in[t_{i-1};t_i]}{\sup}(x(t)) - \underset{t\in[t_{i-1};t_i]}{\inf}(x(t))
     \end{equation*}
-    {\Large РИСУНКИ ИЗ ГАЛЕРЕИ}
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[scale=0.2]{graph15.png}\label{figure15}
+      \end{center}
+    \end{figure}
   \end{lemma}
   \begin{proof}
     (леммы) Ломаная $m(P'')$ получена из ломаной $m(P')$ путем замены звена $M_{i-1}M_i$ на два
     звена: $M_{i-1}M'$ и $M'M_i$.
 
     Очевидно, что $p(m(P')) \leqslant p(m(P''))$.
-
-    $M_i = \gamma (t_i) = (x(t_i);y(t_i)), \ M' = (x(t');y(t')), \ M_{i-1} =
-      (x(t_{i-1});y(t_{i-1}))$, {\Large РИСУНОК}
+    \begin{figure}[h]
+      \begin{minipage}[h]{0.49\linewidth}
+        \center{\includegraphics[scale=0.15]{graph16.png}}
+      \end{minipage}
+      \hfill
+      \begin{minipage}[h]{0.49\linewidth}
+        $M_i = \gamma (t_i) = (x(t_i);y(t_i)), \ M' = (x(t');y(t')), \ M_{i-1} =
+      (x(t_{i-1});y(t_{i-1}))$
 
     $| M_{i-1}M' | + | M'M_i | \leqslant | x(t') - x(t_{i-1}) | + | y(t') - y(t_{i-1}) | + | x(t_i) - x(t') |
       + | y(t_i) - y(t') | \leqslant 2\omega_i(x(t)) + 2\omega_i(y(t)), \ \sup$ берется на отрезке
     $[t_{i-1};t_i]$.
+      \end{minipage}
+    \end{figure}
 
     В итоге, $p(m(P'')) \leqslant p(m(P')) + 2(\omega_i(x(t)) + \omega_i(y(t)))$.
 
     Если не понятно: $p(m(P'')) = \sum_{k=1}^{n}| M_{k-1} M_k | = \sum_{k=1}^{i-1}| M_{k-1}M_k | +
       | M_{i-1}M' | + | M'M_i | + \sum_{k=i+1}^{n}| M_{k-1}M_k | \leqslant p(m(P')) + 2(\omega_i(x(t))
-      +\omega_i(y(t)))$, {\Large РИСУНОК}
+      +\omega_i(y(t)))$.
   \end{proof}
 
   (повтор) Пусть $\epsilon > 0$ задано. Выберем произвольное разбиение $P'$ отрезка $[a;b]: \ p(m(P'))
@@ -2070,15 +2110,15 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
   Пусть это разбиение состоит из $n$ точек. Тогда выберем $\delta > 0: \ \forall t',t'' \in [a;b]: \
     |t'-t''| < \delta \implies | x(t') - x(t'') | < \frac{\epsilon}{8n}; \ | y(t') - y(t'') | < \frac{\epsilon}
-    {8n}$, {\Large РИСУНОК}
+    {8n}$.
 
   Пусть $P''$ - произвольное разбиение: $\lambda(P'') < \delta$. Покажем, что $p(m(P'')) \leqslant S(l)$
   и $p(m(P'')) > S(l) - \frac{\epsilon}{2}$.
 
-  Рассмотрим $P''' = P' \cup P''$. Тогда $p(m(P''')) \geqslant p(m(P''))$. С другой стороны, $P'''$ 
+  Рассмотрим $P''' = P' \cup P''$. Тогда $p(m(P''')) \geqslant p(m(P''))$. С другой стороны, $P'''$
   получена из $P''$ добавлением не более чем $n$ точек. Тогда $p(m(P''')) \leqslant p(m(P'')) +
-  \sum_{i=1}^{n}2(\omega_i(x(t)) + \omega_i(y(t))) < S(l) + 4 \frac{\epsilon}{8n}n = S(l) +
-  \frac{\epsilon}{2}$. Получим, что:
+    \sum_{i=1}^{n}2(\omega_i(x(t)) + \omega_i(y(t))) < S(l) + 4 \frac{\epsilon}{8n}n = S(l) +
+    \frac{\epsilon}{2}$. Получим, что:
   \begin{equation*}
     p(m(P''')) < S(l) + \frac{\epsilon}{2}.
   \end{equation*}
@@ -2089,8 +2129,8 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   \end{equation*}
 
   Так же имеем, что $p(m(P''')) \leqslant p(m(P'')) + \frac{\epsilon}{2} \implies p(m(P'')) \geqslant
-  p(m(P''')) - \frac{\epsilon}{2} \geqslant p(m(P')) - \frac{\epsilon}{2} > S(l) - \frac{\epsilon}{2}
-  - \frac{\epsilon}{2} = S(l) - \epsilon$.
+    p(m(P''')) - \frac{\epsilon}{2} \geqslant p(m(P')) - \frac{\epsilon}{2} > S(l) - \frac{\epsilon}{2}
+    - \frac{\epsilon}{2} = S(l) - \epsilon$.
 
   Так как $S(l) = \underset{m}{\sup} p(m(P)), \ P$ - разбиение отрезка $[a;b] \implies$
   \begin{equation*}
@@ -2098,8 +2138,8 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   \end{equation*}
 
   Таким образом, если $\epsilon > 0$ задано, то возьмем произвольное разбиение $P'': \ \lambda(P'') <
-  \delta \implies S(l) - \epsilon < p(m(P'')) < S(l) + \epsilon \implies | p(m(P'')) - S(l) | < \epsilon
-  \implies$
+    \delta \implies S(l) - \epsilon < p(m(P'')) < S(l) + \epsilon \implies | p(m(P'')) - S(l) | < \epsilon
+    \implies$
   \begin{equation*}
     \underset{\lambda(P)\rightarrow0}{\lim}p(m(P'')) = S(l).
   \end{equation*}
@@ -2124,12 +2164,12 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
     p(m(P')) = \sum_{i=1}^{n} \sqrt{(x(t_i)) - x(t_{i-1})^2 + (y(t_i) - y(t_{i-1}))^2}
   \end{equation*}
   $\forall i = \overline{1,n} \ x(t_i) - x(t_{i-1}) = x'(\tau_i)\Delta t_i, \ \tau_i\in[t_{i-1};t_i], \
-  y(t_i) - y(t_{i-1}) = y'(\overline{\tau_i})\Delta t_i, \ \overline{\tau_i}\in[t_{i-1};t_i]$.
+    y(t_i) - y(t_{i-1}) = y'(\overline{\tau_i})\Delta t_i, \ \overline{\tau_i}\in[t_{i-1};t_i]$.
 
   Тогда:
   \begin{equation*}
     p(m(P')) = \sum_{i=1}^{n}\sqrt{(x'(\tau_i)\Delta t_i)^2 + (y'(\overline{\tau_i})\Delta t_i)^2} =
-  \sum_{i=1}^{n}\sqrt{(x'(\tau_i))^2 + (y'(\overline{\tau_i}))^2}\Delta t_i.
+    \sum_{i=1}^{n}\sqrt{(x'(\tau_i))^2 + (y'(\overline{\tau_i}))^2}\Delta t_i.
   \end{equation*}
 
   Рассмотрим функцию:
@@ -2141,7 +2181,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
     \exists \underset{\lambda(P')\rightarrow0}{\lim}\sigma = \int_{a}^{b}\phi(t)dt,
   \end{equation*}
   где $\sigma = \sum_{i=1}^{n}\phi(\tau_i)\Delta t_i = \sum_{i=1}^{n}\sqrt{(x'(\tau_i))^2 +
-  (y'(\tau_i))^2}\Delta t_i$.
+      (y'(\tau_i))^2}\Delta t_i$.
 
   \begin{lemma}
     $\forall a,b_1,b_2\in\mathbb{R}$ верно неравенство:
@@ -2152,19 +2192,187 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
   \begin{proof}
     (леммы)
-    
+
     \begin{enumerate}
       \item Если $a=0$ - очевидно;
       \item Если $a\ne0 \implies \frac{(\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2})
-      (\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2})}{\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2}} = 
-      \frac{| b_1^2 - b_2^2 |}{\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2}} = 
-      \frac{| b_1 + b_2 | | b_1 - b_2 |}{\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2}} <
-      \frac{| b_1 + b_2 |}{| b_1 | + | b_2 |}| b_1 - b_2 | \leqslant | b_1 - b_2 |$, потому что
-      $\frac{| b_1 + b_2 |}{| b_1 | + | b_2 |} \leqslant 1$.
+                (\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2})}{\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2}} =
+              \frac{| b_1^2 - b_2^2 |}{\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2}} =
+              \frac{| b_1 + b_2 | | b_1 - b_2 |}{\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2}} <
+              \frac{| b_1 + b_2 |}{| b_1 | + | b_2 |}| b_1 - b_2 | \leqslant | b_1 - b_2 |$, потому что
+            $\frac{| b_1 + b_2 |}{| b_1 | + | b_2 |} \leqslant 1$.
     \end{enumerate}
   \end{proof}
 
+  Покажем, что:
+  \begin{equation*}
+    \underset{\lambda(P')\rightarrow0}{\lim}(p(m(P')) - \sigma) = 0.
+  \end{equation*}
 
+  $| p(m(P')) - \sigma | = | \sum_{i=1}^{n}\sqrt{(x'(\tau_i))^2 + (y'(\overline{\tau_i}))^2}\Delta t_i
+    - \sum_{i=1}^{n}\sqrt{(x'(\tau_i))^2 + (y'(\tau_i))^2}\Delta t_i | = | \sum_{i=1}^{n}(
+    \sqrt{(x'(t_i))^2 + (y'(\overline{\tau_i}))^2} - \sqrt{(x'(\tau_i))^2 + (y'(\tau_i))^2})\Delta t_i |
+    \leqslant \sum_{i=1}^{n} | \sqrt{(x'(\tau_i))^2 + (y'(\overline{\tau_i}))^2} -
+    \sqrt{(x'(\tau_i))^2 + (y'(\tau_i))^2} | \Delta t_i \overset{lemma}{\leqslant} \sum_{i=1}^{n}
+    | y'(\overline{\tau_i}) - y'(\tau_i) |\Delta t_i \leqslant \sum_{i=1}^{n}\omega_i(y'(t))\Delta t_i $
+
+  Напоминание:
+  \begin{equation*}
+    \omega_i(t) = \underset{t',t''\in[t_{i-1};t_i]}{\sup}| f(t') - f(t'') |
+  \end{equation*}
+
+  Так как $y'(t)$ - непрерывная функция $\implies y'(t)$ - интегрируема на $[a;b] \implies
+    \sum_{i=1}^{n} \omega_i(y')\Delta t_i \rightarrow 0$ (по критерию интегрируемости) $\implies$
+  \begin{equation*}
+    \underset{\lambda(P')\rightarrow0}{\lim} (p(m(P')) - \sigma) = 0.
+  \end{equation*}
+
+  $\underset{\lambda(P')\rightarrow0}{\lim}(p(m(P'))) = \underset{\lambda(P')\rightarrow0}{\lim}\sigma
+    = \int_{a}^{b}\sqrt{(x'(t))^2 + (y'(t))^2}dt$.
+\end{proof}
+
+\begin{effect}
+  (теоремы)
+
+  \begin{enumerate}
+    \item Пусть $l$ - график функции $y=y(x)$.
+
+          Тогда:
+          \begin{equation*}
+            \left\{
+            \begin{array}{ll}
+              x = x \\
+              y=y(x)
+            \end{array}
+            \right. \implies S(l) = \int_{a}^{b}\sqrt{1 + (y'(x))^2}dx
+          \end{equation*}
+
+    \item Пусть $r = r(\phi)$ - уравнение кривой в полярной системе координат.
+
+          $x = r\cos\phi, \quad y = r\sin\phi, \quad \phi\in[\alpha,\beta]$.
+          Тогда:
+          \begin{equation*}
+            \left\{
+            \begin{array}{ll}
+              x(\phi) = r(\phi)\cos\phi \\
+              y(\phi) = r(\phi)\sin\phi
+            \end{array}
+            \right. \implies
+            \left\{
+            \begin{array}{ll}
+              x'(\phi) = r'(\phi)\cos\phi - r(\phi)\sin\phi \\
+              y'(\phi) = r'(\phi)\sin\phi + r(\phi)\cos\phi
+            \end{array}
+            \right.
+          \end{equation*}
+
+          $(x'(\phi))^2 + (y'(\phi))^2 = (r')^2\cos^2\phi - 2r'r\sin\phi\cos\phi + r^2\sin^2\phi + (r')^2
+            \sin^2\phi + 2r'r\sin\phi\cos\phi + r^2\cos^2\phi = (r')^2 + r^2$.
+
+          Тогда формула для вычисления длины кривой в полярной системе координат:
+          \begin{equation*}
+            S(l) = \int_{\alpha}^{\beta}\sqrt{(r'(\phi))^2 + (r(\phi))^2}d\phi
+          \end{equation*}
+  \end{enumerate}
+\end{effect}
+
+\section{Площадь плоской фигуры}
+
+\begin{definition}
+  \textbf{Многоугольник} - множество точек плоскости, границей которого является объединение конечного
+  числа непересекающихся простых ломаных, при этом это объединение само является замкнутой ломаной.
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[scale=0.3]{graph17.png}\label{figure17}
+    \end{center}
+  \end{figure}
+\end{definition}
+
+
+\begin{definition}
+  Пусть $G$ - множество на плоскости, $G\subset\mathbb{R}^2$. Будем говорить, что многоугольник $A$
+  \textbf{вписан} в $G$, если $A \subset G$ и $A$ \textbf{описан около} $G$, если $G \subset A$.
+\end{definition}
+
+\begin{definition}
+  Множество $G\subset\mathbb{R}^2$ называется \textbf{измеримым по Жардану} (или \textbf{квадрируемым}),
+  если:
+  \begin{equation*}
+    S_* = \underset{A\subset G}{\sup} S(A) = S^* = \underset{B\supset G}{\inf}S(B),
+  \end{equation*}
+  где $\sup$ берется по всем многоугольникам, вписанным в $G$, а $\inf$ - по всем многоугольникам,
+  описанным около $G$. При этом их общее значение $S = S_* = S^*$ называется \textbf{площадью} $G$,
+  или \textbf{мерой Жардана}.
+  \begin{center}
+    $S_*$ - \textbf{внутренняя} мера, $S^*$ - \textbf{внешняя} мера.
+  \end{center}
+
+  Другими словами, множество $G\subset\mathbb{R}^2$ квадрируемо, если внутреняя и внешняя меры совпадают.
+
+  Здесь $S(A),\ S(B)$ - площади многоугольников $A$ и $B$. Многоугольник $A$ можно разбить на конечное число
+  прямоугольников и прямоугольных треугольников:
+  \begin{figure}[h]
+    \begin{minipage}[h]{0.49\linewidth}
+      \center{\includegraphics[scale=0.2]{graph18.png}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[h]{0.49\linewidth}
+      $S_\square = ab; \quad S_\triangle = \frac{1}{2}ab$
+    \end{minipage}
+  \end{figure}
+\end{definition}
+
+\begin{example}
+  (из определения)
+
+  \begin{enumerate}
+    \item Квадрируемые множетсва на плоскости.
+
+          Круг с границей:
+          \begin{equation*}
+            x^2 + y^2 = 1
+          \end{equation*}
+          Упражнение: доказать, что круг - квадрируемое множество.
+    \item Неквадрируемые множества на плоскости.
+
+          Множество точек одинарного квадрата с рациональными координатами:
+          \begin{equation*}
+            G = (\mathbb{Q} \times \mathbb{Q})\cap([0;1] \times [0;1])
+          \end{equation*}
+          Вписанный многоугольник $A = \emptyset, \ S(A) = 0$. Многоугольник $B = [0;1] \times [0;1]$
+          имеет площадь равную  $1$ ($S(B) = 1$).
+          \begin{equation*}
+            S_* = 0, \quad S^* = \underset{B'\supset G}{\inf}S(B') = S(B) = 1 \ (S_* \ne S^*)
+          \end{equation*}
+  \end{enumerate}
+\end{example}
+
+\begin{theorem}[критерий квадрируемости]
+  Множество $G\subset\mathbb{R}^2$ квадрируемо $\iff \forall \epsilon > 0 \ \exists$ многоугольники $A$ и $B$:
+  \begin{enumerate}
+    \item $A\subset G, \ B \supset G$,
+    \item $S(B) - S(A) < \epsilon$.
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  (теоремы)
+
+  $" \rightarrow "$ Пусть $G \subset \mathbb{R}^2$ квадрируемо $\implies S_* = S^* = S'$.
+
+  Выберем $A\subset G: \ S(A) > S - \frac{\epsilon}{2}$ ($\epsilon>0$ - задано) - по определению $\sup$.
+
+  Выберем $B\supset G: \ S(B) < S + \frac{\epsilon}{2}$.
+  \begin{equation*}
+    S(B) - S(A) < (S + \frac{\epsilon}{2}) - (S - \frac{\epsilon}{2}) = \epsilon
+  \end{equation*}
+
+  $" \leftarrow "$ Пусть $\forall \epsilon > 0 \ \exists$ многоугольники $A$ и $B$, $A \subset G$, 
+  $B \supset G$ и $S(B) - S(A) < \epsilon$. Докажем, что $G$ - квадрируемо.
+
+  \begin{equation*}
+    S(B) - S(A) < \epsilon \implies S(B) - \epsilon < S(A) \leqslant S_* \leqslant s^* < S(B) + \epsilon
+  \end{equation*}
 \end{proof}
 
 \end{document}
