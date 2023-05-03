@@ -2371,8 +2371,175 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   $B \supset G$ и $S(B) - S(A) < \epsilon$. Докажем, что $G$ - квадрируемо.
 
   \begin{equation*}
-    S(B) - S(A) < \epsilon \implies S(B) - \epsilon < S(A) \leqslant S_* \leqslant s^* < S(B) + \epsilon
+    S(B) - S(A) < \epsilon \implies S(B) - \epsilon < S(A) \leqslant S_* \leqslant S^* \leqslant S(B)
   \end{equation*}
+
+  Так как $S(B) - S(A) < \epsilon \implies S^* - S_* < \epsilon$. Так как $\epsilon > 0$ - произвольное число
+  $\implies S^* = S_*$, то есть $G$ - квадрируемо.
 \end{proof}
+
+\section{Классы квадрируемых областей}
+
+\begin{definition}
+  \textbf{Криволинейная трапеция} - часть плоскости, ограниченная прямыми $x=a, \ x=b$, графиком функции
+  $y = f(x)$ и осью $Ox$. {\Large РИСУНОК}
+\end{definition}
+
+\begin{theorem}
+  Криволинейная трапеция квадрируема и ее площадь равна:
+  \begin{equation*}
+    S = \int_{a}^{b}f(x)dx,
+  \end{equation*}
+  где $f(x)$ - непрерывна на $[a;b], \ f(x) \geqslant 0$.
+\end{theorem}
+
+\begin{proof}
+  $ABCD$ - криволинейная трапеция, ограничена $x=a, \ x=b, \ y=0$, а так же графиком функции $y = f(x)$.
+  Пусть $\epsilon > 0$ задано. Выберем $\delta>0: \ \forall x',x'':  \ | x' - x'' | < \delta \implies
+  | f(x') - f(x'') | < \frac{\epsilon}{b - a}$ (так как $f(x)$ - непрерывна на $[a;b] \implies f(x)$
+  равномерно непрерывна на $[a;b]$). {\Large РИСУНОК}
+
+  Разобьем отрезок $[a;b]$ точками $a=x_0 < x_1 <\ldots < x_{n-1} < x_n = b$, таким образом, что бы
+  $\underset{i}{\max}| x_i - x_{i-1} | < \delta$. Пусть:
+  \begin{equation*}
+    m_i = \underset{x\in[x_{i-1};x_i]}{\min}f(x), \ M_i = \underset{x\in[x_{i-1};x_i]}{\max}f(x).
+  \end{equation*}
+
+  Построим многоугольник $A$, вписанный в $ABCD$ и многоугольник $B$, описанный около $ABCD$. Многоугольник
+  $A$ состоит из прямоугольников со сторонами $\Delta x_i$ и $m_i$, многоугольник $B$ состоит из прямоугольников 
+  со сторонами $\Delta x_i$ и $M_i$.
+  \begin{equation*}
+    S(A) = \sum_{i=1}^{n}m_i\Delta x_i, \quad S(B) = \sum_{i=1}^{n}M_i\Delta x_i,
+  \end{equation*}
+  \begin{equation*}
+    S(B) - S(A) = \sum_{i=1}^{n}(M_i - m_i)\Delta x_i < \sum_{i=1}^{n}\frac{\epsilon}{b-a}\Delta x_i =
+  \end{equation*}
+  \begin{equation*}
+    = \frac{\epsilon}{b-a}\sum_{i=1}^{n}\Delta x_i = \frac{\epsilon}{b-a}(b-a) = \epsilon \implies
+  \end{equation*}
+  по критерию квадрируемости, криволинейная трапеция $ABCD$ - квадрируема $\implies S_* = S^* = S_{ABCD}$.
+  С другой стороны, $S(B) - S(A) = \sum_{i=1}^{n}(M_i - m_i)\Delta x_i \leqslant \sum_{i=1}^{n}\omega_i
+  (f(x))\Delta x_i$.
+
+  Так как $f$ - непрерывна на $[a;b] \implies f\in R[a;b] \implies \sum_{i=1}^{n}\omega_i\Delta x_i 
+  \rightarrow 0 \implies S_{ABCD} = \int_{a}^{b} = \int_{a}^{b}f(x)dx = S^* = S_*$.
+\end{proof}
+
+\begin{definition}
+  Фигура на плоскости, ограниченная лучами $\phi = \alpha$ и $\phi = \beta$ и кривой $\rho = \rho(\phi)$
+  называется \textbf{криволинейным сектором}.
+\end{definition}
+
+\begin{theorem}
+  Пусть криволинейный сектор $\Omega$ ограничен лучами $\phi = \alpha, \ \phi = \beta$ и кривой $\rho
+  = \rho(\phi)$. Тогда:
+  \begin{equation*}
+    S(\Omega) = \frac{1}{2}\int_{\alpha}^{\beta}\rho^2(\phi)d\phi,
+  \end{equation*}
+  где $\rho(\phi)$ - непрерывна на $[\alpha;\beta]$. {\Large РИСУНОК}
+\end{theorem}
+\begin{proof}
+  Разобьем сектор $\Omega$ лучами $\alpha = \phi_0<\phi_1<\ldots<\phi_{n-1}<\phi_n=b$. Пусть:
+  \begin{equation*}
+    m_i = \underset{\phi\in[\phi_{i-1};\phi_i]}{\min}\rho(\phi), \quad M_i = \underset
+    {\phi\in[\phi_{i-1};\phi_i]}{\max}\rho(\phi).
+  \end{equation*}
+  Построим криволинейные сектора с радиусами $m_i$ и $M_i$. Пусть $\underline{\Omega}$ - объединение
+  секторов в радиусом $m_i$, а $\overline{\Omega}$ - объединение секторов с радиусом $M_i$.
+  \begin{equation*}
+    S(\underline{\Omega}) = \sum_{i=1}^{n}\pi m_i^2\frac{\Delta\phi_i}{2\pi}=\frac{1}{2}\sum_{i=1}^{n}
+    m_i^2\Delta \phi_i,
+  \end{equation*}
+  \begin{equation*}
+    S(\overline{\Omega}) = \sum_{i=1}^{n}\pi M_i^2\frac{\Delta\phi_i}{2\pi}=\frac{1}{2}\sum_{i=1}^{n}
+    M_i^2\Delta \phi_i.
+  \end{equation*}
+  Заметим, что $S(\underline{\Omega})\leqslant S_{kriv.sector} \leqslant S(\overline{\Omega}) \ (*)$.
+
+  Заметим, что $S(\underline{\Omega})$ - нижняя интегральная сумма функции $\frac{\rho^2(\phi)}{2}$,
+  а $S(\overline{\Omega})$ - верхняя интегральная сумма этой же функции. Функция $\frac{\rho^2(\phi)}{2}$ 
+  - непрерывна (так как $\rho(\phi)$ - непрерывна) $\implies$ интегрируема на $[\alpha;\beta] \implies
+  \exists \underset{\max\Delta \phi_i\rightarrow0}{\lim}S(\underline{\Omega}) = 
+  \underset{\max\Delta \phi_i\rightarrow0}{\lim}S(\overline{\Omega}) = \int_{\alpha}^{\beta}\frac{\rho^2(\phi)}
+  {2}d\phi \implies$ учитывая неравенство (*) и лемму о двух миллиционерах:
+  \begin{equation*}
+    S_{kriv.sector} = \frac{1}{2}\int_{\alpha}^{\beta}\rho^2(\phi)d\phi
+  \end{equation*}
+  и криволинейный сектор - квадрируемый.
+\end{proof}
+
+\chapter{Несобственные интегралы}
+
+\begin{definition}
+  Пусть $f:[a;+\infty)\rightarrow\mathbb{R}$ (задана на луче) и $\forall b \in [a;+\infty) \ f\in R[a;b]$.
+  Рассмотрим:
+  \begin{equation*}
+    \underset{b\rightarrow+\infty}{\lim}\int_{a}^{b}f(x)dx,
+  \end{equation*}
+  этот предел называется \textbf{несобственным интегралом} от функции $f(x)$ на луче $[a;+\infty)$.
+
+  Если этот предел существует и конечен, то несобственный интеграл называется \textbf{сходящимся}, иначе
+  \textbf{расходящимся}. Обозначение:
+  \begin{equation*}
+    \int_{a}^{+\infty}f(x)dx \overset{def}{=}\underset{b\rightarrow+\infty}{\lim}\int_{a}^{b}f(x)dx
+  \end{equation*}
+\end{definition}
+
+\begin{example}
+  (продолжение определения)
+
+  \begin{enumerate}
+    \item $\int_{2}^{+\infty}\frac{dx}{x^2} = \underset{b\rightarrow\infty}{\lim}\int_{2}^{b}\frac{dx}{x^2} =
+    \underset{b\rightarrow+\infty}{\lim}(F(b) - F(2)) = \underset{b\rightarrow+\infty}{\lim}(-\frac{1}{b} +
+    \frac{1}{2}) = \frac{1}{2}$.
+  
+    Аналогично, пусть функция $f:(-\infty;a]\rightarrow\mathbb{R}, \ f\in R[a;b], \ \forall b \in (-\infty;a]$.
+    \begin{equation*}
+      \underset{b\rightarrow-\infty}{\lim}\int_{a}^{b}f(x)dx,
+    \end{equation*}
+    этот предел называется \textbf{несобственным интегралом} от функции $f(x)$ на луче $(\infty;a]$.
+  
+    Если этот предел существует и конечен, то соответственно несобственный интеграл - сходящийся. Обозначается:
+    \begin{equation*}
+      \int_{-\infty}^{a}f(x)dx \overset{def}{=}\underset{b\rightarrow-\infty}{\lim}\int_{b}^{a}f(x)dx.
+    \end{equation*}
+    Аналогично:
+    \begin{equation*}
+      \int_{-\infty}^{+\infty}f(x)dx = \int_{-\infty}^{a}f(x)dx + \int_{a}^{+\infty}f(x)dx = \underset{c
+      \rightarrow+\infty, b\rightarrow-\infty}{\lim}\int_{b}^{c}f(x)dx,
+    \end{equation*}
+    где $c\rightarrow+\infty, b\rightarrow-\infty$ - независимые друг от друга ($\forall b,c \ f(x)\in
+    R[b;c]$). {\Large РИСУНОК}
+
+    \item Далее, пусть $f:[a;b)\rightarrow\mathbb{R}: \ \forall c \in [a;b) f\in R[a;c]$. Положим:
+    \begin{equation*}
+      \int_{a}^{b}f(x)dx = \underset{c\rightarrow b}{\lim}\int_{a}^{c}f(x)dx.
+    \end{equation*}
+    Эта величина называется \textbf{несобственным интегралом} от функции $f$ на полуинтервале $[a;b)$.
+  
+    Если предел существует, то несобственный интеграл называется \textbf{сходящимся}, иначе \textbf{расходящимся}.
+  
+    Аналогично, пусть $f:(a;b]\rightarrow\mathbb{R}$, причем $\forall c \in (a;b] \ f\in R[c;b]$:
+    \begin{equation*}
+      \int_{a}^{b}f(x)dx \overset{def}{=} \underset{c\rightarrow a}{\lim}\int_{c}^{b}f(x)dx -
+    \end{equation*}
+    несобственный интеграл от функции $f(x)$ на полуинтервале $(a;b]$.
+  
+    Аналогично, пусть $f:(a;b)\rightarrow\mathbb{R}$, причем $\forall c,d \in (a;b) \ f\in R[c,d]$.
+    Тогда:
+    \begin{equation*}
+      \int_{a}^{b}f(x)dx = \overset{def}{=} \underset{c\rightarrow a,d\rightarrow b}{\lim}\int_{c}^{d}
+      f(x)dx,
+    \end{equation*}
+    (где $c\rightarrow a,d\rightarrow b$ - независимые друг от друга) - несобственный интеграл от $f(x)$
+    на $(a;b)$
+
+    \item Пусть $f:[a;b]\rightarrow\mathbb{R}$ и $\exists c \in (a;b): \ f$ - неограниченана в точке $c$.
+  \end{enumerate}
+  
+
+  
+
+\end{example}
 
 \end{document}
