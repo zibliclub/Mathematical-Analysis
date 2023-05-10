@@ -2033,12 +2033,12 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
     \hfill
     \begin{minipage}[h]{0.49\linewidth}
       Пусть $m_1$ - часть ломаной, вписанной в $l_1, \ m_2'$ - часть ломаной, вписанной
-  в $l_2$. Тогда $p(m) \leqslant p(m') = p(m_1') + p(m_2') \leqslant S(l_1) + S(l_2) \implies
-    S(l) = \underset{m}{p(m)} \leqslant S(l_1) + S(l_2)$.
+      в $l_2$. Тогда $p(m) \leqslant p(m') = p(m_1') + p(m_2') \leqslant S(l_1) + S(l_2) \implies
+        S(l) = \underset{m}{p(m)} \leqslant S(l_1) + S(l_2)$.
     \end{minipage}
   \end{figure}
 
-  
+
 
   Тогда имеем, что $S(l_1) + S(l_2) \leqslant S(l) \leqslant S(l_1) + S(l_2) \implies S(l) =
     S(l_1) + S(l_2)$.
@@ -2090,11 +2090,11 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
       \hfill
       \begin{minipage}[h]{0.49\linewidth}
         $M_i = \gamma (t_i) = (x(t_i);y(t_i)), \ M' = (x(t');y(t')), \ M_{i-1} =
-      (x(t_{i-1});y(t_{i-1}))$
+          (x(t_{i-1});y(t_{i-1}))$
 
-    $| M_{i-1}M' | + | M'M_i | \leqslant | x(t') - x(t_{i-1}) | + | y(t') - y(t_{i-1}) | + | x(t_i) - x(t') |
-      + | y(t_i) - y(t') | \leqslant 2\omega_i(x(t)) + 2\omega_i(y(t)), \ \sup$ берется на отрезке
-    $[t_{i-1};t_i]$.
+        $| M_{i-1}M' | + | M'M_i | \leqslant | x(t') - x(t_{i-1}) | + | y(t') - y(t_{i-1}) | + | x(t_i) - x(t') |
+          + | y(t_i) - y(t') | \leqslant 2\omega_i(x(t)) + 2\omega_i(y(t)), \ \sup$ берется на отрезке
+        $[t_{i-1};t_i]$.
       \end{minipage}
     \end{figure}
 
@@ -2367,7 +2367,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
     S(B) - S(A) < (S + \frac{\epsilon}{2}) - (S - \frac{\epsilon}{2}) = \epsilon
   \end{equation*}
 
-  $" \leftarrow "$ Пусть $\forall \epsilon > 0 \ \exists$ многоугольники $A$ и $B$, $A \subset G$, 
+  $" \leftarrow "$ Пусть $\forall \epsilon > 0 \ \exists$ многоугольники $A$ и $B$, $A \subset G$,
   $B \supset G$ и $S(B) - S(A) < \epsilon$. Докажем, что $G$ - квадрируемо.
 
   \begin{equation*}
@@ -2396,7 +2396,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 \begin{proof}
   $ABCD$ - криволинейная трапеция, ограничена $x=a, \ x=b, \ y=0$, а так же графиком функции $y = f(x)$.
   Пусть $\epsilon > 0$ задано. Выберем $\delta>0: \ \forall x',x'':  \ | x' - x'' | < \delta \implies
-  | f(x') - f(x'') | < \frac{\epsilon}{b - a}$ (так как $f(x)$ - непрерывна на $[a;b] \implies f(x)$
+    | f(x') - f(x'') | < \frac{\epsilon}{b - a}$ (так как $f(x)$ - непрерывна на $[a;b] \implies f(x)$
   равномерно непрерывна на $[a;b]$). {\Large РИСУНОК}
 
   Разобьем отрезок $[a;b]$ точками $a=x_0 < x_1 <\ldots < x_{n-1} < x_n = b$, таким образом, что бы
@@ -2406,7 +2406,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   \end{equation*}
 
   Построим многоугольник $A$, вписанный в $ABCD$ и многоугольник $B$, описанный около $ABCD$. Многоугольник
-  $A$ состоит из прямоугольников со сторонами $\Delta x_i$ и $m_i$, многоугольник $B$ состоит из прямоугольников 
+  $A$ состоит из прямоугольников со сторонами $\Delta x_i$ и $m_i$, многоугольник $B$ состоит из прямоугольников
   со сторонами $\Delta x_i$ и $M_i$.
   \begin{equation*}
     S(A) = \sum_{i=1}^{n}m_i\Delta x_i, \quad S(B) = \sum_{i=1}^{n}M_i\Delta x_i,
@@ -2419,10 +2419,10 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   \end{equation*}
   по критерию квадрируемости, криволинейная трапеция $ABCD$ - квадрируема $\implies S_* = S^* = S_{ABCD}$.
   С другой стороны, $S(B) - S(A) = \sum_{i=1}^{n}(M_i - m_i)\Delta x_i \leqslant \sum_{i=1}^{n}\omega_i
-  (f(x))\Delta x_i$.
+    (f(x))\Delta x_i$.
 
-  Так как $f$ - непрерывна на $[a;b] \implies f\in R[a;b] \implies \sum_{i=1}^{n}\omega_i\Delta x_i 
-  \rightarrow 0 \implies S_{ABCD} = \int_{a}^{b} = \int_{a}^{b}f(x)dx = S^* = S_*$.
+  Так как $f$ - непрерывна на $[a;b] \implies f\in R[a;b] \implies \sum_{i=1}^{n}\omega_i\Delta x_i
+    \rightarrow 0 \implies S_{ABCD} = \int_{a}^{b} = \int_{a}^{b}f(x)dx = S^* = S_*$.
 \end{proof}
 
 \begin{definition}
@@ -2432,7 +2432,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
 \begin{theorem}
   Пусть криволинейный сектор $\Omega$ ограничен лучами $\phi = \alpha, \ \phi = \beta$ и кривой $\rho
-  = \rho(\phi)$. Тогда:
+    = \rho(\phi)$. Тогда:
   \begin{equation*}
     S(\Omega) = \frac{1}{2}\int_{\alpha}^{\beta}\rho^2(\phi)d\phi,
   \end{equation*}
@@ -2457,11 +2457,11 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   Заметим, что $S(\underline{\Omega})\leqslant S_{kriv.sector} \leqslant S(\overline{\Omega}) \ (*)$.
 
   Заметим, что $S(\underline{\Omega})$ - нижняя интегральная сумма функции $\frac{\rho^2(\phi)}{2}$,
-  а $S(\overline{\Omega})$ - верхняя интегральная сумма этой же функции. Функция $\frac{\rho^2(\phi)}{2}$ 
+  а $S(\overline{\Omega})$ - верхняя интегральная сумма этой же функции. Функция $\frac{\rho^2(\phi)}{2}$
   - непрерывна (так как $\rho(\phi)$ - непрерывна) $\implies$ интегрируема на $[\alpha;\beta] \implies
-  \exists \underset{\max\Delta \phi_i\rightarrow0}{\lim}S(\underline{\Omega}) = 
-  \underset{\max\Delta \phi_i\rightarrow0}{\lim}S(\overline{\Omega}) = \int_{\alpha}^{\beta}\frac{\rho^2(\phi)}
-  {2}d\phi \implies$ учитывая неравенство (*) и лемму о двух миллиционерах:
+    \exists \underset{\max\Delta \phi_i\rightarrow0}{\lim}S(\underline{\Omega}) =
+    \underset{\max\Delta \phi_i\rightarrow0}{\lim}S(\overline{\Omega}) = \int_{\alpha}^{\beta}\frac{\rho^2(\phi)}
+    {2}d\phi \implies$ учитывая неравенство (*) и лемму о двух миллиционерах:
   \begin{equation*}
     S_{kriv.sector} = \frac{1}{2}\int_{\alpha}^{\beta}\rho^2(\phi)d\phi
   \end{equation*}
@@ -2485,61 +2485,234 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   \end{equation*}
 \end{definition}
 
-\begin{example}
+\begin{definition}
   (продолжение определения)
 
   \begin{enumerate}
     \item $\int_{2}^{+\infty}\frac{dx}{x^2} = \underset{b\rightarrow\infty}{\lim}\int_{2}^{b}\frac{dx}{x^2} =
-    \underset{b\rightarrow+\infty}{\lim}(F(b) - F(2)) = \underset{b\rightarrow+\infty}{\lim}(-\frac{1}{b} +
-    \frac{1}{2}) = \frac{1}{2}$.
-  
-    Аналогично, пусть функция $f:(-\infty;a]\rightarrow\mathbb{R}, \ f\in R[a;b], \ \forall b \in (-\infty;a]$.
-    \begin{equation*}
-      \underset{b\rightarrow-\infty}{\lim}\int_{a}^{b}f(x)dx,
-    \end{equation*}
-    этот предел называется \textbf{несобственным интегралом} от функции $f(x)$ на луче $(\infty;a]$.
-  
-    Если этот предел существует и конечен, то соответственно несобственный интеграл - сходящийся. Обозначается:
-    \begin{equation*}
-      \int_{-\infty}^{a}f(x)dx \overset{def}{=}\underset{b\rightarrow-\infty}{\lim}\int_{b}^{a}f(x)dx.
-    \end{equation*}
-    Аналогично:
-    \begin{equation*}
-      \int_{-\infty}^{+\infty}f(x)dx = \int_{-\infty}^{a}f(x)dx + \int_{a}^{+\infty}f(x)dx = \underset{c
-      \rightarrow+\infty, b\rightarrow-\infty}{\lim}\int_{b}^{c}f(x)dx,
-    \end{equation*}
-    где $c\rightarrow+\infty, b\rightarrow-\infty$ - независимые друг от друга ($\forall b,c \ f(x)\in
-    R[b;c]$). {\Large РИСУНОК}
+            \underset{b\rightarrow+\infty}{\lim}(F(b) - F(2)) = \underset{b\rightarrow+\infty}{\lim}(-\frac{1}{b} +
+            \frac{1}{2}) = \frac{1}{2}$.
+
+          Аналогично, пусть функция $f:(-\infty;a]\rightarrow\mathbb{R}, \ f\in R[a;b], \ \forall b \in (-\infty;a]$.
+          \begin{equation*}
+            \underset{b\rightarrow-\infty}{\lim}\int_{a}^{b}f(x)dx,
+          \end{equation*}
+          этот предел называется \textbf{несобственным интегралом} от функции $f(x)$ на луче $(\infty;a]$.
+
+          Если этот предел существует и конечен, то соответственно несобственный интеграл - сходящийся. Обозначается:
+          \begin{equation*}
+            \int_{-\infty}^{a}f(x)dx \overset{def}{=}\underset{b\rightarrow-\infty}{\lim}\int_{b}^{a}f(x)dx.
+          \end{equation*}
+          Аналогично:
+          \begin{equation*}
+            \int_{-\infty}^{+\infty}f(x)dx = \int_{-\infty}^{a}f(x)dx + \int_{a}^{+\infty}f(x)dx = \underset{c
+              \rightarrow+\infty, b\rightarrow-\infty}{\lim}\int_{b}^{c}f(x)dx,
+          \end{equation*}
+          где $c\rightarrow+\infty, b\rightarrow-\infty$ - независимые друг от друга ($\forall b,c \ f(x)\in
+            R[b;c]$). {\Large РИСУНОК}
 
     \item Далее, пусть $f:[a;b)\rightarrow\mathbb{R}: \ \forall c \in [a;b) f\in R[a;c]$. Положим:
-    \begin{equation*}
-      \int_{a}^{b}f(x)dx = \underset{c\rightarrow b}{\lim}\int_{a}^{c}f(x)dx.
-    \end{equation*}
-    Эта величина называется \textbf{несобственным интегралом} от функции $f$ на полуинтервале $[a;b)$.
-  
-    Если предел существует, то несобственный интеграл называется \textbf{сходящимся}, иначе \textbf{расходящимся}.
-  
-    Аналогично, пусть $f:(a;b]\rightarrow\mathbb{R}$, причем $\forall c \in (a;b] \ f\in R[c;b]$:
-    \begin{equation*}
-      \int_{a}^{b}f(x)dx \overset{def}{=} \underset{c\rightarrow a}{\lim}\int_{c}^{b}f(x)dx -
-    \end{equation*}
-    несобственный интеграл от функции $f(x)$ на полуинтервале $(a;b]$.
-  
-    Аналогично, пусть $f:(a;b)\rightarrow\mathbb{R}$, причем $\forall c,d \in (a;b) \ f\in R[c,d]$.
-    Тогда:
-    \begin{equation*}
-      \int_{a}^{b}f(x)dx = \overset{def}{=} \underset{c\rightarrow a,d\rightarrow b}{\lim}\int_{c}^{d}
-      f(x)dx,
-    \end{equation*}
-    (где $c\rightarrow a,d\rightarrow b$ - независимые друг от друга) - несобственный интеграл от $f(x)$
-    на $(a;b)$
+                \begin{equation*}
+                  \int_{a}^{b}f(x)dx = \underset{c\rightarrow b}{\lim}\int_{a}^{c}f(x)dx.
+                \end{equation*}
+                Эта величина называется \textbf{несобственным интегралом} от функции $f$ на полуинтервале $[a;b)$.
+
+                    Если предел существует, то несобственный интеграл называется \textbf{сходящимся}, иначе \textbf{расходящимся}.
+
+                    Аналогично, пусть $f:(a;b]\rightarrow\mathbb{R}$, причем $\forall c \in (a;b] \ f\in R[c;b]$:
+          \begin{equation*}
+            \int_{a}^{b}f(x)dx \overset{def}{=} \underset{c\rightarrow a}{\lim}\int_{c}^{b}f(x)dx \ -
+          \end{equation*}
+          несобственный интеграл от функции $f(x)$ на полуинтервале $(a;b]$.
+
+          Аналогично, пусть $f:(a;b)\rightarrow\mathbb{R}$, причем $\forall c,d \in (a;b) \ f\in R[c,d]$.
+          Тогда:
+          \begin{equation*}
+            \int_{a}^{b}f(x)dx \overset{def}{=} \underset{c\rightarrow a,d\rightarrow b}{\lim}\int_{c}^{d}
+            f(x)dx,
+          \end{equation*}
+          (где $c\rightarrow a,d\rightarrow b$ - независимые друг от друга) - несобственный интеграл от $f(x)$
+          на $(a;b)$
 
     \item Пусть $f:[a;b]\rightarrow\mathbb{R}$ и $\exists c \in (a;b): \ f$ - неограниченана в точке $c$.
+          \begin{equation*}
+            \int_{a}^{b} f(x) dx = \int_{a}^{c - \epsilon} f(x)dx + \int_{c+\epsilon}^{b}f(x)dx =
+          \end{equation*}
+          \begin{equation*}
+            \underset{\epsilon\rightarrow0}{\lim}\int_{a}^{c - \epsilon} f(x)dx + \underset{\epsilon}{\lim}
+            \int_{c+\epsilon}^{b}f(x)dx.
+          \end{equation*}
+          Если $\lim$ существует, то интеграл ялвяется сходящимся.
+
+          В дальнейшем будем рассматривать:
+          \begin{equation*}
+            \int_{a}^{\omega}f(x)dx,
+          \end{equation*}
+          где $\omega = +\infty, \ -\infty, \ b$.
   \end{enumerate}
-  
+\end{definition}
 
-  
+\begin{theorem}
+  Пусть $\forall b\in [a;\omega) \ f\in R[a;b]$.
+  \begin{enumerate}
+    \item Тогда $\int_{a}^{\omega}f(x)dx$ сходится $\iff \ \forall
+            b\in[a;\omega) \ \int_{b}^{\omega}f(x)dx$ сходится и
+          \begin{equation*}
+            \int_{a}^{\omega}f(x)dx = \int_{a}^{b}f(x)dx + \int_{b}^{\omega} f(x)dx
+          \end{equation*}
+          {\Large РИСУНОК}
+    \item
+          \begin{equation*}
+            \underset{b\rightarrow\omega}{\lim}\int_{b}^{\omega}f(x)dx = 0
+          \end{equation*}
+    \item $\forall c \in \mathbb{R}$
+          \begin{equation*}
+            \int_{a}^{\omega}cf(x)dx = c\int_{a}^{\omega}f(x)dx
+          \end{equation*}
+          (то есть если $c\int_{a}^{\omega}f(x)dx$ сходится, то сходится $\int_{a}^{\omega}c(x)dx$ и наоборот,
+          и они равны)
+    \item Если $\int_{a}^{\omega}f(x)dx$ и $\int_{a}^{\omega}g(x)dx$ сходятся, то сходится и
+          \begin{equation*}
+            \int_{a}^{\omega}(f(x) + g(x))dx = \int_{a}^{\omega}f(x)dx + \int_{a}^{\omega}g(x)dx
+          \end{equation*}
+  \end{enumerate}
+\end{theorem}
 
-\end{example}
+\begin{proof}
+  (теоремы)
+
+  \begin{enumerate}
+    \item Пусть $b \in [a;\omega)$. Выберем точку $c: \ b<c<\omega$. Тогда
+          \begin{equation*}
+            \int_{a}^{c}f(x)dx = \int_{a}^{b}f(x)dx + \int_{b}^{c}f(x)dx \ (*).
+          \end{equation*}
+          Если $\int_{a}^{\omega}f(x)dx$ сходится $\implies \exists \underset{d\rightarrow\omega}{\lim}\int_{a}^{d}
+            f(x)dx, \ d\in(a;\omega)$ (общее определение) в равенстве $(*)$ перейдем к пределу при $c\rightarrow\omega$,
+          получим
+          \begin{equation*}
+            \underset{c\rightarrow\omega}{\lim}\int_{a}^{c}f(x)dx = \int_{a}^{b}f(x)dx + \underset{c\rightarrow\omega}{\lim}
+            \int_{b}^{c}f(x)dx,
+          \end{equation*}
+          где если $\exists \underset{c\rightarrow\omega}{\lim}\int_{a}^{c}f(x)dx$, то $\exists
+            \underset{c\rightarrow\omega}{\lim}\int_{b}^{c}f(x)dx$.
+
+          Таким образом:
+          \begin{equation*}
+            \int_{a}^{\omega}f(x)dx = \int_{a}^{b}f(x)dx + \int_{b}^{\omega}f(x)dx.
+          \end{equation*}
+          В обратную сторону аналогично.
+    \item Докажем из 1. Имеем:
+          \begin{equation*}
+            \int_{a}^{\omega}f(x)dx = \int_{a}^{b}f(x)dx + \int_{b}^{\omega}f(x)dx;
+          \end{equation*}
+          \begin{equation*}
+            \int_{b}^{\omega}f(x)dx = \int_{a}^{\omega}f(x)dx - \int_{a}^{b}f(x)dx \ (**)
+          \end{equation*}
+          При $b\rightarrow\omega$ в равенстве $(**)$ в правой части получаем:
+          \begin{equation*}
+            \int_{a}^{\omega}f(x)dx - \int_{a}^{\omega}f(x)dx = 0.
+          \end{equation*}
+          \begin{equation*}
+            \underset{b\rightarrow\omega}{\lim}\int_{b}^{\omega}f(x)dx = \int_{a}^{\omega}f(x)dx -
+            \underset{b\rightarrow\omega}{\lim}\int_{a}^{b}f(x)dx = \int_{a}^{\omega}f(x)dx = 0
+          \end{equation*}
+    \item Следует из свойств предела.
+    \item Следует из свойств предела.
+  \end{enumerate}
+\end{proof}
+
+\begin{theorem}[Критерий Коши]
+  Пусть $\forall b \in [a;\omega) \ f\in R[a;b]$.
+
+  $\int_{a}^{\omega}f(x)dx$ сходится $\iff \ \forall
+    \epsilon > 0 \ \exists B\in [a;\omega): \ \forall b_1,b_2 \in (a;\omega)$ и $b_1,b_2 > B$ верно неравенство:
+  \begin{equation*}
+    | \int_{b_1}^{b_2}f(x)dx | < \epsilon
+  \end{equation*}
+  {\Large РИСУНОК}
+\end{theorem}
+
+\begin{proof}
+  Рассмотрим функцию $F(b) = \int_{a}^{b}f(x)dx$.
+
+  Имеем, что $\int_{a}^{\omega}f(x)dx$ сходится $\iff \exists
+    \underset{b\rightarrow\omega}{\lim}\int_{a}^{b}f(x)dx \iff \forall \epsilon > 0 \exists B \in(a;\omega): \
+    \forall b_1,b_2: \ B < b_1,b_2 < \omega \ | F(b_1) - F(b_2) | < \epsilon$ (критерий Коши существования
+  предела $F(b)$).
+
+  \begin{equation*}
+    | F(b_1) - F(b_2) | = | \int_{a}^{b_1}f(x)dx - \int_{a}^{b_2} f(x)dx | =
+  \end{equation*}
+  \begin{equation*}
+    | -(\int_{b_1}^{a}f(x)dx + \int_{a}^{b_2}f(x)dx) | = | \int_{b_1}^{b_2}f(x)dx | < \epsilon.
+  \end{equation*}
+\end{proof}
+
+\begin{theorem}[несобственная сходимость интеграла от неотрицательной функции]
+  Пусть $f\in R[a;b]$ для $\forall b \in (a;\omega)$ и $f(x)\leqslant 0 \ \forall x \in [a;\omega).$
+
+  $\int_{a}^{\omega}f(x)dx$ сходится $\iff \exists M > 0: \ \forall b \in (a;\omega)$
+  \begin{equation*}
+    \int_{a}^{b}f(x)dx < M.
+  \end{equation*}
+  {\Large РИСУНОК}
+\end{theorem}
+
+\begin{proof}
+  Рассмотрим $F(b) = \int_{a}^{b}f(x)dx$. Так как $f(x)\leqslant0 \ \forall x\in[a;\omega)\implies
+    F(b) \geqslant 0$ на $[a;\omega) \implies$ по теореме о пределе монотонной функции:
+  \begin{equation*}
+    \exists \underset{b\rightarrow\omega}{\lim}F(b)\iff \exists M > 0: \ \forall b\in[a;\omega) \ F(b) < M,
+  \end{equation*}
+  \begin{center}
+    или
+  \end{center}
+  \begin{equation*}
+    \int_{a}^{b}f(x)dx < M.
+  \end{equation*}
+\end{proof}
+
+\begin{theorem}[первый признак сравнения]
+  Если $\forall x \in [a;\omega) \ f(x) \leqslant g(x)$ и $\forall b \in [a;\omega) \ f,g \in R[a;b]$.
+  Тогда:
+  \begin{enumerate}
+    \item Если $\int_{a}^{\omega}g(x)dx$ - сходится $\implies \int_{a}^{\omega}f(x)dx$ - сходится.
+    \item Если $\int_{a}^{\omega}f(x)dx$ - расходится $\implies \int_{a}^{\omega}g(x)dx$ - расходится.
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  (теоремы)
+
+  \begin{enumerate}
+    \item Пусть $\forall x \in [a;\omega) \ f(x)\leqslant g(x)$ и $\forall b \in [a;\omega) \ f,g \in R[a;b]$ сходится
+          $\iff \forall b \in [a;\omega) \exists M > 0:$
+          \begin{equation*}
+            \int_{a}^{b}(g(x) - f(x))dx < M \implies
+          \end{equation*}
+          \begin{equation*}
+            \int_{a}^{b}g(x)dx - \int_{a}^{b}f(x)dx < M \implies
+          \end{equation*}
+          \begin{equation*}
+            \int_{a}^{b}g(x)dx < M + \int_{a}^{b}f(x)dx.
+          \end{equation*}
+          Перейдем к пределу при $b \rightarrow \omega$:
+          \begin{equation*}
+            \underset{b\rightarrow\omega}{\lim}\int_{a}^{b}g(x)dx < M + \underset{b\rightarrow\omega}{\lim}\int_{a}^{b}
+            f(x)dx \ (\square).
+          \end{equation*}
+          Рассмотрим $G(b) = \int_{a}^{b}g(x)dx:$
+          \begin{equation*}
+            F(b) = \int_{a}^{b}f(x)dx
+          \end{equation*}
+    \item Если $\int_{a}^{\omega}f(x)dx$ расходится, то с учетом неравенства $(\square)$ расходится и
+          $\int_{a}^{\omega} g(x)dx$.
+
+          Теперь, пусть $\int_{a}^{\omega}g(x)dx$ сходится $\implies \exists \underset{b\rightarrow\omega}{\lim}
+            G(b) \implies$
+  \end{enumerate}
+
+
+\end{proof}
 
 \end{document}
