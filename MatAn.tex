@@ -2673,8 +2673,8 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 \end{proof}
 
 \begin{theorem}[первый признак сравнения]
-  Если $\forall x \in [a;\omega) \ f(x) \leqslant g(x)$ и $\forall b \in [a;\omega) \ f,g \in R[a;b]$.
-  Тогда:
+  Если $\forall x \in [a;\omega) \ f(x) \leqslant g(x)$ и $\forall b \in [a;\omega) \ f,g \in R[a;b], \
+    f(x) \geqslant 0, \ g(x) \geqslant 0$, тогда:
   \begin{enumerate}
     \item Если $\int_{a}^{\omega}g(x)dx$ - сходится $\implies \int_{a}^{\omega}f(x)dx$ - сходится.
     \item Если $\int_{a}^{\omega}f(x)dx$ - расходится $\implies \int_{a}^{\omega}g(x)dx$ - расходится.
@@ -2684,35 +2684,210 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 \begin{proof}
   (теоремы)
 
+  Если $f(x) \leqslant g(x) \ \forall x \in [a;\omega) \implies$
+  \begin{equation*}
+    \int_{a}^{b}f(x)dx \leqslant \int_{a}^{b}g(x)dx,
+  \end{equation*}
+  \begin{equation*}
+    \underset{b\rightarrow \omega}{\lim}\int_{a}^{b}f(x)dx \leqslant \underset{b\rightarrow \omega}{\lim}
+    \int_{a}^{b}g(x)dx.
+  \end{equation*}
+  Далее, доказательство следует из теоремы о сходимости несобственного интеграла от неотрицательной функции.
+\end{proof}
+
+\begin{theorem}[второй признак сравнения]
+  Если $\forall x \in [a;\omega) \ f(x) > 0, \ g(x) > 0$ и $\exists \underset{x\rightarrow \omega}{\lim}
+    \frac{f(x)}{g(x)} = A$ (либо $0$, либо $+\infty$, либо $const \ne 0$), тогда:
   \begin{enumerate}
-    \item Пусть $\forall x \in [a;\omega) \ f(x)\leqslant g(x)$ и $\forall b \in [a;\omega) \ f,g \in R[a;b]$ сходится
-          $\iff \forall b \in [a;\omega) \exists M > 0:$
-          \begin{equation*}
-            \int_{a}^{b}(g(x) - f(x))dx < M \implies
-          \end{equation*}
-          \begin{equation*}
-            \int_{a}^{b}g(x)dx - \int_{a}^{b}f(x)dx < M \implies
-          \end{equation*}
-          \begin{equation*}
-            \int_{a}^{b}g(x)dx < M + \int_{a}^{b}f(x)dx.
-          \end{equation*}
-          Перейдем к пределу при $b \rightarrow \omega$:
-          \begin{equation*}
-            \underset{b\rightarrow\omega}{\lim}\int_{a}^{b}g(x)dx < M + \underset{b\rightarrow\omega}{\lim}\int_{a}^{b}
-            f(x)dx \ (\square).
-          \end{equation*}
-          Рассмотрим $G(b) = \int_{a}^{b}g(x)dx:$
-          \begin{equation*}
-            F(b) = \int_{a}^{b}f(x)dx
-          \end{equation*}
-    \item Если $\int_{a}^{\omega}f(x)dx$ расходится, то с учетом неравенства $(\square)$ расходится и
-          $\int_{a}^{\omega} g(x)dx$.
-
-          Теперь, пусть $\int_{a}^{\omega}g(x)dx$ сходится $\implies \exists \underset{b\rightarrow\omega}{\lim}
-            G(b) \implies$
+    \item Если $A = +\infty$, то из расходимости $\int_{a}^{\omega}g(x)dx$ следует расходимость $\int_{a}^{\omega}
+            f(x)dx$, а из сходимости $\int_{a}^{\omega}f(x)dx$ следует сходимость $\int_{a}^{\omega}g(x)dx$.
+    \item Если $A = 0$, то из расходимости $\int_{a}^{\omega}f(x)dx$ следует расходимость $\int_{a}^{\omega}
+            g(x)dx$, а из сходимости $\int_{a}^{\omega}g(x)dx$ следует сходимость $\int_{a}^{\omega}f(x)dx$.
+    \item Если $A = const \ne 0$, то интегралы $\int_{a}^{\omega}f(x)dx$ и $\int_{a}^{\omega}g(x)dx$ ведут
+          себя одинаково.
   \end{enumerate}
+\end{theorem}
 
+\begin{proof}
+  Начнем с пункта номер 3.:
 
+  3. Пусть $0 < A < +\infty$. Тогда $\exists B \in (a;\omega): \ \forall x \in (B;\omega),
+    \ \forall \epsilon > 0$
+  \begin{equation*}
+    | \frac{f(x)}{g(x)} - A | < \epsilon \implies A - \epsilon < \frac{f(x)}{g(x)} < A + \epsilon (*).
+  \end{equation*}
+
+  Более того, можно считать, что $A - \epsilon > 0$. В $(*)$ домножим обе части неравенства на $g(x) > 0$:
+  \begin{equation*}
+    g(x)(A - \epsilon) < f(x) < g(x)(A + \epsilon).
+  \end{equation*}
+
+  Если $\int_{a}^{\omega}g(x)dx \implies \int_{a}^{\omega}g(x)(A + \epsilon)dx$ сходится $\implies$ по
+  первому признаку сравнения, сходится $\int_{a}^{\omega}f(x)dx$.
+
+  Если $\int_{a}^{\omega}f(x)dx$ сходится
+  $\implies$ по первому признаку сравнения сходится $\int_{a}^{\omega}g(x)(A - \epsilon)dx \implies
+    \int_{a}^{\omega}g(x)dx$.
+
+  Аналогично, если $\int_{a}^{\omega}g(x)dx$ расходится, то $\int_{a}^{\omega}g(x)
+    (A - \epsilon)dx$ - расходится $\implies$ по первому признаку сравнения расходится $\int_{a}^{\omega}f(x)dx$.
+
+  Если $\int_{a}^{\omega}f(x)dx$ расходится, то по первому признаку сравнения $\int_{a}^{\omega}g(x)(A +
+    \epsilon)dx$ расходится $\implies \int_{a}^{\omega}g(x)dx$ расходится. \\
+
+  2. Если $A = 0$, то есть $\underset{x\rightarrow\omega}{\lim}\frac{f(x)}{g(x)} = 0$, то при
+  \begin{center}
+    $f(x) = \alpha(x)g(x)$, где $\alpha(x)\rightarrow 0$ при $x \rightarrow \omega$,
+  \end{center}
+  $f(x) = \underset{x\rightarrow\omega}{o}(g(x)) \implies \exists B \in [a;\omega)$ такая, что $\forall x \in
+    (B;\omega) \ f(x) < \frac{1}{2}g(x) \implies$ по первому признаку сравнения, если $\int_{a}^{\omega}g(x)dx$
+  сходится $\implies \int_{a}^{\omega}f(x)dx$ сходится, если $\int_{a}^{\omega}f(x)dx$ расходится $\implies
+    \int_{a}^{\omega}g(x)dx$ - расходится. \\
+
+  1. Если $A = +\infty$, то есть $\underset{x\rightarrow\omega}{\lim}\frac{f(x)}{g(x)} = +\infty \implies
+    \exists B \in [a;\omega)$ такая, что $\forall x \in (B;\omega) \ f(x) > g(x) \implies$ по первому признаку
+  сравнения, из сходимости $\int_{a}^{\omega}f(x)dx \implies$ сходимость $\int_{a}^{\omega}g(x)dx$ и
+  из расходимости $\int_{a}^{\omega}g(x)dx \implies$ расходимость $\int_{a}^{\omega}f(x)dx$.
+\end{proof}
+
+\begin{example}
+  Задача
+
+  \begin{enumerate}
+    \item Исследуем на сходимость $\int_{a}^{+\infty}\frac{dx}{x^4}$, где $a > 0$:
+          \begin{center}
+            $\underset{b\rightarrow+\infty}{\lim}\int_{a}^{b}\frac{dx}{x^4} = \underset{b\rightarrow+\infty}{\lim}
+              \left\{
+              \begin{array}{ll}
+                \ln x,                 & p = 1   \\
+                \frac{x^{1-p}}{1 - p}, & p \ne 1
+              \end{array}
+              \right. \bigg|^b_a = \underset{b\rightarrow+\infty}{\lim}
+              \left\{
+              \begin{array}{ll}
+                \ln b - \ln a,                               & p = 1   \\
+                \frac{b^{1-p}}{1 - p} - \frac{a^{1-p}}{1-p}, & p \ne 1
+              \end{array}
+              \right. =
+              \left\{
+              \begin{array}{ll}
+                +\infty,               & p=1     \\
+                +\infty,               & 1-p > 0 \\
+                - \frac{a^{1-p}}{1-p}, & p > 1
+              \end{array}
+              \right. \implies$
+          \end{center}
+          $\int_{a}^{+\infty}\frac{dx}{x^p}$ сходится при $p > 1$ и расходится при $p \leqslant 1$.
+    \item Исследуем на сходимость при $a > 0:$
+          \begin{center}
+            $\int_{0}^{a}\frac{dx}{(a-x)^p} = \underset{b\rightarrow a}{\lim}\int_{0}^{b}\frac{dx}{(a-x)^p}
+              = \underset{b\rightarrow a}{\lim} -\int_{0}^{b}\frac{d(a-x)}{(a-x)^p} =
+              \underset{b\rightarrow a}{\lim}
+              \left\{
+              \begin{array}{ll}
+                -\ln| a-x |,              & p = 1   \\
+                \frac{1}{p-1}(a-x)^{1-p}, & p \ne 1
+              \end{array}
+              \right. \bigg|_0^b = \underset{b\rightarrow a}{\lim}
+              \left\{
+              \begin{array}{ll}
+                -\ln| a-b | + \ln| a |,                          & p = 1   \\
+                \frac{1}{p-1}(a-b)^{1-p} - \frac{1}{p-1}a^{1-p}, & p \ne 1
+              \end{array}
+              \right. =
+              \left\{
+              \begin{array}{ll}
+                +\infty,             & p = 1   \\
+                \frac{a^{1-p}}{p-1}, & 1-p > 0 \\
+                +\infty,             & 1-p < 0
+              \end{array}
+              \right. \implies \int_{0}^{a}\frac{dx}{(a-x)^p}$, ($a > 0$ сходится при $p < 1$, расходится
+            при $p \geqslant 1$).
+          \end{center}
+    \item Теперь:
+    
+          \begin{center}
+            $\int_{0}^{+\infty}\frac{dx}{x^p} = \int_{0}^{1}\frac{dx}{x^p} + \int_{1}^{+\infty}\frac{dx}{x^p}$ -
+            расходящаяся для $\forall p$.
+          \end{center}
+    \item Теперь:
+    
+          \begin{center}
+            $\int_{0}^{1}\frac{dx}{\ln x} = \int_{0}^{\frac{1}{2}}\frac{dx}{\ln x} + \int_{\frac{1}{2}}^{1}
+            \frac{dx}{\ln x}$.
+          \end{center}
+          
+          Рассмотрим $\int_{0}^{\frac{1}{2}}\frac{dx}{\sqrt{x}}$ - сходится.
+
+          Рассмотрим $-\int_{0}^{\frac{1}{2}}-\frac{dx}{\ln x}: \ f(x) = -\frac{1}{\ln x}, \ g(x) = \frac{1}
+          {\sqrt{x}}$,
+          \begin{equation*}
+            \underset{x\rightarrow 0}{\lim}\frac{-\frac{1}{\ln x}}{\frac{1}{\sqrt{x}}} = \underset{x\rightarrow 0}
+            {\lim}(-\frac{\sqrt{x}}{\ln x}) = 0 \ -
+          \end{equation*}
+          по второму признаку сравнения, $-\int_{0}^{\frac{1}{2}}-\frac{dx}{\ln x}$ - сходится.
+
+          Рассмотрим $-\int_{\frac{1}{2}}^{1}-\frac{dx}{\ln x}$.
+
+          Рассмотрим $\int_{\frac{1}{2}}^{1}\frac{dx}{1-x}$ - расходится.
+
+          \begin{equation*}
+            f(x) = -\frac{1}{\ln x}, \ g(x) = \frac{1}{1-x},
+          \end{equation*}
+          \begin{equation*}
+            \underset{x\rightarrow1}{\lim}\frac{-\frac{1}{\ln x}}{\frac{1}{1-x}} = \underset{x\rightarrow1}
+            {\lim}\frac{x-1}{\ln x} = \underset{x\rightarrow1}{\lim}\frac{1}{\frac{1}{x}} = 1 \implies
+          \end{equation*}
+          по второму признаку сравнения $\implies -\int_{\frac{1}{2}}^{1}-\frac{dx}{\ln x}$ - расходится
+          $\implies \int_{0}^{1}\frac{dx}{\ln x}$ - расходится.
+  \end{enumerate}
+\end{example}
+
+\begin{definition}
+  Пусть $\forall b \in [a;\omega) \ f\in R[a;b]$.
+
+  $\int_{a}^{\omega}f(x)dx$ называется \textbf{абсолютно сходящимся}, если сходится $\int_{a}^{\omega}|f(x)|dx$.
+\end{definition}
+
+\begin{theorem}
+  Если $\int_{a}^{\omega}| f(x) |dx$ сходится, то $\int_{a}^{\omega}f(x)dx$ тоже сходится (или если интеграл
+  абсолютно сходящийся, то он сходящийся).
+
+  При этом:
+  \begin{equation*}
+    | \int_{a}^{\omega}f(x)dx | \leqslant \int_{a}^{\omega}| f(x) |dx
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Пусть $\int_{a}^{\omega}| f(x) |dx$ - сходится. Пусть $\epsilon > 0$ задано.
+
+  Выберем $B\in[a;\omega): \ \forall b_1,b_2 \in (B,\omega):$
+  \begin{equation*}
+    | \int_{b_1}^{b_2}| f(x) |dx | < \epsilon,
+  \end{equation*}
+  но
+  \begin{equation*}
+    | \int_{b_1}^{b_2}f(x)dx | \leqslant \int_{b_1}^{b_2}| f(x) |dx = | \int_{b_1}^{b_2}| f(x) |dx | <
+    \epsilon \implies
+  \end{equation*}
+  по критерию Коши, $\int_{a}^{\omega}f(x)dx$ - сходится.
+
+  Теперь $\forall b\in [a;\omega) \ | \int_{a}^{b}f(x)dx | \leqslant \int_{a}^{b}| f(x) |dx$.
+
+  Переходя к пределу при $b\rightarrow \omega$, получаем:
+  \begin{equation*}
+    | \int_{a}^{\omega}f(x)dx | \leqslant \int_{a}^{\omega} | f(x) |dx.
+  \end{equation*}
+\end{proof}
+
+\begin{effect}[признак Вейерштрасса]
+  Если $\forall x \in [a;\omega) \ | f(x) | \leqslant g(x)$ и $\int_{a}^{\omega}g(x)dx$ сходится, то 
+  $\int_{a}^{\omega}f(x)dx$ сходится.
+\end{effect}
+
+\begin{proof}
+  Самостоятельно.
 \end{proof}
 
 \end{document}
