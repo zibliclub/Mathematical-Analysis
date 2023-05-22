@@ -2943,7 +2943,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 \end{proof}
 
 \begin{theorem}[о замене переменной в несобственном интеграле]
-  Пусть $\forall b \in [a;\omega), \ f \in \mathbb{C}[a;b]$ (множество непрерывных функций), функция $x = \phi(t):$
+  Пусть $\forall b \in [a;\omega), \ f \in C[a;b]$ (множество непрерывных функций), функция $x = \phi(t):$
   \begin{enumerate}
     \item $\phi: \ [\alpha;\omega_1) \rightarrow [a;\omega)$,
     \item $\phi(\alpha) = a$, при $t \rightarrow \omega_1, \ \phi(t) \rightarrow \omega$,
@@ -3035,24 +3035,190 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
             \sum_{k=1}^{n}x_k y_k \leqslant (\sum_{k=1}^{n}x_k^p)^\frac{1}{p} (\sum_{k=1}^{n}y_k^p)^\frac{1}{p}.
           \end{equation*}
 
-    \item $X$ - пространство непрерывных на $[a;b]$ функций, то есть $X = \mathbb{C}[a;b], \ \forall x \in X 
-    \quad ||x|| = \underset{t \in [a;b]}{\max}|x(t)|$; 1,2,3 - почти очевидно.
+    \item $X$ - пространство непрерывных на $[a;b]$ функций, то есть $X = C[a;b], \ \forall x \in X
+            \quad ||x|| = \underset{t \in [a;b]}{\max}|x(t)|$; 1,2,3 - почти очевидно.
 
-    \item $X = \mathbb{C}[a;b], \ \forall x \in X \quad ||x|| = \int_{a}^{b}|x(t)|dt$.
-    
-    Покажем, что введенная функция есть норма:
-    \begin{enumerate}
-      \item $||x|| = 0 \iff x = 0$;
-      
-      Пусть $\int_{a}^{b}|x(t)|dt = 0$. От противного. Допустим, что $\exists t_0 \in [a;b]: \ x(t_0) \ne 0$.
-      Тогда $\exists t_0 \in [\alpha;\beta], \ [\alpha;\beta] \subset [a;b]$ и $\forall t \in [\alpha;\beta]
-      \quad |x(t)| > 0$,
-      \begin{equation*}
-        \int_{a}^{b}x(t)|dt \geqslant \int_{\alpha}^{\beta}|x(t)|dt
-      \end{equation*}
-      Противоречие $\implies \forall t \in [a;b] \ |x(t)| = 0$.
-    \end{enumerate}
+    \item $X = C[a;b], \ \forall x \in X \quad ||x|| = \int_{a}^{b}|x(t)|dt$.
+
+          Покажем, что введенная функция есть норма:
+          \begin{enumerate}
+            \item $||x(t)|| = 0 \iff x(t) = 0$;
+
+                  Пусть $\int_{a}^{b}|x(t)|dt = 0$. От противного. Допустим, что $\exists t_0 \in [a;b]: \ x(t_0) \ne 0$.
+                  Тогда $\exists t_0 \in [\alpha;\beta], \ [\alpha;\beta] \subset [a;b]$ и $\forall t \in [\alpha;\beta]
+                    \quad |x(t)| > 0$,
+                  \begin{equation*}
+                    \int_{a}^{b}x(t)|dt \geqslant \int_{\alpha}^{\beta}|x(t)|dt
+                  \end{equation*}
+                  Противоречие $\implies \forall t \in [a;b] \ |x(t)| = 0$.
+
+            \item $|| \lambda x || = | \lambda | * || x ||$ (из свойств определенного интеграла);
+            \item $|| x+y || \leqslant || x || + || y ||$ (из свойств определенного интеграла);
+          \end{enumerate}
+    \item $X = C[a;b]$.
   \end{enumerate}
 \end{example}
+
+$(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
+
+Упражнение: доказать, что заданная функция $|| x ||$ является нормой.
+
+ДНП ($C[a;b], || x || (*)$) образначается $C^p[a;b]$.
+
+\begin{statement}
+  Пусть $(X,|| * ||)$ - ЛНП. Тогда функция $\rho X \times X \rightarrow \mathbb{R}$, опредленная $\rho(x,y)
+    = || x-y ||$, является метрикой ЛНП.
+\end{statement}
+
+\begin{proof}
+  Проверим аксиомы метрики:
+  \begin{enumerate}
+    \item $\rho(x,y) = 0 \iff x = y \ \forall x,y \in X$:
+
+          $\rho(x,y) = || x-y || \iff x - y = \overline{0} \iff x = y$;
+
+    \item $\rho(x,y) = \rho(y,x), \ \forall x,y \in X$:
+
+          $\rho(x,y) = ||x - y|| = ||-(y-x)|| = |-1| * ||y-x|| = ||y-x|| = \rho(y,x)$;
+
+    \item $\rho(x,z) \leqslant \rho(x,y) + \rho(y,z) \ \forall x,y,z \in X$:
+
+          $\rho(x,z) = ||x-z|| = ||(x-y)+(y-z)|| \leqslant ||x-y|| + ||y-z|| = \rho(x,y) + \rho(y,z)$.
+  \end{enumerate}
+\end{proof}
+
+\begin{definition}
+  Если линейное нормированное пространство является полным относительно введенной метрики, то оно называется
+  \textbf{банахово}.
+
+  ($X$ - полное, если $\forall$ фундаментальная последовательность сходится).
+\end{definition}
+
+\begin{example}
+  (банаховых пространств)
+
+  \begin{enumerate}
+    \item $X = \mathbb{R}$ - банахово;
+    \item $X = C[a;b], \ ||x|| = \underset{t \in [a;b]}{\max}|x(t)|$;
+          \begin{proof}
+            Докажем, что данное линейное нормированное пространство (ЛНП) - полное относительно метрики.
+
+            Введем метрику (по утверждению):
+            \begin{equation*}
+              \rho(x,y) = ||x-y|| = \underset{t \in [a;b]}{\max}|x(t) - y(t)|.
+            \end{equation*}
+            Пусть $\{x_n (t)\}$ - фундаментальная последовательность непрерывно фундаментальная на $[a;b]$, то есть
+            $\forall \epsilon > 0 \ \exists N: \ \forall n,m  > N$
+            \begin{equation*}
+              \rho(x_n,x_m) < \epsilon \implies \underset{t \in [a;b]}{\max}|x_n(t) - x_m(t)| < \epsilon \ (\forall
+              t \in [a;b]).
+            \end{equation*}
+            Докажем, что $\{x_n (t)\}$ сходится в $C[a;b]$, то есть докажем, что $\exists \underset{n\rightarrow
+                \infty}{\lim}x_n (t) = x(t) \in C[a;b] \implies$ это значит, что $\forall \epsilon > 0 \
+              \exists N: \ \forall n > N$
+            \begin{equation*}
+              \rho(x_n (t), x(t)) < \epsilon,
+            \end{equation*}
+            или, по-другому, надо доказать, что
+            \begin{equation*}
+              \underset{t\in[a;b]}{\max}|x_n(t) - x(t)| \rightarrow 0.
+            \end{equation*}
+            Зафиксируем $t_0 \in [a;b] \implies$ получим числовую последовательность $\{x_n(t_0)\}$ - фундаментальная
+            $\implies$ сходится (по критерию Коши для $X = \mathbb{R}$) $\implies \exists \underset{n\rightarrow\infty}
+              {\lim}x_n(t_0)$.
+
+            Определим функцию $X(t): \ [a;b]\rightarrow \mathbb{R}$, положив, что $x(t) = \underset{n\rightarrow\infty}
+              {\lim}x_n(t)$ (в силу единственности предела последовательности, $x(t)$ - введена корректно).
+
+            Покажем, что $x(t) \in C[a;b]$ и $x_n(t) \rightarrow x(t)$. Пусть $\epsilon > 0$ задано, тогда
+            $\exists N: \ \forall n,m > N$ и $\forall t \in [a;b]$
+            \begin{equation*}
+              |x_n(t) - x_m(t)| < \epsilon.
+            \end{equation*}
+            Перейдем к пределу при $m \rightarrow \infty \implies \forall t \in [a;b]$
+            \begin{equation*}
+              |x_n(t) - x_m(t)| < \epsilon \ (*).
+            \end{equation*}
+            Покажем, что $x(t)$ - непрерывно на $[a;b]$, то есть непрерывно при $\forall t \in [a;b]$.
+
+            Пусть $t_0 \in [a;b]$ - произвольная точка, тогда: $|x(t) - x(t_0)| = |x(t) - x_n(t) + x_n(t) + x_n(t_0)-
+              x_n(t_0) - x(t_n)| = |(x(t) - x_n(t)) + (x_n(t) - x_n(t_0)) + (x_n(t_0) - x(t_0))| \leqslant |x_n(t) - x(t)|
+              + |x_n(t) - x_n(t_0)| + | x_n(t_0) - x(t_0) |$.
+
+            Пусть $\epsilon > 0$ задано, тогда $\exists N : \ \forall n > N$ и $\forall t \in [a;b]$
+            \begin{equation*}
+              | x_n(t) - x(t) | < \frac{\epsilon}{3} \ and \ | x_n(t_0) - x(t_0) | < \frac{\epsilon}{3}
+            \end{equation*}
+            в силу определения функции $x(t) = \underset{n\rightarrow\infty}{\lim}x_n(t) \ \forall t \in [a;b]$.
+
+            Выберем $\delta > 0 : \ \forall t \in [a;b]: \ | t-t_0 | < \delta \implies |x_n(t) - x_n(t_0)| < \frac
+              {\epsilon}{3}$ (в силу непрерывности функции $x_n(t)$).
+
+            Тогда $| x(t) - x(t_0) | < \frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3} = \epsilon$.
+
+            Таким образом функция $x(t) = \underset{n \rightarrow \infty}{\lim}x_n(t) \ \forall t \in [a;b]$ - непрерывна.
+
+            Так как неравенство $(*)$ верно $\forall t \in [a;b]$, то верно и для $\underset{t\in[a;b]}{\max}
+              | x_n(t) - x(t) | < \epsilon \implies \rho(x_n(t), x) < \epsilon$.
+
+            То есть $\{x_n(t)\}$ фундаментальная сходящаяся $\implies$ рассматриваемое ЛНП - полное для заданной метрики
+            $\implies$ оно банахово.
+          \end{proof}
+
+    \item $C_p[a;b]$ - ЛНП, $X = C[a;b]$,
+          \begin{equation*}
+            ||x|| = (\int_{a}^{b}|x(t)|^p dt)^\frac{1}{p}.
+          \end{equation*}
+          \begin{proof}
+            Покажем, что для $p = 1 \ C_1[a;b]$ - не полное.
+
+            Возьмем $C_1[-1;1]$. Положим, что $x_1 = t, \\ x_2 =
+              \left\{
+              \begin{array}{ll}
+                -1, & -1 \leqslant t \leqslant \frac{1}{2}           \\
+                2t, & -\frac{1}{2} \leqslant t \leqslant \frac{1}{2} \\
+                1,  & \frac{1}{2} \leqslant t \leqslant 1
+              \end{array}
+              \right., \ \ldots, \ x_n = 
+              \left\{
+              \begin{array}{ll}
+                -1, & -1 \leqslant t \leqslant \frac{1}{n}           \\
+                nt, & -\frac{1}{n} \leqslant t \leqslant \frac{1}{n} \\
+                1,  & \frac{1}{n} \leqslant t \leqslant 1
+              \end{array}
+              \right., \ \ldots$
+
+              Определим последовательность непрерывных функций $\{x_n(t)\}$.
+
+              Докажем, что введенная последовательность $\{x_n(t)\}$ фундаментальная.
+              \begin{equation*}
+                ||x|| = \int_{-1}^{1}|x(t)|dt,
+              \end{equation*}
+              \begin{equation*}
+                \rho(x,y) \ ||x-y|| = \int_{-1}^{1}|x(t) - y(t)|dt.
+              \end{equation*}
+
+              То есть, покажем, что $\forall \epsilon > 0 \ \exists N : \ \forall n,m > N$ (пусть $n>m$)
+              \begin{equation*}
+                \rho(x_n,x_m) < \epsilon,
+              \end{equation*}
+              $\rho(x_n,x_m) = \int_{-1}^{1}|x_n(t) - x_m(t)|dt =$ |до $-\frac{1}{m}$ и после $\frac{1}{m}$
+              интеграл зануляется| $= \int_{-\frac{1}{m}}^{\frac{1}{m}}|x_n(t) - x_m(t)|dt \leqslant
+              \int_{-\frac{1}{m}}^{\frac{1}{m}}|x_n(t)|dt + \int_{\frac{1}{m}}^{\frac{1}{m}}|x_m(t)|dt \ (\triangle)$.
+
+              Пусть $\epsilon > 0$ задано. Выберем $N: \ \frac{1}{N} < \frac{\epsilon}{3}$.
+
+              $(\triangle) = 2\int_{0}^{\frac{1}{m}}|x_n(t)|dt + 2\int_{1}^{\frac{1}{m}}mtdt = 2\int_{0}^{\frac{1}{m}}
+              |x_n(t)|dt + 2\frac{mt^2}{2}\bigg|^{\frac{1}{m}}_0 = \frac{n}{m^2} + \frac{1}{m} + \frac{1}{n}
+              + 2(\frac{1}{m} - \frac{1}{n}) = \frac{3}{m} - \frac{1}{n} < \frac{3}{m} < \frac{3}{N} < \frac{3}{\epsilon}$.
+
+              $\{x_n(t)\}$ - фундаментальная, $\underset{n\rightarrow\infty}{\lim} x_n(t) = 1$ и
+              $\underset{n\rightarrow\infty}{\lim} x_n(t) = -1 \implies \exists erset{n\rightarrow\infty}{\lim} x_n(t)$
+              - фундаментальная последовательность не сходится $\implies C_1[a;b]$ - не полное.
+          \end{proof}
+  \end{enumerate}
+\end{example}
+
+
 
 \end{document}
