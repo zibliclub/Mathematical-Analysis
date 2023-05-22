@@ -2805,22 +2805,22 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
             при $p \geqslant 1$).
           \end{center}
     \item Теперь:
-    
+
           \begin{center}
             $\int_{0}^{+\infty}\frac{dx}{x^p} = \int_{0}^{1}\frac{dx}{x^p} + \int_{1}^{+\infty}\frac{dx}{x^p}$ -
             расходящаяся для $\forall p$.
           \end{center}
     \item Теперь:
-    
+
           \begin{center}
             $\int_{0}^{1}\frac{dx}{\ln x} = \int_{0}^{\frac{1}{2}}\frac{dx}{\ln x} + \int_{\frac{1}{2}}^{1}
-            \frac{dx}{\ln x}$.
+              \frac{dx}{\ln x}$.
           \end{center}
-          
+
           Рассмотрим $\int_{0}^{\frac{1}{2}}\frac{dx}{\sqrt{x}}$ - сходится.
 
           Рассмотрим $-\int_{0}^{\frac{1}{2}}-\frac{dx}{\ln x}: \ f(x) = -\frac{1}{\ln x}, \ g(x) = \frac{1}
-          {\sqrt{x}}$,
+            {\sqrt{x}}$,
           \begin{equation*}
             \underset{x\rightarrow 0}{\lim}\frac{-\frac{1}{\ln x}}{\frac{1}{\sqrt{x}}} = \underset{x\rightarrow 0}
             {\lim}(-\frac{\sqrt{x}}{\ln x}) = 0 \ -
@@ -2882,12 +2882,177 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 \end{proof}
 
 \begin{effect}[признак Вейерштрасса]
-  Если $\forall x \in [a;\omega) \ | f(x) | \leqslant g(x)$ и $\int_{a}^{\omega}g(x)dx$ сходится, то 
+  Если $\forall x \in [a;\omega) \ | f(x) | \leqslant g(x)$ и $\int_{a}^{\omega}g(x)dx$ сходится, то
   $\int_{a}^{\omega}f(x)dx$ сходится.
 \end{effect}
 
 \begin{proof}
   Самостоятельно.
 \end{proof}
+
+\begin{definition}
+  Если $\int_{a}^{\omega}| f(x) |dx$ расходится, а $\int_{a}^{\omega}f(x)dx$ сходится, то $\int_{a}^{\omega}$
+  называется \textbf{условно сходящимся}.
+\end{definition}
+
+\begin{theorem}[признак Абеля]
+  Если:
+  \begin{enumerate}
+    \item $\int_{a}^{\omega}$ сходится,
+    \item $g(x)$ монотонна и ограничена на $[a;\omega)$,
+  \end{enumerate}
+  то $\int_{a}^{\omega} f(x)g(x)dx$ - сходится.
+\end{theorem}
+
+\begin{theorem}[признак Дирихле]
+  Если:
+  \begin{enumerate}
+    \item Функция $F(b) = \int_{a}^{b}f(x)dx$ ограничена на $[a;\omega)$, то есть $\exists M > 0: \
+            \forall b \in[a;\omega)$
+          \begin{equation*}
+            | \int_{a}^{b}f(x)dx | \leqslant M,
+          \end{equation*}
+    \item $g(x)$ - монотонна на $[a;\omega)$ и $g(x)\rightarrow 0$ при $x\rightarrow\omega$.
+          Тогда $\int_{a}^{\omega}f(x)g(x)dx$ - сходится.
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  (будем использовать критерий Коши)
+
+  Пусть $\epsilon > 0 $ задано. Рассмотрим
+  \begin{equation*}
+    | \int_{b_1}^{b_2}f(x)g(x)dx |
+  \end{equation*}
+  $\overset{2nd \ th. \ about \ mid}{=} |g(b_1)\int_{b_1}^{\xi}f(x)dx + g(b_2)\int_{\xi}^{b_2}f(x)dx| =
+    | b_1 \leqslant \xi \leqslant b_2 | \leqslant | g(b_1) | * | \int_{b_1}^{\xi} f(x)dx | + | g(b_2) | *
+    | \int_{\xi}^{b_2}f(x)dx | \ (*)$
+  \begin{enumerate}
+    \item Пусть выполнены условия признака Абеля. Пусть $L > 0: \ \forall x \in [a;\omega) \ | g(x) |
+            \leqslant L$.
+
+          Возьмем $B \in [a;\omega): \ \forall b_1,b_2 \in (B;\omega) \ | \int_{b_1}^{b_2}f(x)dx | \leqslant
+            \frac{\epsilon}{2L}$ (так как $\int_{a}^{\omega}f(x)dx$ - сходится). Тогда $(*) < L\frac{\epsilon}{2L}
+            + L\frac{\epsilon}{2L} = \epsilon \implies$ по критерию Коши: $\int_{a}^{\omega}f(x)g(x)dx$ - сходится.
+
+    \item Пусть выполнены условия признака Дирихле: $\exists M > 0: \ \forall b \in [a;\omega) \
+            | \int_{a}^{b_1}f(x)dx | \leqslant M$. Возьмем $B: \ \forall x \in [B;\omega) \ | g(x) | < \frac{\epsilon}
+            {2M}$ (в силу условия 2.). Тогда $(*) < M\frac{\epsilon}{2M} + \frac{\epsilon}{2M} = \epsilon \implies
+            \int_{a}^{\omega}f(x)g(x)dx$ - сходится.
+  \end{enumerate}
+\end{proof}
+
+\begin{theorem}[о замене переменной в несобственном интеграле]
+  Пусть $\forall b \in [a;\omega), \ f \in \mathbb{C}[a;b]$ (множество непрерывных функций), функция $x = \phi(t):$
+  \begin{enumerate}
+    \item $\phi: \ [\alpha;\omega_1) \rightarrow [a;\omega)$,
+    \item $\phi(\alpha) = a$, при $t \rightarrow \omega_1, \ \phi(t) \rightarrow \omega$,
+    \item $\phi(t)$ монотонно возрастает на $[\alpha;\omega_1)$,
+    \item $\phi'(t)$ непрерывна на $[\alpha;\omega_1)$,
+  \end{enumerate}
+  Тогда интегралы $\int_{a}^{\omega}f(x)dx$ и $\int_{\alpha}^{\omega_1}f(\phi(t))\phi'(t)dt$ ведут себя
+  одинаково и равны между собой.
+\end{theorem}
+
+\begin{proof}
+  Самостоятельно.
+\end{proof}
+
+\chapter{Дифференциальное исчисление функций многих переменных}
+
+\section{Линейные нормированные пространства}
+
+\begin{definition}
+  \textbf{Линейным пространством} называется четверка $(X,K,+,*)$, где $X$ - множество, $K$ - поле, $"+"$ -
+  операция сложения на $X$ ($"+": \ X \times X \rightarrow X$), $"*"$ - операция умножения элемента поля $K$
+  на элемент множества $X$ ($"*": \ K \times X \rightarrow X$).
+
+  При этом выполняются следующие аксиомы:
+  \begin{enumerate}
+    \item $<X,+>$ - абелева группа;
+    \item
+          \begin{enumerate}
+            \item $\forall \alpha,\beta \in K$ и $\forall x \in X \quad (\alpha\beta)x = \alpha(\beta X)$,
+            \item $\forall x,y \in X, \ \forall \alpha \in K \quad \alpha (x+y) = \alpha x + \alpha y$,
+            \item $\forall \alpha,\beta \in K, \forall x \in X \quad (\alpha + \beta)x = \alpha x + \beta x$,
+            \item $\forall x \in X, \ 1 \in K \quad 1x = x$.
+          \end{enumerate}
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}
+  \textbf{Линейным нормированным пространством} называется пара $(X,||*||)$, где $X$ - линейное пространство
+  над полем $\mathbb{R}$, а $||*||$ - функция из $X$ в $\mathbb{R}$.
+
+  $||*||: \ X \rightarrow \mathbb{R}$, причем выполнены следующие аксиомы для нее:
+  \begin{enumerate}
+    \item $||x|| = 0 \iff x = \overline{0}$ (читается "норма от $x$"),
+    \item $\forall \lambda \in \mathbb{R} \ ||\lambda x|| |\lambda| * ||x||$,
+    \item $\forall x,y \in X \ ||x+y|| \leqslant ||x|| + ||y||$ (неравенство треугольника).
+  \end{enumerate}
+  Функция $||*||$ называется \textbf{нормой}.
+\end{definition}
+
+\begin{example}
+  ЛНП:
+
+  \begin{enumerate}
+    \item $X = \mathbb{R}, \ \forall x \in X \quad ||x|| = |x|$ (норма = модулю по свойствам нормы),
+    \item $X = \mathbb{R}^n = \mathbb{R} \times \mathbb{R} \times \ldots \times \mathbb{R}$ ($n$ раз),
+          $\forall x \in X \ ||x|| = (\sum_{k=1}^{n}a_k^2)^\frac{1}{2}, \ x = (a_1,\ldots,a_n) \in X$.
+          Покажем, что это норма:
+
+          $1.,2.$ - очевидно. Докажем, что $\forall x,y \in X \ ||x+y|| \leqslant ||x||x + ||y||$, то есть
+          докажем, что $(\sum_{k=1}^{n}(x_k + y_k)^2)^\frac{1}{2} \leqslant (\sum_{k=1}^{n}x_k^2)^\frac{1}{2}
+            + (\sum_{k=1}^{n}y_k^2)^\frac{1}{2} \ (\triangle)$.
+
+          Рассмотрим $\sum_{k=1}^{n}(x_k + y_k)^2 = \sum_{k=1}^{n}x_k^2 + 2\sum_{k=1}^{n}x_k y_k + \sum_{k=1}^{n}
+            y_k^2 \leqslant |$ используем неравенство Назарова-Заблоцкого (Коши-Буньковского) $ \sum_{k=1}^{n}x_k y_k \leqslant
+            (\sum_{k=1}^{n}x_K^2)^\frac{1}{2}(\sum_{k=1}^{n}y_k^2)^\frac{1}{2}| \leqslant \sum_{k=1}^{n}x_k^2 +
+            2(\sum_{k=1}^{n}x_k^2)^\frac{1}{2}(\sum_{k=1}^{n}y_k^2)^\frac{1}{2} + \sum_{k=1}^{n}y_k^2 =
+            [(\sum_{k=1}^{n}x_k^2)^\frac{1}{2} + (\sum_{k=1}^{n}y_k^2)^\frac{1}{2}]^2$.
+
+          Имеем:
+          \begin{equation*}
+            \sum_{k=1}^{n}(x_k + y_k)^2 \leqslant [(\sum_{k=1}^{n}x_k^2)^\frac{1}{2} + (\sum_{k=1}^{n}y_k^2)^\frac{1}{2}]^2 \implies
+          \end{equation*}
+          приходим к $(\triangle)$ операцией взятия корня от обеих частей неравенства
+          \begin{equation*}
+            \implies (\sum_{k=1}^{n}(x_k + y_k)^2)^\frac{1}{2} \leqslant (\sum_{k=1}^{n}x_k^2)^\frac{1}{2} +
+            (\sum_{k=1}^{n}y_k^2)^\frac{1}{2}.
+          \end{equation*}
+    \item $X = \mathbb{R}^n, \ \forall x = (x_1,\ldots,x_n)\in X \quad ||x|| = \underset{k=\overline{1,n}}{\max}
+            |x_k|$.
+
+          \begin{center}
+            Такое ЛНП обозначается $\mathbb{R^n_\infty}$.
+          \end{center}
+    \item $X = \mathbb{R}^n, \ \forall x = (x_1,\ldots, x_n) \in X \quad ||x|| = (\sum_{k=1}^{n}x_k^p)^\frac{1}{p},
+            \ p > 1$.
+
+          Упражнение: доказать, что введенная функция есть норма, используя неравенство Левановича (Гельдера):
+          \begin{equation*}
+            \sum_{k=1}^{n}x_k y_k \leqslant (\sum_{k=1}^{n}x_k^p)^\frac{1}{p} (\sum_{k=1}^{n}y_k^p)^\frac{1}{p}.
+          \end{equation*}
+
+    \item $X$ - пространство непрерывных на $[a;b]$ функций, то есть $X = \mathbb{C}[a;b], \ \forall x \in X 
+    \quad ||x|| = \underset{t \in [a;b]}{\max}|x(t)|$; 1,2,3 - почти очевидно.
+
+    \item $X = \mathbb{C}[a;b], \ \forall x \in X \quad ||x|| = \int_{a}^{b}|x(t)|dt$.
+    
+    Покажем, что введенная функция есть норма:
+    \begin{enumerate}
+      \item $||x|| = 0 \iff x = 0$;
+      
+      Пусть $\int_{a}^{b}|x(t)|dt = 0$. От противного. Допустим, что $\exists t_0 \in [a;b]: \ x(t_0) \ne 0$.
+      Тогда $\exists t_0 \in [\alpha;\beta], \ [\alpha;\beta] \subset [a;b]$ и $\forall t \in [\alpha;\beta]
+      \quad |x(t)| > 0$,
+      \begin{equation*}
+        \int_{a}^{b}x(t)|dt \geqslant \int_{\alpha}^{\beta}|x(t)|dt
+      \end{equation*}
+      Противоречие $\implies \forall t \in [a;b] \ |x(t)| = 0$.
+    \end{enumerate}
+  \end{enumerate}
+\end{example}
 
 \end{document}
