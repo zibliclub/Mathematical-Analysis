@@ -2987,7 +2987,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
   $||*||: \ X \rightarrow \mathbb{R}$, причем выполнены следующие аксиомы для нее:
   \begin{enumerate}
     \item $||x|| = 0 \iff x = \overline{0}$ (читается "норма от $x$"),
-    \item $\forall \lambda \in \mathbb{R} \ ||\lambda x|| |\lambda| * ||x||$,
+    \item $\forall \lambda \in \mathbb{R} \ ||\lambda x|| = |\lambda| * ||x||$,
     \item $\forall x,y \in X \ ||x+y|| \leqslant ||x|| + ||y||$ (неравенство треугольника).
   \end{enumerate}
   Функция $||*||$ называется \textbf{нормой}.
@@ -3213,12 +3213,160 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
               + 2(\frac{1}{m} - \frac{1}{n}) = \frac{3}{m} - \frac{1}{n} < \frac{3}{m} < \frac{3}{N} < \frac{3}{\epsilon}$.
 
               $\{x_n(t)\}$ - фундаментальная, $\underset{n\rightarrow\infty}{\lim} x_n(t) = 1$ и
-              $\underset{n\rightarrow\infty}{\lim} x_n(t) = -1 \implies \exists erset{n\rightarrow\infty}{\lim} x_n(t)$
+              $\underset{n\rightarrow\infty}{\lim} x_n(t) = -1 \implies \exists \underset{n\rightarrow\infty}{\lim} x_n(t)$
               - фундаментальная последовательность не сходится $\implies C_1[a;b]$ - не полное.
           \end{proof}
   \end{enumerate}
 \end{example}
 
+\begin{definition}
+  Множество $E$ в ЛНП называется \textbf{ограниченным}, если $\exists M>0: \ \forall x \in E \quad ||x||<M$. 
+\end{definition}
 
+Упражнение: доказать, что ограниченность в ЛНП совпадает с ограниченностью в МП.
+
+\begin{theorem}[о вложенных шарах]
+  Метрическое пространство (МП) является полным $\iff \forall$ последовательность вложенных замкнутых шаров,
+  радиусы которых стремятся к нулю, имеют в нем непустое пересечение.
+\end{theorem}
+
+\begin{proof}
+  Теоремы.
+
+  $"\rightarrow"$ Пусть $(X,\rho)$ - полное МП и имеется $B_1 \supset B_2 \supset \ldots
+  \supset B_n \supset \ldots$ - система вложенных замкнутых шаров, радиусы которых стремятся к $0$, то есть
+  при $n\rightarrow\infty \ r_n \rightarrow 0$.
+
+  Покажем, что пересечение
+  \begin{equation*}
+    \underset{n=1}{\overset{\infty}{\cap}} B_n \ne \emptyset.
+  \end{equation*}
+
+  Рассмотрим $B_n(a_n,r_n), \ r_n \rightarrow 0$. Имеем, что
+  \begin{equation*}
+    \forall n>m \quad B_n\subset B_m \implies a_n \subset B_m.
+  \end{equation*}
+
+  Рассмотрим последовательность центров $\{a_n\}$, покажем, что она фундаментальная.
+
+  Пусть $\epsilon > 0$ задано. Выберем $N>0: \ r_n < \frac{\epsilon}{2}:$
+  \begin{center}
+    $\forall n,m > N \quad \rho(a_n,a_m) \leqslant \rho(a_n,a_N) + \rho(a_N,a_m) <$ \\
+    $< r_N + r_n = \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \implies \{a_n\}$ - фундаментальное
+    $\implies$ \\
+    
+    $\{a_n\}$ - сходится, то есть $\exists a = \underset{n\rightarrow\infty}{\lim}a_n$
+    (так как $(X,\rho)$ - полное).
+  \end{center}
+  Тогда точка $a$ - является предельной точкой для $\forall B_n \implies a =
+  \underset{n=1}{\overset{\infty}{\cap}} B_n$.
+
+  $"\leftarrow"$ Пусть $\forall$ системы вложенных замкнутых шаров, радиус которых $\rightarrow 0 \ \exists$
+  непустое пересечение, то есть $\underset{n=1}{\overset{\infty}{\cap}} B_n \ne \emptyset$.
+
+  Покажем, что $(X,\rho)$ - полное.
+
+  Пусть $\{x_n\}$ - фундаментальная последовательность в $(X,\rho)$. Выберем
+  \begin{equation*}
+    n_1 : \ \forall n > n_1 \ \rho (x_n, x_{n_1}) < \frac{1}{2}
+  \end{equation*}
+
+  Построим шар $B_1 = B(x_{n_1},1)$. Выберем
+  \begin{equation*}
+    n_2 > n_1: \ \forall n> n_2 \ \rho (x_n,x_{n_2}) < \frac{1}{4}
+  \end{equation*}
+
+  Построим шар $B_2 = B(x_{n_2},\frac{1}{2})$. Покажем, что
+  $B_2 \subset B_1$. Если $x\in B_2$, то
+  \begin{equation*}
+    \rho (x,x_{n_1}) \leqslant \rho(x,x_{n_2}) + \rho (x_{n_2},
+  x_{n_1}) \leqslant \frac{1}{2} + \frac{1}{2} = 1 \implies x \in B_1.
+  \end{equation*}
+
+  Выберем
+  \begin{equation*}
+    n_3 > n_2: \ \forall n > n_3 \ \rho(x_n,x_{n_3}) < \frac{1}{2^3}
+  \end{equation*}
+
+  (в силу фундаментальности $\{x_n\}$). Построим шар $B_3 \subset B(x_{n_3},\frac{1}{4})$.
+
+  При этом $B_3 \subset B_2$ и так далее. Таким образом построим систему вложенных замкнутых шаров $B_1
+  \supset B_2 \supset \ldots \supset B_k \supset \ldots$, где $B_k = B(x_{n_k},\frac{1}{2^{k-1}})$.
+  Причем $r_k = \frac{1}{2^{k-1}} \rightarrow 0$ при $k \rightarrow \infty$.
+
+  Пусть $a \in \underset{n=1}{\overset{\infty}{\cap}} B_n$. Пусть $\epsilon > 0$ задано. Выберем $N:$.
+  Тогда $\forall n > N \ \rho(x_n,a)\leqslant \rho(x_n,x_{n_N}) + \rho(x_{n_N},a)$ ($x_{n_N}$ - центр $B_N$) 
+  $< \frac{1}{2^N} + \frac{1}{2^{N-1}} < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \implies$
+  \begin{center}
+    $a = \underset{n\rightarrow\infty}{\lim}x_n \implies (X,\rho)$ - полное.
+  \end{center}
+\end{proof}
+
+\section{Принцип сжимающих отображений}
+
+\begin{definition}
+  Пусть $(X,\rho_X), \ (Y,\rho_Y)$ - МП. Отображение $f:X\rightarrow Y$ называется \textbf{сжимающим},
+  если $\exists 0 \leqslant \alpha < 1: \ \forall x_1,x_2 \in X$
+  \begin{equation*}
+    \rho_Y(f(x_1),f(x_2)) \leqslant \alpha * \rho_X(x_1,x_2).
+  \end{equation*}
+\end{definition}
+
+\begin{theorem}[принцип сжимающих отображений]
+  Сжимающее отображение полного МП в себя имеет единственную неподвижную точку, то есть если
+  $(X,\rho)$ - полное, отображение $f:X\rightarrow X$ - сжимающее, то
+  \begin{equation*}
+    \exists ! a \in X: \quad f(a) = a.
+  \end{equation*}  
+\end{theorem}
+
+\begin{proof}
+  Пусть $0 \leqslant \alpha < 1: \ \forall x,y \in X \ \rho(f(x), f(y)) \leqslant \alpha * \rho (x,y)$.
+
+  Пусть $\alpha = 0 \implies \rho(f(x),f(y)) = 0 \implies f(x) = f(y) \forall x,y \implies f = const
+  \implies \exists a \in X: \ \forall x \ f(x) = a \implies f(a) = a$.
+
+  Пусть $\alpha \ne 0$. Пусть $x \in X$, построим последовательность $\{x_n\}: \ x_0 = x, \ x_1 = f(x_0)
+  \ x_2 = f(x_1), \ x_3 = f(x_2), \ \ldots, \ x_n = f(x_{n-1}), \ \ldots$.
+
+  Покажем, что эта последовательность фундаментальная. Рассмотрим
+  \begin{equation*}
+    \rho(x_2,x_1) = \rho(f(x_1), f(x_0)) \leqslant \alpha * \rho(x_1,x_0),
+  \end{equation*}
+  \begin{equation*}
+    \rho(x_3,x_2) = \rho(f(x_2), f(x_1)) \leqslant \alpha * \rho(x_2,x_1) \leqslant \alpha^2 * \rho(x_1,x_0),
+  \end{equation*}
+  \begin{equation*}
+    \ldots
+  \end{equation*}
+  \begin{equation*}
+    \rho(x_n,x_{n-1}) = \rho(f(x_{n-1}), f(x_{n-2})) \leqslant \alpha * \rho(x_{n-1},x_{n-2}) \leqslant
+    \alpha^{n-1} * \rho(x_1,x_0).
+  \end{equation*}
+  Тогда при $n > m \quad \rho(x_n,x_m) \leqslant \rho(x_m,x_{m+1}) + \rho(x_{m+1},x_{m+2}) + \ldots + 
+  \rho(x_{n-1},x_n) \leqslant \alpha^m * \rho(x_1,x_0) + \alpha^{m+1}(x_1,x_0) + \ldots + \alpha^{n-1} *
+  \rho(x_1,x_0) = \rho(x_1,x_0) * \alpha^m * (1 + \alpha + \ldots + \alpha^{n-1-m}) = \rho(x_1,x_0) * 
+  \alpha^m * \frac{(1-\alpha^{n-1-m})}{1 - \alpha} < \frac{\alpha^m}{1 - \alpha} * \rho (x_1,x_0)
+  <$ |при $m \rightarrow \infty \ 0 < \alpha < 1 \ \alpha^m \rightarrow 0$| $< \epsilon$, где $\epsilon
+  > 0$ задано $\implies \{x_n\}$ - фундаментальная в полном МП $\implies \exists a = \underset{n\rightarrow
+  \infty}{\lim} x_n$.
+
+  \begin{equation*}
+    f(a) = f(\underset{n\rightarrow\infty}{\lim} x_n) = \underset{n\rightarrow\infty}{\lim} f(x_n) =
+    \underset{n\rightarrow\infty}{\lim} x_{n+1} = a
+  \end{equation*}
+
+  $\implies \exists a: \ f(a) = a$.
+
+  Докажем единственность $a$. Пусть $\exists b \in X: \ f(b) = b$. Тогда
+  \begin{equation*}
+    \rho(a,b) = \rho(f(a),f(b)) = \alpha * \rho(a,b),
+  \end{equation*}
+  \begin{equation*}
+    \rho(a,b)(1 - \alpha) \leqslant 0 \iff \rho(a,b) = 0 \iff a = b.
+  \end{equation*}
+\end{proof}
+
+Упражнение: доказать, что сжимающее отображение - непрерывно.
 
 \end{document}
