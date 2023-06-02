@@ -1055,7 +1055,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 \end{effect}
 
 \begin{theorem}[Дарбу]
-  Для любой ограниченной функции $f:[a;b]\rightarrow\mathbb{R}$ выполняются равенства:
+  Для любой ограниченой функции $f:[a;b]\rightarrow\mathbb{R}$ выполняются равенства:
 
   \begin{center}
     {\large $\underline{\mathfrak{I}} = \underset{\lambda(P)\rightarrow0}{\lim}\underline{S}(P); \ \overline{\mathfrak{I}}
@@ -3302,7 +3302,7 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
   \end{center}
 \end{proof}
 
-\section{Принцип сжимающих отображений}
+\subsection{Принцип сжимающих отображений}
 
 \begin{definition}
   Пусть $(X,\rho_X), \ (Y,\rho_Y)$ - МП. Отображение $f:X\rightarrow Y$ называется \textbf{сжимающим},
@@ -3368,5 +3368,155 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
 \end{proof}
 
 Упражнение: доказать, что сжимающее отображение - непрерывно.
+
+\begin{definition}
+  Если $\forall x_1,x_2 \quad \rho_Y (f(x_1),f(x_2)) \leqslant \rho_X(x_1,x_2)$, где \\ $(X,\rho_X),(Y,\rho_Y)$ - МП, 
+  $f:X\rightarrow Y$, то такое отображение называется \textbf{нерастягивающим}.
+\end{definition}
+
+Упражнение: доказать, что предыдущая теорема неверна для нерастягивающихся отображений.
+
+\begin{definition}
+  Множество $E$ в метрическом пространстве называется \textbf{предкомпактным} (\textbf{относительно компактным}),
+  если ее замыкание $\overline{E}$ компактно.
+\end{definition}
+
+\begin{definition}
+  Множество $E$ в МП $(X,\rho)$ называется \textbf{вполне ограниченным}, если $\forall \epsilon > 0 \ \exists$
+  конечная $\epsilon$-сеть для $E$.
+
+  Напоминание: $\epsilon$-сеть - набор $\{x_1,\ldots,x_n \ | \ x_i \in E\} \ \forall x \in E \ \exists$ хотя бы
+  одна точка $x_i: \ \rho(x,x_i) < \epsilon$.
+\end{definition}
+
+\begin{theorem}[Хаусдорфа]
+  Множество $E$ в полном МП $(X,\rho)$ ялвяется предкомпактным $\iff$ оно вполне ограничено.
+\end{theorem}
+
+\begin{proof}
+  $"\rightarrow"$ Пусть $(X,\rho)$ - МП, $E \subset X$. Пусть $E$ - предкомпактно. Пусть $\epsilon > 0$ задано.
+  
+  Возьмем точку
+  $x_1 \in E$. Если $\forall x \in E \ \rho(x,x_1) < \epsilon$, то нужная $\epsilon$-сеть построена. Пусть 
+  $\exists$ точка $x_2 \in E: \ \rho(x_2,x_1) \geqslant \epsilon$, тогда в набор $\epsilon$-сети добавляем
+  точку $x_2$. Если $\forall x \in E \ \rho(x,x_1) < \epsilon$ или $\rho(x,x_2) < \epsilon \implies$ нужная
+  $\epsilon$-сеть построена. Пусть $\exists$ точка $x_3 \in E: \ \rho(x_3,x_1) \geqslant \epsilon$ и $\rho(x_3,x_2)
+  \geqslant \epsilon$, тогда в $\epsilon$-сеть включаем и точку $x_3$ и так далее.
+  
+  Либо на некотором шаге процесс
+  остановится и $\epsilon$-сеть будет построена: $\{x_1,x_2,\ldots,x_n\}$.
+  
+  Либо построена последовательность
+  $x_1,x_2,\ldots,x_n,\ldots \in E:$
+  \begin{equation*}
+    \forall n,m \quad \rho(x_n,x_m)\geqslant \epsilon
+  \end{equation*} $\implies$ у такой
+  последовательности $\{x_n\} \ \nexists$ сходящейся подпоследовательности в $E \subset X \implies x_n$
+  не имеет предела, то есть $E$ не имеет предельной точки $\implies \overline{E}$ некомпактно - противоречие 
+  $\implies$ второй случай не имеет место быть.
+
+  $"\leftarrow"$ Пусть $E$ - вполне ограничено. То есть $\forall \epsilon > 0 \ \exists$ конечная $\epsilon$-сеть
+  для $E \subset X$. Пусть $F\subset E$ - бесконечное. Покажем, что $F$ имеет предельную точку в $\overline{E}$
+  (используем критерий компактности).
+
+  Пусть $x_{11},x_{12},\ldots,x_{1k_1}$ - 1-сеть ($\epsilon = 1$) для $E$. Пусть $B_{11},B_{12},\ldots,B_{1k_1}$
+  - соответсвующие шары с центрами в точках $x_{11},x_{12},\ldots,x_{1k_1}$ (с радиусом 1).
+
+  $\exists$ шар, например, $B_{11}: \ B_{11} \cup F = F_1$ - бесконечное подмножество в $E$.
+  
+  Далее, пусть
+  $x_{21},x_{22},\ldots,x_{2k_2}$ - $\frac{1}{2}$-сеть для $E$. Пусть $B_{21},B_{22},\ldots,B_{2k_2}$ - 
+  соответсвующие шары с центрами в точках $x_{21},x_{22},\ldots,x_{2k_2}$ (с радиусом $r_2 = \frac{1}{2}$).
+
+  $\exists$ шар $B_{22}: \ B_{22} \cap F_1 = F_2$ - бесконечное подмножество в $E$ и так далее.
+
+  Таким образом построим систему шаров $B_{11}, B_{22}, \ldots, B_{nn}, \ldots, \ r_n = \frac{1}{2^{n-1}}$,
+  а также систему бесконечных множеств $F\subset F_1\subset F_2\subset \ldots\subset F_n\subset \ldots, \ F_n \in B_{nn}$.
+
+  Построим последовательность $\{x_n\}: \ x_n \in F_n$. Последовательность - фундаментальная, так как
+  $\forall \epsilon > 0 \ \exists N : \ \forall n,m > N \ \rho(x_n,x_m) < \epsilon$ (так как $r_n\rightarrow0$
+  при $n\rightarrow \infty$) $\implies \{x_n\}$ - сходится (так как $(X,\rho)$ - полное) $\implies \exists x \in E:
+  \quad \underset{n \rightarrow \infty}{\lim} x_n = x \implies F$ имеет предельную точку $\implies \overline{E}$
+  компактно (по критерию компактности).
+\end{proof}
+
+\begin{theorem}
+  Пространство $\mathbb{R}^n$ (n-мерное линейное пространство с евклидовой метрикой),
+  \begin{center}
+    $||x|| = (\sum_{i=1}^{n} (x^i)^2)^\frac{1}{2}$ - полное
+  \end{center}
+\end{theorem}
+
+\begin{proof}
+  Пусть $\{x_n\}$ - фундаментальная последовательность в $\mathbb{R}^n$:
+  \begin{equation*}
+    x_1,x_2,\ldots,x_n,\ldots, \ x_k \in \mathbb{R}^n \ x_k = \{x_k^1,x_k^2,\ldots,x_k^n\}.
+  \end{equation*}
+  Покажем, что $\{x_n\}$ сходится. Пусть $\epsilon > 0$ задано. Выберем $N: \ \forall k,m > N \ \rho(x_k,x_m) <
+  \epsilon$,
+  \begin{equation*}
+    \rho(x_k,x_m) = ||x_k-x_m|| = (\sum_{i=1}^{n}(x_k^i - x_m^i)^2)^\frac{1}{2} < \epsilon
+  \end{equation*}
+  \begin{equation*}
+    \implies \forall i = \overline{1,n} \quad |x_k^i - x_m^i| < \epsilon
+  \end{equation*}
+  $\implies$ последовательность $x_k^i$ - фундаментальная в $\mathbb{R} \ \forall i \implies x_k^i$ - сходится 
+  в $\mathbb{R} \implies \exists x^i = \underset{k\rightarrow \infty}{\lim} x^i_k \ \forall i = \overline{1,n}$.
+
+  Положим $x = \{x^1,x^2,\ldots,x^n\}$, где $x^i = \underset{k\rightarrow\infty}{\lim} x_k^i$.
+  Покажем, что $\underset{k\rightarrow\infty}{\lim} x_k = x$, где $n_k$ и $n$ - $n$-мерные вектора.
+
+  Пусть $\epsilon > 0$ задано. Выберем $N: \ \forall m > N$:
+  \begin{equation*}
+    \underset{i = \overline{1,n}}{\max} |x_m^i - x^i| < \frac{\epsilon}{N}.
+  \end{equation*}
+  Тогда $\forall m > N$:
+  \begin{equation*}
+    \rho(x_m) = ||x_m - x|| = (\sum_{i=1}^{n}(x_m^i - x^i)^2)^\frac{1}{2} \leqslant \sum_{i=1}^{n}|x_m^i - x^i| <
+    N * \frac{\epsilon}{N} = \epsilon.
+  \end{equation*}
+\end{proof}
+
+\begin{theorem}[критерий компактности в $\mathbb{R}^n$]
+  Множество $E \subset \mathbb{R}^n$ компактно $\iff$ замкнуто и ограничено.
+\end{theorem}
+
+\begin{proof}
+  Самостоятельно.
+\end{proof}
+
+\subsection{Эквивалентность норм в $\mathbb{R}^n$}
+
+\begin{definition}
+  Пусть $(X, ||*||_1),(X, ||*||_2)$ - линейное нормированное пространство (конечномерное). Говорят, что $||*||_1
+  \sim ||*||_2$ (эквивалентны), если $\exists c_1,c_2 > 0 \ (c_1,c_2 \in \mathbb{R}):$
+  \begin{equation*}
+    \forall x \in X \quad c_1 * ||x||_2 \leqslant ||x||_1 \leqslant c_2 * ||x||_2 \quad (*)
+  \end{equation*}
+\end{definition}
+
+Упражнение: доказать, что $(*)$ - отношение эквивалентности.
+
+\begin{theorem}[эквивалентность норм в конечномерном пространстве]
+  Если $X$ - конечномерное пространство МП, и $||*||_1, \ ||*||_2$ - две нормы на нем, то:
+  \begin{equation*}
+    ||*||_1 \sim ||*||_2
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  (теоремы)
+
+  Покажем, что $\forall$ норма в конечномерном МП эквивалентна евклидовой. Пусть $||*||_1$ - норма в $n$-мерном
+  МП, $||*||$ - евклидова норма там же.
+  \begin{lemma}
+    Пусть $(X,||*||)$ - Л.Н.П. Тогда функция $||*||: \ X \rightarrow \mathbb{R}$ является непрерывной.
+  \end{lemma}
+  \begin{proof}
+    (леммы)
+
+    текст
+  \end{proof}
+\end{proof}
 
 \end{document}
