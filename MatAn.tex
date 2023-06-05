@@ -3063,7 +3063,7 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
 
 Упражнение: доказать, что заданная функция $|| x ||$ является нормой.
 
-ДНП ($C[a;b], || x || (*)$) образначается $C^p[a;b]$.
+ЛНП ($C[a;b], || x || (*)$) образначается $C^p[a;b]$.
 
 \begin{statement}
   Пусть $(X,|| * ||)$ - ЛНП. Тогда функция $\rho X \times X \rightarrow \mathbb{R}$, опредленная $\rho(x,y)
@@ -3179,7 +3179,7 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
                 2t, & -\frac{1}{2} \leqslant t \leqslant \frac{1}{2} \\
                 1,  & \frac{1}{2} \leqslant t \leqslant 1
               \end{array}
-              \right., \ \ldots, \ x_n = 
+              \right., \ \ldots, \ x_n =
               \left\{
               \begin{array}{ll}
                 -1, & -1 \leqslant t \leqslant \frac{1}{n}           \\
@@ -3188,39 +3188,39 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
               \end{array}
               \right., \ \ldots$
 
-              Определим последовательность непрерывных функций $\{x_n(t)\}$.
+            Определим последовательность непрерывных функций $\{x_n(t)\}$.
 
-              Докажем, что введенная последовательность $\{x_n(t)\}$ фундаментальная.
-              \begin{equation*}
-                ||x|| = \int_{-1}^{1}|x(t)|dt,
-              \end{equation*}
-              \begin{equation*}
-                \rho(x,y) \ ||x-y|| = \int_{-1}^{1}|x(t) - y(t)|dt.
-              \end{equation*}
+            Докажем, что введенная последовательность $\{x_n(t)\}$ фундаментальная.
+            \begin{equation*}
+              ||x|| = \int_{-1}^{1}|x(t)|dt,
+            \end{equation*}
+            \begin{equation*}
+              \rho(x,y) \ ||x-y|| = \int_{-1}^{1}|x(t) - y(t)|dt.
+            \end{equation*}
 
-              То есть, покажем, что $\forall \epsilon > 0 \ \exists N : \ \forall n,m > N$ (пусть $n>m$)
-              \begin{equation*}
-                \rho(x_n,x_m) < \epsilon,
-              \end{equation*}
-              $\rho(x_n,x_m) = \int_{-1}^{1}|x_n(t) - x_m(t)|dt =$ |до $-\frac{1}{m}$ и после $\frac{1}{m}$
-              интеграл зануляется| $= \int_{-\frac{1}{m}}^{\frac{1}{m}}|x_n(t) - x_m(t)|dt \leqslant
+            То есть, покажем, что $\forall \epsilon > 0 \ \exists N : \ \forall n,m > N$ (пусть $n>m$)
+            \begin{equation*}
+              \rho(x_n,x_m) < \epsilon,
+            \end{equation*}
+            $\rho(x_n,x_m) = \int_{-1}^{1}|x_n(t) - x_m(t)|dt =$ |до $-\frac{1}{m}$ и после $\frac{1}{m}$
+            интеграл зануляется| $= \int_{-\frac{1}{m}}^{\frac{1}{m}}|x_n(t) - x_m(t)|dt \leqslant
               \int_{-\frac{1}{m}}^{\frac{1}{m}}|x_n(t)|dt + \int_{\frac{1}{m}}^{\frac{1}{m}}|x_m(t)|dt \ (\triangle)$.
 
-              Пусть $\epsilon > 0$ задано. Выберем $N: \ \frac{1}{N} < \frac{\epsilon}{3}$.
+            Пусть $\epsilon > 0$ задано. Выберем $N: \ \frac{1}{N} < \frac{\epsilon}{3}$.
 
-              $(\triangle) = 2\int_{0}^{\frac{1}{m}}|x_n(t)|dt + 2\int_{1}^{\frac{1}{m}}mtdt = 2\int_{0}^{\frac{1}{m}}
+            $(\triangle) = 2\int_{0}^{\frac{1}{m}}|x_n(t)|dt + 2\int_{1}^{\frac{1}{m}}mtdt = 2\int_{0}^{\frac{1}{m}}
               |x_n(t)|dt + 2\frac{mt^2}{2}\bigg|^{\frac{1}{m}}_0 = \frac{n}{m^2} + \frac{1}{m} + \frac{1}{n}
               + 2(\frac{1}{m} - \frac{1}{n}) = \frac{3}{m} - \frac{1}{n} < \frac{3}{m} < \frac{3}{N} < \frac{3}{\epsilon}$.
 
-              $\{x_n(t)\}$ - фундаментальная, $\underset{n\rightarrow\infty}{\lim} x_n(t) = 1$ и
-              $\underset{n\rightarrow\infty}{\lim} x_n(t) = -1 \implies \exists \underset{n\rightarrow\infty}{\lim} x_n(t)$
-              - фундаментальная последовательность не сходится $\implies C_1[a;b]$ - не полное.
+            $\{x_n(t)\}$ - фундаментальная, $\underset{n\rightarrow\infty}{\lim} x_n(t) = 1$ и
+            $\underset{n\rightarrow\infty}{\lim} x_n(t) = -1 \implies \exists \underset{n\rightarrow\infty}{\lim} x_n(t)$
+            - фундаментальная последовательность не сходится $\implies C_1[a;b]$ - не полное.
           \end{proof}
   \end{enumerate}
 \end{example}
 
 \begin{definition}
-  Множество $E$ в ЛНП называется \textbf{ограниченным}, если $\exists M>0: \ \forall x \in E \quad ||x||<M$. 
+  Множество $E$ в ЛНП называется \textbf{ограниченным}, если $\exists M>0: \ \forall x \in E \quad ||x||<M$.
 \end{definition}
 
 Упражнение: доказать, что ограниченность в ЛНП совпадает с ограниченностью в МП.
@@ -3234,7 +3234,7 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
   Теоремы.
 
   $"\rightarrow"$ Пусть $(X,\rho)$ - полное МП и имеется $B_1 \supset B_2 \supset \ldots
-  \supset B_n \supset \ldots$ - система вложенных замкнутых шаров, радиусы которых стремятся к $0$, то есть
+    \supset B_n \supset \ldots$ - система вложенных замкнутых шаров, радиусы которых стремятся к $0$, то есть
   при $n\rightarrow\infty \ r_n \rightarrow 0$.
 
   Покажем, что пересечение
@@ -3254,12 +3254,12 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
     $\forall n,m > N \quad \rho(a_n,a_m) \leqslant \rho(a_n,a_N) + \rho(a_N,a_m) <$ \\
     $< r_N + r_n = \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \implies \{a_n\}$ - фундаментальное
     $\implies$ \\
-    
+
     $\{a_n\}$ - сходится, то есть $\exists a = \underset{n\rightarrow\infty}{\lim}a_n$
     (так как $(X,\rho)$ - полное).
   \end{center}
   Тогда точка $a$ - является предельной точкой для $\forall B_n \implies a =
-  \underset{n=1}{\overset{\infty}{\cap}} B_n$.
+    \underset{n=1}{\overset{\infty}{\cap}} B_n$.
 
   $"\leftarrow"$ Пусть $\forall$ системы вложенных замкнутых шаров, радиус которых $\rightarrow 0 \ \exists$
   непустое пересечение, то есть $\underset{n=1}{\overset{\infty}{\cap}} B_n \ne \emptyset$.
@@ -3280,7 +3280,7 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
   $B_2 \subset B_1$. Если $x\in B_2$, то
   \begin{equation*}
     \rho (x,x_{n_1}) \leqslant \rho(x,x_{n_2}) + \rho (x_{n_2},
-  x_{n_1}) \leqslant \frac{1}{2} + \frac{1}{2} = 1 \implies x \in B_1.
+    x_{n_1}) \leqslant \frac{1}{2} + \frac{1}{2} = 1 \implies x \in B_1.
   \end{equation*}
 
   Выберем
@@ -3291,11 +3291,11 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
   (в силу фундаментальности $\{x_n\}$). Построим шар $B_3 \subset B(x_{n_3},\frac{1}{4})$.
 
   При этом $B_3 \subset B_2$ и так далее. Таким образом построим систему вложенных замкнутых шаров $B_1
-  \supset B_2 \supset \ldots \supset B_k \supset \ldots$, где $B_k = B(x_{n_k},\frac{1}{2^{k-1}})$.
+    \supset B_2 \supset \ldots \supset B_k \supset \ldots$, где $B_k = B(x_{n_k},\frac{1}{2^{k-1}})$.
   Причем $r_k = \frac{1}{2^{k-1}} \rightarrow 0$ при $k \rightarrow \infty$.
 
   Пусть $a \in \underset{n=1}{\overset{\infty}{\cap}} B_n$. Пусть $\epsilon > 0$ задано. Выберем $N:$.
-  Тогда $\forall n > N \ \rho(x_n,a)\leqslant \rho(x_n,x_{n_N}) + \rho(x_{n_N},a)$ ($x_{n_N}$ - центр $B_N$) 
+  Тогда $\forall n > N \ \rho(x_n,a)\leqslant \rho(x_n,x_{n_N}) + \rho(x_{n_N},a)$ ($x_{n_N}$ - центр $B_N$)
   $< \frac{1}{2^N} + \frac{1}{2^{N-1}} < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \implies$
   \begin{center}
     $a = \underset{n\rightarrow\infty}{\lim}x_n \implies (X,\rho)$ - полное.
@@ -3317,17 +3317,17 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
   $(X,\rho)$ - полное, отображение $f:X\rightarrow X$ - сжимающее, то
   \begin{equation*}
     \exists ! a \in X: \quad f(a) = a.
-  \end{equation*}  
+  \end{equation*}
 \end{theorem}
 
 \begin{proof}
   Пусть $0 \leqslant \alpha < 1: \ \forall x,y \in X \ \rho(f(x), f(y)) \leqslant \alpha * \rho (x,y)$.
 
   Пусть $\alpha = 0 \implies \rho(f(x),f(y)) = 0 \implies f(x) = f(y) \forall x,y \implies f = const
-  \implies \exists a \in X: \ \forall x \ f(x) = a \implies f(a) = a$.
+    \implies \exists a \in X: \ \forall x \ f(x) = a \implies f(a) = a$.
 
   Пусть $\alpha \ne 0$. Пусть $x \in X$, построим последовательность $\{x_n\}: \ x_0 = x, \ x_1 = f(x_0)
-  \ x_2 = f(x_1), \ x_3 = f(x_2), \ \ldots, \ x_n = f(x_{n-1}), \ \ldots$.
+    \ x_2 = f(x_1), \ x_3 = f(x_2), \ \ldots, \ x_n = f(x_{n-1}), \ \ldots$.
 
   Покажем, что эта последовательность фундаментальная. Рассмотрим
   \begin{equation*}
@@ -3343,13 +3343,13 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
     \rho(x_n,x_{n-1}) = \rho(f(x_{n-1}), f(x_{n-2})) \leqslant \alpha * \rho(x_{n-1},x_{n-2}) \leqslant
     \alpha^{n-1} * \rho(x_1,x_0).
   \end{equation*}
-  Тогда при $n > m \quad \rho(x_n,x_m) \leqslant \rho(x_m,x_{m+1}) + \rho(x_{m+1},x_{m+2}) + \ldots + 
-  \rho(x_{n-1},x_n) \leqslant \alpha^m * \rho(x_1,x_0) + \alpha^{m+1}(x_1,x_0) + \ldots + \alpha^{n-1} *
-  \rho(x_1,x_0) = \rho(x_1,x_0) * \alpha^m * (1 + \alpha + \ldots + \alpha^{n-1-m}) = \rho(x_1,x_0) * 
-  \alpha^m * \frac{(1-\alpha^{n-1-m})}{1 - \alpha} < \frac{\alpha^m}{1 - \alpha} * \rho (x_1,x_0)
-  <$ |при $m \rightarrow \infty \ 0 < \alpha < 1 \ \alpha^m \rightarrow 0$| $< \epsilon$, где $\epsilon
-  > 0$ задано $\implies \{x_n\}$ - фундаментальная в полном МП $\implies \exists a = \underset{n\rightarrow
-  \infty}{\lim} x_n$.
+  Тогда при $n > m \quad \rho(x_n,x_m) \leqslant \rho(x_m,x_{m+1}) + \rho(x_{m+1},x_{m+2}) + \ldots +
+    \rho(x_{n-1},x_n) \leqslant \alpha^m * \rho(x_1,x_0) + \alpha^{m+1}(x_1,x_0) + \ldots + \alpha^{n-1} *
+    \rho(x_1,x_0) = \rho(x_1,x_0) * \alpha^m * (1 + \alpha + \ldots + \alpha^{n-1-m}) = \rho(x_1,x_0) *
+    \alpha^m * \frac{(1-\alpha^{n-1-m})}{1 - \alpha} < \frac{\alpha^m}{1 - \alpha} * \rho (x_1,x_0)
+    <$ |при $m \rightarrow \infty \ 0 < \alpha < 1 \ \alpha^m \rightarrow 0$| $< \epsilon$, где $\epsilon
+    > 0$ задано $\implies \{x_n\}$ - фундаментальная в полном МП $\implies \exists a = \underset{n\rightarrow
+      \infty}{\lim} x_n$.
 
   \begin{equation*}
     f(a) = f(\underset{n\rightarrow\infty}{\lim} x_n) = \underset{n\rightarrow\infty}{\lim} f(x_n) =
@@ -3370,7 +3370,7 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
 Упражнение: доказать, что сжимающее отображение - непрерывно.
 
 \begin{definition}
-  Если $\forall x_1,x_2 \quad \rho_Y (f(x_1),f(x_2)) \leqslant \rho_X(x_1,x_2)$, где \\ $(X,\rho_X),(Y,\rho_Y)$ - МП, 
+  Если $\forall x_1,x_2 \quad \rho_Y (f(x_1),f(x_2)) \leqslant \rho_X(x_1,x_2)$, где \\ $(X,\rho_X),(Y,\rho_Y)$ - МП,
   $f:X\rightarrow Y$, то такое отображение называется \textbf{нерастягивающим}.
 \end{definition}
 
@@ -3395,24 +3395,24 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
 
 \begin{proof}
   $"\rightarrow"$ Пусть $(X,\rho)$ - МП, $E \subset X$. Пусть $E$ - предкомпактно. Пусть $\epsilon > 0$ задано.
-  
+
   Возьмем точку
-  $x_1 \in E$. Если $\forall x \in E \ \rho(x,x_1) < \epsilon$, то нужная $\epsilon$-сеть построена. Пусть 
+  $x_1 \in E$. Если $\forall x \in E \ \rho(x,x_1) < \epsilon$, то нужная $\epsilon$-сеть построена. Пусть
   $\exists$ точка $x_2 \in E: \ \rho(x_2,x_1) \geqslant \epsilon$, тогда в набор $\epsilon$-сети добавляем
   точку $x_2$. Если $\forall x \in E \ \rho(x,x_1) < \epsilon$ или $\rho(x,x_2) < \epsilon \implies$ нужная
   $\epsilon$-сеть построена. Пусть $\exists$ точка $x_3 \in E: \ \rho(x_3,x_1) \geqslant \epsilon$ и $\rho(x_3,x_2)
-  \geqslant \epsilon$, тогда в $\epsilon$-сеть включаем и точку $x_3$ и так далее.
-  
+    \geqslant \epsilon$, тогда в $\epsilon$-сеть включаем и точку $x_3$ и так далее.
+
   Либо на некотором шаге процесс
   остановится и $\epsilon$-сеть будет построена: $\{x_1,x_2,\ldots,x_n\}$.
-  
+
   Либо построена последовательность
   $x_1,x_2,\ldots,x_n,\ldots \in E:$
   \begin{equation*}
     \forall n,m \quad \rho(x_n,x_m)\geqslant \epsilon
   \end{equation*} $\implies$ у такой
   последовательности $\{x_n\} \ \nexists$ сходящейся подпоследовательности в $E \subset X \implies x_n$
-  не имеет предела, то есть $E$ не имеет предельной точки $\implies \overline{E}$ некомпактно - противоречие 
+  не имеет предела, то есть $E$ не имеет предельной точки $\implies \overline{E}$ некомпактно - противоречие
   $\implies$ второй случай не имеет место быть.
 
   $"\leftarrow"$ Пусть $E$ - вполне ограничено. То есть $\forall \epsilon > 0 \ \exists$ конечная $\epsilon$-сеть
@@ -3423,9 +3423,9 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
   - соответсвующие шары с центрами в точках $x_{11},x_{12},\ldots,x_{1k_1}$ (с радиусом 1).
 
   $\exists$ шар, например, $B_{11}: \ B_{11} \cup F = F_1$ - бесконечное подмножество в $E$.
-  
+
   Далее, пусть
-  $x_{21},x_{22},\ldots,x_{2k_2}$ - $\frac{1}{2}$-сеть для $E$. Пусть $B_{21},B_{22},\ldots,B_{2k_2}$ - 
+  $x_{21},x_{22},\ldots,x_{2k_2}$ - $\frac{1}{2}$-сеть для $E$. Пусть $B_{21},B_{22},\ldots,B_{2k_2}$ -
   соответсвующие шары с центрами в точках $x_{21},x_{22},\ldots,x_{2k_2}$ (с радиусом $r_2 = \frac{1}{2}$).
 
   $\exists$ шар $B_{22}: \ B_{22} \cap F_1 = F_2$ - бесконечное подмножество в $E$ и так далее.
@@ -3436,7 +3436,7 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
   Построим последовательность $\{x_n\}: \ x_n \in F_n$. Последовательность - фундаментальная, так как
   $\forall \epsilon > 0 \ \exists N : \ \forall n,m > N \ \rho(x_n,x_m) < \epsilon$ (так как $r_n\rightarrow0$
   при $n\rightarrow \infty$) $\implies \{x_n\}$ - сходится (так как $(X,\rho)$ - полное) $\implies \exists x \in E:
-  \quad \underset{n \rightarrow \infty}{\lim} x_n = x \implies F$ имеет предельную точку $\implies \overline{E}$
+    \quad \underset{n \rightarrow \infty}{\lim} x_n = x \implies F$ имеет предельную точку $\implies \overline{E}$
   компактно (по критерию компактности).
 \end{proof}
 
@@ -3453,14 +3453,14 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
     x_1,x_2,\ldots,x_n,\ldots, \ x_k \in \mathbb{R}^n \ x_k = \{x_k^1,x_k^2,\ldots,x_k^n\}.
   \end{equation*}
   Покажем, что $\{x_n\}$ сходится. Пусть $\epsilon > 0$ задано. Выберем $N: \ \forall k,m > N \ \rho(x_k,x_m) <
-  \epsilon$,
+    \epsilon$,
   \begin{equation*}
     \rho(x_k,x_m) = ||x_k-x_m|| = (\sum_{i=1}^{n}(x_k^i - x_m^i)^2)^\frac{1}{2} < \epsilon
   \end{equation*}
   \begin{equation*}
     \implies \forall i = \overline{1,n} \quad |x_k^i - x_m^i| < \epsilon
   \end{equation*}
-  $\implies$ последовательность $x_k^i$ - фундаментальная в $\mathbb{R} \ \forall i \implies x_k^i$ - сходится 
+  $\implies$ последовательность $x_k^i$ - фундаментальная в $\mathbb{R} \ \forall i \implies x_k^i$ - сходится
   в $\mathbb{R} \implies \exists x^i = \underset{k\rightarrow \infty}{\lim} x^i_k \ \forall i = \overline{1,n}$.
 
   Положим $x = \{x^1,x^2,\ldots,x^n\}$, где $x^i = \underset{k\rightarrow\infty}{\lim} x_k^i$.
@@ -3489,7 +3489,7 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
 
 \begin{definition}
   Пусть $(X, ||*||_1),(X, ||*||_2)$ - линейное нормированное пространство (конечномерное). Говорят, что $||*||_1
-  \sim ||*||_2$ (эквивалентны), если $\exists c_1,c_2 > 0 \ (c_1,c_2 \in \mathbb{R}):$
+    \sim ||*||_2$ (эквивалентны), если $\exists c_1,c_2 > 0 \ (c_1,c_2 \in \mathbb{R}):$
   \begin{equation*}
     \forall x \in X \quad c_1 * ||x||_2 \leqslant ||x||_1 \leqslant c_2 * ||x||_2 \quad (*)
   \end{equation*}
@@ -3515,8 +3515,157 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
   \begin{proof}
     (леммы)
 
-    текст
+    Самостоятельно.
   \end{proof}
+
+  Рассмотрим сферу $S$ с радиусом 1 в евклидовой норме в двумерном пространстве:
+  \begin{equation*}
+    S=\{x \in X \ | \ \sum_{i=1}^{n}(x^i)^2 = 1\}, \quad x = (x^1,x^2,\ldots,x^n).
+  \end{equation*}
+
+  Сфера является ограниченной и замкнутой в $\mathbb{R}^n$ $\implies$ она компактна $\implies$ по теореме
+  Вейерштрасса, функция $||*||_1$ достигает наименьшего и наибольшего значения.
+
+  Пусть:
+  \begin{equation*}
+    \alpha = \underset{x\in S}{\min} ||x||_1, \quad \beta = \underset{x \in S}{\max} ||x||_1.
+  \end{equation*}
+
+  Имеем:
+  \begin{equation*}
+    \alpha * ||x|| \leqslant ||x||_1 = ||(x^1,x^2,\ldots,x^n)||_1 =
+  \end{equation*}
+  \begin{equation*}
+    = \frac{||x||}{||x||} * ||(x^1,x^2,\ldots,x^n)||_1 =
+    ||x|| * ||(\frac{x^1}{||x||},\frac{x^2}{||x||},\ldots,\frac{x^n}{||x||})||_1 \leqslant \beta * ||x||.
+  \end{equation*}
+
+  Получаем, что:
+  \begin{equation*}
+    \alpha * ||x|| \leqslant ||x||_1 \leqslant \beta * ||x||.
+  \end{equation*}
+
+  Заметим, что $\alpha > 0$. Таким образом, $||x||\sim||x||_1$ в $\mathbb{R}^n$.
 \end{proof}
+
+\section{Линейные отображения в конечномерном пространстве и их непрерывность}
+
+\begin{definition}
+  Пусть $X,Y$ - линейные пространства. Отображение $L: X \rightarrow Y$ называется \textbf{линейным}, если
+  $\forall x_1,x_2 \in X$ и $\alpha,\beta \in \mathbb{R}$:
+  \begin{equation*}
+    L(\alpha x_1 + \beta x_2) = \alpha * L(x_1) + \beta L(x_2) = \alpha L x_1 + \beta L x_2.
+  \end{equation*}
+\end{definition}
+
+\begin{theorem}
+  Всякому линейному отображению $L:\mathbb{R}^n \rightarrow \mathbb{R}^k$ можно поставить в соответствие
+  матрицу $A$ размером $k \times n$:
+  \begin{equation*}
+    \forall x \in \mathbb{R}^n \quad L(x) = Ax.
+  \end{equation*}
+
+  При этом, если в $\mathbb{R}^n$ и $\mathbb{R}^k$ зафиксированны базисы, то матрица $A$ определяется однозначно.
+\end{theorem}
+
+\begin{proof}
+  Пусть $e_1,e_2,\ldots,e_n$ - базис в $\mathbb{R}^n$, $e_1',e_2',\ldots,e_k'$ - базис в $\mathbb{R}^k$.
+  Тогда $L(x) = L(x^1e_1 + x^2e_2 + \ldots + x^ne_n) = x^1 L(e_1) + x^2 L(e_2) + \ldots + x^n L(e_n) =
+    \left|
+    L(e_k) \in \mathbb{R}^k
+    \right| = x^1 (a_1^1e^1_1 + a^2_1e_2^1 + \ldots + a_1^ke_k^1) + x^2(a_2^1e_1^1 + a^2_2e_2^1 + \ldots +
+    a^k_2e_k^1) + \ldots + x^n (a^1_n e_1^1 + a^2_n e_2^1 + \ldots + a_n^k e^1_k) = (\sum_{i=1}^{n}x^i
+    a_i^1)e_1' + (\sum_{i=1}^{n}x^ia_i^2)e_2' + \ldots + (\sum_{i=1}^{n}x^i a_i^k)e_k'$.
+
+  Таким образом получили Коэффициенты при базисных векторах в $\mathbb{R}^k$ - координаты вектора $L(x)\in
+    \mathbb{R}^k$.
+
+  Заметим, что:
+  \begin{equation*}
+    \left(
+    \begin{array}{cccc}
+      a^1_1  & a_2^1  & \ldots & a_n^1  \\
+      a^2_1  & a_2^2  & \ldots & a_n^2  \\
+      \vdots & \vdots & \ddots & \vdots \\
+      a^k_1  & a_2^k  & \ldots & a_n^k  \\
+    \end{array}
+    \right)\left(
+    \begin{array}{c}
+      x^1    \\
+      x^2    \\
+      \vdots \\
+      x^n
+    \end{array}
+    \right) = \left(
+    \begin{array}{c}
+      \sum_{i=1}^{n}x^i a^1_j \\
+      \sum_{i=1}^{n}x^i a^2_j \\
+      \vdots                  \\
+      \sum_{i=1}^{n}x^i a^k_j
+    \end{array}
+    \right) = \left(
+    \begin{array}{c}
+      \overset{\sim}{x}^1 \\
+      \overset{\sim}{x}^2 \\
+      \vdots              \\
+      \overset{\sim}{x}^k \\
+    \end{array}
+    \right)
+  \end{equation*}
+
+  Следовательно, $A$ - единственная.
+\end{proof}
+
+\begin{statement}
+  Если $L:\mathbb{R}^n \rightarrow \mathbb{R}^k$ - линейно, то оно непрерывно.
+\end{statement}
+
+\begin{proof}
+  Рассмотрим произвольный вектор $h \in \mathbb{R}^n$:
+
+  $||L(h)|| = ||L(h^1 e_1 + h^2 e_2 + \ldots + h^n e_n)|| = |e_1,\ldots,e_n - $базис в $\mathbb{R}^n| =
+    ||h^1 L(e_1) + h^2L(e_2) + \ldots + h^n L(e_n)|| \leqslant |h^1| * ||L(e_1)|| + |h^2| * ||L(e_2)|| + \ldots +
+    |h^n| * ||L(e_n)|| \leqslant ||h|| * \sum_{i=1}^{n}||L(e_1)||$.
+
+  Пусть $x\in\mathbb{R}^n, \ \epsilon > 0$ задано. Выберем $\delta < \frac{\epsilon}{\sum_{i=1}^{n}||L(e_1)||}$.
+  Тогда, если $||h|| < \delta$:
+  \begin{equation*}
+    ||L(x+h) - L(x)|| = ||L(x) + L(h) - L(x)|| = ||L(h)|| \leqslant
+  \end{equation*}
+  \begin{equation*}
+    \leqslant ||h|| * \sum_{i=1}^{n}||L(e_i)||
+    < \delta * \sum_{i=1}^{n}||L(e_i)|| = \epsilon.
+  \end{equation*}
+\end{proof}
+
+\begin{definition}
+  Пусть $X$ - множество, $\beta$ - база на $X, \ f: X \rightarrow \mathbb{R}^n, \ g:X \rightarrow \mathbb{R}^k$.
+
+  Будем говорить, что $f(x) = o(g(x))$ по базе $\beta$, если:
+  \begin{equation*}
+    ||f(x)||_{\mathbb{R}^n} = o(||g(x)||_{\mathbb{R}^k})
+  \end{equation*}
+
+  То есть:
+  \begin{equation*}
+    ||f(x)||_{\mathbb{R}^n} = \alpha(x) * ||g(x)||_{\mathbb{R}^k},
+  \end{equation*}где $\alpha(x): X \rightarrow \mathbb{R}$ и $\underset{\beta}{\lim}\alpha(x) = 0$.
+\end{definition}
+
+\begin{definition}
+  Пусть $D \subset \mathbb{R}^n, \ f:D\rightarrow\mathbb{R}^k$, точка $a\in D$ - предельная точка для $D$.
+
+  Отображение $f$ называется \textbf{дифференцируемым} в точке $a$, если $\forall h: \ a+h \in D \ \exists$
+  линейное отображение $L(a):$
+  \begin{equation*}
+    f(a+h) - f(a) = L(a)h + o(h), \quad h\rightarrow\overline{0}.
+  \end{equation*}
+
+  Линейный оператор $L(a)$ называется \textbf{дифференциалом} (или \textbf{касательным отображением}, или
+  \textbf{производным отображением}) функции $f$ и обозначается:
+  \begin{equation*}
+    Df(x), \quad df(x)
+  \end{equation*} 
+\end{definition}
 
 \end{document}
