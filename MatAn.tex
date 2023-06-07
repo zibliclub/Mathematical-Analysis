@@ -3665,7 +3665,279 @@ $(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
   \textbf{производным отображением}) функции $f$ и обозначается:
   \begin{equation*}
     Df(x), \quad df(x)
-  \end{equation*} 
+  \end{equation*}
 \end{definition}
+
+\begin{statement}
+  Пусть $f:D\rightarrow\mathbb{R}^k, \ D \subset \mathbb{R}^n, \ a \in D$ \\ и $f(x) = \left(
+    \begin{array}{c}
+        f^1(x) \\
+        f^2(x) \\
+        \vdots \\
+        f^k(x)
+      \end{array}
+    \right) = \left(
+    \begin{array}{c}
+        f^1(x^1,x^2,\ldots,x^n) \\
+        f^2(x^1,x^2,\ldots,x^n) \\
+        \vdots                  \\
+        f^k(x^1,x^2,\ldots,x^n) \\
+      \end{array}
+    \right)$
+
+  Отображение $f$ дифференцируемо в точке $a \iff$ отображение $f^i: D \rightarrow \mathbb{R}$ дифференцируемо
+  в точке $a$.
+\end{statement}
+
+\begin{proof}
+  $"\rightarrow"$ Пусть $f$ дифференцируемо в точке $a$ и $\exists$ линейное отображение $L(a) = \left(
+    \begin{array}{c}
+      L^1(a) \\
+      L^2(a) \\
+      \vdots \\
+      L^k(a)
+    \end{array}
+    \right)$
+  \begin{equation*}
+    f(a+h) - f(a) = L(a)*h + o(h), \ h\rightarrow 0
+  \end{equation*}
+  \begin{equation*}
+    \left(
+    \begin{array}{c}
+      f^1(a+h) - f^1(a) \\
+      f^2(a+h) - f^2(a) \\
+      \vdots            \\
+      f^k(a+h) - f^k(a)
+    \end{array}
+    \right) = \left(
+    \begin{array}{c}
+      L^1(a)h \\
+      l^2(a)h \\
+      \vdots  \\
+      L^k(a)h
+    \end{array}
+    \right) + \left(
+    \begin{array}{c}
+      \alpha^1(h) \\
+      \alpha^2(h) \\
+      \vdots      \\
+      \alpha^k(h)
+    \end{array}
+    \right), \quad \alpha^i(h) = o(h)
+  \end{equation*}
+  \begin{equation*}
+    f(x) = o(g(x)) = \alpha(x) * g(x), \quad \alpha(x)\rightarrow0, \quad x \rightarrow x_0
+  \end{equation*}
+
+  Отсюда $f^i(a+h) - f^i(a) = L^i(a)h + \alpha^i(h)б \quad \alpha^i(h) = o(h) \implies$
+
+  \begin{remark}
+    Заметим, что если имеется вектор $h = (h^1,\ldots, h^n)$, то:
+  \begin{equation*}
+    \forall i = \overline{1,n} \quad |h^i| \leqslant ||h|| = (\sum_{i=1}^{n}(h^i)^2)^\frac{1}{2} \leqslant
+    \sum_{i=1}^{n}|h^i| \implies
+  \end{equation*}
+  \begin{equation*}
+    \implies f(x) = \left(
+      \begin{array}{c}
+        f^1(x) \\
+        \vdots \\
+        f^k(x)
+      \end{array}
+      \right) = o(g(x)) \iff f^i(x) = o(g(x)).
+  \end{equation*}
+
+  Конец замечания.
+  \end{remark}
+
+  $\implies f^i$ дифференцируемо в точке $a$.
+
+  $"\leftarrow"$ Если $\forall i = \overline{1,n} \ f$ дифференцируемо в точке $a \implies \alpha^i(h) = o(h)$.
+
+  Сделав обратные рассуждения, получим: $f$ дифференцируемо в точке $a$.
+\end{proof}
+
+Таким образом изучение дифференцируемых отображений из $\mathbb{R}^n$ в $\mathbb{R}^k$ сводится к изучению
+дифференцируемых отображений из $\mathbb{R}^n$ в $\mathbb{R}$.
+
+\section{Частные производные}
+
+\begin{definition}
+  Множество $D\subset\mathbb{R}^n$ называется \textbf{областью}, если оно открыто и линейно связно.
+\end{definition}
+
+\begin{definition}
+  Пусть $D$ - область в $\mathbb{R}^n, \ f:D\rightarrow\mathbb{R},$
+  \begin{equation*}
+    f(x) = f(x^1,x^2,\ldots,x^n), \quad x \in D.
+  \end{equation*}
+
+  Частной производной отображения $f$ точки $x \in D$ по переменной $x^i$ называется
+  \begin{equation*}
+    \underset{h^i\rightarrow 0}{\lim}\frac{f(x^1,x^2,\ldots,x^i + h^i, \ldots,x^n) - (f(x^1,x^2,\ldots,x^n))}{h^i},
+  \end{equation*}
+  если этот предел существует.
+
+  Обозначение:
+  \begin{equation*}
+    \frac{\partial f}{\partial x^i} \quad or \quad f_{x^i}'
+  \end{equation*}
+\end{definition}
+
+Пример 1:
+  \begin{equation*}
+    f = f(x,y) = yx^2 + y^2x \quad f_x' = 2xy + y^2 \quad f_y' = x^2 + 2yx
+  \end{equation*}
+
+\begin{theorem}[о связи дифференциала и частных производных]
+  Если $f:D\rightarrow\mathbb{R}$ ($D$ - область в $\mathbb{R}^n$) дифференцируема в точке $x \in D$, то она 
+  имеет в точке $x$ все частные производные, при этом:
+  \begin{equation*}
+    df(x)h = \frac{\partial f}{\partial x^1}h^1 + \frac{\partial f}{\partial x^2}h^2 + \ldots +
+    \frac{\partial f}{\partial x^n}h^n =
+  \end{equation*}
+  \begin{equation*}
+    =\left(\begin{array}{cccc}
+      \frac{\partial f}{\partial x^1} & \frac{\partial f}{\partial x^2} & \ldots & \frac{\partial f}{\partial x^n} 
+    \end{array}\right) * \left(\begin{array}{c}
+      h^1 \\
+      h^2 \\
+      \vdots \\
+      h^n
+    \end{array}\right)
+  \end{equation*}
+
+  (здесь везде $1,2,\ldots,n$ - индексы, а не степени или производные).
+\end{theorem}
+
+\begin{proof}
+  Пусть $L(x) = (a_1,a_2,\ldots,a_n)$ - дифференциал функции в точке $x$. Положим: $h = (0,\ldots,0,h^i,0,\ldots,0)$.
+  Тогда:
+  \begin{equation*}
+    f(x+h) - f(x) = L(x)h + o(h) \implies  
+  \end{equation*}
+  \begin{equation*}
+    \implies f(x^1,x^2,\ldots,x^i + h^i,\ldots,x^n) - f(x^1,x^2,\ldots,x^n) =
+  \end{equation*}
+  \begin{equation*}
+    = (a_1,\ldots, a_i, \ldots,a_n) * \left(\begin{array}{c}
+      0 \\
+      \vdots \\
+      0 \\
+      h^i \\
+      0 \\
+      \vdots \\
+      0
+    \end{array}\right) + 0(h) = a_ih^i + o(h).
+  \end{equation*}
+
+  Поделим уравнение на $h^i$:
+  \begin{equation*}
+    a_i + \frac{o(h)}{h_i} = \frac{f(x^1,\ldots,x^i + h^i,\ldots, x^n) - f(x^1,x^2,\ldots,x^n)}{h^i}.
+  \end{equation*}
+
+  Тогда $\frac{\partial f}{\partial x^i} = \underset{h^i\rightarrow 0}{\lim} \frac{f(x^1,\ldots,x^i + h^i,
+  \ldots,x^n) - f(x^1,\ldots,x^n)}{h^i} = \underset{h^i\rightarrow 0}{\lim} (a_i + \frac{o(h)}{h^i}) = a_i$.
+
+  Так как $i = \overline{1,n}$, то:
+  \begin{equation*}
+    L(x) = (\frac{\partial f}{\partial x^1}, \ldots, \frac{\partial f}{\partial x^n}).
+  \end{equation*}
+\end{proof}
+
+Пример 2:
+
+Из примера 1 $\implies$
+\begin{equation*}
+  df(x,y) = \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy,
+\end{equation*}
+\begin{equation*}
+  h = (dx,dy),
+\end{equation*}
+\begin{equation*}
+  df(x,y) = (2xy + y^2)dx + (x^2 + 2yx)dy
+\end{equation*}
+
+\section*{Матрица Якоби}
+
+Пусть $f:\mathbb{R}^n \rightarrow \mathbb{R}^k$.
+
+Матрицей Якоби отображения $f$ в точке $x\in\mathbb{R}$ называется:
+\begin{equation*}
+  \mathfrak{I}(x) = \left(
+    \begin{array}{ccc}
+      \frac{\partial f^1}{\partial x^1} & \ldots & \frac{\partial f^1}{\partial x^n} \\
+      \frac{\partial f^2}{\partial x^1} & \ldots & \frac{\partial f^2}{\partial x^n} \\
+      \vdots & \ddots & \vdots \\
+      \frac{\partial f^k}{\partial x^1} & \ldots & \frac{\partial f^k}{\partial x^n}
+    \end{array}
+  \right)
+\end{equation*}
+
+Здесь $f(x) = \left(
+  \begin{array}{c}
+    f^1(x) \\
+    \vdots \\
+    f^k(x)
+  \end{array}
+\right)$
+
+Т. обр. $df(x)h = \mathfrak{I}(x)h = \left(
+  \begin{array}{ccc}
+    \frac{\partial f^1}{\partial x^1} & \ldots & \frac{\partial f^1}{\partial x^n} \\
+    \frac{\partial f^2}{\partial x^1} & \ldots & \frac{\partial f^2}{\partial x^n} \\
+    \vdots & \ddots & \vdots \\
+    \frac{\partial f^k}{\partial x^1} & \ldots & \frac{\partial f^k}{\partial x^n}
+  \end{array}
+\right) * \left(
+  \begin{array}{c}
+    h^1 \\
+    \vdots \\
+    h^k
+  \end{array}
+\right) = \left(
+  \begin{array}{ccc}
+    df^1(x)h \\
+    df^2(x)h \\
+    \vdots \\
+    df^k(x)h
+  \end{array}
+\right)$
+
+Часто матрицу Якоби отображения $f$ будем обозначать $f'$.
+
+\section{Дифференцируемость и арифметические операции}
+
+\begin{theorem}
+  Пусть $D\subset \mathbb{R}^n$ - область, $f:D\rightarrow\mathbb{R}^k, \ g:D\rightarrow\mathbb{R}^k,$ если 
+  $f$ и $g$ дифференцируемы в точке $x\in D$, то $\forall \lambda_1,\lambda_2\in\mathbb{R}$ функция
+  $\lambda_1 f + \lambda_2 g$ дифференцируема в точке $x$, при этом:
+  \begin{equation*}
+    (\lambda_1f + \lambda_2g)' = \lambda_1f' + \lambda_2g',
+  \end{equation*}
+  где $(\lambda_1f + \lambda_2g)', \ f', \ g'$ - матрицы Якоби.
+\end{theorem}
+
+\begin{proof}
+  $(\lambda_1f + \lambda_2g)(x + h) - (\lambda_1f + \lambda_2g)(x) = \lambda_1 f(x+h) + \lambda_2 g(x + h) -
+  \lambda_1f(x) - \lambda_2g(x) = \lambda_1(f(x+h) - f(x)) + \lambda_2(g(x+h) - g(x)) = \lambda_1(f'(x)h +
+  o(h)) + \lambda_2(g'(x)h + o(h)) = (\lambda_1 f'(x) + \lambda_2g'(x))h + o(h)$.
+\end{proof}
+
+\begin{theorem}
+  Пусть $D$ - область в $\mathbb{R}^n, \ f:D\rightarrow\mathbb{R}$. Если $f,g$ - дифференцируемы в точке $x \in D$,
+  то $f*g$ дифференцируемо в точке $x$ и если $g(x) \ne 0$, то $\frac{f}{g}$ - дифференцируемо в точке $x$, при
+  этом:
+  \begin{equation*}
+    (f*g)'(x) = f'(x)*g(x) + f(x)*g'(x);
+  \end{equation*}
+  \begin{equation*}
+    (\frac{f}{g})'(x) = \frac{f'(x)g(x) - f(x)g'(x)}{(g(x))^2}.
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Самостоятельно. $\overset{\cdot \ \cdot}{\smile}$
+\end{proof}
 
 \end{document}
