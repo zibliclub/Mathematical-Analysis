@@ -34,6 +34,171 @@
 \tableofcontents
 \chapter{Дифференциальное исчисление}
 
+\section{Формула Тейлора}
+
+\subsection{Формула Тейлора с остаточным членом в форме Пеано}
+
+Пусть $f:(a;b)\rightarrow\mathbb{R}, \ x_0 \in (a;b)$. Нужно построить многочлен $P(x;x_0)$ вида:
+\begin{equation*}
+  P(x;x_0)=a_0 + a_1(x-x_0) + a_2(x-x_0)^2 + \ldots + a_n (x-x_0)^n
+\end{equation*}
+$f(x) - P(x;x_0) = r_n (x;x_0)$ - $n$-ый остаточный член в формуле Тейлора.
+
+\begin{definition}
+  Остаточные члены в форме Пеано имеют вид:
+  \begin{equation*}
+    r_n(x;x_0) = \underset{x\rightarrow x_0}{o}((x-x_0)^n)
+  \end{equation*}
+\end{definition}
+
+\begin{definition}
+  Пусть $f:(a;b)\rightarrow\mathbb{R}, \ x_0\in(a;b), \ f(x)$ имеет в точке $x_0$ проиводные до
+  $n$-ого порядка включительно.
+
+  \textbf{Многочленом Тейлора} (полиномом Тейлора) функции $f(x)$ в точке $x$ называется многочлен:
+  \begin{equation*}
+    P(x;x_0) = f(x_0) + \frac{f'(x_0)}{1!}(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \ldots +
+    + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n
+  \end{equation*}
+\end{definition}
+
+
+\begin{statement}
+  Если $f:(a;b)\rightarrow\mathbb{R}$ имеет в точке $x_0\in(a;b)$ производные до $n$-го порядка
+  включительно и $P(x;x_0)$ - ее многочлен Тейлора, то:
+  \begin{equation*}
+    f(x_0) = P(x_0;x_0), \ f'(x_0) = P'(x_0;x_0), \ \ldots, \ f^{(n)}(x_0) = P^{(n)}(x_0;x_0)
+  \end{equation*}
+\end{statement}
+
+\begin{proof}
+  $P(x;x_0) = f(x) + \ldots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n$, при $x = x_0$: $P(x_0;x_0) = f(x_0)$
+
+  $P'(x;x_0) = + \frac{f'(x_0)}{1!}(x-x_0) + \frac{f''(x_0)}{2!}2(x-x_0) + \ldots
+    + \frac{f^{(n)}(x_0)}{n!}n(x-x_0)^{n-1}$, при $x = x_0$: $P'(x_0;x_0) = \frac{f'(x_0)}{1!}; \
+    P''(x;x_0) = f''(x_0) + \frac{f'''(x_0)}{3!}6(x-x_0) + \ldots + \frac{f^{(n)}(x_0)}{n!}
+    n(n-1)(x-x_0)^{n-2}; \ P^{(n)}(x_0;x_0) = f^{(n)}(x_0)$.
+\end{proof}
+
+\begin{theorem}
+  Пусть $f:(a;b)\rightarrow\mathbb{R}, \ x_0\in(a;b), \ f$ имеет в точке $x_0$ проивзодные до $n$-ого
+  порядка включительно, тогда существует единственный многочлен вида:
+  \begin{equation*}
+    p(x;x_0) = a_0 + a_1(x-x_0) + \ldots + a_n(x-x_0)^n
+  \end{equation*}
+  такой, что:
+  \begin{equation*}
+    f(x) - P(x;x_0) = \underset{x\rightarrow x_0}{o}((x-x_0)^n)
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  (теоремы)
+  \begin{enumerate}
+    \item Докажем единственность.
+
+          Пусть $Q(x;x_0) = b_0 + b_1(x-x_0) + \ldots + b_n(x-x_0)^n: \ f(x) - Q(x;x_0) = \underset{x\rightarrow
+            x_0}{o}((x-x_0)^n), \ f(x) = P(x;x_0) + \underset{x\rightarrow x_0}{o}((x-x_0)^n)$.
+
+          Рассмотрим разность этих выражений: $f(x) - f(x) = P(x;x_0) - Q(x;x_0) + \underset{x\rightarrow x_0}
+            {o}((x-x_0)^n) = (a_0 - b_0) + (a_1 - b_1)(x-x_0) + (a_2 - b_2)(x-x_0)^2 + \ldots + (a_n - b_n)
+            (x-x_0)^n + \underset{x\rightarrow x_0}{o}((x-x_0)^n)$ (*).
+
+          Переходя к пределу при $x\rightarrow x_0$, получим, что $0 = a_0 - b_0 \implies a_0 = b_0$. Разделим
+          (*) на $x-x_0: \ 0 = (a_1 - b_1) + (a_2 - b_2)(x-x_0) + \ldots + (a_n - b_n)(x-x_0)^{n-1} +
+            \underset{x\rightarrow x_0}{o}((x-x_0)^{n-1})$ (**);
+          \begin{equation*}
+            \underset{x\rightarrow x_0}{o}((x-x_0)^{n}) = \alpha(x)(x-x_0)^n, \
+            \alpha(x)\rightarrow0 \ (x\rightarrow x_0)
+          \end{equation*}
+          Переходя к пределу при $x\rightarrow x_0$ в (**) получаем, что $a_1 - b_1 = 0 \implies a_1 = b_1$.
+          Используя ММИ можно показать, что $a_i = b_i, \ i = 2,\ldots,n \implies Q(x;x_0) = P(x;x_0)$.
+    \item Докажем существование.
+
+          \begin{lemma}
+            Если фукнция $\phi:(a;b)\rightarrow\mathbb{R}, \ x_0\in(a;b)$, такая, что $\phi(x_0) = \phi'(x_0)
+              = \ldots = \phi^{(n)}(x_0) = 0$ ($\phi(x)$ имеет производную до $n$-ого порядка включительно),
+            причем все производные непрерывны в некоторой окрестности точки $x_0$. Тогда:
+            \begin{equation*}
+              \phi(x) = \underset{x\rightarrow x_0}{o}((x-x_0)^n), \ (x\rightarrow x_0)
+            \end{equation*}
+          \end{lemma}
+          Допустим, что лемма доказана. Тогда положим $\phi(x) = f(x) - P(x;x_0)$, тогда будет выполнено
+          условие леммы (+ смотри утверждение в начале параграфа) $\implies f(x) - P(x;x_0) =
+            \underset{x\rightarrow x_0}{o}((x-x_0)^n)$ при $x\rightarrow x_0$, где $P(x;x_0)$ -
+          многочлен Тейлора функциии $f$ в точке $x_0$.
+  \end{enumerate}
+\end{proof}
+
+\clearpage
+
+\begin{proof}
+  (леммы)
+
+  По индукции.
+
+  Пусть $n = 1$, то есть $\phi$ - дифференцируема в окрестности точки $x_0$ и $\phi(x_0)
+    = \phi'(x_0) = 0$. Тогда $\phi(x) = \phi(x) - \phi(x_0) = \phi'(\xi)(x-x_0)$, где $\xi\in(a;b)$
+  (по теореме Лагранжа).
+
+  Далее, $\phi'(\xi)\rightarrow\phi'(x_0)$ при $\xi\rightarrow x_0$ (используя непрерывность функции)
+  $\implies \phi'(\xi)$ - бесконечно малая, поскольку $\phi'(x_0) = 0$.
+
+  То есть $\phi'(\xi)\rightarrow0$ при $\xi\rightarrow x_0 \implies \phi(x) = \phi'(\xi)(x-x_0) =
+    \underset{\xi\rightarrow x_0}{o}(x-x_0)$.
+
+  Допустим, лемма верна для $k=n-1$. Положим $g(x) = \phi'(x)$. Тогда $g(x)$ имеет непрерывные производные
+  до $(n-1)$-ого порядка включительно, при этом $g(x_0) = g'(x_0) = \ldots = g^{(n)}(x_0) = 0 \implies$
+  по утверждению леммы:
+  \begin{equation*}
+    g(x) = \underset{x\rightarrow x_0}{o}((x-x_0)^{n-1})
+  \end{equation*}
+
+  Далее, $\phi(x) - \phi(x_0) = \phi(x) = \phi'(\xi)(x-x_0) = g(\xi)(x-x_0) = \underset{\xi\rightarrow x_0}
+    {o}((\xi - x_0)^{n-1})(x-x_0) = \alpha(\xi)(\xi - x_0)^{n-1}(x-x_0), \ \alpha(\xi)\rightarrow 0$ при
+  $\xi \rightarrow x_0$.
+
+  Отсюда $| \phi(x) | = | \alpha(\xi) | | \xi - x_0 |^{n-1} | x - x_0 | \leqslant | \alpha (\xi) |
+    | x - x_0 |^n$ ($\alpha (\xi) \rightarrow0$ при $\xi \rightarrow x_0$) $\implies \phi(x) = \underset
+    {x\rightarrow x_0}{o}((x-x_0)^n)$.
+\end{proof}
+
+\subsection*{Примеры представления некоторых функций через многочлен Тейлора ($x_0 = 0$)}
+
+\begin{enumerate}
+  \item $e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{3!} + \ldots + \frac{x^n}{n!} + \underset{x\rightarrow0}
+          {o}(x^n)$
+  \item $\sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots + (-1)^{n-1}\frac{x^{2n+1}}{(2n+1)!} +
+          \underset{x\rightarrow0}{o}(x^{2n-1})$
+  \item $\cos x = 1 - \frac{x^2}{2} + \frac{x^4}{4!} - \ldots + (-1)^n\frac{x^{2n}}{(2n)!} +
+          \underset{x\rightarrow0}{o}(x^{2n})$
+  \item $\ln (1+x) = x - \frac{x^2}{2} + \frac{x^3}{3!} - \ldots + (-1)^{n-1}\frac{x^n}{n!} +
+          \underset{x\rightarrow0}{o}(x^n)$
+  \item $(1+x)^\alpha = 1 + \alpha x + \frac{\alpha (\alpha - 1)}{\alpha !} x^2 + \ldots +
+          \frac{\alpha(\alpha-1)(\alpha-2)\ldots(\alpha - (n-1))}{n!}x^n + \underset{x\rightarrow0}{o}(x^n)$
+\end{enumerate}
+
+\subsection{Формула Тейлора с остаточным членом в форме Лагранжа и в форме Коши}
+
+
+
+\section{Приложения дифференциального исчисления}
+
+\subsection{Монотонность функции}
+
+
+
+\subsection{Экстремумы}
+
+
+
+\subsection{Выпуклость функции}
+
+\subsection*{Геометрический смысл выпуклой функции}
+
+
+
+
 \section{Первообразная и неопределенный интеграл}
 
 \begin{definition}[Первообразная функция]
@@ -470,7 +635,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
 \chapter{Интегральное исчисление}
 
-\section{Интеграл Римана}
+\section*{Интеграл Римана}
 
 \begin{definition}[интеграл Римана]
   Пусть $f:[a;b]\rightarrow\mathbb{R}$. Разобьем отрезок $[a;b]$ на $n$ частей точками $a = x_{0} < x_{1} < \ldots <
@@ -891,7 +1056,7 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 \end{effect}
 
 \begin{theorem}[Дарбу]
-  Для любой ограниченной функции $f:[a;b]\rightarrow\mathbb{R}$ выполняются равенства:
+  Для любой ограниченой функции $f:[a;b]\rightarrow\mathbb{R}$ выполняются равенства:
 
   \begin{center}
     {\large $\underline{\mathfrak{I}} = \underset{\lambda(P)\rightarrow0}{\lim}\underline{S}(P); \ \overline{\mathfrak{I}}
@@ -1072,9 +1237,2708 @@ $x$ (в том числе при $x^{0}$) получим $n$ уравнений 
 
           Пусть $P$ - произвольное разбиение. Пусть $\epsilon > 0$ задано. Возьмем $\delta>0$ и
           $P: \ \lambda(P) < \delta \quad \omega_{i}(f^{2},\Delta_{i}) \leqslant 2L\omega_{i}
-            (f,\Delta_{i})$
+            (f,\Delta_{i})$.\\
+
+          $\underset{i}{\sum}w_{i}(f^{2},\Delta_{i})\Delta x_{i} \leqslant (\underset{i}{\sum}\omega_{i}(f,
+              \Delta_{i})\Delta_{i})2L$.\\
+
+          Так как $f\in R[a;b]$, то $\underset{i}{\sum}\omega_{i}(f,\Delta_{i})\Delta x_{i}\rightarrow 0
+            \implies$ по лемме о двух миллиционерах, $\underset{i}{\sum}\omega_{i}(f^{2},\Delta_{i})\Delta
+            x_{i}\rightarrow0 \implies$ (по критерию интегрируемости) $f^{2}\in R[a;b]$.\\
+
+          $fg = \frac{1}{4}((f+g)^{2}-(f-g)^{2})\implies fg \in R[a;b]$.
+    \item Рассмотрим $||f(x_{1})| - | f(x_{2}) || \leqslant | f(x_{1}) - f(x_{2}) |, \ x_{1},x_{2}\in
+            \Delta_{i} \implies \omega_{i}(|f|,\Delta_{i})\leqslant \omega_{i}(f,\Delta_{i})$. \\
+
+          $0 \leqslant \underset{i}{\sum}\omega_{i}(| f |,\Delta_{i})\Delta x_{i} \leqslant \underset{i}{\sum}
+            \omega_{i}(f,\Delta_{i})\Delta x_{i} \implies |f|\in R[a;b].$
+
+          Рассмотрим $| \underset{i}{\sum}f(\xi_{i}) | \leqslant \underset{i}{\sum} | f(\xi_{i}) |\Delta x_{i}
+            \implies \underset{\lambda(P)\rightarrow 0}{\lim}| \underset{i}{\sum}f(\xi_{i})\Delta x_{i} |
+            \leqslant \underset{\lambda(P)\rightarrow0}{\lim}\underset{i}{\sum} | f(\xi_{i}) |\Delta x_{i}, \quad
+            | \int_{a}^{b}f(x)dx | \leqslant \int_{a}^{b} |f(x)|dx$.
   \end{enumerate}
 \end{proof}
 
+\subsection{Аддитивность интеграла Римана}
+
+\begin{definition}
+  Пусть $a>b, \ a,b\in\mathbb{R}$, положим $\int_{a}^{b}f(x)dx = -\int_{b}^{a}f(x)dx$. Если $a=b$, то
+  $\int_{a}^{a=b}f(x)dx =0$.
+\end{definition}
+
+\begin{theorem}[Аддитивность интеграла Римана]
+  Пусть даны точки $a,b,c\in \mathbb{R}$. Если $f$ - интегрируема на большем из отрезков $[a;b],\ [a,c],\
+    [b,c]$, то $f$ - интегрируема и на меньших отрезках. И наоборот, если $f$ интегрирема на двух меньших отрезках,
+  то она интегрируема и на большем отрезке. При этом:
+  \begin{equation*}
+    \int_{a}^{b}f(x) dx + \int_{b}^{c}f(x)dx + \int_{c}^{a}f(x)dx = 0
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}[теоремы 2.4.8]
+  Пусть $a<b<c$.
+
+  Построим такое разбиение отрезка $[a;c]$ с отмеченнымыми точками, что точка $b$ будет его точкой разбиения
+  $P = {x_{0}, x_{1}, \ldots, b, \ldots, x_{n}}$.
+
+  Тогда $\underset{P}{\sum}f(\xi_{i})\Delta x_{i} < \underset{P'}{\sum}f(\xi_{i})\Delta x_{i} +
+    \underset{P''}{\sum}f(\xi_{i})\Delta x_{i}$, где $P'$ - разбиение отрезка левеее точки $b$, $P''$ - правее
+  точки $b$.
+
+  Покажем, что если $f\in R[a;c]$, то $f\in R[a;b]$. В самом деле, $\underset{P'}{\sum}\omega_{i}\Delta x_{i}
+    \leqslant \underset{P}{\sum}\omega_{i}\Delta x_{i}\rightarrow 0 \implies f\in R[a;b]$. Аналогично, можно
+  показать, что $f\in R[b;c]$. Если $f$ - интегрируема на $[a;b]$ и $f\in R[b;c] \implies \underset{P'}{\sum}
+    \omega_{i}\Delta x_{i} \rightarrow0, \ \underset{P''}{\sum}\omega_{i}\Delta x_{i} \rightarrow0 \implies$
+  учитывая то, что $\underset{P}{\sum}f(\xi_{i})\Delta x_{i} < \underset{P'}{\sum}f(\xi_{i})\Delta x_{i} +
+    \underset{P''}{\sum}f(\xi_{i})\Delta x_{i}$, тогда $\underset{P}{\sum}\omega_{i}\Delta x_{i}\rightarrow0
+    \implies f\in R[a;c]$, а так же то, что $\int_{a}^{c}f(x) dx \ \int_{a}^{b}f(x) dx + \int_{b}^{c}f(x)dx$.
+\end{proof}
+
+\subsection{Монотонность интеграла Римана}
+
+\begin{theorem}
+  Если $a<b$ и $f\in R[a;b]$ и:
+  \begin{enumerate}
+    \item $\forall x \in [a;b] \ f(x) \geqslant 0$, то $\int_{a}^{b} f(x) dx \geqslant 0$
+    \item $\forall x \in [a;b] \ f(x) > 0$, то $\int_{a}^{b}f(x)dx > 0$
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  (теоремы 2.4.9)
+
+  \begin{enumerate}
+    \item Почти очевидно (по определению интеграла Римана и свойствам предела)
+    \item Пусть $\forall x \in [a;b] f(x) > 0$. Покажем, что $\int_{a}^{b} f(x) dx > 0$. Допустим, что
+          $\int_{a}^{b}f(x) dx = 0$. Тогда $\underset{\lambda(P)\rightarrow0}{\lim}\overline{S}(P)=0$.
+
+          Тогда можно взять такое разбинеие $P: \ \overline{S}(P) < \frac{b-a}{2}$. Тогда у этого разбиения $P
+            \exists$ отрезок $\Delta_{i}: \ M_{i} = \underset{x \in \Delta_{i}}{\sup}f(x) < \frac{1}{2}$. В самом деле,
+          если $M_{i} \geqslant \frac{1}{2} \ \forall i$, то $\overline{S}(P) = \underset{i}{\sum}M_{i}\Delta x_{i}
+            \geqslant \frac{1}{2}\underset{i}{\sum}\Delta x_{i} = \frac{b-a}{2}$, противоречие с выбраным $P$.
+
+          Обозначим $\Delta_{i} = [a_{1},b_{1}]$. Так как $f\in R[a;b] \implies f\in R[a_{1},b_{1}]$. При этом
+          $\int_{a}^{b}f(x)dx = 0$. Пусть $P_{1}$ - разбиение отрезка $[a_{1},b_{1}]: \ \overline{S}(P_{1}) <
+            \frac{b_{1} - a_{1}}{4} \implies \exists$ отрезок разбиения $[a_{2},b_{2}] \subset [a_{1},b_{1}]: \
+            \underset{x\in [a_{2},b_{2}]}{\sup}f(x) < \frac{1}{4}$ и так далее.
+
+          Таким образом получим систему вложенных отрезков $[a;b] \supset [a_{1},b_{1}] \supset [a_{2},b_{2}] \supset
+            \ldots$, при этом $\underset{x\in[a_{k},b_{k}]}{\sup}f(x) < \frac{1}{2^{k}}$. Пусть $c \in \underset
+            {k=1}{\overset{\infty}{\cap}}[a_{k};b_{k}]$. Тогда $f(c) > 0$. С другой стороны, $f(c) < \frac{1}{2^{k}}
+            \implies f(c) = 0$ - противоречие $\implies \int_{a}^{b}f(x)dx > 0$.
+  \end{enumerate}
+\end{proof}
+
+\begin{effect}
+  (теоремы 2.4.9)
+  \begin{enumerate}
+    \item Если $a<b, \ f,g \in R[a;b]$ и:
+          \begin{enumerate}
+            \item $\forall x \in [a;b] \ f(x) \leqslant g(x)$, то $\int_{a}^{b}f(x) dx \leqslant
+                    \int_{a}^{b}g(x)dx$
+            \item $\forall x \in [a;b] \ f(x) < g(x)$, то $\int_{a}^{b}f(x)dx < \int_{a}^{b}g(x) dx$
+                  \begin{proof}
+                    Очевидно, $g(x) - f(x) \geqslant 0$.
+                  \end{proof}
+          \end{enumerate}
+    \item Если $f\in R[a;b], \ a<b, \ M = \underset{x \in [a;b]}{\sup}f(x), \ m = \underset{x\in[a;b]}
+            {\inf}f(x)$, то $m(b-a) \leqslant \int_{a}^{b}f(x)dx \leqslant M(b-a)$.
+          \begin{proof}
+            $\forall$ разбиения $P$ с отмеченными точками верно: $\underset{i}{\sum}m\Delta x_{i} \leqslant
+              \underset{i}{\sum}f(\xi_{i})\Delta x_{i} \leqslant \underset{i}{\sum} M\Delta x_{i}$ и
+            $m(b-a) \leqslant \underset{i}{\sum}f(\xi_{i})\Delta x_{i} \leqslant M(b-a)$.
+
+            Переходя к пределу получаем то, что нужно было доказать.
+          \end{proof}
+    \item (Теорема о среднем)
+
+          Пусть $f\in R[a;b] (a>b, a<b), \ m = \underset{x \in[a;b]}{\inf}f(x), \ M = \underset{x \in[a;b]}{\sup}f(x)$.
+          Тогда существует $\mu \in [m;M]: \ \int_{a}^{b}f(x)dx = \mu (b-a)$.
+
+          \begin{proof}
+            Пусть $a<b$. Тогда (из 2-го пункта) $m(b-a) \leqslant \int_{a}^{b}f(x)dx\leqslant M(b-a), \ (b-a>0)$.
+
+            $m \leqslant \frac{1}{b-a}\int_{a}^{b}f(x)dx \leqslant M$. Пусть $\mu \ \frac{1}{b-a} \frac{1}{b-a}
+              \int_{a}^{b}f(x) dx \implies \frac{a}{b}f(x)dx = \mu(b-a)$. Если $a > b$, то $m(a-b) \leqslant
+              \int_{a}^{b}f(x)dx \leqslant M(a-b)$ (домножим на $-1$), $m(b-a)\geqslant \int_{a}^{b}f(x)dx \geqslant
+              M(b-a)\implies m \leqslant \frac{1}{b-a}\int_{a}^{b}f(x) dx \leqslant M$.
+          \end{proof}
+
+          \begin{effect}
+            Если, кроме того, $f(x)$ - непрерывна на $[a;b]$, то $\exists c \in [a;b]: \ \int_{a}^{b}f(x)dx =
+              f(x)(b-a)$.
+          \end{effect}
+          \begin{proof}
+            Доказательство следует из теоремы Больцано-Коши о промежуточном значении.
+          \end{proof}
+  \end{enumerate}
+\end{effect}
+
+\begin{theorem}[Первая теорема о среднем]
+  Пусть $f,g\in R[a;b] (a>b, a<b), \ m = \underset{x\in[a;b]}{\inf}f(x), \ M = \underset{x\in[a;b]}{\sup}f(x)$
+  и $g$ не меняет свой знак на $[a;b]$. Тогда $\exists \mu \in [m;M]: \ \int_{a}^{b}f(x)g(x)dx = \mu \int_{a}^{b}
+    g(x)dx$.
+\end{theorem}
+
+\begin{proof}
+  Пусть $a<b$ и $\forall x \in [a;b] \ g(x) \geqslant 0$. Имеем, что $m\leqslant f(x) \leqslant M, \ (g(x) > 0), \
+    mg(x) \leqslant f(x)g(x) \leqslant Mg(x) \implies m \int_{a}^{b}g(x)dx \leqslant \int_{a}^{b}f(x)g(x)dx
+    \leqslant M\int_{a}^{b}g(x)dx$. Если $\int_{a}^{b}g(x)dx = 0 \implies \int_{a}^{b}f(x)g(x)dx = 0 \implies
+    \int_{a}^{b}f(x)g(x)dx = \mu \int_{a}^{b}g(x)dx$. Если $\int_{a}^{b}g(x)dx \ne 0$, то поделим в неравенстве
+  $m \int_{a}^{b}g(x)dx \leqslant \int_{a}^{b}f(x)g(x)dx \leqslant M\int_{a}^{b}g(x)dx$ все на $\int_{a}^{b}
+    g(x)dx > 0: \quad m \leqslant \frac{\int_{a}^{b}f(x)g(x)dx}{\int_{a}^{b}g(x)dx} \leqslant M$, где
+  $\frac{\int_{a}^{b}f(x)g(x)dx}{\int_{a}^{b}g(x)dx} = \mu$.
+
+  Аналогично доказываются остальные случаи $(a<b, \ g(x) \leqslant 0; \ a>b, \ g(x)\geqslant 0)$.
+\end{proof}
+
+\section{Интеграл Римана как функция верхнего предела интегрирования}
+
+\begin{definition}
+  Пусть $f\in R[a;b], \ x \in [a;b]$.
+
+  Рассмотрим функцию $F(x) = \int_{a}^{x}f(t)dt, \ F(x)$ определена для $\forall x \in [a;b]$.
+\end{definition}
+
+\begin{theorem}[непрерывность интеграла Римана]
+  Если $f\in R[a;b]$, то $F(x) = \int_{a}^{x}f(t)dt$ - непрерывна на $[a;b]$.
+\end{theorem}
+
+\begin{proof}
+  Пусть $h\in \mathbb{R}: \ x + h \in [a;b]$. Тогда $F(x+h) = \int_{a}^{x+h}f(t)dt$. Пусть
+  $\epsilon>0$ задано. Покажем, что $\exists\delta>0: \ \forall h \in \mathbb{R}: \ |h|<\delta \
+    | F(x+h) - F(x) | < \epsilon$.
+
+  Рассмотрим $| F(x+h) - F(x) | = | \int_{a}^{x+h}f(t)dt - \int_{a}^{x}f(t)dt | = | \int_{a}^{x}f(t)dt +
+    \int_{x}^{x+h}f(t)dt - \int_{a}^{x}f(t)dt | = | \int_{x}^{x+h}f(t)dt | \leqslant |\int_{x}^{x+h}| f(t) |dt|$.
+  Так как $f\in R[a;b]$, то $f$ - ограничена на $[a;b]$, то есть $\exists L > 0: \ \forall x \in [a;b] \
+    | f(x) | \leqslant L$. Тогда $|\int_{x}^{x+h}| f(t) |dt| \leqslant | L \int_{x}^{x+h}dt |$, так как
+  \begin{equation*}
+    \int_{x}^{x+h}1dt = \underset{\lambda(P)\rightarrow0}{\lim}\sum_{i=1}^{n}1\Delta x_{i} = | h |,
+  \end{equation*}
+  тогда $\delta = \frac{\epsilon}{L}$, что и требовалось доказать.
+\end{proof}
+
+\begin{theorem}[о дифференцируемости интеграла Римана как функции по верхнему пределу]
+  Пусть $f\in R[a;b], \ x \in [a;b]$ и $f$ непрерывна в точке $x$, тогда функция $F(x) = \int_{a}^{x}f(t)dt$
+  дифференцируема в точке $x$, причем:
+  \begin{equation*}
+    F'(x) = f(x) \implies (\int_{a}^{x}f(t)dt)_{x}'=f(x)
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Пусть $h\in\mathbb{R}: \ x+h \in [a;b]$.
+
+  Рассмотрим $|\frac{F(x+h) - F(x)}{h} - f(x)| = | \frac{1}{h}(\int_{a}^{x+h}f(t)dt - \int_{a}^{x}f(t)dt) -
+    f(x) | = | \frac{1}{h} \int_{a}^{x+h}f(t)dt - f(x) | = | \frac{1}{h}\int_{x}^{x+h}f(t)dt - \frac{f(x)}{h}
+    \int_{x}^{x+h}dt | = | \frac{1}{h}(\int_{x}^{x+h}f(t)dt - \int_{x}^{x+h}f(x)dt) | = | \frac{1}{h}
+    (\int_{x}^{x+h}(f(t)-f(x))dt) | = \frac{1}{|h|}| \int_{x}^{x+h}| f(t) - f(x) |dt |$.
+
+  Так как $f$ - непрерывна в точке $x$, то $\forall \epsilon>0 \ \exists \delta>0: \ \forall h: \ |h|<\delta
+    \ | f(t) - f(x) | < \epsilon$, где $t\in[x;x+h]$.
+
+  Тогда $|\frac{F(x+h) - F(x)}{h} - f(x) | \leqslant \frac{1}{|h|}| \int_{x}^{x+h}| f(t) - f(x) |dt | <
+    \frac{1}{|h|}\epsilon| \int_{x}^{x+h}dt | = \frac{1}{|h|}\epsilon|h| = \epsilon$
+
+  Таким образом, по определению производной:
+  \begin{equation*}
+    \underset{h\rightarrow0}{\lim}\frac{F(x+h) - F(x)}{h} = f(x) = F'(x).
+  \end{equation*}
+\end{proof}
+
+\begin{effect}
+  Если $f$ - непрерывна на $[a;b]$, то на $[a;b]$ она имеет первообразную, которая равна:
+  \begin{equation*}
+    \Phi (x) = \int_{a}^{x}f(t)dt + C
+  \end{equation*}
+\end{effect}
+
+\begin{remark}
+  Рассмотрим следующие классы (множества/пространства) функций:
+  \begin{itemize}
+    \item $R[a;b]$ - множество интегрируемых на $[a;b]$ функций;
+    \item $C[a;b]$ - множество непрерывных на $[a;b]$ функций;
+    \item $C^{o}[a;b]$ - множество дифференцируемых на $[a;b]$ функций.
+  \end{itemize}
+  Получаем:
+  \begin{equation*}
+    C^{o}[a;b]\subset C[a;b] \subset R[a;b].
+  \end{equation*}
+\end{remark}
+
+\begin{theorem}[вторая теорема о среднем]
+  Пусть $f,g\in R[a;b]$, причем $f$ - монотонна на $[a;b]$. Тогда $\exists \xi \in [a;b]:$
+  \begin{equation*}
+    \int_{a}^{b}f(x)g(x)dx = f(a)\int_{a}^{\xi}g(x)dx + f(b)\int_{\xi}^{b}g(x)dx
+  \end{equation*}
+\end{theorem}
+
+\begin{lemma}
+  Пусть $f,g\in R[a;b]$, причем $f$ - невозрастающая и неотрицательная.
+
+  Тогда $\exists \xi \in [a;b]:$
+  \begin{equation*}
+    \int_{a}^{b}f(x)g(x)dx = f(a)\int_{a}^{\xi}g(x)dx.
+  \end{equation*}
+\end{lemma}
+
+\begin{proof}
+  (леммы)
+
+  Пусть $P$ - произвольное разбиение отрезка $[a;b]: \ a = x_{0} < x_{1} < \ldots < x_{n-1} < x_{n} = b$.
+  Тогда $\int_{a}^{b}f(x)g(x)dt = \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}f(x)g(x)dx \\ + \sum_{i=1}^{n}
+    \int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx - \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx =
+    \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}(f(x)-f(x_{i-1}))g(x)dx + \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}
+    f(x_{i-1})g(x)dx =$ (где $\sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}(f(x)-f(x_{i-1}))g(x)dx = \rho$ и
+  $\sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx = \sigma$) $= \rho + \sigma$.
+
+  Устремим $\lambda(P)\rightarrow0$:
+  \begin{equation*}
+    \int_{a}^{b}f(x)g(x)dx = \underset{\lambda(P)\rightarrow0}{\lim}\rho + \underset{\lambda(P)\rightarrow0}
+    {\lim}\sigma
+  \end{equation*}
+  Покажем, что пределы существуют, более того: $\underset{\lambda(P)\rightarrow0}{\lim}\rho = 0$.
+
+  Так как $g(x)\in R[a;b] \implies g$ - ограничена на $[a;b]$, то есть $\exists L > 0: \ \forall x
+    \in [a;b] \ | g(x) |\leqslant L$.
+
+  Рассмотрим $\omega_{i} = \omega_{i}(f,\Delta_{i}) = \underset{\xi_{1},\xi_{2}=\Delta_{i}}{\sup}
+    | f(\xi_{1}) - f(\xi_{2}) |$. Так как $f\in R[a;b]$, то по критерию интегрируемости:
+  $\underset{i}{\sum}\omega_{i}\Delta x_{i} \rightarrow 0$.
+
+  Тогда $| \rho | = | \sum_{i=1}^{n} \int_{x_{i-1}}^{x_{i}}(f(x) - f(x_{i-1}))g(x)dx |\leqslant
+    \sum_{i=1}^{n}\int_{x_{i-1}}^{x_{i}}| f(x) - f(x_{i-1}) | | g(x) |dx \leqslant\sum_{i=1}^{n}
+    \int_{x_{i-1}}^{x_{i}}\omega_{i}Ldx = L\sum_{i=1}^{n}\omega_{i}\int_{x_{i-1}}^{x_{i}}dx =
+    L\sum_{i=1}^{n}\omega_{i}\Delta x_{i}$.
+
+  Пусть $\epsilon > 0$ задано. Выберем $\delta>0: \ \forall P: \ \lambda(P) < \delta$ и
+  $\sum_{i=1}^{n}\omega_{i}\Delta x_{i} < \frac{\epsilon}{L}$.
+
+  Имеем, что $|\rho| \leqslant L\sum_{i=1}^{n}\omega_{i}\Delta x_{i} < L\frac{\epsilon}{L} =
+    \epsilon \implies \underset{\lambda(P)\rightarrow0}{\lim}\rho = 0$.
+
+  Тогда $\int_{a}^{b}f(x)g(x)dx = \underset{\lambda(P)\rightarrow0}{\lim}\sum_{i=1}^{n}
+    \int_{x_{i-1}}^{x_{i}}f(x_{i-1})g(x)dx$. $\underset{\lambda(P)\rightarrow0}{\lim}\sigma$
+  существует, так как $\int_{a}^{b}f(x)g(x)dx = const$ и $\underset{\lambda(P)\rightarrow0}{\lim}
+    \rho = 0$.
+
+  Рассмотрим функцию $G(x) = \int_{a}^{x}g(x)dx$:
+  \begin{enumerate}
+    \item $G(x)$ - непрерывна на $[a;b] \ (x\in[a;b]) \implies G(x)$ принимает на $[a;b]
+            \ max \ min$ значение (по теореме Вейерштрасса о максимальном значении), $m = \underset
+            {x\in[a;b]}{\min}G(x), \ M = \underset{x\in[a;b]}{\max} G(x)$.
+    \item $\int_{x_{i-1}}^{x_{i}}g(x)dx = \int_{a}^{x_{i}}g(x)dx - \int_{a}^{x_{i-1}}g(x)dx =
+            G(x_{i}) - G(x_{i-1})$.
+
+          $\sigma = \sum_{i=1}^{n}f(x_{i-1})\int_{x_{i-1}}^{x_{i}}g(x)dx = \sum_{i=1}^{n}f(x_{i-1})
+            (G(x_{i}) - G(x_{i-1})) = f(x_{0}) G(x_{1}) - f(x_{0})G(x_{0}) +
+            f(x_{1}) G(x_{2}) - f(x_{1}) G(x_{1}) + \ldots + f(x_{n-2})G(x_{n-1}) -
+            f(x_{n-2}) G(x_{n-2}) + f(x_{n-1})G(x_{n}) - f(x_{n-1})G(x_{n-1}) =
+            \sum_{i=1}^{n-1} G(x_{i})(f(x_{i-1}) - f(x_{i})) + f(x_{n-1})G(x_{n})$.
+
+          Тогда $\sigma \geqslant m (\sum_{i=1}^{n-1}(f(x_{i-1}) - f(x_{2})) + f(x_{n-1})) =
+            m(f(x_{0}) - f(x_{1}) + f(x_{1}) - f(x_{2}) + f(x_{2}) - \ldots - f(x_{n-1}) + f(x_{n-1}))
+            = mf(a)$. Аналогично, $\sigma \leqslant Mf(a)$.
+          \begin{equation*}
+            mf(a) \leqslant \sigma \leqslant Mf(a)
+          \end{equation*}
+          Пусть $f(a) \ne 0 \implies (f(a) > 0) \ m \leqslant \frac{\sigma}{f(a)} \leqslant M \implies$
+          \begin{equation*}
+            m \leqslant \frac{1}{f(a)}\int_{a}^{b}f(x)g(x)dx \leqslant M
+          \end{equation*}
+          $\implies \exists \xi \in [a;b]: \ m \leqslant G(\xi) \leqslant M$ и $G(\xi) = \frac{1}{f(a)}
+            \int_{a}^{\xi}f(x)g(x)dx$.
+
+          $\int_{a}^{b}f(x)g(x)dx = f(a)G(\xi) = f(a)\int_{a}^{\xi}g(x)dx$.
+  \end{enumerate}
+\end{proof}
+
+\begin{proof}
+  (теоремы)
+
+  Пусть $f$ - неубывающая. Рассмотрим функцию $h(x) = f(b) - f(x), \ h(x) \geqslant 0 \
+    \forall x \in [a;b] \ \forall x_{1},x_{2} \in [a;b]: \ x_{1} < x_{2} \implies
+    h(x_{1}) - h(x_{2}) = f(b) - f(x) - f(b) + f(x_{2}) = f(x_{2}) - f(x_{1}) \geqslant 0
+    \implies h(x_{1}) \geqslant h(x_{2}) \implies h(x)$ - невозрастающая.
+
+  По лемме, $\int_{a}^{b}h(x)g(x)dx = h(a)\int_{a}^{\xi}g(x)dx$.
+
+  С другой стороны, $\int_{a}^{b}h(x)g(x)dx = \int_{a}^{b}(f(b) - f(x))g(x)dx =
+    f(b)\int_{a}^{b}g(x)dx - \int_{a}^{b}f(x)g(x)dx$.
+
+  Имеем, что $f(b)\int_{a}^{\xi}g(x)dx - f(a)\int_{a}^{\xi}g(x)dx = f(b)\int_{a}^{b}
+    g(x)dx - \int_{a}^{b}f(x)g(x)dx$.
+
+  $\int_{a}^{b}f(x)g(x)dx = f(b)(\int_{a}^{\xi}g(x)dx + \int_{\xi}^{b}g(x)dx) -
+    f(b)\int_{a}^{\xi}g(x)dx + f(a)\int_{a}^{\xi}g(x)dx = f(a)\int_{a}^{\xi} +
+    f(b)\int_{\xi}^{b}g(x)dx$.
+
+  Для случая, когда $f$ - невозрастающая, доказываем аналогично.
+\end{proof}
+
+\section{Формула Ньютона-Лейбница}
+
+\begin{theorem}
+  Пусть $f$ - непрерывна на $[a;b]$ и $F(x)$ - её первообразная.
+
+  Тогда $\int_{a}^{b}f(x)dx = F(b) - F(a) = F(x)|_{a}^{b}$
+\end{theorem}
+
+\begin{proof}
+  Пусть $F(x)$ - первообразная функции $f(x)$ на $[a;b]$:
+  \begin{equation*}
+    F(x) = \int_{a}^{x}f(t)dt + C.
+  \end{equation*}
+  Отсюда, $F(b) = \int_{a}^{b}f(t)dt + C; \ F(a) = \int_{a}^{a}f(t)dt;$
+
+  $F(b) - F(a) = \int_{a}^{b}f(t)dt + C - C = \int_{a}^{b}f(t)dt + C (?)$
+\end{proof}
+
+\begin{theorem}
+  Пусть $F(x)$ - непрерывна на $[a;b]$, дифференцируема на $[a;b]$
+  за исключением не более чем конечного числа точек. Причем всюду, где
+  она дифференцируема: $F'(x) = f(x)$. И, наконец, $f(x)\in R[a;b]$.
+
+  Тогда:
+  \begin{equation*}
+    \int_{a}^{b}f(x)dx = F(b) - F(a) = F(x)|_{a}^{b}
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Возьмем произвольное разбиение $P$ отрезка $[a;b]$ так, что оно содержит
+  все точки недиференцируемости функции $F(x): \ a=x_{0} < x_{1} < \ldots
+    <x_{n-1} < x_{n} = b, \implies F(b) - F(a) = \sum_{i=1}^{n}(F(x_{i}) - F(x_{i-1}))$.
+
+  Пусть $\Delta_{i} = [x_{i-1};x_{i}]$. Фукнция $F(x)$ дифференцируема на
+  $(x_{i-1};x_{i})$, непрерывна на $[x_{i-1};x_{i}] \ \forall i = \overline{1,n}$.
+
+  По теореме Лагранжа, $\exists \xi_{i} \in (x_{i-1};x_{i}): \ F(x_{i}) - F(x_{i-1})=
+    F'(\xi_{i})(x_{i} - x_{i-1}) = f(\xi_{i})\Delta x_{i}$.
+
+  Тогда:
+  \begin{equation*}
+    F(b) - F(a) = \sum_{i=1}^{n}f(\xi_{i})\Delta x_{i}.
+  \end{equation*}
+
+  Устремим $\lambda (P) \rightarrow 0$:
+  \begin{equation*}
+    F(b) - F(a) = \underset{\lambda(P)\rightarrow0}{\lim}\sum_{i=1}^{n}f(\xi_{i})\Delta x_{i},
+  \end{equation*}
+
+  так как $\exists \lim, \ f\in R[a;b]$, то $F(b) - F(a) = \int_{a}^{b}f(x)dx$.
+\end{proof}
+
+\begin{effect}
+  Если функция $F(x)$ удовлетворяет условиям теоремы 2.5.2, то $\forall x \in [a;b]:$
+  \begin{equation*}
+    F(x) = F(a) + \int_{a}^{x}F'(t)dt.
+  \end{equation*}
+\end{effect}
+
+\section{Интегрирование по частям в определенном интеграле и формула Тейлора}
+
+\begin{theorem}[формула интегрирования по частям]
+  Если фукнции $u(x)$ и $v(x)$ непрерывно дифференцируемы на отрезке $[a;b]$, то
+  справедливо равенство:
+  \begin{equation*}
+    \int_{a}^{b}udv = uv|_{a}^{b} - \int_{a}^{b}vdu.
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Рассмотрим $uv|_{a}^{b} = \int_{a}^{b}d(uv) = \int_{a}^{b}(vdu + udv) = \int_{a}^{b}vdu +
+    \int_{a}^{b}udv \implies \int_{a}^{b}udv = uv|_{a}^{b} - \int_{a}^{b}vdu$.
+\end{proof}
+
+\begin{theorem}[формула Тейлора с остаточным членом в интегральной форме]
+  Пусть функция $f(t)$ имеет на отрезке $[a;x]$ непрерывные производные до
+  $n$-го порядка включительно. Тогда справедлива формула Тейлора:
+  \begin{equation*}
+    f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^{2} + \ldots +
+    \frac{f^{(n-1)}(a)}{(n-1)!}(x-a)^{n-1} + r_{n}(a;x),
+  \end{equation*}
+  где $r_{n}(a;x) = \frac{1}{(n-1)!}\int_{a}^{x}f^{(n)}(t)(x-a)^{n-1}dt$.
+\end{theorem}
+
+\begin{proof}
+  Пусть $f(t)$ имеет на $[a;x]$ непрерывные производные до $n$-го порядка включительно.
+  По формуле Ньютона-Лейбница:
+  $f(x) - f(a) = \int_{a}^{x}f'(t)dt = \int_{a}^{x}f'(t)dt = -\int_{a}^{x}f'(t)(x-t)'dt=$\\
+  \begin{equation*}
+    = \left|
+    \begin{array}{c}
+      u = f'(t) \implies u' = f'(t) \implies du = f''(t)dt \\
+      (x-t)'dt = dv \implies d(x-t) = dv \implies v=x-t
+    \end{array}
+    \right| =
+  \end{equation*}
+  $= -f'(t)(x-t)|_{a}^{x} + \int_{a}^{x}f''(t)(x-t)dt = f'(a)(x-a) +
+    \frac{1}{2}\int_{a}^{x}-f''(t)((x-t)^{2})_{t}'dt = f'(a)(x-a) - \frac{1}{2}
+    (f''(t)(x-t)^{2}|_{a}^{x} - \int_{a}^{x}f'''(t)(x-t)^{2}dt) = f'(a)(x-a) +
+    \frac{1}{2} f''(a)(x-a)^{2} - \frac{1}{6}\int_{a}^{x}f'''(t)((x-t)^{3})'dt =
+    \ldots = f'(a)(x-a) + \frac{1}{2}f''(a)(x-a)^{2} + \frac{1}{6}f'''(a)(x-a)^{3}
+    + \ldots + \frac{1}{6 * \ldots * (n-1)}f^{(n-1)}(a)(x-a)^{n-1} + \frac{1}{(n-1)!}
+    \int_{a}^{x}f^{(n)}(t)(x-t)^{n-1}dt$.
+\end{proof}
+
+\section{Замена переменной в определенном интеграле}
+
+\begin{theorem}
+  Пусть $\phi : [\alpha;\beta] \rightarrow [a;b]$ - непрерывно дифференцируемое
+  отображение отрезка $[\alpha;\beta]$ в отрезок $[a;b]$, причем $\phi(\alpha)
+    = a, \ \phi(\beta) = b$. Тогда для любой функции $f(x)$, непрерывной на $[a;b]$,
+  функция $f(\phi(t))\phi'(t)$ - непрерывна на $[\alpha;\beta]$ и справедливо
+  равенство:
+  \begin{equation*}
+    \int_{a}^{b}f(x)dx = \int_{\alpha}^{\beta}f(\phi(t))\phi'(t)dt.
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Пусть $F(x)$ - первообразная $f(x)$ на $[a;b]$.
+
+  Тогда $F(\phi(t))$ - первообразная для $f(\phi(t)\phi'(t)) \ (F_{t}'(\phi(t))
+    = F_{\phi}'\phi_{t}') \implies F(\phi(t))$ - непрерывна на $[\alpha;\beta]$.
+
+  По формуле Ньютона-Лейбница, $F(b) - F(a) = \int_{a}^{b}f(x)dx$ и $\int_{\alpha}
+    ^{\beta}f(\phi(t))\phi'(t)dt = F(\phi(\beta)) - F(\phi(\alpha))$.
+
+  По условию, $\phi(\beta) = b, \ \phi(\alpha) = a \implies \int_{a}^{b}f(x)dx =
+    \int_{\alpha}^{\beta}f(\phi(t))\phi'(t)dt$.
+\end{proof}
+
+\begin{theorem}[замена переменной для интегрируемых функций]
+  Пусть $f:[a;b]\rightarrow\mathbb{R}, \ f\in R[a;b]$, функция $x = \phi(t):$
+  \begin{enumerate}
+    \item $\phi:[\alpha;\beta]\rightarrow[a;b]$
+    \item $\phi(\alpha)=a, \ \phi(\beta)=b$
+    \item $\phi'(t)$ непрерывна на $[\alpha;\beta]$
+    \item $\phi$ - строго монотонна
+  \end{enumerate}
+  Тогда:
+  \begin{equation*}
+    \int_{a}^{b}f(x)dx = \int_{\alpha}^{\beta}f(\phi(t))\phi'(t)dt
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Пусть $(P_t,\tau)$ - произвольное разбиение с отмеченными точками отрезка $[\alpha;\beta]:$
+  \begin{equation*}
+    \alpha = t_0 < t_1 < \ldots < t_{n-1} < t_n = \beta;
+  \end{equation*}
+  \begin{equation*}
+    \tau_i \in [t_{i-1};t_i], \ i = \overline{1,n},
+  \end{equation*}
+  Для определенности будем считать, что $\phi$ - возрастающая, то есть $\alpha < \beta, \ a < b$.
+
+  \clearpage
+
+  Тогда можно построить разбиение $(P_x,\xi)$ с отмеченными точками отрезка $[a;b]:$
+  \begin{figure}[h]
+    \begin{minipage}[h]{0.49\linewidth}
+      \center{\includegraphics[scale=0.1]{graph5.png}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[h]{0.49\linewidth}
+      $a = x_0 < x_1 < \ldots < x_{n-1} < x_n = b;$
+
+      $\xi_i \in [x_{i-1};x_i], \ i = \overline{1,n},$
+
+      Здесь $x_i = \phi(t_i), \ \xi_i = \phi(\tau_i)$.
+    \end{minipage}
+  \end{figure}
+
+  Если $\lambda(P_t)\rightarrow0 \implies \lambda(P_x)\rightarrow0$. Составим интегральные суммы:
+  \begin{equation*}
+    \sigma = \sum_{i=1}^{n}f(\phi(\tau_i))\phi'(\tau_i)\Delta t_i;
+  \end{equation*}
+  \begin{equation*}
+    \overline{\sigma} = \sum_{i=1}^{n}f(\xi_i)\Delta x_i,
+  \end{equation*}
+  Если $\lambda(P_t)\rightarrow0 \implies \lambda(P_x) \rightarrow 0 \implies \overline{\sigma}
+    \rightarrow \int_{a}^{b}f(x)dx$ (так как $f\in R[a;b]$).
+
+  Покажем, что $\sigma \rightarrow \int_{a}^{b}f(x)dx: \ \Delta x_i = x_i - x_{i-1} = \phi(t_i)
+    - \phi (t_{i-1}) = \phi'(\overline{\tau_i})\Delta t_i, \ \overline{\tau_i} \in [t_{i-1};t_i]$
+  (случайная точка из отрезка).
+
+  Тогда:
+  \begin{equation*}
+    \overline{\sigma} = \sum_{i=1}^{n}f(\xi_i)\Delta x_i = \sum_{i=1}^{n}f(\phi(\tau_i))
+    \phi'(\overline{\tau_i})\Delta t_i;
+  \end{equation*}
+  Покажем, что $\underset{\lambda(P_i)\rightarrow0}{\lim}(\sigma - \overline{\sigma}) = 0:$
+
+  В самом деле, $| \sigma - \overline{\sigma} | = | \sum_{i=1}^{n} f(\phi(\tau_i))\phi'(\tau_i)
+    \Delta t_i - \sum_{i=1}^{n}f(\phi(\tau_i)\phi'(\overline{\tau_i}))\Delta t_i | =
+    | \sum_{i=1}^{n}f(\phi(\tau_i))(\phi'(\tau_i) - \phi'(\overline{\tau_i}))\Delta t_i | \leqslant
+    \sum_{i=1}^{n}| f(\phi(\tau_i)) | | \phi'(\tau_i) - \phi'(\overline{\tau_i}) |\Delta t_i \leqslant
+    \\ L\sum_{i=1}^{n}| \phi'(\tau_i) - \phi'(\overline{\tau_i}) | \Delta t_i$, где $L>0: \ \forall x
+    \in [a;b] \quad |f(x)| \leqslant L$ (так как $f$ - интегрируема $\implies$ ограничена).
+
+  Так как $\phi'(t)$ непрерывна на $[\alpha;\beta] \implies \forall i = \overline{1,n} \
+    \phi'(t)$ непрерывна на $[t_{i-1}; t_i] \implies \phi'(t)$ равномерно непрерывна на $[t_{i-1}; t_i]$.
+  Возьмем $\delta > 0 : \ \forall t_1, t_2 \in [t_{i-1}; t_i] \ | [t_1 - t_2] | < \delta \implies
+    | \phi'(t_1) - \phi'(t_2) | < \frac{\epsilon}{L(\beta - \alpha)} \ (\forall \epsilon > 0)$.
+
+  Тогда $| \sigma - \overline{\sigma} | \leqslant L\sum_{i=1}^{n} | \phi'(\tau_i) - \phi'(\overline{
+      \tau_i}) | \Delta t_i < L\frac{\epsilon}{L(\beta - \alpha)}\sum_{i=1}^{n}\Delta t_i = L
+    \frac{\epsilon}{L(\beta - \alpha)}(\beta - \alpha) = \epsilon \implies \sigma \rightarrow
+    \int_{a}^{b}f(x)dx$ при $\lambda(P_t) \rightarrow 0$.
+
+  С другой стороны, по определению определенного интеграла:
+  \begin{equation*}
+    \underset{\lambda(P_t)\rightarrow0}{\lim}
+    \sigma = \int_{\alpha}^{\beta}f(\phi(t))\phi'(t)dt \implies \int_{a}^{b}f(x)dx = \int_{\alpha}^{\beta}
+    f(\phi(t))\phi'(t)dt.
+  \end{equation*}
+\end{proof}
+
+\chapter{Геометрические приложения интеграла Римана}
+
+\section{Длина кривой}
+
+\begin{definition}
+  Пусть $(X,\rho)$ - метрическое пространство, $[a;b] \subset \mathbb{R}$. Будем называть \textbf{путем}
+  произвольное непрерывное отображение:
+  \begin{equation*}
+    \gamma:[a;b]\rightarrow X
+  \end{equation*}
+\end{definition}
+
+\begin{definition}
+  Пусть $\gamma:[a;b]\rightarrow X$ называется \textbf{простым}, если:
+  \begin{equation*}
+    \forall t_1,t_2 \in[a;b]: \quad \gamma(t_1) = \gamma(t_2) \implies t_1 = t_2
+  \end{equation*}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[scale=0.2]{graph6.png}\label{figure6}
+
+      а). простой путь $\quad$ б). непростой путь
+    \end{center}
+  \end{figure}
+\end{definition}
+
+\begin{definition}
+  Пусть $\gamma:[a;b]\rightarrow X$ называется \textbf{замкнутым}, если:
+  \begin{equation*}
+    \gamma(a) = \gamma(b),
+  \end{equation*}
+  тогда:
+  \begin{itemize}
+    \item $\gamma(a)$ - начало пути,
+    \item $\gamma(b)$ - конец пути
+  \end{itemize}
+\end{definition}
+
+\begin{definition}
+  Пусть $\gamma:[a;b]\rightarrow X$ называется \textbf{простым замкнутым}, если:
+  \begin{equation*}
+    \forall t_1,t_2\in(a;b): \ \gamma(t_1)=\gamma(t_2)\implies t_1=t_2; \ \gamma(a) = \gamma(b)
+  \end{equation*}
+\end{definition}
+
+\clearpage
+
+На множестве путей введем отношение.
+
+Пусть $\gamma_1:[a;b]\rightarrow X, \ \gamma_2:[\alpha;\beta] \rightarrow X$.
+
+Будем говорить, что $\gamma_1$ и $\gamma_2$ находятся в отношении $"\sim"$, то есть $\gamma_1 \sim \gamma_2$,
+если существует строго возрастающее отображение $\phi:[\alpha;\beta]\rightarrow[a;b]:$
+\begin{equation*}
+  \phi(\alpha) = a, \ \phi(\beta) = b,
+\end{equation*}
+а так же:
+\begin{equation*}
+  \gamma_2(\tau) = \gamma_1(\phi(\tau))
+\end{equation*}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.2]{graph7.png}\label{figure7}
+  \end{center}
+\end{figure}
+
+Упражнение 1: Доказать, что введенное отношение есть отношение эквивалентности.
+
+\begin{definition}
+  Отображение $\phi$ называется \textbf{гомеоморфизмом}, если:
+  \begin{center}
+    $\phi$ и $\phi^{-1}$ - непрерывны
+  \end{center}
+\end{definition}
+
+Упражнение 2: Доказать, что $\phi$ в определении отношения между $\gamma_1$ и $\gamma_2$ есть
+гомеоморфизм.
+
+\begin{definition}
+  \textbf{Кривой} в $X$ будем называть класс эквивалентных путей.
+\end{definition}
+
+\begin{definition}
+  Образ пути $\gamma$ называется \textbf{носителем} этого пути.
+\end{definition}
+
+\begin{example}
+  Рассмотрим:
+
+  $\gamma_1: [0;1] \rightarrow \mathbb{R}: \quad \gamma_1(t) = t$;
+
+  $\gamma_2: [0;1] \rightarrow \mathbb{R}: \quad \gamma_2(\tau) = \tau^3$,
+
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[scale=0.2]{graph8.png}\label{figure8}
+    \end{center}
+  \end{figure}
+
+  Что бы доказать, что $\gamma_1 \sim \gamma_2$, нужно найти строго возрастающее отображение
+  $\phi:[0;1]\rightarrow[0;1]$:
+
+  $t = \phi(\tau) = \tau^3, \ \phi(\tau)$ - строго возрастающее, $\phi(0) = 0, \ \phi(1) = 1$;
+
+  $\gamma_2(\tau) = \tau^3 = \phi(\tau) = t = \gamma_1(t) = \gamma_1(\phi(\tau)) \implies
+    \gamma_2(\tau) = \gamma_1(\phi(\tau))$.
+\end{example}
+
+\begin{definition}
+  Кривая называется \textbf{простой}, если она представляется простым путем (это значит, что в ее классе
+  есть простой путь).
+\end{definition}
+
+Упражнение 3: Доказать, что если один путь в классе эквивалентности простой, то остальные тоже простые.
+
+\begin{definition}
+  Путь, представляющий данную кривую (из класса эквивалентности путей) $l$ называется
+  \textbf{параметризацией} этой кривой.
+\end{definition}
+
+Вдальнейшем будем рассматривать метрические пространства $(X,\rho)$ как $\mathbb{R}^2, \ \mathbb{R}^3$
+с евклидовой метрикой.
+
+\begin{definition}
+  Пусть $l$ - простая кривая в $\mathbb{R}^2, \ \gamma(t) = (x(t);t(t))$ - ее параметризация.
+  Кривая $l$ называется \textbf{гладкой}, если $\forall t \ x(t),y(t)$ имеют непрерывные производные
+  на $[\alpha,\beta]$ и $\nexists t_0 \in [\alpha,\beta] \ (\gamma : [\alpha,\beta] \rightarrow
+    \mathbb{R}^2), \ x'(t_0)=0$ и $y'(t_0) = 0$.
+\end{definition}
+
+\begin{definition}
+  Пусть $l \subset \mathbb{R}^2 \ (\mathbb{R}^3)$ и $\gamma:[\alpha,\beta]\rightarrow\mathbb{R}^2 \
+    (\mathbb{R}^3)$ - параметризация кривой $l$.
+
+  Пусть $\alpha = t_0 < t_1 < \ldots < t_{n-1} < t_n = \beta$ - разбиение отрезка $[\alpha,\beta]$
+  и $M_i = \gamma(t_i), \ i=\overline{0,n}$ - точка пути $\gamma$ (кривая $l$):
+  \begin{equation*}
+    M_i = \gamma (t_i) = (x(t_i);y(t_i))
+  \end{equation*}
+  Тогда отрезок $M_{i-1}M_i \ (i = \overline{1,n})$ называется \textbf{звеном} кривой $l$.
+  Объединение $\underset{i}{\cap}M_{i-1}M_i$ - ломаная, вписанная в $l$.
+
+  \textbf{Периметром} ломаной называется сумма длин ее звеньев:
+  \begin{equation*}
+    p(M_0,M_1,\ldots,M_n) = \sum_{i=1}^{n}| M_{i-1}M_i |
+  \end{equation*}
+  \begin{figure}[h]
+    \begin{minipage}[h]{0.49\linewidth}
+      \center{\includegraphics[scale=0.2]{graph9.png}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[h]{0.49\linewidth}
+      \center{\includegraphics[scale=0.2]{graph10.png}}
+    \end{minipage}
+  \end{figure}
+\end{definition}
+
+\begin{definition}
+  Если множество периметров ломаных, вписанных в данную кривую $l$ - ограничено, то кривую $l$
+  будем называть \textbf{спрямляемой}.
+\end{definition}
+
+\begin{definition}
+  Если $p(M_0,M_1,\ldots,M_n)$ - периметр ломаной, вписанной в кривую $l, \ S(l)$ - длина кривой, то
+  по определению:
+  \begin{equation*}
+    S(l) = \sup p(M_0,\ldots,M_n),
+  \end{equation*}
+  где $\sup$ берется по всем ломаным $\underset{i}{\cup} M_{i-1}M_i$, вписанным в $l$.
+\end{definition}
+
+\begin{example}
+  (неспрямляемой кривой)
+
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[scale=0.2]{graph11.png}\label{figure11}
+    \end{center}
+  \end{figure}
+\end{example}
+
+Рассмотрим $L$ - множество всех спрямляемых кривых на плоскости $(\mathbb{R}^2)$.
+Введем $S:L\rightarrow\mathbb{R}$, то есть отображение $S$ сопоставляет спрямляемую кривую $l$
+ее длину.
+\begin{center}
+  $S(l)$ - длина кривой $l$
+\end{center}
+
+\begin{theorem}[аддитивность длины кривой]
+  Функция $S(l)$ является аддитивной, то есть если $l = l_1 \cup l_2$, то $S(l) = S(l_1) + S(l_2)$.
+
+  \textbf{Более тонко:} Пусть $\gamma:[a;b]\rightarrow\mathbb{R}^2$ - параметризация спрямляемой кривой
+  $l$, точка $c \in [a;b]$:
+
+  $\gamma_1:[a;c] \rightarrow \mathbb{R}^2$ - параметризация кривой $l_1$,
+
+  $\gamma_2:[c;b] \rightarrow \mathbb{R}^2$ - параметризация кривой $l_2$,
+
+  при этом $C = \gamma(c) = \gamma_1(c) = \gamma_2(c)$.
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[scale=0.2]{graph12.png}\label{figure12}
+    \end{center}
+  \end{figure}
+
+  Тогда $S(l) = S(l_1) + S(l_2)$.
+\end{theorem}
+
+\begin{proof}
+  Пусть $l$ - спрямляемая кривая. Покажем, что $l_1$ и $l_2$ - спрямляемые.
+
+  Обозначим за $m_1$ и $m_2$ - ломаные, вписанные в $l_1$ и $l_2$ соответственно. Тогда можно ввести
+  $m$ как $m = m_1 \cup m_2$ - ломаная, вписанная в $l$.
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[scale=0.2]{graph13.png}\label{figure13}
+    \end{center}
+  \end{figure}
+
+  $p(m)$ - периметр ломаной, вписанной в $l$, $p(m) = p(m_1) + p(m_2) \leqslant S(l) \implies
+    p(m_1)\leqslant S(l)$ и $p(m_2) \leqslant S(l) \implies l_1$ и $l_2$ - спрямляемые.
+
+  Пусть $S(l_1) = \underset{m_1}{\sup} p(m_1)$ и $S(l_2) = \underset{m_2}{\sup} p(m_2) \implies
+    S(l_1) + S(l_2) \leqslant S(l)$
+
+  Обратно, пусть $l_2$ и $l_2$ - спрямляемые кривые. Покажем, что $l$ - спрямляемая. Пусть $m$
+  - некоторая ломаная, вписанная в $l$.
+
+  Возьмем $C \in l$. Пусть $m'$ - ломаная, получаемая из ломаной $m$ добавлением звеньев,
+  проходящих через $C$.
+  \begin{figure}[h]
+    \begin{minipage}[h]{0.49\linewidth}
+      \center{\includegraphics[scale=0.2]{graph14.png}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[h]{0.49\linewidth}
+      Пусть $m_1$ - часть ломаной, вписанной в $l_1, \ m_2'$ - часть ломаной, вписанной
+      в $l_2$. Тогда $p(m) \leqslant p(m') = p(m_1') + p(m_2') \leqslant S(l_1) + S(l_2) \implies
+        S(l) = \underset{m}{p(m)} \leqslant S(l_1) + S(l_2)$.
+    \end{minipage}
+  \end{figure}
+
+
+
+  Тогда имеем, что $S(l_1) + S(l_2) \leqslant S(l) \leqslant S(l_1) + S(l_2) \implies S(l) =
+    S(l_1) + S(l_2)$.
+\end{proof}
+
+\section{Длина кривой как предел}
+
+\begin{theorem}
+  Пусть $l$ - простая спрямляемая незамкнутая кривая в $\mathbb{R}^2$ и $\gamma:[a;b]\rightarrow\mathbb{R}^2$
+  - ее параметризация. Пусть $a = t_0 < t_1 < \ldots < t_{n-1} < t_n = b$ - разбиение отрезка $[a;b]$,
+  этому разбиению соответствуют точки $M_0,M_1,\ldots,M_n$ - соответсвующая ломаная, вписанная в $l \
+    (M_i = \gamma(t_i))$, тогда:
+  \begin{equation*}
+    S(l) = \underset{\lambda\rightarrow0}{\lim}p(m),
+  \end{equation*}
+  где $\lambda = \underset{i}{\max}\Delta t_i, \ \Delta t_i = t_i - t_{i-1}$.
+\end{theorem}
+
+\begin{proof}
+  (теоремы) Пусть $l$ - простая спрямляемая незамкнутая кривая в $\mathbb{R}^2, \ P' =
+    \{a=t_0<t_1<\ldots<t_{n-1} <t_n=b\}$ - произвольное разбиение отрезка $[a;b]$.
+
+  $m(P')$ - ломаная, вписанная в $l$, соответствующая разбиениею $P$. Пусть $\gamma:[a;b]\rightarrow
+    \mathbb{R}^2$ - параметризация кривой $l, \ \gamma(t) = (x(t);y(t)), \ t\in[a;b]$.
+  \begin{lemma}
+    Если разбиение $P''$ получено из разбиения $P'$ добавлением точки на промежуток $(t_{i-1};t_i)$,
+    то периметр ломаной, соответсвующий разбиению $P'$, не больше периметра ломаной, соответсвующей
+    разбиению $P''$ и $p(m(P')) \leqslant p(m(P'')) \leqslant p(m(P')) + 2(\omega_i(x(t)) + \omega_i(y(t)))$, где
+    $\omega_i$ - колебания функции $x(t), \ y(t)$:
+    \begin{equation*}
+      \omega_i(x(t)) = \underset{t',t''\in[t_{i-1};t_i]}{\sup}(x(t') - x(t'')) =
+      \underset{t\in[t_{i-1};t_i]}{\sup}(x(t)) - \underset{t\in[t_{i-1};t_i]}{\inf}(x(t))
+    \end{equation*}
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[scale=0.2]{graph15.png}\label{figure15}
+      \end{center}
+    \end{figure}
+  \end{lemma}
+  \begin{proof}
+    (леммы) Ломаная $m(P'')$ получена из ломаной $m(P')$ путем замены звена $M_{i-1}M_i$ на два
+    звена: $M_{i-1}M'$ и $M'M_i$.
+
+    Очевидно, что $p(m(P')) \leqslant p(m(P''))$.
+    \begin{figure}[h]
+      \begin{minipage}[h]{0.49\linewidth}
+        \center{\includegraphics[scale=0.15]{graph16.png}}
+      \end{minipage}
+      \hfill
+      \begin{minipage}[h]{0.49\linewidth}
+        $M_i = \gamma (t_i) = (x(t_i);y(t_i)), \ M' = (x(t');y(t')), \ M_{i-1} =
+          (x(t_{i-1});y(t_{i-1}))$
+
+        $| M_{i-1}M' | + | M'M_i | \leqslant | x(t') - x(t_{i-1}) | + | y(t') - y(t_{i-1}) | + | x(t_i) - x(t') |
+          + | y(t_i) - y(t') | \leqslant 2\omega_i(x(t)) + 2\omega_i(y(t)), \ \sup$ берется на отрезке
+        $[t_{i-1};t_i]$.
+      \end{minipage}
+    \end{figure}
+
+    В итоге, $p(m(P'')) \leqslant p(m(P')) + 2(\omega_i(x(t)) + \omega_i(y(t)))$.
+
+    Если не понятно: $p(m(P'')) = \sum_{k=1}^{n}| M_{k-1} M_k | = \sum_{k=1}^{i-1}| M_{k-1}M_k | +
+      | M_{i-1}M' | + | M'M_i | + \sum_{k=i+1}^{n}| M_{k-1}M_k | \leqslant p(m(P')) + 2(\omega_i(x(t))
+      +\omega_i(y(t)))$.
+  \end{proof}
+
+  (повтор) Пусть $\epsilon > 0$ задано. Выберем произвольное разбиение $P'$ отрезка $[a;b]: \ p(m(P'))
+    > S(l) - \frac{\epsilon}{2}$ (по определению $\sup$ множества).
+
+  Пусть это разбиение состоит из $n$ точек. Тогда выберем $\delta > 0: \ \forall t',t'' \in [a;b]: \
+    |t'-t''| < \delta \implies | x(t') - x(t'') | < \frac{\epsilon}{8n}; \ | y(t') - y(t'') | < \frac{\epsilon}
+    {8n}$.
+
+  Пусть $P''$ - произвольное разбиение: $\lambda(P'') < \delta$. Покажем, что $p(m(P'')) \leqslant S(l)$
+  и $p(m(P'')) > S(l) - \frac{\epsilon}{2}$.
+
+  Рассмотрим $P''' = P' \cup P''$. Тогда $p(m(P''')) \geqslant p(m(P''))$. С другой стороны, $P'''$
+  получена из $P''$ добавлением не более чем $n$ точек. Тогда $p(m(P''')) \leqslant p(m(P'')) +
+    \sum_{i=1}^{n}2(\omega_i(x(t)) + \omega_i(y(t))) < S(l) + 4 \frac{\epsilon}{8n}n = S(l) +
+    \frac{\epsilon}{2}$. Получим, что:
+  \begin{equation*}
+    p(m(P''')) < S(l) + \frac{\epsilon}{2}.
+  \end{equation*}
+
+  Так как $P'''$ тоже получено из $P'$ добавлением точек, то:
+  \begin{equation*}
+    p(m(P''')) \geqslant p(m(P')) > S(l) - \frac{\epsilon}{2}.
+  \end{equation*}
+
+  Так же имеем, что $p(m(P''')) \leqslant p(m(P'')) + \frac{\epsilon}{2} \implies p(m(P'')) \geqslant
+    p(m(P''')) - \frac{\epsilon}{2} \geqslant p(m(P')) - \frac{\epsilon}{2} > S(l) - \frac{\epsilon}{2}
+    - \frac{\epsilon}{2} = S(l) - \epsilon$.
+
+  Так как $S(l) = \underset{m}{\sup} p(m(P)), \ P$ - разбиение отрезка $[a;b] \implies$
+  \begin{equation*}
+    p(m(P'')) \leqslant S(l) < S(l) + \epsilon.
+  \end{equation*}
+
+  Таким образом, если $\epsilon > 0$ задано, то возьмем произвольное разбиение $P'': \ \lambda(P'') <
+    \delta \implies S(l) - \epsilon < p(m(P'')) < S(l) + \epsilon \implies | p(m(P'')) - S(l) | < \epsilon
+    \implies$
+  \begin{equation*}
+    \underset{\lambda(P)\rightarrow0}{\lim}p(m(P'')) = S(l).
+  \end{equation*}
+\end{proof}
+
+\begin{theorem}[формула для вычисления длины кривой]
+  Пусть $l$ - гладкая кривая; $\gamma:[a;b]\rightarrow\mathbb{R}^2$ - ее параметризация (гладкая,
+  то есть $\gamma(t) = (x(t);y(t))$, где $x(t)$ и $y(t)$ имеют непрерывные произведения на $[a;b]$).
+  Тогда $l$ - спрямляема и:
+  \begin{equation*}
+    S(l) = \int_{a}^{b}\sqrt{(x'(t))^2 + (y'(t))^2}dt
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  (теоремы) Возьмем разбиение:
+  \begin{equation*}
+    P' = \{a=t_0<t_1<\ldots<t_{n-1}<t_n=b\}
+  \end{equation*}
+  Тогда:
+  \begin{equation*}
+    p(m(P')) = \sum_{i=1}^{n} \sqrt{(x(t_i)) - x(t_{i-1})^2 + (y(t_i) - y(t_{i-1}))^2}
+  \end{equation*}
+  $\forall i = \overline{1,n} \ x(t_i) - x(t_{i-1}) = x'(\tau_i)\Delta t_i, \ \tau_i\in[t_{i-1};t_i], \
+    y(t_i) - y(t_{i-1}) = y'(\overline{\tau_i})\Delta t_i, \ \overline{\tau_i}\in[t_{i-1};t_i]$.
+
+  Тогда:
+  \begin{equation*}
+    p(m(P')) = \sum_{i=1}^{n}\sqrt{(x'(\tau_i)\Delta t_i)^2 + (y'(\overline{\tau_i})\Delta t_i)^2} =
+    \sum_{i=1}^{n}\sqrt{(x'(\tau_i))^2 + (y'(\overline{\tau_i}))^2}\Delta t_i.
+  \end{equation*}
+
+  Рассмотрим функцию:
+  \begin{equation*}
+    \phi(t) = \sqrt{(x'(t))^2 + (y'(t))^2},
+  \end{equation*}
+  где $\phi(t)$ - непрерывна на $[a;b] \implies \phi(t)$ - интегрируема на $[a;b]$, то есть:
+  \begin{equation*}
+    \exists \underset{\lambda(P')\rightarrow0}{\lim}\sigma = \int_{a}^{b}\phi(t)dt,
+  \end{equation*}
+  где $\sigma = \sum_{i=1}^{n}\phi(\tau_i)\Delta t_i = \sum_{i=1}^{n}\sqrt{(x'(\tau_i))^2 +
+      (y'(\tau_i))^2}\Delta t_i$.
+
+  \begin{lemma}
+    $\forall a,b_1,b_2\in\mathbb{R}$ верно неравенство:
+    \begin{equation*}
+      \sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2} \leqslant | b_1 - b_2 |
+    \end{equation*}
+  \end{lemma}
+
+  \begin{proof}
+    (леммы)
+
+    \begin{enumerate}
+      \item Если $a=0$ - очевидно;
+      \item Если $a\ne0 \implies \frac{(\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2})
+                (\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2})}{\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2}} =
+              \frac{| b_1^2 - b_2^2 |}{\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2}} =
+              \frac{| b_1 + b_2 | | b_1 - b_2 |}{\sqrt{a^2 + b_1^2} - \sqrt{a^2 + b_2^2}} <
+              \frac{| b_1 + b_2 |}{| b_1 | + | b_2 |}| b_1 - b_2 | \leqslant | b_1 - b_2 |$, потому что
+            $\frac{| b_1 + b_2 |}{| b_1 | + | b_2 |} \leqslant 1$.
+    \end{enumerate}
+  \end{proof}
+
+  Покажем, что:
+  \begin{equation*}
+    \underset{\lambda(P')\rightarrow0}{\lim}(p(m(P')) - \sigma) = 0.
+  \end{equation*}
+
+  $| p(m(P')) - \sigma | = | \sum_{i=1}^{n}\sqrt{(x'(\tau_i))^2 + (y'(\overline{\tau_i}))^2}\Delta t_i
+    - \sum_{i=1}^{n}\sqrt{(x'(\tau_i))^2 + (y'(\tau_i))^2}\Delta t_i | = | \sum_{i=1}^{n}(
+    \sqrt{(x'(t_i))^2 + (y'(\overline{\tau_i}))^2} - \sqrt{(x'(\tau_i))^2 + (y'(\tau_i))^2})\Delta t_i |
+    \leqslant \sum_{i=1}^{n} | \sqrt{(x'(\tau_i))^2 + (y'(\overline{\tau_i}))^2} -
+    \sqrt{(x'(\tau_i))^2 + (y'(\tau_i))^2} | \Delta t_i \overset{lemma}{\leqslant} \sum_{i=1}^{n}
+    | y'(\overline{\tau_i}) - y'(\tau_i) |\Delta t_i \leqslant \sum_{i=1}^{n}\omega_i(y'(t))\Delta t_i $
+
+  Напоминание:
+  \begin{equation*}
+    \omega_i(t) = \underset{t',t''\in[t_{i-1};t_i]}{\sup}| f(t') - f(t'') |
+  \end{equation*}
+
+  Так как $y'(t)$ - непрерывная функция $\implies y'(t)$ - интегрируема на $[a;b] \implies
+    \sum_{i=1}^{n} \omega_i(y')\Delta t_i \rightarrow 0$ (по критерию интегрируемости) $\implies$
+  \begin{equation*}
+    \underset{\lambda(P')\rightarrow0}{\lim} (p(m(P')) - \sigma) = 0.
+  \end{equation*}
+
+  $\underset{\lambda(P')\rightarrow0}{\lim}(p(m(P'))) = \underset{\lambda(P')\rightarrow0}{\lim}\sigma
+    = \int_{a}^{b}\sqrt{(x'(t))^2 + (y'(t))^2}dt$.
+\end{proof}
+
+\begin{effect}
+  (теоремы)
+
+  \begin{enumerate}
+    \item Пусть $l$ - график функции $y=y(x)$.
+
+          Тогда:
+          \begin{equation*}
+            \left\{
+            \begin{array}{ll}
+              x = x \\
+              y=y(x)
+            \end{array}
+            \right. \implies S(l) = \int_{a}^{b}\sqrt{1 + (y'(x))^2}dx
+          \end{equation*}
+
+    \item Пусть $r = r(\phi)$ - уравнение кривой в полярной системе координат.
+
+          $x = r\cos\phi, \quad y = r\sin\phi, \quad \phi\in[\alpha,\beta]$.
+          Тогда:
+          \begin{equation*}
+            \left\{
+            \begin{array}{ll}
+              x(\phi) = r(\phi)\cos\phi \\
+              y(\phi) = r(\phi)\sin\phi
+            \end{array}
+            \right. \implies
+            \left\{
+            \begin{array}{ll}
+              x'(\phi) = r'(\phi)\cos\phi - r(\phi)\sin\phi \\
+              y'(\phi) = r'(\phi)\sin\phi + r(\phi)\cos\phi
+            \end{array}
+            \right.
+          \end{equation*}
+
+          $(x'(\phi))^2 + (y'(\phi))^2 = (r')^2\cos^2\phi - 2r'r\sin\phi\cos\phi + r^2\sin^2\phi + (r')^2
+            \sin^2\phi + 2r'r\sin\phi\cos\phi + r^2\cos^2\phi = (r')^2 + r^2$.
+
+          Тогда формула для вычисления длины кривой в полярной системе координат:
+          \begin{equation*}
+            S(l) = \int_{\alpha}^{\beta}\sqrt{(r'(\phi))^2 + (r(\phi))^2}d\phi
+          \end{equation*}
+  \end{enumerate}
+\end{effect}
+
+\section{Площадь плоской фигуры}
+
+\begin{definition}
+  \textbf{Многоугольник} - множество точек плоскости, границей которого является объединение конечного
+  числа непересекающихся простых ломаных, при этом это объединение само является замкнутой ломаной.
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[scale=0.3]{graph17.png}\label{figure17}
+    \end{center}
+  \end{figure}
+\end{definition}
+
+
+\begin{definition}
+  Пусть $G$ - множество на плоскости, $G\subset\mathbb{R}^2$. Будем говорить, что многоугольник $A$
+  \textbf{вписан} в $G$, если $A \subset G$ и $A$ \textbf{описан около} $G$, если $G \subset A$.
+\end{definition}
+
+\begin{definition}
+  Множество $G\subset\mathbb{R}^2$ называется \textbf{измеримым по Жардану} (или \textbf{квадрируемым}),
+  если:
+  \begin{equation*}
+    S_* = \underset{A\subset G}{\sup} S(A) = S^* = \underset{B\supset G}{\inf}S(B),
+  \end{equation*}
+  где $\sup$ берется по всем многоугольникам, вписанным в $G$, а $\inf$ - по всем многоугольникам,
+  описанным около $G$. При этом их общее значение $S = S_* = S^*$ называется \textbf{площадью} $G$,
+  или \textbf{мерой Жардана}.
+  \begin{center}
+    $S_*$ - \textbf{внутренняя} мера, $S^*$ - \textbf{внешняя} мера.
+  \end{center}
+
+  Другими словами, множество $G\subset\mathbb{R}^2$ квадрируемо, если внутреняя и внешняя меры совпадают.
+
+  Здесь $S(A),\ S(B)$ - площади многоугольников $A$ и $B$. Многоугольник $A$ можно разбить на конечное число
+  прямоугольников и прямоугольных треугольников:
+  \begin{figure}[h]
+    \begin{minipage}[h]{0.49\linewidth}
+      \center{\includegraphics[scale=0.2]{graph18.png}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[h]{0.49\linewidth}
+      $S_\square = ab; \quad S_\triangle = \frac{1}{2}ab$
+    \end{minipage}
+  \end{figure}
+\end{definition}
+
+\begin{example}
+  (из определения)
+
+  \begin{enumerate}
+    \item Квадрируемые множетсва на плоскости.
+
+          Круг с границей:
+          \begin{equation*}
+            x^2 + y^2 = 1
+          \end{equation*}
+          Упражнение: доказать, что круг - квадрируемое множество.
+    \item Неквадрируемые множества на плоскости.
+
+          Множество точек одинарного квадрата с рациональными координатами:
+          \begin{equation*}
+            G = (\mathbb{Q} \times \mathbb{Q})\cap([0;1] \times [0;1])
+          \end{equation*}
+          Вписанный многоугольник $A = \emptyset, \ S(A) = 0$. Многоугольник $B = [0;1] \times [0;1]$
+          имеет площадь равную  $1$ ($S(B) = 1$).
+          \begin{equation*}
+            S_* = 0, \quad S^* = \underset{B'\supset G}{\inf}S(B') = S(B) = 1 \ (S_* \ne S^*)
+          \end{equation*}
+  \end{enumerate}
+\end{example}
+
+\begin{theorem}[критерий квадрируемости]
+  Множество $G\subset\mathbb{R}^2$ квадрируемо $\iff \forall \epsilon > 0 \ \exists$ многоугольники $A$ и $B$:
+  \begin{enumerate}
+    \item $A\subset G, \ B \supset G$,
+    \item $S(B) - S(A) < \epsilon$.
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  (теоремы)
+
+  $" \rightarrow "$ Пусть $G \subset \mathbb{R}^2$ квадрируемо $\implies S_* = S^* = S'$.
+
+  Выберем $A\subset G: \ S(A) > S - \frac{\epsilon}{2}$ ($\epsilon>0$ - задано) - по определению $\sup$.
+
+  Выберем $B\supset G: \ S(B) < S + \frac{\epsilon}{2}$.
+  \begin{equation*}
+    S(B) - S(A) < (S + \frac{\epsilon}{2}) - (S - \frac{\epsilon}{2}) = \epsilon
+  \end{equation*}
+
+  $" \leftarrow "$ Пусть $\forall \epsilon > 0 \ \exists$ многоугольники $A$ и $B$, $A \subset G$,
+  $B \supset G$ и $S(B) - S(A) < \epsilon$. Докажем, что $G$ - квадрируемо.
+
+  \begin{equation*}
+    S(B) - S(A) < \epsilon \implies S(B) - \epsilon < S(A) \leqslant S_* \leqslant S^* \leqslant S(B)
+  \end{equation*}
+
+  Так как $S(B) - S(A) < \epsilon \implies S^* - S_* < \epsilon$. Так как $\epsilon > 0$ - произвольное число
+  $\implies S^* = S_*$, то есть $G$ - квадрируемо.
+\end{proof}
+
+\section{Классы квадрируемых областей}
+
+\begin{definition}
+  \textbf{Криволинейная трапеция} - часть плоскости, ограниченная прямыми $x=a, \ x=b$, графиком функции
+  $y = f(x)$ и осью $Ox$. {\Large РИСУНОК}
+\end{definition}
+
+\begin{theorem}
+  Криволинейная трапеция квадрируема и ее площадь равна:
+  \begin{equation*}
+    S = \int_{a}^{b}f(x)dx,
+  \end{equation*}
+  где $f(x)$ - непрерывна на $[a;b], \ f(x) \geqslant 0$.
+\end{theorem}
+
+\begin{proof}
+  $ABCD$ - криволинейная трапеция, ограничена $x=a, \ x=b, \ y=0$, а так же графиком функции $y = f(x)$.
+  Пусть $\epsilon > 0$ задано. Выберем $\delta>0: \ \forall x',x'':  \ | x' - x'' | < \delta \implies
+    | f(x') - f(x'') | < \frac{\epsilon}{b - a}$ (так как $f(x)$ - непрерывна на $[a;b] \implies f(x)$
+  равномерно непрерывна на $[a;b]$). {\Large РИСУНОК}
+
+  Разобьем отрезок $[a;b]$ точками $a=x_0 < x_1 <\ldots < x_{n-1} < x_n = b$, таким образом, что бы
+  $\underset{i}{\max}| x_i - x_{i-1} | < \delta$. Пусть:
+  \begin{equation*}
+    m_i = \underset{x\in[x_{i-1};x_i]}{\min}f(x), \ M_i = \underset{x\in[x_{i-1};x_i]}{\max}f(x).
+  \end{equation*}
+
+  Построим многоугольник $A$, вписанный в $ABCD$ и многоугольник $B$, описанный около $ABCD$. Многоугольник
+  $A$ состоит из прямоугольников со сторонами $\Delta x_i$ и $m_i$, многоугольник $B$ состоит из прямоугольников
+  со сторонами $\Delta x_i$ и $M_i$.
+  \begin{equation*}
+    S(A) = \sum_{i=1}^{n}m_i\Delta x_i, \quad S(B) = \sum_{i=1}^{n}M_i\Delta x_i,
+  \end{equation*}
+  \begin{equation*}
+    S(B) - S(A) = \sum_{i=1}^{n}(M_i - m_i)\Delta x_i < \sum_{i=1}^{n}\frac{\epsilon}{b-a}\Delta x_i =
+  \end{equation*}
+  \begin{equation*}
+    = \frac{\epsilon}{b-a}\sum_{i=1}^{n}\Delta x_i = \frac{\epsilon}{b-a}(b-a) = \epsilon \implies
+  \end{equation*}
+  по критерию квадрируемости, криволинейная трапеция $ABCD$ - квадрируема $\implies S_* = S^* = S_{ABCD}$.
+  С другой стороны, $S(B) - S(A) = \sum_{i=1}^{n}(M_i - m_i)\Delta x_i \leqslant \sum_{i=1}^{n}\omega_i
+    (f(x))\Delta x_i$.
+
+  Так как $f$ - непрерывна на $[a;b] \implies f\in R[a;b] \implies \sum_{i=1}^{n}\omega_i\Delta x_i
+    \rightarrow 0 \implies S_{ABCD} = \int_{a}^{b} = \int_{a}^{b}f(x)dx = S^* = S_*$.
+\end{proof}
+
+\begin{definition}
+  Фигура на плоскости, ограниченная лучами $\phi = \alpha$ и $\phi = \beta$ и кривой $\rho = \rho(\phi)$
+  называется \textbf{криволинейным сектором}.
+\end{definition}
+
+\begin{theorem}
+  Пусть криволинейный сектор $\Omega$ ограничен лучами $\phi = \alpha, \ \phi = \beta$ и кривой $\rho
+    = \rho(\phi)$. Тогда:
+  \begin{equation*}
+    S(\Omega) = \frac{1}{2}\int_{\alpha}^{\beta}\rho^2(\phi)d\phi,
+  \end{equation*}
+  где $\rho(\phi)$ - непрерывна на $[\alpha;\beta]$. {\Large РИСУНОК}
+\end{theorem}
+\begin{proof}
+  Разобьем сектор $\Omega$ лучами $\alpha = \phi_0<\phi_1<\ldots<\phi_{n-1}<\phi_n=b$. Пусть:
+  \begin{equation*}
+    m_i = \underset{\phi\in[\phi_{i-1};\phi_i]}{\min}\rho(\phi), \quad M_i = \underset
+    {\phi\in[\phi_{i-1};\phi_i]}{\max}\rho(\phi).
+  \end{equation*}
+  Построим криволинейные сектора с радиусами $m_i$ и $M_i$. Пусть $\underline{\Omega}$ - объединение
+  секторов в радиусом $m_i$, а $\overline{\Omega}$ - объединение секторов с радиусом $M_i$.
+  \begin{equation*}
+    S(\underline{\Omega}) = \sum_{i=1}^{n}\pi m_i^2\frac{\Delta\phi_i}{2\pi}=\frac{1}{2}\sum_{i=1}^{n}
+    m_i^2\Delta \phi_i,
+  \end{equation*}
+  \begin{equation*}
+    S(\overline{\Omega}) = \sum_{i=1}^{n}\pi M_i^2\frac{\Delta\phi_i}{2\pi}=\frac{1}{2}\sum_{i=1}^{n}
+    M_i^2\Delta \phi_i.
+  \end{equation*}
+  Заметим, что $S(\underline{\Omega})\leqslant S_{kriv.sector} \leqslant S(\overline{\Omega}) \ (*)$.
+
+  Заметим, что $S(\underline{\Omega})$ - нижняя интегральная сумма функции $\frac{\rho^2(\phi)}{2}$,
+  а $S(\overline{\Omega})$ - верхняя интегральная сумма этой же функции. Функция $\frac{\rho^2(\phi)}{2}$
+  - непрерывна (так как $\rho(\phi)$ - непрерывна) $\implies$ интегрируема на $[\alpha;\beta] \implies
+    \exists \underset{\max\Delta \phi_i\rightarrow0}{\lim}S(\underline{\Omega}) =
+    \underset{\max\Delta \phi_i\rightarrow0}{\lim}S(\overline{\Omega}) = \int_{\alpha}^{\beta}\frac{\rho^2(\phi)}
+    {2}d\phi \implies$ учитывая неравенство (*) и лемму о двух миллиционерах:
+  \begin{equation*}
+    S_{kriv.sector} = \frac{1}{2}\int_{\alpha}^{\beta}\rho^2(\phi)d\phi
+  \end{equation*}
+  и криволинейный сектор - квадрируемый.
+\end{proof}
+
+\chapter{Несобственные интегралы}
+
+\begin{definition}
+  Пусть $f:[a;+\infty)\rightarrow\mathbb{R}$ (задана на луче) и $\forall b \in [a;+\infty) \ f\in R[a;b]$.
+  Рассмотрим:
+  \begin{equation*}
+    \underset{b\rightarrow+\infty}{\lim}\int_{a}^{b}f(x)dx,
+  \end{equation*}
+  этот предел называется \textbf{несобственным интегралом} от функции $f(x)$ на луче $[a;+\infty)$.
+
+  Если этот предел существует и конечен, то несобственный интеграл называется \textbf{сходящимся}, иначе
+  \textbf{расходящимся}. Обозначение:
+  \begin{equation*}
+    \int_{a}^{+\infty}f(x)dx \overset{def}{=}\underset{b\rightarrow+\infty}{\lim}\int_{a}^{b}f(x)dx
+  \end{equation*}
+\end{definition}
+
+\begin{definition}
+  (продолжение определения)
+
+  \begin{enumerate}
+    \item $\int_{2}^{+\infty}\frac{dx}{x^2} = \underset{b\rightarrow\infty}{\lim}\int_{2}^{b}\frac{dx}{x^2} =
+            \underset{b\rightarrow+\infty}{\lim}(F(b) - F(2)) = \underset{b\rightarrow+\infty}{\lim}(-\frac{1}{b} +
+            \frac{1}{2}) = \frac{1}{2}$.
+
+          Аналогично, пусть функция $f:(-\infty;a]\rightarrow\mathbb{R}, \ f\in R[a;b], \ \forall b \in (-\infty;a]$.
+          \begin{equation*}
+            \underset{b\rightarrow-\infty}{\lim}\int_{a}^{b}f(x)dx,
+          \end{equation*}
+          этот предел называется \textbf{несобственным интегралом} от функции $f(x)$ на луче $(\infty;a]$.
+
+          Если этот предел существует и конечен, то соответственно несобственный интеграл - сходящийся. Обозначается:
+          \begin{equation*}
+            \int_{-\infty}^{a}f(x)dx \overset{def}{=}\underset{b\rightarrow-\infty}{\lim}\int_{b}^{a}f(x)dx.
+          \end{equation*}
+          Аналогично:
+          \begin{equation*}
+            \int_{-\infty}^{+\infty}f(x)dx = \int_{-\infty}^{a}f(x)dx + \int_{a}^{+\infty}f(x)dx = \underset{c
+              \rightarrow+\infty, b\rightarrow-\infty}{\lim}\int_{b}^{c}f(x)dx,
+          \end{equation*}
+          где $c\rightarrow+\infty, b\rightarrow-\infty$ - независимые друг от друга ($\forall b,c \ f(x)\in
+            R[b;c]$). {\Large РИСУНОК}
+
+    \item Далее, пусть $f:[a;b)\rightarrow\mathbb{R}: \ \forall c \in [a;b) f\in R[a;c]$. Положим:
+                \begin{equation*}
+                  \int_{a}^{b}f(x)dx = \underset{c\rightarrow b}{\lim}\int_{a}^{c}f(x)dx.
+                \end{equation*}
+                Эта величина называется \textbf{несобственным интегралом} от функции $f$ на полуинтервале $[a;b)$.
+
+                    Если предел существует, то несобственный интеграл называется \textbf{сходящимся}, иначе \textbf{расходящимся}.
+
+                    Аналогично, пусть $f:(a;b]\rightarrow\mathbb{R}$, причем $\forall c \in (a;b] \ f\in R[c;b]$:
+          \begin{equation*}
+            \int_{a}^{b}f(x)dx \overset{def}{=} \underset{c\rightarrow a}{\lim}\int_{c}^{b}f(x)dx \ -
+          \end{equation*}
+          несобственный интеграл от функции $f(x)$ на полуинтервале $(a;b]$.
+
+          Аналогично, пусть $f:(a;b)\rightarrow\mathbb{R}$, причем $\forall c,d \in (a;b) \ f\in R[c,d]$.
+          Тогда:
+          \begin{equation*}
+            \int_{a}^{b}f(x)dx \overset{def}{=} \underset{c\rightarrow a,d\rightarrow b}{\lim}\int_{c}^{d}
+            f(x)dx,
+          \end{equation*}
+          (где $c\rightarrow a,d\rightarrow b$ - независимые друг от друга) - несобственный интеграл от $f(x)$
+          на $(a;b)$
+
+    \item Пусть $f:[a;b]\rightarrow\mathbb{R}$ и $\exists c \in (a;b): \ f$ - неограниченана в точке $c$.
+          \begin{equation*}
+            \int_{a}^{b} f(x) dx = \int_{a}^{c - \epsilon} f(x)dx + \int_{c+\epsilon}^{b}f(x)dx =
+          \end{equation*}
+          \begin{equation*}
+            \underset{\epsilon\rightarrow0}{\lim}\int_{a}^{c - \epsilon} f(x)dx + \underset{\epsilon}{\lim}
+            \int_{c+\epsilon}^{b}f(x)dx.
+          \end{equation*}
+          Если $\lim$ существует, то интеграл ялвяется сходящимся.
+
+          В дальнейшем будем рассматривать:
+          \begin{equation*}
+            \int_{a}^{\omega}f(x)dx,
+          \end{equation*}
+          где $\omega = +\infty, \ -\infty, \ b$.
+  \end{enumerate}
+\end{definition}
+
+\begin{theorem}
+  Пусть $\forall b\in [a;\omega) \ f\in R[a;b]$.
+  \begin{enumerate}
+    \item Тогда $\int_{a}^{\omega}f(x)dx$ сходится $\iff \ \forall
+            b\in[a;\omega) \ \int_{b}^{\omega}f(x)dx$ сходится и
+          \begin{equation*}
+            \int_{a}^{\omega}f(x)dx = \int_{a}^{b}f(x)dx + \int_{b}^{\omega} f(x)dx
+          \end{equation*}
+          {\Large РИСУНОК}
+    \item
+          \begin{equation*}
+            \underset{b\rightarrow\omega}{\lim}\int_{b}^{\omega}f(x)dx = 0
+          \end{equation*}
+    \item $\forall c \in \mathbb{R}$
+          \begin{equation*}
+            \int_{a}^{\omega}cf(x)dx = c\int_{a}^{\omega}f(x)dx
+          \end{equation*}
+          (то есть если $c\int_{a}^{\omega}f(x)dx$ сходится, то сходится $\int_{a}^{\omega}c(x)dx$ и наоборот,
+          и они равны)
+    \item Если $\int_{a}^{\omega}f(x)dx$ и $\int_{a}^{\omega}g(x)dx$ сходятся, то сходится и
+          \begin{equation*}
+            \int_{a}^{\omega}(f(x) + g(x))dx = \int_{a}^{\omega}f(x)dx + \int_{a}^{\omega}g(x)dx
+          \end{equation*}
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  (теоремы)
+
+  \begin{enumerate}
+    \item Пусть $b \in [a;\omega)$. Выберем точку $c: \ b<c<\omega$. Тогда
+          \begin{equation*}
+            \int_{a}^{c}f(x)dx = \int_{a}^{b}f(x)dx + \int_{b}^{c}f(x)dx \ (*).
+          \end{equation*}
+          Если $\int_{a}^{\omega}f(x)dx$ сходится $\implies \exists \underset{d\rightarrow\omega}{\lim}\int_{a}^{d}
+            f(x)dx, \ d\in(a;\omega)$ (общее определение) в равенстве $(*)$ перейдем к пределу при $c\rightarrow\omega$,
+          получим
+          \begin{equation*}
+            \underset{c\rightarrow\omega}{\lim}\int_{a}^{c}f(x)dx = \int_{a}^{b}f(x)dx + \underset{c\rightarrow\omega}{\lim}
+            \int_{b}^{c}f(x)dx,
+          \end{equation*}
+          где если $\exists \underset{c\rightarrow\omega}{\lim}\int_{a}^{c}f(x)dx$, то $\exists
+            \underset{c\rightarrow\omega}{\lim}\int_{b}^{c}f(x)dx$.
+
+          Таким образом:
+          \begin{equation*}
+            \int_{a}^{\omega}f(x)dx = \int_{a}^{b}f(x)dx + \int_{b}^{\omega}f(x)dx.
+          \end{equation*}
+          В обратную сторону аналогично.
+    \item Докажем из 1. Имеем:
+          \begin{equation*}
+            \int_{a}^{\omega}f(x)dx = \int_{a}^{b}f(x)dx + \int_{b}^{\omega}f(x)dx;
+          \end{equation*}
+          \begin{equation*}
+            \int_{b}^{\omega}f(x)dx = \int_{a}^{\omega}f(x)dx - \int_{a}^{b}f(x)dx \ (**)
+          \end{equation*}
+          При $b\rightarrow\omega$ в равенстве $(**)$ в правой части получаем:
+          \begin{equation*}
+            \int_{a}^{\omega}f(x)dx - \int_{a}^{\omega}f(x)dx = 0.
+          \end{equation*}
+          \begin{equation*}
+            \underset{b\rightarrow\omega}{\lim}\int_{b}^{\omega}f(x)dx = \int_{a}^{\omega}f(x)dx -
+            \underset{b\rightarrow\omega}{\lim}\int_{a}^{b}f(x)dx = \int_{a}^{\omega}f(x)dx = 0
+          \end{equation*}
+    \item Следует из свойств предела.
+    \item Следует из свойств предела.
+  \end{enumerate}
+\end{proof}
+
+\begin{theorem}[Критерий Коши]
+  Пусть $\forall b \in [a;\omega) \ f\in R[a;b]$.
+
+  $\int_{a}^{\omega}f(x)dx$ сходится $\iff \ \forall
+    \epsilon > 0 \ \exists B\in [a;\omega): \ \forall b_1,b_2 \in (a;\omega)$ и $b_1,b_2 > B$ верно неравенство:
+  \begin{equation*}
+    | \int_{b_1}^{b_2}f(x)dx | < \epsilon
+  \end{equation*}
+  {\Large РИСУНОК}
+\end{theorem}
+
+\begin{proof}
+  Рассмотрим функцию $F(b) = \int_{a}^{b}f(x)dx$.
+
+  Имеем, что $\int_{a}^{\omega}f(x)dx$ сходится $\iff \exists
+    \underset{b\rightarrow\omega}{\lim}\int_{a}^{b}f(x)dx \iff \forall \epsilon > 0 \exists B \in(a;\omega): \
+    \forall b_1,b_2: \ B < b_1,b_2 < \omega \ | F(b_1) - F(b_2) | < \epsilon$ (критерий Коши существования
+  предела $F(b)$).
+
+  \begin{equation*}
+    | F(b_1) - F(b_2) | = | \int_{a}^{b_1}f(x)dx - \int_{a}^{b_2} f(x)dx | =
+  \end{equation*}
+  \begin{equation*}
+    | -(\int_{b_1}^{a}f(x)dx + \int_{a}^{b_2}f(x)dx) | = | \int_{b_1}^{b_2}f(x)dx | < \epsilon.
+  \end{equation*}
+\end{proof}
+
+\begin{theorem}[несобственная сходимость интеграла от неотрицательной функции]
+  Пусть $f\in R[a;b]$ для $\forall b \in (a;\omega)$ и $f(x)\leqslant 0 \ \forall x \in [a;\omega).$
+
+  $\int_{a}^{\omega}f(x)dx$ сходится $\iff \exists M > 0: \ \forall b \in (a;\omega)$
+  \begin{equation*}
+    \int_{a}^{b}f(x)dx < M.
+  \end{equation*}
+  {\Large РИСУНОК}
+\end{theorem}
+
+\begin{proof}
+  Рассмотрим $F(b) = \int_{a}^{b}f(x)dx$. Так как $f(x)\leqslant0 \ \forall x\in[a;\omega)\implies
+    F(b) \geqslant 0$ на $[a;\omega) \implies$ по теореме о пределе монотонной функции:
+  \begin{equation*}
+    \exists \underset{b\rightarrow\omega}{\lim}F(b)\iff \exists M > 0: \ \forall b\in[a;\omega) \ F(b) < M,
+  \end{equation*}
+  \begin{center}
+    или
+  \end{center}
+  \begin{equation*}
+    \int_{a}^{b}f(x)dx < M.
+  \end{equation*}
+\end{proof}
+
+\begin{theorem}[первый признак сравнения]
+  Если $\forall x \in [a;\omega) \ f(x) \leqslant g(x)$ и $\forall b \in [a;\omega) \ f,g \in R[a;b], \
+    f(x) \geqslant 0, \ g(x) \geqslant 0$, тогда:
+  \begin{enumerate}
+    \item Если $\int_{a}^{\omega}g(x)dx$ - сходится $\implies \int_{a}^{\omega}f(x)dx$ - сходится.
+    \item Если $\int_{a}^{\omega}f(x)dx$ - расходится $\implies \int_{a}^{\omega}g(x)dx$ - расходится.
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  (теоремы)
+
+  Если $f(x) \leqslant g(x) \ \forall x \in [a;\omega) \implies$
+  \begin{equation*}
+    \int_{a}^{b}f(x)dx \leqslant \int_{a}^{b}g(x)dx,
+  \end{equation*}
+  \begin{equation*}
+    \underset{b\rightarrow \omega}{\lim}\int_{a}^{b}f(x)dx \leqslant \underset{b\rightarrow \omega}{\lim}
+    \int_{a}^{b}g(x)dx.
+  \end{equation*}
+  Далее, доказательство следует из теоремы о сходимости несобственного интеграла от неотрицательной функции.
+\end{proof}
+
+\begin{theorem}[второй признак сравнения]
+  Если $\forall x \in [a;\omega) \ f(x) > 0, \ g(x) > 0$ и $\exists \underset{x\rightarrow \omega}{\lim}
+    \frac{f(x)}{g(x)} = A$ (либо $0$, либо $+\infty$, либо $const \ne 0$), тогда:
+  \begin{enumerate}
+    \item Если $A = +\infty$, то из расходимости $\int_{a}^{\omega}g(x)dx$ следует расходимость $\int_{a}^{\omega}
+            f(x)dx$, а из сходимости $\int_{a}^{\omega}f(x)dx$ следует сходимость $\int_{a}^{\omega}g(x)dx$.
+    \item Если $A = 0$, то из расходимости $\int_{a}^{\omega}f(x)dx$ следует расходимость $\int_{a}^{\omega}
+            g(x)dx$, а из сходимости $\int_{a}^{\omega}g(x)dx$ следует сходимость $\int_{a}^{\omega}f(x)dx$.
+    \item Если $A = const \ne 0$, то интегралы $\int_{a}^{\omega}f(x)dx$ и $\int_{a}^{\omega}g(x)dx$ ведут
+          себя одинаково.
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  Начнем с пункта номер 3.:
+
+  3. Пусть $0 < A < +\infty$. Тогда $\exists B \in (a;\omega): \ \forall x \in (B;\omega),
+    \ \forall \epsilon > 0$
+  \begin{equation*}
+    | \frac{f(x)}{g(x)} - A | < \epsilon \implies A - \epsilon < \frac{f(x)}{g(x)} < A + \epsilon (*).
+  \end{equation*}
+
+  Более того, можно считать, что $A - \epsilon > 0$. В $(*)$ домножим обе части неравенства на $g(x) > 0$:
+  \begin{equation*}
+    g(x)(A - \epsilon) < f(x) < g(x)(A + \epsilon).
+  \end{equation*}
+
+  Если $\int_{a}^{\omega}g(x)dx \implies \int_{a}^{\omega}g(x)(A + \epsilon)dx$ сходится $\implies$ по
+  первому признаку сравнения, сходится $\int_{a}^{\omega}f(x)dx$.
+
+  Если $\int_{a}^{\omega}f(x)dx$ сходится
+  $\implies$ по первому признаку сравнения сходится $\int_{a}^{\omega}g(x)(A - \epsilon)dx \implies
+    \int_{a}^{\omega}g(x)dx$.
+
+  Аналогично, если $\int_{a}^{\omega}g(x)dx$ расходится, то $\int_{a}^{\omega}g(x)
+    (A - \epsilon)dx$ - расходится $\implies$ по первому признаку сравнения расходится $\int_{a}^{\omega}f(x)dx$.
+
+  Если $\int_{a}^{\omega}f(x)dx$ расходится, то по первому признаку сравнения $\int_{a}^{\omega}g(x)(A +
+    \epsilon)dx$ расходится $\implies \int_{a}^{\omega}g(x)dx$ расходится. \\
+
+  2. Если $A = 0$, то есть $\underset{x\rightarrow\omega}{\lim}\frac{f(x)}{g(x)} = 0$, то при
+  \begin{center}
+    $f(x) = \alpha(x)g(x)$, где $\alpha(x)\rightarrow 0$ при $x \rightarrow \omega$,
+  \end{center}
+  $f(x) = \underset{x\rightarrow\omega}{o}(g(x)) \implies \exists B \in [a;\omega)$ такая, что $\forall x \in
+    (B;\omega) \ f(x) < \frac{1}{2}g(x) \implies$ по первому признаку сравнения, если $\int_{a}^{\omega}g(x)dx$
+  сходится $\implies \int_{a}^{\omega}f(x)dx$ сходится, если $\int_{a}^{\omega}f(x)dx$ расходится $\implies
+    \int_{a}^{\omega}g(x)dx$ - расходится. \\
+
+  1. Если $A = +\infty$, то есть $\underset{x\rightarrow\omega}{\lim}\frac{f(x)}{g(x)} = +\infty \implies
+    \exists B \in [a;\omega)$ такая, что $\forall x \in (B;\omega) \ f(x) > g(x) \implies$ по первому признаку
+  сравнения, из сходимости $\int_{a}^{\omega}f(x)dx \implies$ сходимость $\int_{a}^{\omega}g(x)dx$ и
+  из расходимости $\int_{a}^{\omega}g(x)dx \implies$ расходимость $\int_{a}^{\omega}f(x)dx$.
+\end{proof}
+
+\begin{example}
+  Задача
+
+  \begin{enumerate}
+    \item Исследуем на сходимость $\int_{a}^{+\infty}\frac{dx}{x^4}$, где $a > 0$:
+          \begin{center}
+            $\underset{b\rightarrow+\infty}{\lim}\int_{a}^{b}\frac{dx}{x^4} = \underset{b\rightarrow+\infty}{\lim}
+              \left\{
+              \begin{array}{ll}
+                \ln x,                 & p = 1   \\
+                \frac{x^{1-p}}{1 - p}, & p \ne 1
+              \end{array}
+              \right. \bigg|^b_a = \underset{b\rightarrow+\infty}{\lim}
+              \left\{
+              \begin{array}{ll}
+                \ln b - \ln a,                               & p = 1   \\
+                \frac{b^{1-p}}{1 - p} - \frac{a^{1-p}}{1-p}, & p \ne 1
+              \end{array}
+              \right. =
+              \left\{
+              \begin{array}{ll}
+                +\infty,               & p=1     \\
+                +\infty,               & 1-p > 0 \\
+                - \frac{a^{1-p}}{1-p}, & p > 1
+              \end{array}
+              \right. \implies$
+          \end{center}
+          $\int_{a}^{+\infty}\frac{dx}{x^p}$ сходится при $p > 1$ и расходится при $p \leqslant 1$.
+    \item Исследуем на сходимость при $a > 0:$
+          \begin{center}
+            $\int_{0}^{a}\frac{dx}{(a-x)^p} = \underset{b\rightarrow a}{\lim}\int_{0}^{b}\frac{dx}{(a-x)^p}
+              = \underset{b\rightarrow a}{\lim} -\int_{0}^{b}\frac{d(a-x)}{(a-x)^p} =
+              \underset{b\rightarrow a}{\lim}
+              \left\{
+              \begin{array}{ll}
+                -\ln| a-x |,              & p = 1   \\
+                \frac{1}{p-1}(a-x)^{1-p}, & p \ne 1
+              \end{array}
+              \right. \bigg|_0^b = \underset{b\rightarrow a}{\lim}
+              \left\{
+              \begin{array}{ll}
+                -\ln| a-b | + \ln| a |,                          & p = 1   \\
+                \frac{1}{p-1}(a-b)^{1-p} - \frac{1}{p-1}a^{1-p}, & p \ne 1
+              \end{array}
+              \right. =
+              \left\{
+              \begin{array}{ll}
+                +\infty,             & p = 1   \\
+                \frac{a^{1-p}}{p-1}, & 1-p > 0 \\
+                +\infty,             & 1-p < 0
+              \end{array}
+              \right. \implies \int_{0}^{a}\frac{dx}{(a-x)^p}$, ($a > 0$ сходится при $p < 1$, расходится
+            при $p \geqslant 1$).
+          \end{center}
+    \item Теперь:
+
+          \begin{center}
+            $\int_{0}^{+\infty}\frac{dx}{x^p} = \int_{0}^{1}\frac{dx}{x^p} + \int_{1}^{+\infty}\frac{dx}{x^p}$ -
+            расходящаяся для $\forall p$.
+          \end{center}
+    \item Теперь:
+
+          \begin{center}
+            $\int_{0}^{1}\frac{dx}{\ln x} = \int_{0}^{\frac{1}{2}}\frac{dx}{\ln x} + \int_{\frac{1}{2}}^{1}
+              \frac{dx}{\ln x}$.
+          \end{center}
+
+          Рассмотрим $\int_{0}^{\frac{1}{2}}\frac{dx}{\sqrt{x}}$ - сходится.
+
+          Рассмотрим $-\int_{0}^{\frac{1}{2}}-\frac{dx}{\ln x}: \ f(x) = -\frac{1}{\ln x}, \ g(x) = \frac{1}
+            {\sqrt{x}}$,
+          \begin{equation*}
+            \underset{x\rightarrow 0}{\lim}\frac{-\frac{1}{\ln x}}{\frac{1}{\sqrt{x}}} = \underset{x\rightarrow 0}
+            {\lim}(-\frac{\sqrt{x}}{\ln x}) = 0 \ -
+          \end{equation*}
+          по второму признаку сравнения, $-\int_{0}^{\frac{1}{2}}-\frac{dx}{\ln x}$ - сходится.
+
+          Рассмотрим $-\int_{\frac{1}{2}}^{1}-\frac{dx}{\ln x}$.
+
+          Рассмотрим $\int_{\frac{1}{2}}^{1}\frac{dx}{1-x}$ - расходится.
+
+          \begin{equation*}
+            f(x) = -\frac{1}{\ln x}, \ g(x) = \frac{1}{1-x},
+          \end{equation*}
+          \begin{equation*}
+            \underset{x\rightarrow1}{\lim}\frac{-\frac{1}{\ln x}}{\frac{1}{1-x}} = \underset{x\rightarrow1}
+            {\lim}\frac{x-1}{\ln x} = \underset{x\rightarrow1}{\lim}\frac{1}{\frac{1}{x}} = 1 \implies
+          \end{equation*}
+          по второму признаку сравнения $\implies -\int_{\frac{1}{2}}^{1}-\frac{dx}{\ln x}$ - расходится
+          $\implies \int_{0}^{1}\frac{dx}{\ln x}$ - расходится.
+  \end{enumerate}
+\end{example}
+
+\begin{definition}
+  Пусть $\forall b \in [a;\omega) \ f\in R[a;b]$.
+
+  $\int_{a}^{\omega}f(x)dx$ называется \textbf{абсолютно сходящимся}, если сходится $\int_{a}^{\omega}|f(x)|dx$.
+\end{definition}
+
+\begin{theorem}
+  Если $\int_{a}^{\omega}| f(x) |dx$ сходится, то $\int_{a}^{\omega}f(x)dx$ тоже сходится (или если интеграл
+  абсолютно сходящийся, то он сходящийся).
+
+  При этом:
+  \begin{equation*}
+    | \int_{a}^{\omega}f(x)dx | \leqslant \int_{a}^{\omega}| f(x) |dx
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Пусть $\int_{a}^{\omega}| f(x) |dx$ - сходится. Пусть $\epsilon > 0$ задано.
+
+  Выберем $B\in[a;\omega): \ \forall b_1,b_2 \in (B,\omega):$
+  \begin{equation*}
+    | \int_{b_1}^{b_2}| f(x) |dx | < \epsilon,
+  \end{equation*}
+  но
+  \begin{equation*}
+    | \int_{b_1}^{b_2}f(x)dx | \leqslant \int_{b_1}^{b_2}| f(x) |dx = | \int_{b_1}^{b_2}| f(x) |dx | <
+    \epsilon \implies
+  \end{equation*}
+  по критерию Коши, $\int_{a}^{\omega}f(x)dx$ - сходится.
+
+  Теперь $\forall b\in [a;\omega) \ | \int_{a}^{b}f(x)dx | \leqslant \int_{a}^{b}| f(x) |dx$.
+
+  Переходя к пределу при $b\rightarrow \omega$, получаем:
+  \begin{equation*}
+    | \int_{a}^{\omega}f(x)dx | \leqslant \int_{a}^{\omega} | f(x) |dx.
+  \end{equation*}
+\end{proof}
+
+\begin{effect}[признак Вейерштрасса]
+  Если $\forall x \in [a;\omega) \ | f(x) | \leqslant g(x)$ и $\int_{a}^{\omega}g(x)dx$ сходится, то
+  $\int_{a}^{\omega}f(x)dx$ сходится.
+\end{effect}
+
+\begin{proof}
+  Самостоятельно.
+\end{proof}
+
+\begin{definition}
+  Если $\int_{a}^{\omega}| f(x) |dx$ расходится, а $\int_{a}^{\omega}f(x)dx$ сходится, то $\int_{a}^{\omega}$
+  называется \textbf{условно сходящимся}.
+\end{definition}
+
+\begin{theorem}[признак Абеля]
+  Если:
+  \begin{enumerate}
+    \item $\int_{a}^{\omega}$ сходится,
+    \item $g(x)$ монотонна и ограничена на $[a;\omega)$,
+  \end{enumerate}
+  то $\int_{a}^{\omega} f(x)g(x)dx$ - сходится.
+\end{theorem}
+
+\begin{theorem}[признак Дирихле]
+  Если:
+  \begin{enumerate}
+    \item Функция $F(b) = \int_{a}^{b}f(x)dx$ ограничена на $[a;\omega)$, то есть $\exists M > 0: \
+            \forall b \in[a;\omega)$
+          \begin{equation*}
+            | \int_{a}^{b}f(x)dx | \leqslant M,
+          \end{equation*}
+    \item $g(x)$ - монотонна на $[a;\omega)$ и $g(x)\rightarrow 0$ при $x\rightarrow\omega$.
+          Тогда $\int_{a}^{\omega}f(x)g(x)dx$ - сходится.
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+  (будем использовать критерий Коши)
+
+  Пусть $\epsilon > 0 $ задано. Рассмотрим
+  \begin{equation*}
+    | \int_{b_1}^{b_2}f(x)g(x)dx |
+  \end{equation*}
+  $\overset{2nd \ th. \ about \ mid}{=} |g(b_1)\int_{b_1}^{\xi}f(x)dx + g(b_2)\int_{\xi}^{b_2}f(x)dx| =
+    | b_1 \leqslant \xi \leqslant b_2 | \leqslant | g(b_1) | * | \int_{b_1}^{\xi} f(x)dx | + | g(b_2) | *
+    | \int_{\xi}^{b_2}f(x)dx | \ (*)$
+  \begin{enumerate}
+    \item Пусть выполнены условия признака Абеля. Пусть $L > 0: \ \forall x \in [a;\omega) \ | g(x) |
+            \leqslant L$.
+
+          Возьмем $B \in [a;\omega): \ \forall b_1,b_2 \in (B;\omega) \ | \int_{b_1}^{b_2}f(x)dx | \leqslant
+            \frac{\epsilon}{2L}$ (так как $\int_{a}^{\omega}f(x)dx$ - сходится). Тогда $(*) < L\frac{\epsilon}{2L}
+            + L\frac{\epsilon}{2L} = \epsilon \implies$ по критерию Коши: $\int_{a}^{\omega}f(x)g(x)dx$ - сходится.
+
+    \item Пусть выполнены условия признака Дирихле: $\exists M > 0: \ \forall b \in [a;\omega) \
+            | \int_{a}^{b_1}f(x)dx | \leqslant M$. Возьмем $B: \ \forall x \in [B;\omega) \ | g(x) | < \frac{\epsilon}
+            {2M}$ (в силу условия 2.). Тогда $(*) < M\frac{\epsilon}{2M} + \frac{\epsilon}{2M} = \epsilon \implies
+            \int_{a}^{\omega}f(x)g(x)dx$ - сходится.
+  \end{enumerate}
+\end{proof}
+
+\begin{theorem}[о замене переменной в несобственном интеграле]
+  Пусть $\forall b \in [a;\omega), \ f \in C[a;b]$ (множество непрерывных функций), функция $x = \phi(t):$
+  \begin{enumerate}
+    \item $\phi: \ [\alpha;\omega_1) \rightarrow [a;\omega)$,
+    \item $\phi(\alpha) = a$, при $t \rightarrow \omega_1, \ \phi(t) \rightarrow \omega$,
+    \item $\phi(t)$ монотонно возрастает на $[\alpha;\omega_1)$,
+    \item $\phi'(t)$ непрерывна на $[\alpha;\omega_1)$,
+  \end{enumerate}
+  Тогда интегралы $\int_{a}^{\omega}f(x)dx$ и $\int_{\alpha}^{\omega_1}f(\phi(t))\phi'(t)dt$ ведут себя
+  одинаково и равны между собой.
+\end{theorem}
+
+\begin{proof}
+  Самостоятельно.
+\end{proof}
+
+\chapter{Дифференциальное исчисление функций многих переменных}
+
+\section{Линейные нормированные пространства}
+
+\begin{definition}
+  \textbf{Линейным пространством} называется четверка $(X,K,+,*)$, где $X$ - множество, $K$ - поле, $"+"$ -
+  операция сложения на $X$ ($"+": \ X \times X \rightarrow X$), $"*"$ - операция умножения элемента поля $K$
+  на элемент множества $X$ ($"*": \ K \times X \rightarrow X$).
+
+  При этом выполняются следующие аксиомы:
+  \begin{enumerate}
+    \item $<X,+>$ - абелева группа;
+    \item
+          \begin{enumerate}
+            \item $\forall \alpha,\beta \in K$ и $\forall x \in X \quad (\alpha\beta)x = \alpha(\beta X)$,
+            \item $\forall x,y \in X, \ \forall \alpha \in K \quad \alpha (x+y) = \alpha x + \alpha y$,
+            \item $\forall \alpha,\beta \in K, \forall x \in X \quad (\alpha + \beta)x = \alpha x + \beta x$,
+            \item $\forall x \in X, \ 1 \in K \quad 1x = x$.
+          \end{enumerate}
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}
+  \textbf{Линейным нормированным пространством} называется пара $(X,||*||)$, где $X$ - линейное пространство
+  над полем $\mathbb{R}$, а $||*||$ - функция из $X$ в $\mathbb{R}$.
+
+  $||*||: \ X \rightarrow \mathbb{R}$, причем выполнены следующие аксиомы для нее:
+  \begin{enumerate}
+    \item $||x|| = 0 \iff x = \overline{0}$ (читается "норма от $x$"),
+    \item $\forall \lambda \in \mathbb{R} \ ||\lambda x|| = |\lambda| * ||x||$,
+    \item $\forall x,y \in X \ ||x+y|| \leqslant ||x|| + ||y||$ (неравенство треугольника).
+  \end{enumerate}
+  Функция $||*||$ называется \textbf{нормой}.
+\end{definition}
+
+\begin{example}
+  ЛНП:
+
+  \begin{enumerate}
+    \item $X = \mathbb{R}, \ \forall x \in X \quad ||x|| = |x|$ (норма = модулю по свойствам нормы),
+    \item $X = \mathbb{R}^n = \mathbb{R} \times \mathbb{R} \times \ldots \times \mathbb{R}$ ($n$ раз),
+          $\forall x \in X \ ||x|| = (\sum_{k=1}^{n}a_k^2)^\frac{1}{2}, \ x = (a_1,\ldots,a_n) \in X$.
+          Покажем, что это норма:
+
+          $1.,2.$ - очевидно. Докажем, что $\forall x,y \in X \ ||x+y|| \leqslant ||x||x + ||y||$, то есть
+          докажем, что $(\sum_{k=1}^{n}(x_k + y_k)^2)^\frac{1}{2} \leqslant (\sum_{k=1}^{n}x_k^2)^\frac{1}{2}
+            + (\sum_{k=1}^{n}y_k^2)^\frac{1}{2} \ (\triangle)$.
+
+          Рассмотрим $\sum_{k=1}^{n}(x_k + y_k)^2 = \sum_{k=1}^{n}x_k^2 + 2\sum_{k=1}^{n}x_k y_k + \sum_{k=1}^{n}
+            y_k^2 \leqslant |$ используем неравенство Назарова-Заблоцкого (Коши-Буньковского) $ \sum_{k=1}^{n}x_k y_k \leqslant
+            (\sum_{k=1}^{n}x_K^2)^\frac{1}{2}(\sum_{k=1}^{n}y_k^2)^\frac{1}{2}| \leqslant \sum_{k=1}^{n}x_k^2 +
+            2(\sum_{k=1}^{n}x_k^2)^\frac{1}{2}(\sum_{k=1}^{n}y_k^2)^\frac{1}{2} + \sum_{k=1}^{n}y_k^2 =
+            [(\sum_{k=1}^{n}x_k^2)^\frac{1}{2} + (\sum_{k=1}^{n}y_k^2)^\frac{1}{2}]^2$.
+
+          Имеем:
+          \begin{equation*}
+            \sum_{k=1}^{n}(x_k + y_k)^2 \leqslant [(\sum_{k=1}^{n}x_k^2)^\frac{1}{2} + (\sum_{k=1}^{n}y_k^2)^\frac{1}{2}]^2 \implies
+          \end{equation*}
+          приходим к $(\triangle)$ операцией взятия корня от обеих частей неравенства
+          \begin{equation*}
+            \implies (\sum_{k=1}^{n}(x_k + y_k)^2)^\frac{1}{2} \leqslant (\sum_{k=1}^{n}x_k^2)^\frac{1}{2} +
+            (\sum_{k=1}^{n}y_k^2)^\frac{1}{2}.
+          \end{equation*}
+    \item $X = \mathbb{R}^n, \ \forall x = (x_1,\ldots,x_n)\in X \quad ||x|| = \underset{k=\overline{1,n}}{\max}
+            |x_k|$.
+
+          \begin{center}
+            Такое ЛНП обозначается $\mathbb{R^n_\infty}$.
+          \end{center}
+    \item $X = \mathbb{R}^n, \ \forall x = (x_1,\ldots, x_n) \in X \quad ||x|| = (\sum_{k=1}^{n}x_k^p)^\frac{1}{p},
+            \ p > 1$.
+
+          Упражнение: доказать, что введенная функция есть норма, используя неравенство Левановича (Гельдера):
+          \begin{equation*}
+            \sum_{k=1}^{n}x_k y_k \leqslant (\sum_{k=1}^{n}x_k^p)^\frac{1}{p} (\sum_{k=1}^{n}y_k^p)^\frac{1}{p}.
+          \end{equation*}
+
+    \item $X$ - пространство непрерывных на $[a;b]$ функций, то есть $X = C[a;b], \ \forall x \in X
+            \quad ||x|| = \underset{t \in [a;b]}{\max}|x(t)|$; 1,2,3 - почти очевидно.
+
+    \item $X = C[a;b], \ \forall x \in X \quad ||x|| = \int_{a}^{b}|x(t)|dt$.
+
+          Покажем, что введенная функция есть норма:
+          \begin{enumerate}
+            \item $||x(t)|| = 0 \iff x(t) = 0$;
+
+                  Пусть $\int_{a}^{b}|x(t)|dt = 0$. От противного. Допустим, что $\exists t_0 \in [a;b]: \ x(t_0) \ne 0$.
+                  Тогда $\exists t_0 \in [\alpha;\beta], \ [\alpha;\beta] \subset [a;b]$ и $\forall t \in [\alpha;\beta]
+                    \quad |x(t)| > 0$,
+                  \begin{equation*}
+                    \int_{a}^{b}x(t)|dt \geqslant \int_{\alpha}^{\beta}|x(t)|dt
+                  \end{equation*}
+                  Противоречие $\implies \forall t \in [a;b] \ |x(t)| = 0$.
+
+            \item $|| \lambda x || = | \lambda | * || x ||$ (из свойств определенного интеграла);
+            \item $|| x+y || \leqslant || x || + || y ||$ (из свойств определенного интеграла);
+          \end{enumerate}
+    \item $X = C[a;b]$.
+  \end{enumerate}
+\end{example}
+
+$(*) \quad || x(t) || = (\int_{a}^{b}|x(x)|^pdt)^\frac{1}{p}, \ p > 1$.
+
+Упражнение: доказать, что заданная функция $|| x ||$ является нормой.
+
+ЛНП ($C[a;b], || x || (*)$) образначается $C^p[a;b]$.
+
+\begin{statement}
+  Пусть $(X,|| * ||)$ - ЛНП. Тогда функция $\rho X \times X \rightarrow \mathbb{R}$, опредленная $\rho(x,y)
+    = || x-y ||$, является метрикой ЛНП.
+\end{statement}
+
+\begin{proof}
+  Проверим аксиомы метрики:
+  \begin{enumerate}
+    \item $\rho(x,y) = 0 \iff x = y \ \forall x,y \in X$:
+
+          $\rho(x,y) = || x-y || \iff x - y = \overline{0} \iff x = y$;
+
+    \item $\rho(x,y) = \rho(y,x), \ \forall x,y \in X$:
+
+          $\rho(x,y) = ||x - y|| = ||-(y-x)|| = |-1| * ||y-x|| = ||y-x|| = \rho(y,x)$;
+
+    \item $\rho(x,z) \leqslant \rho(x,y) + \rho(y,z) \ \forall x,y,z \in X$:
+
+          $\rho(x,z) = ||x-z|| = ||(x-y)+(y-z)|| \leqslant ||x-y|| + ||y-z|| = \rho(x,y) + \rho(y,z)$.
+  \end{enumerate}
+\end{proof}
+
+\begin{definition}
+  Если линейное нормированное пространство является полным относительно введенной метрики, то оно называется
+  \textbf{банахово}.
+
+  ($X$ - полное, если $\forall$ фундаментальная последовательность сходится).
+\end{definition}
+
+\begin{example}
+  (банаховых пространств)
+
+  \begin{enumerate}
+    \item $X = \mathbb{R}$ - банахово;
+    \item $X = C[a;b], \ ||x|| = \underset{t \in [a;b]}{\max}|x(t)|$;
+          \begin{proof}
+            Докажем, что данное линейное нормированное пространство (ЛНП) - полное относительно метрики.
+
+            Введем метрику (по утверждению):
+            \begin{equation*}
+              \rho(x,y) = ||x-y|| = \underset{t \in [a;b]}{\max}|x(t) - y(t)|.
+            \end{equation*}
+            Пусть $\{x_n (t)\}$ - фундаментальная последовательность непрерывно фундаментальная на $[a;b]$, то есть
+            $\forall \epsilon > 0 \ \exists N: \ \forall n,m  > N$
+            \begin{equation*}
+              \rho(x_n,x_m) < \epsilon \implies \underset{t \in [a;b]}{\max}|x_n(t) - x_m(t)| < \epsilon \ (\forall
+              t \in [a;b]).
+            \end{equation*}
+            Докажем, что $\{x_n (t)\}$ сходится в $C[a;b]$, то есть докажем, что $\exists \underset{n\rightarrow
+                \infty}{\lim}x_n (t) = x(t) \in C[a;b] \implies$ это значит, что $\forall \epsilon > 0 \
+              \exists N: \ \forall n > N$
+            \begin{equation*}
+              \rho(x_n (t), x(t)) < \epsilon,
+            \end{equation*}
+            или, по-другому, надо доказать, что
+            \begin{equation*}
+              \underset{t\in[a;b]}{\max}|x_n(t) - x(t)| \rightarrow 0.
+            \end{equation*}
+            Зафиксируем $t_0 \in [a;b] \implies$ получим числовую последовательность $\{x_n(t_0)\}$ - фундаментальная
+            $\implies$ сходится (по критерию Коши для $X = \mathbb{R}$) $\implies \exists \underset{n\rightarrow\infty}
+              {\lim}x_n(t_0)$.
+
+            Определим функцию $X(t): \ [a;b]\rightarrow \mathbb{R}$, положив, что $x(t) = \underset{n\rightarrow\infty}
+              {\lim}x_n(t)$ (в силу единственности предела последовательности, $x(t)$ - введена корректно).
+
+            Покажем, что $x(t) \in C[a;b]$ и $x_n(t) \rightarrow x(t)$. Пусть $\epsilon > 0$ задано, тогда
+            $\exists N: \ \forall n,m > N$ и $\forall t \in [a;b]$
+            \begin{equation*}
+              |x_n(t) - x_m(t)| < \epsilon.
+            \end{equation*}
+            Перейдем к пределу при $m \rightarrow \infty \implies \forall t \in [a;b]$
+            \begin{equation*}
+              |x_n(t) - x_m(t)| < \epsilon \ (*).
+            \end{equation*}
+            Покажем, что $x(t)$ - непрерывно на $[a;b]$, то есть непрерывно при $\forall t \in [a;b]$.
+
+            Пусть $t_0 \in [a;b]$ - произвольная точка, тогда: $|x(t) - x(t_0)| = |x(t) - x_n(t) + x_n(t) + x_n(t_0)-
+              x_n(t_0) - x(t_n)| = |(x(t) - x_n(t)) + (x_n(t) - x_n(t_0)) + (x_n(t_0) - x(t_0))| \leqslant |x_n(t) - x(t)|
+              + |x_n(t) - x_n(t_0)| + | x_n(t_0) - x(t_0) |$.
+
+            Пусть $\epsilon > 0$ задано, тогда $\exists N : \ \forall n > N$ и $\forall t \in [a;b]$
+            \begin{equation*}
+              | x_n(t) - x(t) | < \frac{\epsilon}{3} \ and \ | x_n(t_0) - x(t_0) | < \frac{\epsilon}{3}
+            \end{equation*}
+            в силу определения функции $x(t) = \underset{n\rightarrow\infty}{\lim}x_n(t) \ \forall t \in [a;b]$.
+
+            Выберем $\delta > 0 : \ \forall t \in [a;b]: \ | t-t_0 | < \delta \implies |x_n(t) - x_n(t_0)| < \frac
+              {\epsilon}{3}$ (в силу непрерывности функции $x_n(t)$).
+
+            Тогда $| x(t) - x(t_0) | < \frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3} = \epsilon$.
+
+            Таким образом функция $x(t) = \underset{n \rightarrow \infty}{\lim}x_n(t) \ \forall t \in [a;b]$ - непрерывна.
+
+            Так как неравенство $(*)$ верно $\forall t \in [a;b]$, то верно и для $\underset{t\in[a;b]}{\max}
+              | x_n(t) - x(t) | < \epsilon \implies \rho(x_n(t), x) < \epsilon$.
+
+            То есть $\{x_n(t)\}$ фундаментальная сходящаяся $\implies$ рассматриваемое ЛНП - полное для заданной метрики
+            $\implies$ оно банахово.
+          \end{proof}
+
+    \item $C_p[a;b]$ - ЛНП, $X = C[a;b]$,
+          \begin{equation*}
+            ||x|| = (\int_{a}^{b}|x(t)|^p dt)^\frac{1}{p}.
+          \end{equation*}
+          \begin{proof}
+            Покажем, что для $p = 1 \ C_1[a;b]$ - не полное.
+
+            Возьмем $C_1[-1;1]$. Положим, что $x_1 = t, \\ x_2 =
+              \left\{
+              \begin{array}{ll}
+                -1, & -1 \leqslant t \leqslant \frac{1}{2}           \\
+                2t, & -\frac{1}{2} \leqslant t \leqslant \frac{1}{2} \\
+                1,  & \frac{1}{2} \leqslant t \leqslant 1
+              \end{array}
+              \right., \ \ldots, \ x_n =
+              \left\{
+              \begin{array}{ll}
+                -1, & -1 \leqslant t \leqslant \frac{1}{n}           \\
+                nt, & -\frac{1}{n} \leqslant t \leqslant \frac{1}{n} \\
+                1,  & \frac{1}{n} \leqslant t \leqslant 1
+              \end{array}
+              \right., \ \ldots$
+
+            Определим последовательность непрерывных функций $\{x_n(t)\}$.
+
+            Докажем, что введенная последовательность $\{x_n(t)\}$ фундаментальная.
+            \begin{equation*}
+              ||x|| = \int_{-1}^{1}|x(t)|dt,
+            \end{equation*}
+            \begin{equation*}
+              \rho(x,y) \ ||x-y|| = \int_{-1}^{1}|x(t) - y(t)|dt.
+            \end{equation*}
+
+            То есть, покажем, что $\forall \epsilon > 0 \ \exists N : \ \forall n,m > N$ (пусть $n>m$)
+            \begin{equation*}
+              \rho(x_n,x_m) < \epsilon,
+            \end{equation*}
+            $\rho(x_n,x_m) = \int_{-1}^{1}|x_n(t) - x_m(t)|dt =$ |до $-\frac{1}{m}$ и после $\frac{1}{m}$
+            интеграл зануляется| $= \int_{-\frac{1}{m}}^{\frac{1}{m}}|x_n(t) - x_m(t)|dt \leqslant
+              \int_{-\frac{1}{m}}^{\frac{1}{m}}|x_n(t)|dt + \int_{\frac{1}{m}}^{\frac{1}{m}}|x_m(t)|dt \ (\triangle)$.
+
+            Пусть $\epsilon > 0$ задано. Выберем $N: \ \frac{1}{N} < \frac{\epsilon}{3}$.
+
+            $(\triangle) = 2\int_{0}^{\frac{1}{m}}|x_n(t)|dt + 2\int_{1}^{\frac{1}{m}}mtdt = 2\int_{0}^{\frac{1}{m}}
+              |x_n(t)|dt + 2\frac{mt^2}{2}\bigg|^{\frac{1}{m}}_0 = \frac{n}{m^2} + \frac{1}{m} + \frac{1}{n}
+              + 2(\frac{1}{m} - \frac{1}{n}) = \frac{3}{m} - \frac{1}{n} < \frac{3}{m} < \frac{3}{N} < \frac{3}{\epsilon}$.
+
+            $\{x_n(t)\}$ - фундаментальная, $\underset{n\rightarrow\infty}{\lim} x_n(t) = 1$ и
+            $\underset{n\rightarrow\infty}{\lim} x_n(t) = -1 \implies \exists \underset{n\rightarrow\infty}{\lim} x_n(t)$
+            - фундаментальная последовательность не сходится $\implies C_1[a;b]$ - не полное.
+          \end{proof}
+  \end{enumerate}
+\end{example}
+
+\begin{definition}
+  Множество $E$ в ЛНП называется \textbf{ограниченным}, если $\exists M>0: \ \forall x \in E \quad ||x||<M$.
+\end{definition}
+
+Упражнение: доказать, что ограниченность в ЛНП совпадает с ограниченностью в МП.
+
+\begin{theorem}[о вложенных шарах]
+  Метрическое пространство (МП) является полным $\iff \forall$ последовательность вложенных замкнутых шаров,
+  радиусы которых стремятся к нулю, имеют в нем непустое пересечение.
+\end{theorem}
+
+\begin{proof}
+  Теоремы.
+
+  $"\rightarrow"$ Пусть $(X,\rho)$ - полное МП и имеется $B_1 \supset B_2 \supset \ldots
+    \supset B_n \supset \ldots$ - система вложенных замкнутых шаров, радиусы которых стремятся к $0$, то есть
+  при $n\rightarrow\infty \ r_n \rightarrow 0$.
+
+  Покажем, что пересечение
+  \begin{equation*}
+    \underset{n=1}{\overset{\infty}{\cap}} B_n \ne \emptyset.
+  \end{equation*}
+
+  Рассмотрим $B_n(a_n,r_n), \ r_n \rightarrow 0$. Имеем, что
+  \begin{equation*}
+    \forall n>m \quad B_n\subset B_m \implies a_n \subset B_m.
+  \end{equation*}
+
+  Рассмотрим последовательность центров $\{a_n\}$, покажем, что она фундаментальная.
+
+  Пусть $\epsilon > 0$ задано. Выберем $N>0: \ r_n < \frac{\epsilon}{2}:$
+  \begin{center}
+    $\forall n,m > N \quad \rho(a_n,a_m) \leqslant \rho(a_n,a_N) + \rho(a_N,a_m) <$ \\
+    $< r_N + r_n = \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \implies \{a_n\}$ - фундаментальное
+    $\implies$ \\
+
+    $\{a_n\}$ - сходится, то есть $\exists a = \underset{n\rightarrow\infty}{\lim}a_n$
+    (так как $(X,\rho)$ - полное).
+  \end{center}
+  Тогда точка $a$ - является предельной точкой для $\forall B_n \implies a =
+    \underset{n=1}{\overset{\infty}{\cap}} B_n$.
+
+  $"\leftarrow"$ Пусть $\forall$ системы вложенных замкнутых шаров, радиус которых $\rightarrow 0 \ \exists$
+  непустое пересечение, то есть $\underset{n=1}{\overset{\infty}{\cap}} B_n \ne \emptyset$.
+
+  Покажем, что $(X,\rho)$ - полное.
+
+  Пусть $\{x_n\}$ - фундаментальная последовательность в $(X,\rho)$. Выберем
+  \begin{equation*}
+    n_1 : \ \forall n > n_1 \ \rho (x_n, x_{n_1}) < \frac{1}{2}
+  \end{equation*}
+
+  Построим шар $B_1 = B(x_{n_1},1)$. Выберем
+  \begin{equation*}
+    n_2 > n_1: \ \forall n> n_2 \ \rho (x_n,x_{n_2}) < \frac{1}{4}
+  \end{equation*}
+
+  Построим шар $B_2 = B(x_{n_2},\frac{1}{2})$. Покажем, что
+  $B_2 \subset B_1$. Если $x\in B_2$, то
+  \begin{equation*}
+    \rho (x,x_{n_1}) \leqslant \rho(x,x_{n_2}) + \rho (x_{n_2},
+    x_{n_1}) \leqslant \frac{1}{2} + \frac{1}{2} = 1 \implies x \in B_1.
+  \end{equation*}
+
+  Выберем
+  \begin{equation*}
+    n_3 > n_2: \ \forall n > n_3 \ \rho(x_n,x_{n_3}) < \frac{1}{2^3}
+  \end{equation*}
+
+  (в силу фундаментальности $\{x_n\}$). Построим шар $B_3 \subset B(x_{n_3},\frac{1}{4})$.
+
+  При этом $B_3 \subset B_2$ и так далее. Таким образом построим систему вложенных замкнутых шаров $B_1
+    \supset B_2 \supset \ldots \supset B_k \supset \ldots$, где $B_k = B(x_{n_k},\frac{1}{2^{k-1}})$.
+  Причем $r_k = \frac{1}{2^{k-1}} \rightarrow 0$ при $k \rightarrow \infty$.
+
+  Пусть $a \in \underset{n=1}{\overset{\infty}{\cap}} B_n$. Пусть $\epsilon > 0$ задано. Выберем $N:$.
+  Тогда $\forall n > N \ \rho(x_n,a)\leqslant \rho(x_n,x_{n_N}) + \rho(x_{n_N},a)$ ($x_{n_N}$ - центр $B_N$)
+  $< \frac{1}{2^N} + \frac{1}{2^{N-1}} < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \implies$
+  \begin{center}
+    $a = \underset{n\rightarrow\infty}{\lim}x_n \implies (X,\rho)$ - полное.
+  \end{center}
+\end{proof}
+
+\subsection{Принцип сжимающих отображений}
+
+\begin{definition}
+  Пусть $(X,\rho_X), \ (Y,\rho_Y)$ - МП. Отображение $f:X\rightarrow Y$ называется \textbf{сжимающим},
+  если $\exists 0 \leqslant \alpha < 1: \ \forall x_1,x_2 \in X$
+  \begin{equation*}
+    \rho_Y(f(x_1),f(x_2)) \leqslant \alpha * \rho_X(x_1,x_2).
+  \end{equation*}
+\end{definition}
+
+\begin{theorem}[принцип сжимающих отображений]
+  Сжимающее отображение полного МП в себя имеет единственную неподвижную точку, то есть если
+  $(X,\rho)$ - полное, отображение $f:X\rightarrow X$ - сжимающее, то
+  \begin{equation*}
+    \exists ! a \in X: \quad f(a) = a.
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Пусть $0 \leqslant \alpha < 1: \ \forall x,y \in X \ \rho(f(x), f(y)) \leqslant \alpha * \rho (x,y)$.
+
+  Пусть $\alpha = 0 \implies \rho(f(x),f(y)) = 0 \implies f(x) = f(y) \forall x,y \implies f = const
+    \implies \exists a \in X: \ \forall x \ f(x) = a \implies f(a) = a$.
+
+  Пусть $\alpha \ne 0$. Пусть $x \in X$, построим последовательность $\{x_n\}: \ x_0 = x, \ x_1 = f(x_0)
+    \ x_2 = f(x_1), \ x_3 = f(x_2), \ \ldots, \ x_n = f(x_{n-1}), \ \ldots$.
+
+  Покажем, что эта последовательность фундаментальная. Рассмотрим
+  \begin{equation*}
+    \rho(x_2,x_1) = \rho(f(x_1), f(x_0)) \leqslant \alpha * \rho(x_1,x_0),
+  \end{equation*}
+  \begin{equation*}
+    \rho(x_3,x_2) = \rho(f(x_2), f(x_1)) \leqslant \alpha * \rho(x_2,x_1) \leqslant \alpha^2 * \rho(x_1,x_0),
+  \end{equation*}
+  \begin{equation*}
+    \ldots
+  \end{equation*}
+  \begin{equation*}
+    \rho(x_n,x_{n-1}) = \rho(f(x_{n-1}), f(x_{n-2})) \leqslant \alpha * \rho(x_{n-1},x_{n-2}) \leqslant
+    \alpha^{n-1} * \rho(x_1,x_0).
+  \end{equation*}
+  Тогда при $n > m \quad \rho(x_n,x_m) \leqslant \rho(x_m,x_{m+1}) + \rho(x_{m+1},x_{m+2}) + \ldots +
+    \rho(x_{n-1},x_n) \leqslant \alpha^m * \rho(x_1,x_0) + \alpha^{m+1}(x_1,x_0) + \ldots + \alpha^{n-1} *
+    \rho(x_1,x_0) = \rho(x_1,x_0) * \alpha^m * (1 + \alpha + \ldots + \alpha^{n-1-m}) = \rho(x_1,x_0) *
+    \alpha^m * \frac{(1-\alpha^{n-1-m})}{1 - \alpha} < \frac{\alpha^m}{1 - \alpha} * \rho (x_1,x_0)
+    <$ |при $m \rightarrow \infty \ 0 < \alpha < 1 \ \alpha^m \rightarrow 0$| $< \epsilon$, где $\epsilon
+    > 0$ задано $\implies \{x_n\}$ - фундаментальная в полном МП $\implies \exists a = \underset{n\rightarrow
+      \infty}{\lim} x_n$.
+
+  \begin{equation*}
+    f(a) = f(\underset{n\rightarrow\infty}{\lim} x_n) = \underset{n\rightarrow\infty}{\lim} f(x_n) =
+    \underset{n\rightarrow\infty}{\lim} x_{n+1} = a
+  \end{equation*}
+
+  $\implies \exists a: \ f(a) = a$.
+
+  Докажем единственность $a$. Пусть $\exists b \in X: \ f(b) = b$. Тогда
+  \begin{equation*}
+    \rho(a,b) = \rho(f(a),f(b)) = \alpha * \rho(a,b),
+  \end{equation*}
+  \begin{equation*}
+    \rho(a,b)(1 - \alpha) \leqslant 0 \iff \rho(a,b) = 0 \iff a = b.
+  \end{equation*}
+\end{proof}
+
+Упражнение: доказать, что сжимающее отображение - непрерывно.
+
+\begin{definition}
+  Если $\forall x_1,x_2 \quad \rho_Y (f(x_1),f(x_2)) \leqslant \rho_X(x_1,x_2)$, где \\ $(X,\rho_X),(Y,\rho_Y)$ - МП,
+  $f:X\rightarrow Y$, то такое отображение называется \textbf{нерастягивающим}.
+\end{definition}
+
+Упражнение: доказать, что предыдущая теорема неверна для нерастягивающихся отображений.
+
+\begin{definition}
+  Множество $E$ в метрическом пространстве называется \textbf{предкомпактным} (\textbf{относительно компактным}),
+  если ее замыкание $\overline{E}$ компактно.
+\end{definition}
+
+\begin{definition}
+  Множество $E$ в МП $(X,\rho)$ называется \textbf{вполне ограниченным}, если $\forall \epsilon > 0 \ \exists$
+  конечная $\epsilon$-сеть для $E$.
+
+  Напоминание: $\epsilon$-сеть - набор $\{x_1,\ldots,x_n \ | \ x_i \in E\} \ \forall x \in E \ \exists$ хотя бы
+  одна точка $x_i: \ \rho(x,x_i) < \epsilon$.
+\end{definition}
+
+\begin{theorem}[Хаусдорфа]
+  Множество $E$ в полном МП $(X,\rho)$ ялвяется предкомпактным $\iff$ оно вполне ограничено.
+\end{theorem}
+
+\begin{proof}
+  $"\rightarrow"$ Пусть $(X,\rho)$ - МП, $E \subset X$. Пусть $E$ - предкомпактно. Пусть $\epsilon > 0$ задано.
+
+  Возьмем точку
+  $x_1 \in E$. Если $\forall x \in E \ \rho(x,x_1) < \epsilon$, то нужная $\epsilon$-сеть построена. Пусть
+  $\exists$ точка $x_2 \in E: \ \rho(x_2,x_1) \geqslant \epsilon$, тогда в набор $\epsilon$-сети добавляем
+  точку $x_2$. Если $\forall x \in E \ \rho(x,x_1) < \epsilon$ или $\rho(x,x_2) < \epsilon \implies$ нужная
+  $\epsilon$-сеть построена. Пусть $\exists$ точка $x_3 \in E: \ \rho(x_3,x_1) \geqslant \epsilon$ и $\rho(x_3,x_2)
+    \geqslant \epsilon$, тогда в $\epsilon$-сеть включаем и точку $x_3$ и так далее.
+
+  Либо на некотором шаге процесс
+  остановится и $\epsilon$-сеть будет построена: $\{x_1,x_2,\ldots,x_n\}$.
+
+  Либо построена последовательность
+  $x_1,x_2,\ldots,x_n,\ldots \in E:$
+  \begin{equation*}
+    \forall n,m \quad \rho(x_n,x_m)\geqslant \epsilon
+  \end{equation*} $\implies$ у такой
+  последовательности $\{x_n\} \ \nexists$ сходящейся подпоследовательности в $E \subset X \implies x_n$
+  не имеет предела, то есть $E$ не имеет предельной точки $\implies \overline{E}$ некомпактно - противоречие
+  $\implies$ второй случай не имеет место быть.
+
+  $"\leftarrow"$ Пусть $E$ - вполне ограничено. То есть $\forall \epsilon > 0 \ \exists$ конечная $\epsilon$-сеть
+  для $E \subset X$. Пусть $F\subset E$ - бесконечное. Покажем, что $F$ имеет предельную точку в $\overline{E}$
+  (используем критерий компактности).
+
+  Пусть $x_{11},x_{12},\ldots,x_{1k_1}$ - 1-сеть ($\epsilon = 1$) для $E$. Пусть $B_{11},B_{12},\ldots,B_{1k_1}$
+  - соответсвующие шары с центрами в точках $x_{11},x_{12},\ldots,x_{1k_1}$ (с радиусом 1).
+
+  $\exists$ шар, например, $B_{11}: \ B_{11} \cup F = F_1$ - бесконечное подмножество в $E$.
+
+  Далее, пусть
+  $x_{21},x_{22},\ldots,x_{2k_2}$ - $\frac{1}{2}$-сеть для $E$. Пусть $B_{21},B_{22},\ldots,B_{2k_2}$ -
+  соответсвующие шары с центрами в точках $x_{21},x_{22},\ldots,x_{2k_2}$ (с радиусом $r_2 = \frac{1}{2}$).
+
+  $\exists$ шар $B_{22}: \ B_{22} \cap F_1 = F_2$ - бесконечное подмножество в $E$ и так далее.
+
+  Таким образом построим систему шаров $B_{11}, B_{22}, \ldots, B_{nn}, \ldots, \ r_n = \frac{1}{2^{n-1}}$,
+  а также систему бесконечных множеств $F\subset F_1\subset F_2\subset \ldots\subset F_n\subset \ldots, \ F_n \in B_{nn}$.
+
+  Построим последовательность $\{x_n\}: \ x_n \in F_n$. Последовательность - фундаментальная, так как
+  $\forall \epsilon > 0 \ \exists N : \ \forall n,m > N \ \rho(x_n,x_m) < \epsilon$ (так как $r_n\rightarrow0$
+  при $n\rightarrow \infty$) $\implies \{x_n\}$ - сходится (так как $(X,\rho)$ - полное) $\implies \exists x \in E:
+    \quad \underset{n \rightarrow \infty}{\lim} x_n = x \implies F$ имеет предельную точку $\implies \overline{E}$
+  компактно (по критерию компактности).
+\end{proof}
+
+\begin{theorem}
+  Пространство $\mathbb{R}^n$ (n-мерное линейное пространство с евклидовой метрикой),
+  \begin{center}
+    $||x|| = (\sum_{i=1}^{n} (x^i)^2)^\frac{1}{2}$ - полное
+  \end{center}
+\end{theorem}
+
+\begin{proof}
+  Пусть $\{x_n\}$ - фундаментальная последовательность в $\mathbb{R}^n$:
+  \begin{equation*}
+    x_1,x_2,\ldots,x_n,\ldots, \ x_k \in \mathbb{R}^n \ x_k = \{x_k^1,x_k^2,\ldots,x_k^n\}.
+  \end{equation*}
+  Покажем, что $\{x_n\}$ сходится. Пусть $\epsilon > 0$ задано. Выберем $N: \ \forall k,m > N \ \rho(x_k,x_m) <
+    \epsilon$,
+  \begin{equation*}
+    \rho(x_k,x_m) = ||x_k-x_m|| = (\sum_{i=1}^{n}(x_k^i - x_m^i)^2)^\frac{1}{2} < \epsilon
+  \end{equation*}
+  \begin{equation*}
+    \implies \forall i = \overline{1,n} \quad |x_k^i - x_m^i| < \epsilon
+  \end{equation*}
+  $\implies$ последовательность $x_k^i$ - фундаментальная в $\mathbb{R} \ \forall i \implies x_k^i$ - сходится
+  в $\mathbb{R} \implies \exists x^i = \underset{k\rightarrow \infty}{\lim} x^i_k \ \forall i = \overline{1,n}$.
+
+  Положим $x = \{x^1,x^2,\ldots,x^n\}$, где $x^i = \underset{k\rightarrow\infty}{\lim} x_k^i$.
+  Покажем, что $\underset{k\rightarrow\infty}{\lim} x_k = x$, где $n_k$ и $n$ - $n$-мерные вектора.
+
+  Пусть $\epsilon > 0$ задано. Выберем $N: \ \forall m > N$:
+  \begin{equation*}
+    \underset{i = \overline{1,n}}{\max} |x_m^i - x^i| < \frac{\epsilon}{N}.
+  \end{equation*}
+  Тогда $\forall m > N$:
+  \begin{equation*}
+    \rho(x_m) = ||x_m - x|| = (\sum_{i=1}^{n}(x_m^i - x^i)^2)^\frac{1}{2} \leqslant \sum_{i=1}^{n}|x_m^i - x^i| <
+    N * \frac{\epsilon}{N} = \epsilon.
+  \end{equation*}
+\end{proof}
+
+\begin{theorem}[критерий компактности в $\mathbb{R}^n$]
+  Множество $E \subset \mathbb{R}^n$ компактно $\iff$ замкнуто и ограничено.
+\end{theorem}
+
+\begin{proof}
+  Самостоятельно.
+\end{proof}
+
+\subsection{Эквивалентность норм в $\mathbb{R}^n$}
+
+\begin{definition}
+  Пусть $(X, ||*||_1),(X, ||*||_2)$ - линейное нормированное пространство (конечномерное). Говорят, что $||*||_1
+    \sim ||*||_2$ (эквивалентны), если $\exists c_1,c_2 > 0 \ (c_1,c_2 \in \mathbb{R}):$
+  \begin{equation*}
+    \forall x \in X \quad c_1 * ||x||_2 \leqslant ||x||_1 \leqslant c_2 * ||x||_2 \quad (*)
+  \end{equation*}
+\end{definition}
+
+Упражнение: доказать, что $(*)$ - отношение эквивалентности.
+
+\begin{theorem}[эквивалентность норм в конечномерном пространстве]
+  Если $X$ - конечномерное пространство МП, и $||*||_1, \ ||*||_2$ - две нормы на нем, то:
+  \begin{equation*}
+    ||*||_1 \sim ||*||_2
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  (теоремы)
+
+  Покажем, что $\forall$ норма в конечномерном МП эквивалентна евклидовой. Пусть $||*||_1$ - норма в $n$-мерном
+  МП, $||*||$ - евклидова норма там же.
+  \begin{lemma}
+    Пусть $(X,||*||)$ - Л.Н.П. Тогда функция $||*||: \ X \rightarrow \mathbb{R}$ является непрерывной.
+  \end{lemma}
+  \begin{proof}
+    (леммы)
+
+    Самостоятельно.
+  \end{proof}
+
+  Рассмотрим сферу $S$ с радиусом 1 в евклидовой норме в двумерном пространстве:
+  \begin{equation*}
+    S=\{x \in X \ | \ \sum_{i=1}^{n}(x^i)^2 = 1\}, \quad x = (x^1,x^2,\ldots,x^n).
+  \end{equation*}
+
+  Сфера является ограниченной и замкнутой в $\mathbb{R}^n$ $\implies$ она компактна $\implies$ по теореме
+  Вейерштрасса, функция $||*||_1$ достигает наименьшего и наибольшего значения.
+
+  Пусть:
+  \begin{equation*}
+    \alpha = \underset{x\in S}{\min} ||x||_1, \quad \beta = \underset{x \in S}{\max} ||x||_1.
+  \end{equation*}
+
+  Имеем:
+  \begin{equation*}
+    \alpha * ||x|| \leqslant ||x||_1 = ||(x^1,x^2,\ldots,x^n)||_1 =
+  \end{equation*}
+  \begin{equation*}
+    = \frac{||x||}{||x||} * ||(x^1,x^2,\ldots,x^n)||_1 =
+    ||x|| * ||(\frac{x^1}{||x||},\frac{x^2}{||x||},\ldots,\frac{x^n}{||x||})||_1 \leqslant \beta * ||x||.
+  \end{equation*}
+
+  Получаем, что:
+  \begin{equation*}
+    \alpha * ||x|| \leqslant ||x||_1 \leqslant \beta * ||x||.
+  \end{equation*}
+
+  Заметим, что $\alpha > 0$. Таким образом, $||x||\sim||x||_1$ в $\mathbb{R}^n$.
+\end{proof}
+
+\section{Линейные отображения в конечномерном пространстве и их непрерывность}
+
+\begin{definition}
+  Пусть $X,Y$ - линейные пространства. Отображение $L: X \rightarrow Y$ называется \textbf{линейным}, если
+  $\forall x_1,x_2 \in X$ и $\alpha,\beta \in \mathbb{R}$:
+  \begin{equation*}
+    L(\alpha x_1 + \beta x_2) = \alpha * L(x_1) + \beta L(x_2) = \alpha L x_1 + \beta L x_2.
+  \end{equation*}
+\end{definition}
+
+\begin{theorem}
+  Всякому линейному отображению $L:\mathbb{R}^n \rightarrow \mathbb{R}^k$ можно поставить в соответствие
+  матрицу $A$ размером $k \times n$:
+  \begin{equation*}
+    \forall x \in \mathbb{R}^n \quad L(x) = Ax.
+  \end{equation*}
+
+  При этом, если в $\mathbb{R}^n$ и $\mathbb{R}^k$ зафиксированны базисы, то матрица $A$ определяется однозначно.
+\end{theorem}
+
+\begin{proof}
+  Пусть $e_1,e_2,\ldots,e_n$ - базис в $\mathbb{R}^n$, $e_1',e_2',\ldots,e_k'$ - базис в $\mathbb{R}^k$.
+  Тогда $L(x) = L(x^1e_1 + x^2e_2 + \ldots + x^ne_n) = x^1 L(e_1) + x^2 L(e_2) + \ldots + x^n L(e_n) =
+    \left|
+    L(e_k) \in \mathbb{R}^k
+    \right| = x^1 (a_1^1e^1_1 + a^2_1e_2^1 + \ldots + a_1^ke_k^1) + x^2(a_2^1e_1^1 + a^2_2e_2^1 + \ldots +
+    a^k_2e_k^1) + \ldots + x^n (a^1_n e_1^1 + a^2_n e_2^1 + \ldots + a_n^k e^1_k) = (\sum_{i=1}^{n}x^i
+    a_i^1)e_1' + (\sum_{i=1}^{n}x^ia_i^2)e_2' + \ldots + (\sum_{i=1}^{n}x^i a_i^k)e_k'$.
+
+  Таким образом получили Коэффициенты при базисных векторах в $\mathbb{R}^k$ - координаты вектора $L(x)\in
+    \mathbb{R}^k$.
+
+  Заметим, что:
+  \begin{equation*}
+    \left(
+    \begin{array}{cccc}
+      a^1_1  & a_2^1  & \ldots & a_n^1  \\
+      a^2_1  & a_2^2  & \ldots & a_n^2  \\
+      \vdots & \vdots & \ddots & \vdots \\
+      a^k_1  & a_2^k  & \ldots & a_n^k  \\
+    \end{array}
+    \right)\left(
+    \begin{array}{c}
+      x^1    \\
+      x^2    \\
+      \vdots \\
+      x^n
+    \end{array}
+    \right) = \left(
+    \begin{array}{c}
+      \sum_{i=1}^{n}x^i a^1_j \\
+      \sum_{i=1}^{n}x^i a^2_j \\
+      \vdots                  \\
+      \sum_{i=1}^{n}x^i a^k_j
+    \end{array}
+    \right) = \left(
+    \begin{array}{c}
+      \overset{\sim}{x}^1 \\
+      \overset{\sim}{x}^2 \\
+      \vdots              \\
+      \overset{\sim}{x}^k \\
+    \end{array}
+    \right)
+  \end{equation*}
+
+  Следовательно, $A$ - единственная.
+\end{proof}
+
+\begin{statement}
+  Если $L:\mathbb{R}^n \rightarrow \mathbb{R}^k$ - линейно, то оно непрерывно.
+\end{statement}
+
+\begin{proof}
+  Рассмотрим произвольный вектор $h \in \mathbb{R}^n$:
+
+  $||L(h)|| = ||L(h^1 e_1 + h^2 e_2 + \ldots + h^n e_n)|| = |e_1,\ldots,e_n - $базис в $\mathbb{R}^n| =
+    ||h^1 L(e_1) + h^2L(e_2) + \ldots + h^n L(e_n)|| \leqslant |h^1| * ||L(e_1)|| + |h^2| * ||L(e_2)|| + \ldots +
+    |h^n| * ||L(e_n)|| \leqslant ||h|| * \sum_{i=1}^{n}||L(e_1)||$.
+
+  Пусть $x\in\mathbb{R}^n, \ \epsilon > 0$ задано. Выберем $\delta < \frac{\epsilon}{\sum_{i=1}^{n}||L(e_1)||}$.
+  Тогда, если $||h|| < \delta$:
+  \begin{equation*}
+    ||L(x+h) - L(x)|| = ||L(x) + L(h) - L(x)|| = ||L(h)|| \leqslant
+  \end{equation*}
+  \begin{equation*}
+    \leqslant ||h|| * \sum_{i=1}^{n}||L(e_i)||
+    < \delta * \sum_{i=1}^{n}||L(e_i)|| = \epsilon.
+  \end{equation*}
+\end{proof}
+
+\begin{definition}
+  Пусть $X$ - множество, $\beta$ - база на $X, \ f: X \rightarrow \mathbb{R}^n, \ g:X \rightarrow \mathbb{R}^k$.
+
+  Будем говорить, что $f(x) = o(g(x))$ по базе $\beta$, если:
+  \begin{equation*}
+    ||f(x)||_{\mathbb{R}^n} = o(||g(x)||_{\mathbb{R}^k})
+  \end{equation*}
+
+  То есть:
+  \begin{equation*}
+    ||f(x)||_{\mathbb{R}^n} = \alpha(x) * ||g(x)||_{\mathbb{R}^k},
+  \end{equation*}где $\alpha(x): X \rightarrow \mathbb{R}$ и $\underset{\beta}{\lim}\alpha(x) = 0$.
+\end{definition}
+
+\begin{definition}
+  Пусть $D \subset \mathbb{R}^n, \ f:D\rightarrow\mathbb{R}^k$, точка $a\in D$ - предельная точка для $D$.
+
+  Отображение $f$ называется \textbf{дифференцируемым} в точке $a$, если $\forall h: \ a+h \in D \ \exists$
+  линейное отображение $L(a):\mathbb{R}^n\rightarrow\mathbb{R}^k:$
+  \begin{equation*}
+    f(a+h) - f(a) = L(a)h + o(h), \quad h\rightarrow\overline{0}.
+  \end{equation*}
+
+  Линейный оператор $L(a)$ называется \textbf{дифференциалом} (или \textbf{касательным отображением}, или
+  \textbf{производным отображением}) функции $f$ и обозначается:
+  \begin{equation*}
+    Df(x), \quad df(x)
+  \end{equation*}
+\end{definition}
+
+\begin{statement}
+  Пусть $f:D\rightarrow\mathbb{R}^k, \ D \subset \mathbb{R}^n, \ a \in D$ \\ и $f(x) = \left(
+    \begin{array}{c}
+        f^1(x) \\
+        f^2(x) \\
+        \vdots \\
+        f^k(x)
+      \end{array}
+    \right) = \left(
+    \begin{array}{c}
+        f^1(x^1,x^2,\ldots,x^n) \\
+        f^2(x^1,x^2,\ldots,x^n) \\
+        \vdots                  \\
+        f^k(x^1,x^2,\ldots,x^n) \\
+      \end{array}
+    \right)$
+
+  Отображение $f$ дифференцируемо в точке $a \iff$ отображение $f^i: D \rightarrow \mathbb{R}$ дифференцируемо
+  в точке $a$.
+\end{statement}
+
+\begin{proof}
+  $"\rightarrow"$ Пусть $f$ дифференцируемо в точке $a$ и $\exists$ линейное отображение $L(a) = \left(
+    \begin{array}{c}
+      L^1(a) \\
+      L^2(a) \\
+      \vdots \\
+      L^k(a)
+    \end{array}
+    \right)$
+  \begin{equation*}
+    f(a+h) - f(a) = L(a)*h + o(h), \ h\rightarrow 0
+  \end{equation*}
+  \begin{equation*}
+    \left(
+    \begin{array}{c}
+      f^1(a+h) - f^1(a) \\
+      f^2(a+h) - f^2(a) \\
+      \vdots            \\
+      f^k(a+h) - f^k(a)
+    \end{array}
+    \right) = \left(
+    \begin{array}{c}
+      L^1(a)h \\
+      l^2(a)h \\
+      \vdots  \\
+      L^k(a)h
+    \end{array}
+    \right) + \left(
+    \begin{array}{c}
+      \alpha^1(h) \\
+      \alpha^2(h) \\
+      \vdots      \\
+      \alpha^k(h)
+    \end{array}
+    \right), \quad \alpha^i(h) = o(h)
+  \end{equation*}
+  \begin{equation*}
+    f(x) = o(g(x)) = \alpha(x) * g(x), \quad \alpha(x)\rightarrow0, \quad x \rightarrow x_0
+  \end{equation*}
+
+  Отсюда $f^i(a+h) - f^i(a) = L^i(a)h + \alpha^i(h)б \quad \alpha^i(h) = o(h) \implies$
+
+  \begin{remark}
+    Заметим, что если имеется вектор $h = (h^1,\ldots, h^n)$, то:
+  \begin{equation*}
+    \forall i = \overline{1,n} \quad |h^i| \leqslant ||h|| = (\sum_{i=1}^{n}(h^i)^2)^\frac{1}{2} \leqslant
+    \sum_{i=1}^{n}|h^i| \implies
+  \end{equation*}
+  \begin{equation*}
+    \implies f(x) = \left(
+      \begin{array}{c}
+        f^1(x) \\
+        \vdots \\
+        f^k(x)
+      \end{array}
+      \right) = o(g(x)) \iff f^i(x) = o(g(x)).
+  \end{equation*}
+
+  Конец замечания.
+  \end{remark}
+
+  $\implies f^i$ дифференцируемо в точке $a$.
+
+  $"\leftarrow"$ Если $\forall i = \overline{1,n} \ f$ дифференцируемо в точке $a \implies \alpha^i(h) = o(h)$.
+
+  Сделав обратные рассуждения, получим: $f$ дифференцируемо в точке $a$.
+\end{proof}
+
+Таким образом изучение дифференцируемых отображений из $\mathbb{R}^n$ в $\mathbb{R}^k$ сводится к изучению
+дифференцируемых отображений из $\mathbb{R}^n$ в $\mathbb{R}$.
+
+\section{Частные производные}
+
+\begin{definition}
+  Множество $D\subset\mathbb{R}^n$ называется \textbf{областью}, если оно открыто и линейно связно.
+\end{definition}
+
+\begin{definition}
+  Пусть $D$ - область в $\mathbb{R}^n, \ f:D\rightarrow\mathbb{R},$
+  \begin{equation*}
+    f(x) = f(x^1,x^2,\ldots,x^n), \quad x \in D.
+  \end{equation*}
+
+  Частной производной отображения $f$ точки $x \in D$ по переменной $x^i$ называется
+  \begin{equation*}
+    \underset{h^i\rightarrow 0}{\lim}\frac{f(x^1,x^2,\ldots,x^i + h^i, \ldots,x^n) - (f(x^1,x^2,\ldots,x^n))}{h^i},
+  \end{equation*}
+  если этот предел существует.
+
+  Обозначение:
+  \begin{equation*}
+    \frac{\partial f}{\partial x^i} \quad or \quad f_{x^i}'
+  \end{equation*}
+\end{definition}
+
+Пример 1:
+  \begin{equation*}
+    f = f(x,y) = yx^2 + y^2x \quad f_x' = 2xy + y^2 \quad f_y' = x^2 + 2yx
+  \end{equation*}
+
+\begin{theorem}[о связи дифференциала и частных производных]
+  Если $f:D\rightarrow\mathbb{R}$ ($D$ - область в $\mathbb{R}^n$) дифференцируема в точке $x \in D$, то она 
+  имеет в точке $x$ все частные производные, при этом:
+  \begin{equation*}
+    df(x)h = \frac{\partial f}{\partial x^1}h^1 + \frac{\partial f}{\partial x^2}h^2 + \ldots +
+    \frac{\partial f}{\partial x^n}h^n =
+  \end{equation*}
+  \begin{equation*}
+    =\left(\begin{array}{cccc}
+      \frac{\partial f}{\partial x^1} & \frac{\partial f}{\partial x^2} & \ldots & \frac{\partial f}{\partial x^n} 
+    \end{array}\right) * \left(\begin{array}{c}
+      h^1 \\
+      h^2 \\
+      \vdots \\
+      h^n
+    \end{array}\right)
+  \end{equation*}
+
+  (здесь везде $1,2,\ldots,n$ - индексы, а не степени или производные).
+\end{theorem}
+
+\begin{proof}
+  Пусть $L(x) = (a_1,a_2,\ldots,a_n)$ - дифференциал функции в точке $x$. Положим: $h = (0,\ldots,0,h^i,0,\ldots,0)$.
+  Тогда:
+  \begin{equation*}
+    f(x+h) - f(x) = L(x)h + o(h) \implies  
+  \end{equation*}
+  \begin{equation*}
+    \implies f(x^1,x^2,\ldots,x^i + h^i,\ldots,x^n) - f(x^1,x^2,\ldots,x^n) =
+  \end{equation*}
+  \begin{equation*}
+    = (a_1,\ldots, a_i, \ldots,a_n) * \left(\begin{array}{c}
+      0 \\
+      \vdots \\
+      0 \\
+      h^i \\
+      0 \\
+      \vdots \\
+      0
+    \end{array}\right) + 0(h) = a_ih^i + o(h).
+  \end{equation*}
+
+  Поделим уравнение на $h^i$:
+  \begin{equation*}
+    a_i + \frac{o(h)}{h_i} = \frac{f(x^1,\ldots,x^i + h^i,\ldots, x^n) - f(x^1,x^2,\ldots,x^n)}{h^i}.
+  \end{equation*}
+
+  Тогда $\frac{\partial f}{\partial x^i} = \underset{h^i\rightarrow 0}{\lim} \frac{f(x^1,\ldots,x^i + h^i,
+  \ldots,x^n) - f(x^1,\ldots,x^n)}{h^i} = \underset{h^i\rightarrow 0}{\lim} (a_i + \frac{o(h)}{h^i}) = a_i$.
+
+  Так как $i = \overline{1,n}$, то:
+  \begin{equation*}
+    L(x) = (\frac{\partial f}{\partial x^1}, \ldots, \frac{\partial f}{\partial x^n}).
+  \end{equation*}
+\end{proof}
+
+Пример 2:
+
+Из примера 1 $\implies$
+\begin{equation*}
+  df(x,y) = \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy,
+\end{equation*}
+\begin{equation*}
+  h = (dx,dy),
+\end{equation*}
+\begin{equation*}
+  df(x,y) = (2xy + y^2)dx + (x^2 + 2yx)dy
+\end{equation*}
+
+\section*{Матрица Якоби}
+
+Пусть $f:\mathbb{R}^n \rightarrow \mathbb{R}^k$.
+
+Матрицей Якоби отображения $f$ в точке $x\in\mathbb{R}$ называется:
+\begin{equation*}
+  \mathfrak{I}(x) = \left(
+    \begin{array}{ccc}
+      \frac{\partial f^1}{\partial x^1} & \ldots & \frac{\partial f^1}{\partial x^n} \\
+      \frac{\partial f^2}{\partial x^1} & \ldots & \frac{\partial f^2}{\partial x^n} \\
+      \vdots & \ddots & \vdots \\
+      \frac{\partial f^k}{\partial x^1} & \ldots & \frac{\partial f^k}{\partial x^n}
+    \end{array}
+  \right)
+\end{equation*}
+
+Здесь $f(x) = \left(
+  \begin{array}{c}
+    f^1(x) \\
+    \vdots \\
+    f^k(x)
+  \end{array}
+\right)$
+
+Т. обр. $df(x)h = \mathfrak{I}(x)h = \left(
+  \begin{array}{ccc}
+    \frac{\partial f^1}{\partial x^1} & \ldots & \frac{\partial f^1}{\partial x^n} \\
+    \frac{\partial f^2}{\partial x^1} & \ldots & \frac{\partial f^2}{\partial x^n} \\
+    \vdots & \ddots & \vdots \\
+    \frac{\partial f^k}{\partial x^1} & \ldots & \frac{\partial f^k}{\partial x^n}
+  \end{array}
+\right) * \left(
+  \begin{array}{c}
+    h^1 \\
+    \vdots \\
+    h^k
+  \end{array}
+\right) = \left(
+  \begin{array}{ccc}
+    df^1(x)h \\
+    df^2(x)h \\
+    \vdots \\
+    df^k(x)h
+  \end{array}
+\right)$
+
+Часто матрицу Якоби отображения $f$ будем обозначать $f'$.
+
+\section{Дифференцируемость и арифметические операции}
+
+\begin{theorem}
+  Пусть $D\subset \mathbb{R}^n$ - область, $f:D\rightarrow\mathbb{R}^k, \ g:D\rightarrow\mathbb{R}^k,$ если 
+  $f$ и $g$ дифференцируемы в точке $x\in D$, то $\forall \lambda_1,\lambda_2\in\mathbb{R}$ функция
+  $\lambda_1 f + \lambda_2 g$ дифференцируема в точке $x$, при этом:
+  \begin{equation*}
+    (\lambda_1f + \lambda_2g)' = \lambda_1f' + \lambda_2g',
+  \end{equation*}
+  где $(\lambda_1f + \lambda_2g)', \ f', \ g'$ - матрицы Якоби.
+\end{theorem}
+
+\begin{proof}
+  $(\lambda_1f + \lambda_2g)(x + h) - (\lambda_1f + \lambda_2g)(x) = \lambda_1 f(x+h) + \lambda_2 g(x + h) -
+  \lambda_1f(x) - \lambda_2g(x) = \lambda_1(f(x+h) - f(x)) + \lambda_2(g(x+h) - g(x)) = \lambda_1(f'(x)h +
+  o(h)) + \lambda_2(g'(x)h + o(h)) = (\lambda_1 f'(x) + \lambda_2g'(x))h + o(h)$.
+\end{proof}
+
+\begin{theorem}
+  Пусть $D$ - область в $\mathbb{R}^n, \ f:D\rightarrow\mathbb{R}$. Если $f,g$ - дифференцируемы в точке $x \in D$,
+  то $f*g$ дифференцируемо в точке $x$ и если $g(x) \ne 0$, то $\frac{f}{g}$ - дифференцируемо в точке $x$, при
+  этом:
+  \begin{equation*}
+    (f*g)'(x) = f'(x)*g(x) + f(x)*g'(x);
+  \end{equation*}
+  \begin{equation*}
+    (\frac{f}{g})'(x) = \frac{f'(x)g(x) - f(x)g'(x)}{(g(x))^2}.
+  \end{equation*}
+\end{theorem}
+
+\begin{proof}
+  Самостоятельно. $\overset{\cdot \ \cdot}{\smile}$
+\end{proof}
 
 \end{document}
